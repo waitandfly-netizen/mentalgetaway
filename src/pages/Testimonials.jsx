@@ -1,44 +1,47 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Quote, Star } from 'lucide-react';
+import { Quote, ArrowRight } from 'lucide-react';
 
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "陳小姐",
-      program: "二日放空篇",
-      content: "這是我第一次參加心靈假期，原本只是想要逃離工作壓力，沒想到收穫遠超預期。在森林中漫步時，我感受到前所未有的平靜。主辦方準備的每一餐都非常用心，讓我重新認識到「吃」可以是一種療癒。",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+      title: "從"聽"開始",
+      content: "這次心靈假期，從"聽"開始，在心靈導遊的提醒下，才頓然發現外頭的聲音小，是因為自己內在的聲音太大。確實如此，當我們靜下來聆聽，才能真正聽見..."
     },
     {
-      name: "林先生",
-      program: "僻靜篇（5日）",
-      content: "五天的靜默修習，徹底改變了我對生活的看法。原本以為會很難熬，但在引導老師的帶領下，我學會了如何與寧靜共處。回到城市後，發現自己更能專注當下，面對壓力也更有彈性了。",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+      title: "我的故鄉在這裡",
+      content: "不要問我從哪裡來～我的故鄉在這裡～這兩天，在這偌大的療癒性大草皮渡上了一個心靈假期，在這裡，我盡情地感受大自然的擁抱..."
     },
     {
-      name: "王小姐",
-      program: "一日放空篇",
-      content: "平常週末都在補眠中度過，這次嘗試了一日放空，發現原來只要一天的時間，就能讓身心完全充電。健行的路線很適合初學者，而且沿途的風景美得令人屏息。已經在期待下一次了！",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+      title: "自然而然",
+      content: "沉靜在笑靜心中，不用頭腦去思考，而將一切交給身體交給心，感受意識在一握一放之間，那些在意的酸酸的，苦苦的，都在這過程中慢慢釋放..."
     },
     {
-      name: "張先生",
-      program: "二日放空篇",
-      content: "身為一個長期焦慮的人，我嘗試過很多方法，但這次的體驗給我的幫助最大。不是因為課程內容多特別，而是整個環境、氛圍都讓人自然而然地放鬆下來。晚上躺在星空下的那一刻，我感動得幾乎落淚。",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80"
+      title: "真實的快樂",
+      content: "全然投入每個當下、盡情享受所有發生，一步步貼近自己的愛、大家的愛⋯ 越往下紮根、越深入內在，向外的揮灑也越自在..."
     },
     {
-      name: "李小姐",
-      program: "僻靜篇（3日）",
-      content: "一直以來都是在照顧別人，這是我第一次真正為自己安排的旅程。三天的時間，我終於能夠好好地和自己對話。感謝心靈假期團隊創造了這麼安全、舒適的空間，讓我可以卸下所有的武裝。",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80"
+      title: "黑夜裡的自然律動",
+      content: "心靈導遊夜間帶我們去海邊體驗宇宙浩瀚，在漆黑的海邊我踩著海水，海水是深黑色的，好可怕。遠方的白浪，巨大的聲響，讓我感受到大自然的力量..."
     },
     {
-      name: "吳先生",
-      program: "一日放空篇",
-      content: "原本是被朋友拉來的，沒有抱太大期待，結果發現這種「慢下來」的體驗非常珍貴。尤其是午餐時分，大家安靜地品味每一口食物的感覺，讓我重新體會到生活中被忽略的美好。",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+      title: "踏上靜心成長的路",
+      content: "這裡來說說當年我的社工生涯和到底是怎麼踏上靜心成長的路～那時在台北某知名社福基金會裡做個小主管，加上種種機緣，開始了這段旅程..."
+    }
+  ];
+
+  const articles = [
+    {
+      title: "一封來自存在的信",
+      description: "收件人是助人工作者。親愛的你：不管是誤打誤撞還是自小立志成為助人工作者，下面的內容請你認真看一看..."
+    },
+    {
+      title: "踏上靜心成長的路",
+      description: "這裡來說說當年我的社工生涯和到底是怎麼踏上靜心成長的路～那時在台北某知名社福基金會裡做個小主管，加上..."
+    },
+    {
+      title: "ego與self之不同",
+      description: "ego是自我，是人為的，是從社會製造出來的，是self的替代品，是一個假的實體。我們會需要自我(eg..."
     }
   ];
 
@@ -49,7 +52,7 @@ export default function Testimonials() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80')"
+            backgroundImage: "url('https://spiritvacation.wordpress.com/wp-content/uploads/2025/12/e696b0e5a29ee6a899e9a18c-2-3.jpg?w=1024')"
           }}
         >
           <div className="absolute inset-0 bg-stone-900/50" />
@@ -68,18 +71,26 @@ export default function Testimonials() {
         </motion.div>
       </section>
 
-      {/* Testimonials Grid */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <motion.p 
-            className="text-center text-stone-500 font-light max-w-2xl mx-auto mb-16 text-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            聽聽參加過心靈假期的夥伴們怎麼說
-          </motion.p>
+      {/* Intro */}
+      <section className="py-16 px-6 bg-white">
+        <motion.div 
+          className="max-w-3xl mx-auto text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          <p className="text-stone-600 font-light text-lg leading-relaxed">
+            心靈假期中，我們沒有固定行程，而是順著引導安住在當下，
+          </p>
+          <p className="text-stone-600 font-light text-lg leading-relaxed">
+            每一個被好好經驗的片刻，都是一處風景。
+          </p>
+        </motion.div>
+      </section>
 
+      {/* Testimonials Grid */}
+      <section className="py-16 px-6 bg-stone-50">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -91,24 +102,48 @@ export default function Testimonials() {
                 className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
               >
                 <Quote className="w-8 h-8 text-emerald-200 mb-4" />
-                <p className="text-stone-600 font-light leading-relaxed mb-6">
+                <h3 className="text-lg font-medium text-stone-800 mb-4">{testimonial.title}</h3>
+                <p className="text-stone-600 font-light leading-relaxed text-sm">
                   {testimonial.content}
                 </p>
-                <div className="flex items-center gap-4 pt-4 border-t border-stone-100">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Articles Section */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2 
+            className="text-3xl font-light text-stone-800 text-center mb-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            延伸閱讀
+          </motion.h2>
+
+          <div className="space-y-6">
+            {articles.map((article, index) => (
+              <motion.div
+                key={article.title}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group bg-stone-50 hover:bg-emerald-50 rounded-xl p-6 transition-colors cursor-pointer"
+              >
+                <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="font-medium text-stone-800">{testimonial.name}</p>
-                    <p className="text-sm text-emerald-600">{testimonial.program}</p>
+                    <h3 className="text-lg font-medium text-stone-800 group-hover:text-emerald-800 transition-colors mb-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-stone-500 text-sm font-light">
+                      {article.description}
+                    </p>
                   </div>
-                </div>
-                <div className="flex gap-1 mt-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
+                  <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
                 </div>
               </motion.div>
             ))}
@@ -121,10 +156,10 @@ export default function Testimonials() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "500+", label: "累積參加人數" },
-              { number: "98%", label: "滿意度" },
-              { number: "50+", label: "成功舉辦場次" },
-              { number: "3", label: "年服務經驗" }
+              { number: "1000+", label: "累積參加人次" },
+              { number: "20+", label: "年服務經驗" },
+              { number: "15000+", label: "累積教學時數" },
+              { number: "∞", label: "回鍋參加者" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
