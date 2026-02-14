@@ -264,24 +264,65 @@ From ✨存在✨`
             <h2 className="text-3xl font-light text-stone-800">心靈專欄</h2>
           </motion.div>
 
-          <div className="space-y-4">
-            {articles.map((article, index) => (
-              <motion.div
-                key={article.title}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+          <AnimatePresence mode="wait">
+            {activeArticle === null ? (
+              <motion.div 
+                key="list"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="space-y-4"
               >
-                <div className="group bg-stone-50 hover:bg-emerald-50 rounded-xl p-6 transition-colors cursor-pointer flex items-center justify-between">
-                  <span className="text-stone-700 group-hover:text-emerald-800 font-medium transition-colors">
-                    {article.title}
-                  </span>
-                  <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all" />
+                {articles.map((article, index) => (
+                  <motion.div
+                    key={article.title}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <button 
+                      onClick={() => setActiveArticle(index)}
+                      className="w-full group bg-stone-50 hover:bg-emerald-50 rounded-xl p-6 transition-colors cursor-pointer flex items-center justify-between text-left"
+                    >
+                      <span className="text-stone-700 group-hover:text-emerald-800 font-medium transition-colors">
+                        {article.title}
+                      </span>
+                      <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all" />
+                    </button>
+                  </motion.div>
+                ))}
+              </motion.div>
+            ) : (
+              <motion.div 
+                key="article"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="bg-stone-50 rounded-2xl p-8 md:p-10"
+              >
+                <button 
+                  onClick={() => setActiveArticle(null)}
+                  className="flex items-center gap-2 text-emerald-700 hover:text-emerald-800 mb-6 transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                  <span>返回文章列表</span>
+                </button>
+                
+                <h3 className="text-2xl font-medium text-stone-800 mb-8">
+                  {articles[activeArticle].title}
+                </h3>
+                
+                <div className="prose prose-stone max-w-none">
+                  {articles[activeArticle].content.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="text-stone-600 font-light leading-loose mb-4">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
               </motion.div>
-            ))}
-          </div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 
