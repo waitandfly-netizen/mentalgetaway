@@ -5,8 +5,8 @@ import { Quote, ArrowRight } from 'lucide-react';
 export default function Testimonials() {
   const testimonials = [
     {
-      title: "從"聽"開始",
-      content: "這次心靈假期，從"聽"開始，在心靈導遊的提醒下，才頓然發現外頭的聲音小，是因為自己內在的聲音太大。確實如此，當我們靜下來聆聽，才能真正聽見..."
+      title: "從『聽』開始",
+      content: "這次心靈假期，從『聽』開始，在心靈導遊的提醒下，才頓然發現外頭的聲音小，是因為自己內在的聲音太大。確實如此，當我們靜下來聆聽，才能真正聽見..."
     },
     {
       title: "我的故鄉在這裡",
