@@ -56,6 +56,7 @@ import Contact from './pages/Contact';
 import OneDayRetreat from './pages/OneDayRetreat';
 import TwoDayRetreat from './pages/TwoDayRetreat';
 import SilentRetreat from './pages/SilentRetreat';
+import Guide from './pages/Guide';
 import __Layout from './Layout.jsx';
 
 
@@ -69,6 +70,7 @@ export const PAGES = {
     "OneDayRetreat": OneDayRetreat,
     "TwoDayRetreat": TwoDayRetreat,
     "SilentRetreat": SilentRetreat,
+    "Guide": Guide,
 }
 
 export const pagesConfig = {

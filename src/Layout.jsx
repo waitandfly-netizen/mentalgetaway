@@ -25,6 +25,7 @@ export default function Layout({ children, currentPageName }) {
   const navLinks = [
     { name: '初心緣起', page: 'About' },
     { name: '旅程介紹', page: 'Programs' },
+    { name: '心靈導遊', page: 'Guide' },
     { name: '參加者心得', page: 'Testimonials' },
     { name: '常見問題', page: 'FAQ' },
     { name: '聯繫我們', page: 'Contact' },
