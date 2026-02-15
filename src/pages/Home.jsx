@@ -10,7 +10,7 @@ export default function Home() {
       title: "一日放空篇",
       subtitle: "Day Retreat",
       description: "在自然中深呼吸，讓身心回歸平靜",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+      image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/03/img_7582.jpeg",
       link: "OneDayRetreat",
       icon: Sun
     },
@@ -18,7 +18,7 @@ export default function Home() {
       title: "二日放空篇",
       subtitle: "Weekend Escape",
       description: "兩天一夜的心靈充電之旅",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+      image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/03/line_album_240313_12.jpg",
       link: "TwoDayRetreat",
       icon: Moon
     },
@@ -26,7 +26,7 @@ export default function Home() {
       title: "僻靜篇",
       subtitle: "Silent Retreat",
       description: "在寧靜中與內在自我對話",
-      image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&q=80",
+      image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/02/s__381304862_0.jpg",
       link: "SilentRetreat",
       icon: Mountain
     }
