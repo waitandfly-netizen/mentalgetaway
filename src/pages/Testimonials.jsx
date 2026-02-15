@@ -109,11 +109,26 @@ export default function Testimonials() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
               >
-                <Quote className="w-8 h-8 text-emerald-200 mb-4" />
-                <h3 className="text-lg font-medium text-stone-800 mb-4">{testimonial.title}</h3>
-                <p className="text-stone-600 font-light leading-relaxed text-sm">
-                  {testimonial.content}
-                </p>
+                {testimonial.link ? (
+                  <Link to={createPageUrl(testimonial.link)} className="block group">
+                    <Quote className="w-8 h-8 text-emerald-200 mb-4" />
+                    <h3 className="text-lg font-medium text-stone-800 mb-4 group-hover:text-emerald-700 transition-colors">{testimonial.title}</h3>
+                    <p className="text-stone-600 font-light leading-relaxed text-sm mb-4">
+                      {testimonial.content}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-emerald-700 text-sm group-hover:gap-3 transition-all">
+                      閱讀更多 <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                ) : (
+                  <>
+                    <Quote className="w-8 h-8 text-emerald-200 mb-4" />
+                    <h3 className="text-lg font-medium text-stone-800 mb-4">{testimonial.title}</h3>
+                    <p className="text-stone-600 font-light leading-relaxed text-sm">
+                      {testimonial.content}
+                    </p>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>
