@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { Quote, ArrowRight } from 'lucide-react';
 
@@ -6,27 +8,33 @@ export default function Testimonials() {
   const testimonials = [
     {
       title: "從『聽』開始",
-      content: "這次心靈假期，從『聽』開始，在心靈導遊的提醒下，才頓然發現外頭的聲音小，是因為自己內在的聲音太大。確實如此，當我們靜下來聆聽，才能真正聽見..."
+      content: "這次心靈假期，從『聽』開始，在心靈導遊的提醒下，才頓然發現外頭的聲音小，是因為自己內在的聲音太大。確實如此，當我們靜下來聆聽，才能真正聽見...",
+      link: "TestimonialFromHear"
     },
     {
       title: "我的故鄉在這裡",
-      content: "不要問我從哪裡來～我的故鄉在這裡～這兩天，在這偌大的療癒性大草皮渡上了一個心靈假期，在這裡，我盡情地感受大自然的擁抱..."
+      content: "不要問我從哪裡來～我的故鄉在這裡～這兩天，在這偌大的療癒性大草皮渡上了一個心靈假期，在這裡，我盡情地感受大自然的擁抱...",
+      link: "TestimonialHometown"
     },
     {
       title: "自然而然",
-      content: "沉靜在笑靜心中，不用頭腦去思考，而將一切交給身體交給心，感受意識在一握一放之間，那些在意的酸酸的，苦苦的，都在這過程中慢慢釋放..."
+      content: "沉靜在笑靜心中，不用頭腦去思考，而將一切交給身體交給心，感受意識在一握一放之間，那些在意的酸酸的，苦苦的，都在這過程中慢慢釋放...",
+      link: "TestimonialNaturally"
     },
     {
       title: "真實的快樂",
-      content: "全然投入每個當下、盡情享受所有發生，一步步貼近自己的愛、大家的愛⋯ 越往下紮根、越深入內在，向外的揮灑也越自在..."
+      content: "全然投入每個當下、盡情享受所有發生，一步步貼近自己的愛、大家的愛⋯ 越往下紮根、越深入內在，向外的揮灑也越自在...",
+      link: "TestimonialTrueHappiness"
     },
     {
       title: "黑夜裡的自然律動",
-      content: "心靈導遊夜間帶我們去海邊體驗宇宙浩瀚，在漆黑的海邊我踩著海水，海水是深黑色的，好可怕。遠方的白浪，巨大的聲響，讓我感受到大自然的力量..."
+      content: "心靈導遊夜間帶我們去海邊體驗宇宙浩瀚，在漆黑的海邊我踩著海水，海水是深黑色的，好可怕。遠方的白浪，巨大的聲響，讓我感受到大自然的力量...",
+      link: "TestimonialNightRhythm"
     },
     {
       title: "踏上靜心成長的路",
-      content: "這裡來說說當年我的社工生涯和到底是怎麼踏上靜心成長的路～那時在台北某知名社福基金會裡做個小主管，加上種種機緣，開始了這段旅程..."
+      content: "這裡來說說當年我的社工生涯和到底是怎麼踏上靜心成長的路～那時在台北某知名社福基金會裡做個小主管，加上種種機緣，開始了這段旅程...",
+      link: null
     }
   ];
 
