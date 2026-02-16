@@ -48,61 +48,61 @@ export default function TestimonialFromHear() {
             transition={{ delay: 0.3 }}
             className="prose prose-stone max-w-none"
           >
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               這次心靈假期，從「聽」開始，在心靈導遊的提醒下，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               才頓然發現外頭的聲音小，是因為自己內在的聲音太大。
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               確實常活在被自己困住的煩惱中，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               以為和自己對話、親密著煩惱，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               實則沒有放開來與外在的世界接軌。
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               能夠放開來去聽，山、海、火車聲、鳥叫聲、鞭炮聲、音樂等，是很和諧舒服的，能納入存在的種種，自己就慢慢變大了。
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               在享受每個發生淡出及淡入的過程，也和地球連線了。
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               地球乘載著萬物，且不斷地轉動著，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               於是一個片刻接著一個片刻，這是事實。
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               生活中習慣用直線的想法去做事，執著於順序及結果，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               與真實的存在背道而馳，難怪辛苦~
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               在進行每個活動中，不管是煮飯、吃飯、組願力共同體，幾乎都是原動力在說話。好笑的是，當原動力出來還會想打壓它，不透過這些過程，怎麼看得清楚自己長什麼樣子….
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               當願力共同體的呈現，又花蝴蝶去了，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               內心其實很排斥這種沒實質內涵、很空泛的展現，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               但它很自然地又發生了。
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               我沒有真正去傾聽生命為何需要這樣的元素，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               和我原動力、原創力、心靈願景的關係又是什麼，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               禮物擺在眼前，是我面對它的態度不友善，
             </p>
-            <p className="text-stone-600 font-light leading-loose text-lg mb-6">
+            <p className="text-stone-600 font-light leading-relaxed text-lg mb-4">
               覺得原先的排斥真的很傻~
             </p>
           </motion.div>
