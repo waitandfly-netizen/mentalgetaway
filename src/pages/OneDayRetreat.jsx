@@ -19,10 +19,8 @@ export default function OneDayRetreat() {
 
   const includes = [
     "專業引導老師全程帶領",
-    "原型食物午餐",
     "活動場地費用",
-    "旅遊平安保險",
-    "活動紀念小禮"
+    "旅遊平安保險"
   ];
 
   return (
@@ -192,17 +190,16 @@ export default function OneDayRetreat() {
               className="bg-gradient-to-br from-emerald-800 to-emerald-900 rounded-2xl p-8 text-white"
             >
               <p className="text-emerald-200 text-sm mb-2">費用</p>
-              <p className="text-4xl font-light mb-4">NT$ 2,800<span className="text-lg text-emerald-200">/人</span></p>
-              <p className="text-emerald-100/80 text-sm mb-8">早鳥優惠 NT$ 2,500（活動前30天報名）</p>
+              <p className="text-4xl font-light mb-4">NT$ 1,200<span className="text-lg text-emerald-200">/人</span></p>
               
-              <Link to={createPageUrl("Contact")}>
+              <a href="https://forms.gle/KCYzFjRnw8CuoYKT6" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-white text-emerald-800 hover:bg-amber-50 py-6 rounded-xl">
                   <span className="flex items-center gap-2">
                     立即報名
                     <ArrowRight className="w-4 h-4" />
                   </span>
                 </Button>
-              </Link>
+              </a>
             </motion.div>
           </div>
         </div>

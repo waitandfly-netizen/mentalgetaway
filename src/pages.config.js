@@ -55,13 +55,13 @@ import Home from './pages/Home';
 import OneDayRetreat from './pages/OneDayRetreat';
 import Programs from './pages/Programs';
 import SilentRetreat from './pages/SilentRetreat';
-import Testimonials from './pages/Testimonials';
-import TwoDayRetreat from './pages/TwoDayRetreat';
 import TestimonialFromHear from './pages/TestimonialFromHear';
 import TestimonialHometown from './pages/TestimonialHometown';
 import TestimonialNaturally from './pages/TestimonialNaturally';
-import TestimonialTrueHappiness from './pages/TestimonialTrueHappiness';
 import TestimonialNightRhythm from './pages/TestimonialNightRhythm';
+import TestimonialTrueHappiness from './pages/TestimonialTrueHappiness';
+import Testimonials from './pages/Testimonials';
+import TwoDayRetreat from './pages/TwoDayRetreat';
 import __Layout from './Layout.jsx';
 
 
@@ -74,13 +74,13 @@ export const PAGES = {
     "OneDayRetreat": OneDayRetreat,
     "Programs": Programs,
     "SilentRetreat": SilentRetreat,
-    "Testimonials": Testimonials,
-    "TwoDayRetreat": TwoDayRetreat,
     "TestimonialFromHear": TestimonialFromHear,
     "TestimonialHometown": TestimonialHometown,
     "TestimonialNaturally": TestimonialNaturally,
-    "TestimonialTrueHappiness": TestimonialTrueHappiness,
     "TestimonialNightRhythm": TestimonialNightRhythm,
+    "TestimonialTrueHappiness": TestimonialTrueHappiness,
+    "Testimonials": Testimonials,
+    "TwoDayRetreat": TwoDayRetreat,
 }
 
 export const pagesConfig = {
