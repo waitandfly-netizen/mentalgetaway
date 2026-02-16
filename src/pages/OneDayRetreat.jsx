@@ -7,19 +7,17 @@ import { Button } from "@/components/ui/button";
 
 export default function OneDayRetreat() {
   const schedule = [
-    { time: "08:30", activity: "集合出發", description: "於指定地點集合，前往活動場地" },
-    { time: "09:30", activity: "開場引導", description: "認識彼此、活動說明、身心準備" },
-    { time: "10:00", activity: "森林健行", description: "輕度健行，沿途進行正念練習" },
-    { time: "12:00", activity: "原型食物午餐", description: "品味健康餐食，練習正念飲食" },
-    { time: "13:30", activity: "自由探索", description: "個人時光，可選擇休息或獨處漫步" },
-    { time: "15:00", activity: "呼吸練習", description: "深度呼吸練習，釋放身心壓力" },
-    { time: "16:00", activity: "分享圈", description: "團體分享，為旅程畫下句點" },
-    { time: "17:00", activity: "賦歸", description: "帶著滿滿能量回家" }
+    { time: "09:00", activity: "捷運劍潭站集合" },
+    { time: "10:00", activity: "開場引導" },
+    { time: "10:30", activity: "森林健行-站樁體驗" },
+    { time: "12:00", activity: "午餐休憩" },
+    { time: "13:30", activity: "放空練習" },
+    { time: "15:30", activity: "賦歸" }
   ];
 
   const includes = [
     "專業引導老師全程帶領",
-    "活動場地費用",
+    "活動行政費",
     "旅遊平安保險"
   ];
 
@@ -144,8 +142,8 @@ export default function OneDayRetreat() {
                   <div className="w-4 h-4 rounded-full bg-emerald-500 border-4 border-emerald-100 flex-shrink-0 mt-1 hidden md:block" />
                   <div className="flex-1 bg-white rounded-xl p-6 shadow-sm">
                     <span className="text-emerald-700 font-medium md:hidden">{item.time}</span>
-                    <h3 className="font-medium text-stone-800 mb-1">{item.activity}</h3>
-                    <p className="text-stone-500 font-light text-sm">{item.description}</p>
+                    <h3 className="font-medium text-stone-800">{item.activity}</h3>
+                    {item.description && <p className="text-stone-500 font-light text-sm mt-1">{item.description}</p>}
                   </div>
                 </motion.div>
               ))}
