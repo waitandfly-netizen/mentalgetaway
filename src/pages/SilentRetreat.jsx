@@ -32,34 +32,17 @@ export default function SilentRetreat() {
   const options = [
     {
       duration: "3天2夜",
-      price: "12,800",
-      earlyBird: "10,800",
-      description: "適合初次體驗靜默修習的夥伴",
-      popular: false
-    },
-    {
-      duration: "5天4夜",
-      price: "18,800",
-      earlyBird: "15,800",
-      description: "深度體驗，建議有冥想基礎者參加",
-      popular: true
-    },
-    {
-      duration: "7天6夜",
-      price: "25,800",
-      earlyBird: "21,800",
-      description: "完整的靜默閉關體驗",
-      popular: false
+      price: "依該次行程公告",
+      description: "適合初次體驗靜默修習的夥伴"
     }
   ];
 
   const includes = [
     "資深引導老師全程帶領",
-    "全程住宿（單人房）",
+    "全程住宿",
     "活動期間全部餐食",
-    "每日冥想與瑜伽課程",
+    "靜心活動與課程",
     "一對一引導時間",
-    "靜修手冊與資料",
     "旅遊平安保險"
   ];
 
@@ -228,7 +211,7 @@ export default function SilentRetreat() {
           </h2>
           <p className="text-center text-stone-500 mb-16">依您的時間與需求，選擇適合的天數</p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="max-w-md mx-auto">
             {options.map((option, index) => (
               <motion.div
                 key={option.duration}
@@ -236,36 +219,17 @@ export default function SilentRetreat() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`rounded-2xl p-8 relative ${
-                  option.popular 
-                    ? 'bg-emerald-900 text-white' 
-                    : 'bg-stone-100 text-stone-800'
-                }`}
+                className="rounded-2xl p-8 bg-emerald-900 text-white"
               >
-                {option.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-stone-900 text-xs font-medium px-4 py-1 rounded-full">
-                    最受歡迎
-                  </div>
-                )}
                 <h3 className="text-2xl font-light mb-2">{option.duration}</h3>
-                <p className={`text-sm mb-6 ${option.popular ? 'text-emerald-200' : 'text-stone-500'}`}>
+                <p className="text-sm mb-6 text-emerald-200">
                   {option.description}
                 </p>
-                <p className="text-3xl font-light mb-1">
-                  NT$ {option.price}
-                  <span className={`text-sm ${option.popular ? 'text-emerald-200' : 'text-stone-400'}`}>/人</span>
-                </p>
-                <p className={`text-sm mb-8 ${option.popular ? 'text-emerald-200' : 'text-stone-500'}`}>
-                  早鳥優惠 NT$ {option.earlyBird}
+                <p className="text-2xl font-light mb-8">
+                  {option.price}
                 </p>
                 <Link to={createPageUrl("Contact")}>
-                  <Button 
-                    className={`w-full py-6 rounded-xl ${
-                      option.popular 
-                        ? 'bg-white text-emerald-800 hover:bg-amber-50' 
-                        : 'bg-emerald-700 text-white hover:bg-emerald-800'
-                    }`}
-                  >
+                  <Button className="w-full py-6 rounded-xl bg-white text-emerald-800 hover:bg-amber-50">
                     立即報名
                   </Button>
                 </Link>

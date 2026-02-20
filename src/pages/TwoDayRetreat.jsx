@@ -28,11 +28,10 @@ export default function TwoDayRetreat() {
 
   const includes = [
     "專業引導老師全程帶領",
-    "精緻住宿一晚（雙人房）",
+    "住宿一晚",
     "活動期間全部餐食",
     "所有課程與活動費用",
-    "旅遊平安保險",
-    "活動紀念禮品"
+    "旅遊平安保險"
   ];
 
   const highlights = [
