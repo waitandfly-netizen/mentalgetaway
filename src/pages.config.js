@@ -62,6 +62,7 @@ import TestimonialNightRhythm from './pages/TestimonialNightRhythm';
 import TestimonialTrueHappiness from './pages/TestimonialTrueHappiness';
 import Testimonials from './pages/Testimonials';
 import TwoDayRetreat from './pages/TwoDayRetreat';
+import InvitationRetreat from './pages/InvitationRetreat';
 import __Layout from './Layout.jsx';
 
 
@@ -81,6 +82,7 @@ export const PAGES = {
     "TestimonialTrueHappiness": TestimonialTrueHappiness,
     "Testimonials": Testimonials,
     "TwoDayRetreat": TwoDayRetreat,
+    "InvitationRetreat": InvitationRetreat,
 }
 
 export const pagesConfig = {

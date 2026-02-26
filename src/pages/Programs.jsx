@@ -54,7 +54,7 @@ export default function Programs() {
       groupSize: "4-8 人",
       location: "花東僻靜場地",
       image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/9c4e700ba_IMG_20220923_150004.jpg",
-      link: null,
+      link: "InvitationRetreat",
       icon: Sparkles,
       color: "violet"
     }
