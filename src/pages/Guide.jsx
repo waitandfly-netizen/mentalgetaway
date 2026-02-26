@@ -146,7 +146,7 @@ From ✨存在✨`
               transition={{ duration: 0.8 }}
             >
               <img 
-                src="https://spiritvacation.wordpress.com/wp-content/uploads/2026/02/583618912_10237580030657715_8289364465581566650_n-1.jpg" 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/325984cb6_BF23888F-18F5-4CBC-967A-C6BF097C7E21.jpg" 
                 alt="丁靜如老師"
                 className="w-full rounded-2xl shadow-lg"
               />
