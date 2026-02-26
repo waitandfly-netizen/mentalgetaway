@@ -53,7 +53,7 @@ export default function Programs() {
       duration: "3-7 天",
       groupSize: "4-8 人",
       location: "花東僻靜場地",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/9c4e700ba_IMG_20220923_150004.jpg",
       link: null,
       icon: Sparkles,
       color: "violet"
