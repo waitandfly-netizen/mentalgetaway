@@ -57,14 +57,7 @@ export default function Testimonials() {
     <div className="min-h-screen bg-stone-50">
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://spiritvacation.wordpress.com/wp-content/uploads/2025/12/e696b0e5a29ee6a899e9a18c-2-3.jpg?w=1024')"
-          }}
-        >
-          <div className="absolute inset-0 bg-stone-900/50" />
-        </div>
+        <div className="absolute inset-0 bg-emerald-900" />
         
         <motion.div 
           className="relative z-10 text-center px-6"

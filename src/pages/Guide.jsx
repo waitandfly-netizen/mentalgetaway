@@ -326,19 +326,7 @@ From ✨存在✨`
         </div>
       </section>
 
-      {/* Bottom Image */}
-      <section className="px-6 pb-24">
-        <div className="max-w-5xl mx-auto">
-          <motion.img 
-            src="https://spiritvacation.wordpress.com/wp-content/uploads/2025/12/e696b0e5a29ee6a899e9a18c-2-3.jpg"
-            alt="心靈假期"
-            className="w-full rounded-2xl shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          />
-        </div>
-      </section>
+
     </div>
   );
 }
