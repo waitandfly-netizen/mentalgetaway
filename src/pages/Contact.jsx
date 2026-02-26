@@ -33,20 +33,15 @@ export default function Contact() {
     {
       icon: Mail,
       title: "電子郵件",
-      content: "hello@spiritvacation.tw",
-      link: "mailto:hello@spiritvacation.tw"
+      content: "taipei.circlelounge@gmail.com",
+      link: "mailto:taipei.circlelounge@gmail.com"
     },
-    {
-      icon: Phone,
-      title: "電話",
-      content: "02-1234-5678",
-      link: "tel:0212345678"
-    },
+
     {
       icon: MessageCircle,
       title: "LINE 官方帳號",
-      content: "@spiritvacation",
-      link: "https://line.me/ti/p/@spiritvacation"
+      content: "@467wrtjj",
+      link: "https://line.me/ti/p/@467wrtjj"
     },
     {
       icon: Clock,
@@ -84,8 +79,8 @@ export default function Contact() {
 
       {/* Contact Content */}
       <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
+        <div className="max-w-4xl mx-auto">
+          <div>
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -130,107 +125,10 @@ export default function Contact() {
                 ))}
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-12 rounded-2xl overflow-hidden aspect-video bg-stone-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
-                  alt="Location"
-                  className="w-full h-full object-cover opacity-80"
-                />
-              </div>
+
             </motion.div>
 
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm">
-                <h3 className="text-2xl font-light text-stone-800 mb-8">
-                  留言給我們
-                </h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="text-stone-600">姓名</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        required
-                        className="border-stone-200 focus:border-emerald-500 focus:ring-emerald-500"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-stone-600">電子郵件</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        required
-                        className="border-stone-200 focus:border-emerald-500 focus:ring-emerald-500"
-                      />
-                    </div>
-                  </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone" className="text-stone-600">電話（選填）</Label>
-                      <Input
-                        id="phone"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        className="border-stone-200 focus:border-emerald-500 focus:ring-emerald-500"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="subject" className="text-stone-600">主旨</Label>
-                      <Input
-                        id="subject"
-                        value={formData.subject}
-                        onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                        required
-                        className="border-stone-200 focus:border-emerald-500 focus:ring-emerald-500"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="text-stone-600">訊息內容</Label>
-                    <Textarea
-                      id="message"
-                      rows={6}
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      required
-                      className="border-stone-200 focus:border-emerald-500 focus:ring-emerald-500 resize-none"
-                      placeholder="請告訴我們您想詢問的內容..."
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    disabled={isSubmitting}
-                    className="w-full bg-emerald-700 hover:bg-emerald-800 text-white py-6 rounded-xl"
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center gap-2">
-                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        送出中...
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-2">
-                        <Send className="w-4 h-4" />
-                        送出訊息
-                      </span>
-                    )}
-                  </Button>
-                </form>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
