@@ -23,7 +23,7 @@ export default function Programs() {
       title: "二日放空篇",
       subtitle: "Weekend Escape",
       description: "兩天一夜的深度休憩，遠離城市的喧囂，在寧靜的環境中重新連結自己。包含完整的身心課程與舒適住宿。",
-      features: ["深度森林浴", "晨間冥想練習", "營養飲食調理", "星空下的分享"],
+      features: ["深度森林浴", "晨間冥想練習", "營養飲食調理", "星空下靜心"],
       duration: "2天1夜",
       groupSize: "8-15 人",
       location: "宜蘭山區民宿",
@@ -33,7 +33,7 @@ export default function Programs() {
       color: "indigo"
     },
     {
-      title: "僻靜篇",
+      title: "蛻變篇",
       subtitle: "Silent Retreat",
       description: "三天至七天的深度僻靜體驗，在全然的寧靜中與內在自我對話。適合有冥想基礎或渴望深度轉化的夥伴。",
       features: ["靜默修習", "每日冥想課程", "輕食淨化飲食", "一對一引導"],
