@@ -111,7 +111,7 @@ export default function About() {
               </p>
               
               <p>
-                於是<span className="text-emerald-700 font-medium">「以渡假的方式讓人體驗身心靈成長的美好」</span>定調了。
+                於是<span className="text-emerald-700 font-medium">「以渡假的方式體驗身心靈成長的美好」</span>定調了。
               </p>
               
               <p>
@@ -197,7 +197,7 @@ export default function About() {
         >
           <div className="text-5xl text-amber-200/30 mb-6">"</div>
           <blockquote className="text-2xl md:text-3xl font-light leading-relaxed mb-8">
-            真實、美好的旅程，是一趟快樂的出走
+            以渡假的方式體驗身心靈成長的美好
           </blockquote>
           <div className="w-16 h-px bg-amber-200/40 mx-auto" />
         </motion.div>
