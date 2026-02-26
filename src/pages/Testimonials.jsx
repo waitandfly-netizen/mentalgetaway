@@ -38,20 +38,7 @@ export default function Testimonials() {
     }
   ];
 
-  const articles = [
-    {
-      title: "一封來自存在的信",
-      description: "收件人是助人工作者。親愛的你：不管是誤打誤撞還是自小立志成為助人工作者，下面的內容請你認真看一看..."
-    },
-    {
-      title: "踏上靜心成長的路",
-      description: "這裡來說說當年我的社工生涯和到底是怎麼踏上靜心成長的路～那時在台北某知名社福基金會裡做個小主管，加上..."
-    },
-    {
-      title: "ego與self之不同",
-      description: "ego是自我，是人為的，是從社會製造出來的，是self的替代品，是一個假的實體。我們會需要自我(eg..."
-    }
-  ];
+
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -128,44 +115,7 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* Articles Section */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2 
-            className="text-3xl font-light text-stone-800 text-center mb-12"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            延伸閱讀
-          </motion.h2>
 
-          <div className="space-y-6">
-            {articles.map((article, index) => (
-              <motion.div
-                key={article.title}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group bg-stone-50 hover:bg-emerald-50 rounded-xl p-6 transition-colors cursor-pointer"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-lg font-medium text-stone-800 group-hover:text-emerald-800 transition-colors mb-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-stone-500 text-sm font-light">
-                      {article.description}
-                    </p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Stats Section */}
       <section className="py-20 px-6 bg-emerald-900 text-white">
