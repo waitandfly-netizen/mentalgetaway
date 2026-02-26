@@ -69,14 +69,16 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
             心靈假期
           </h1>
-          <p className="text-xl md:text-2xl text-stone-100/90 font-light mb-8 tracking-widest leading-relaxed">
-            好好生活，<br />
-            <span className="inline-block pl-16">回到寧靜心靈的綠洲</span>
-          </p>
-          <p className="text-xl md:text-2xl text-stone-200/80 font-light max-w-2xl mx-auto leading-relaxed tracking-widest">
-            真實旅程，<br />
-            <span className="inline-block pl-16">一趟美好滋養的出走</span>
-          </p>
+          <div className="space-y-6">
+            <p className="text-xl md:text-2xl text-stone-100/90 font-light tracking-widest leading-relaxed">
+              好好生活，<br />
+              <span className="inline-block pl-16">回到寧靜心靈的綠洲</span>
+            </p>
+            <p className="text-xl md:text-2xl text-stone-200/80 font-light tracking-widest leading-relaxed">
+              真實旅程，<br />
+              <span className="inline-block pl-16">一趟美好滋養的出走</span>
+            </p>
+          </div>
           
           <motion.div
             initial={{ opacity: 0 }}
