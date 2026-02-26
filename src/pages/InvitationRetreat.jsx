@@ -171,32 +171,6 @@ export default function InvitationRetreat() {
         </div>
       </section>
 
-      {/* Daily Schedule */}
-      <section className="py-24 px-6 bg-stone-100/50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-light text-stone-800 text-center mb-4">
-            每日作息參考
-          </h2>
-          <p className="text-center text-stone-500 mb-16">實際行程將依個人狀態彈性調整</p>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            {schedule.map((item, index) => (
-              <motion.div
-                key={item.time}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.03 }}
-                className="bg-white rounded-xl p-4 shadow-sm flex items-center gap-4"
-              >
-                <span className="text-violet-700 font-medium text-sm w-14">{item.time}</span>
-                <span className="text-stone-600 text-sm">{item.activity}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Invitation Info */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -252,37 +226,7 @@ export default function InvitationRetreat() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 px-6 bg-violet-900 text-white">
-        <motion.div 
-          className="max-w-3xl mx-auto text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-light mb-6">
-            想了解更多關於心靈假期？
-          </h2>
-          <p className="text-violet-100/80 mb-10">
-            歡迎先體驗我們的其他旅程，或直接與我們聯繫
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to={createPageUrl("Programs")}>
-              <Button className="bg-white text-violet-800 hover:bg-violet-50 px-10 py-6 rounded-xl">
-                查看其他旅程
-              </Button>
-            </Link>
-            <Link to={createPageUrl("Contact")}>
-              <Button className="bg-violet-800 border-2 border-white text-white hover:bg-violet-700 px-10 py-6 rounded-xl">
-                <span className="flex items-center gap-2">
-                  聯繫我們
-                  <ArrowRight className="w-4 h-4" />
-                </span>
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+
     </div>
   );
 }
