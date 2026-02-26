@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sun, Moon, Mountain, Clock, Users, MapPin } from 'lucide-react';
+import { ArrowRight, Sun, Moon, Mountain, Clock, Users, MapPin, Sparkles } from 'lucide-react';
 
 export default function Programs() {
   const programs = [
@@ -44,6 +44,19 @@ export default function Programs() {
       link: "SilentRetreat",
       icon: Mountain,
       color: "emerald"
+    },
+    {
+      title: "僻靜篇",
+      subtitle: "Invitation Only",
+      description: "由心靈導遊邀請合適對象，規劃符合身心狀態之免費行程，不定期舉辦。",
+      features: ["洗滌身心靈", "靜心冥想", "淨化飲食", "心靈導遊從旁支持"],
+      duration: "3-7 天",
+      groupSize: "4-8 人",
+      location: "花東僻靜場地",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+      link: null,
+      icon: Sparkles,
+      color: "violet"
     }
   ];
 
@@ -98,12 +111,28 @@ export default function Programs() {
                 }`}
               >
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                  <Link to={createPageUrl(program.link)} className="block group">
+                  {program.link ? (
+                    <Link to={createPageUrl(program.link)} className="block group">
+                      <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                        <img 
+                          src={program.image} 
+                          alt={program.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent" />
+                        <div className="absolute top-6 left-6">
+                          <div className={`w-12 h-12 rounded-full bg-white/90 flex items-center justify-center`}>
+                            <program.icon className={`w-6 h-6 text-${program.color}-600`} />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
                     <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
                       <img 
                         src={program.image} 
                         alt={program.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent" />
                       <div className="absolute top-6 left-6">
@@ -112,7 +141,7 @@ export default function Programs() {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  )}
                 </div>
 
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
@@ -151,13 +180,15 @@ export default function Programs() {
                     </div>
                   </div>
 
-                  <Link 
-                    to={createPageUrl(program.link)}
-                    className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 transition-colors group"
-                  >
-                    <span className="tracking-wider">查看詳細資訊</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  {program.link && (
+                    <Link 
+                      to={createPageUrl(program.link)}
+                      className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 transition-colors group"
+                    >
+                      <span className="tracking-wider">查看詳細資訊</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  )}
                 </div>
               </motion.div>
             ))}
