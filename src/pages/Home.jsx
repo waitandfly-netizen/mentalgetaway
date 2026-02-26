@@ -29,6 +29,14 @@ export default function Home() {
       image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/02/s__381304862_0.jpg",
       link: "SilentRetreat",
       icon: Mountain
+    },
+    {
+      title: "僻靜篇",
+      subtitle: "Invitation Only",
+      description: "由心靈導遊邀請，為您量身打造的身心靈旅程",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/9c4e700ba_IMG_20220923_150004.jpg",
+      link: "InvitationRetreat",
+      icon: Sparkles
     }
   ];
 
@@ -150,7 +158,7 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
             {programs.map((program, index) => (
               <motion.div
                 key={program.title}
