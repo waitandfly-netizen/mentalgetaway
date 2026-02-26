@@ -10,7 +10,7 @@ export default function Programs() {
       title: "一日放空行",
       subtitle: "Day Retreat",
       description: "適合忙碌的都市人，用一天的時間讓身心重新充電。在自然環境中進行輕度健行、呼吸練習。",
-      features: ["半日健行體驗", "呼吸冥想練習", "原型食物午餐", "自由探索時光"],
+      features: ["半日健行體驗", "呼吸冥想練習", "自由探索時光"],
       duration: "約 8 小時",
       groupSize: "6-12 人",
       location: "台北近郊山區",
