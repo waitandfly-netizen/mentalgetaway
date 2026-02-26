@@ -32,7 +32,7 @@ export default function SilentRetreat() {
   const options = [
     {
       duration: "3天2夜",
-      price: "依該次行程公告",
+      price: "3,600 - 6,800 元",
       description: "適合初次體驗靜默修習的夥伴"
     }
   ];
@@ -86,7 +86,7 @@ export default function SilentRetreat() {
             <span className="text-white/90 text-sm tracking-wider">SILENT RETREAT</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide mb-4">
-            僻靜篇
+            蛻變篇
           </h1>
           <p className="text-xl text-stone-200/90 font-light">
             在寧靜中與內在自我對話
@@ -97,12 +97,13 @@ export default function SilentRetreat() {
       {/* Quick Info */}
       <section className="py-12 px-6 bg-white border-b border-stone-100">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
               { icon: Clock, label: "時長", value: "3-7 天" },
               { icon: Users, label: "人數", value: "4-8 人" },
               { icon: MapPin, label: "地點", value: "花東僻靜場地" },
-              { icon: Calendar, label: "梯次", value: "季節性開團" }
+              { icon: Calendar, label: "梯次", value: "季節性開團" },
+              { icon: Check, label: "參加條件", value: "參加六次以上二日放空篇" }
             ].map((item, index) => (
               <motion.div
                 key={item.label}
@@ -155,7 +156,7 @@ export default function SilentRetreat() {
             </h2>
             <div className="text-stone-600 font-light leading-loose space-y-6">
               <p>
-                「僻靜篇」是我們最深度的旅程。這是一趟向內探索的旅程，
+                「蛻變篇」是我們最深度的旅程。這是一趟向內探索的旅程，
                 在遠離塵囂的環境中，透過靜默與冥想，與真實的自己相遇。
               </p>
               <p>
