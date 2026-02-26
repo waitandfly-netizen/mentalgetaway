@@ -23,7 +23,7 @@ export default function Home() {
       icon: Moon
     },
     {
-      title: "僻靜篇",
+      title: "蛻變篇",
       subtitle: "Silent Retreat",
       description: "在寧靜中與內在自我對話",
       image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/02/s__381304862_0.jpg",

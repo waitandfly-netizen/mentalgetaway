@@ -52,6 +52,7 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Guide from './pages/Guide';
 import Home from './pages/Home';
+import InvitationRetreat from './pages/InvitationRetreat';
 import OneDayRetreat from './pages/OneDayRetreat';
 import Programs from './pages/Programs';
 import SilentRetreat from './pages/SilentRetreat';
@@ -61,9 +62,8 @@ import TestimonialNaturally from './pages/TestimonialNaturally';
 import TestimonialNightRhythm from './pages/TestimonialNightRhythm';
 import TestimonialTrueHappiness from './pages/TestimonialTrueHappiness';
 import Testimonials from './pages/Testimonials';
-import TwoDayRetreat from './pages/TwoDayRetreat';
-import InvitationRetreat from './pages/InvitationRetreat';
 import TransformationStories from './pages/TransformationStories';
+import TwoDayRetreat from './pages/TwoDayRetreat';
 import __Layout from './Layout.jsx';
 
 
@@ -73,6 +73,7 @@ export const PAGES = {
     "FAQ": FAQ,
     "Guide": Guide,
     "Home": Home,
+    "InvitationRetreat": InvitationRetreat,
     "OneDayRetreat": OneDayRetreat,
     "Programs": Programs,
     "SilentRetreat": SilentRetreat,
@@ -82,9 +83,8 @@ export const PAGES = {
     "TestimonialNightRhythm": TestimonialNightRhythm,
     "TestimonialTrueHappiness": TestimonialTrueHappiness,
     "Testimonials": Testimonials,
-    "TwoDayRetreat": TwoDayRetreat,
-    "InvitationRetreat": InvitationRetreat,
     "TransformationStories": TransformationStories,
+    "TwoDayRetreat": TwoDayRetreat,
 }
 
 export const pagesConfig = {
