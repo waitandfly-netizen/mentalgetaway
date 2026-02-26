@@ -7,10 +7,10 @@ import { ArrowRight, Sun, Moon, Mountain, Clock, Users, MapPin } from 'lucide-re
 export default function Programs() {
   const programs = [
     {
-      title: "一日放空篇",
+      title: "一日放空行",
       subtitle: "Day Retreat",
-      description: "適合忙碌的都市人，用一天的時間讓身心重新充電。在自然環境中進行輕度健行、呼吸練習、與品味健康餐食。",
-      features: ["半日健行體驗", "正念呼吸練習", "原型食物午餐", "自由探索時光"],
+      description: "適合忙碌的都市人，用一天的時間讓身心重新充電。在自然環境中進行輕度健行、呼吸練習。",
+      features: ["半日健行體驗", "呼吸冥想練習", "原型食物午餐", "自由探索時光"],
       duration: "約 8 小時",
       groupSize: "6-12 人",
       location: "台北近郊山區",
@@ -82,7 +82,7 @@ export default function Programs() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            選擇適合您的旅程，開始一段療癒身心的旅途
+            選擇適合您的方式，開始一段療癒身心的旅途
           </motion.p>
 
           <div className="space-y-24">
