@@ -8,21 +8,19 @@ import { Button } from "@/components/ui/button";
 export default function TwoDayRetreat() {
   const schedule = {
     day1: [
-      { time: "10:00", activity: "抵達與安頓", description: "認識環境，讓身心慢慢沉靜" },
-      { time: "11:00", activity: "開場儀式", description: "團體介紹，設定意圖" },
-      { time: "12:30", activity: "午餐時光", description: "享用在地食材製作的健康餐食" },
-      { time: "14:00", activity: "森林浴體驗", description: "深度森林漫步，喚醒五感" },
-      { time: "17:00", activity: "自由時間", description: "休息、閱讀或獨處" },
-      { time: "18:30", activity: "晚餐", description: "溫暖的團體用餐時光" },
-      { time: "20:00", activity: "星空分享", description: "在星空下分享故事與心情" }
+      { time: "10:00", activity: "安頓身心、卸下疲累", description: "" },
+      { time: "12:30", activity: "享用午餐", description: "" },
+      { time: "14:00", activity: "靜心冥想、身心紓壓", description: "" },
+      { time: "18:30", activity: "共煮、共食", description: "" },
+      { time: "20:00", activity: "心靈派對", description: "" }
     ],
     day2: [
-      { time: "06:30", activity: "晨間冥想", description: "迎接新的一天（自由參加）" },
-      { time: "08:00", activity: "早餐", description: "營養均衡的晨間能量" },
-      { time: "09:30", activity: "身心覺察課程", description: "溫和的身體活動與呼吸練習" },
-      { time: "12:00", activity: "午餐", description: "最後一餐的美好時光" },
-      { time: "13:30", activity: "結束儀式", description: "整合收穫，帶著祝福回家" },
-      { time: "15:00", activity: "賦歸", description: "滿載能量，回到日常" }
+      { time: "06:30", activity: "晨間靜心、品茗時光", description: "" },
+      { time: "08:00", activity: "享用早餐", description: "" },
+      { time: "09:30", activity: "靜心冥想、身心淨化", description: "" },
+      { time: "12:00", activity: "享用午餐", description: "" },
+      { time: "13:30", activity: "交流分享、打包收穫", description: "" },
+      { time: "16:00", activity: "賦歸", description: "" }
     ]
   };
 
