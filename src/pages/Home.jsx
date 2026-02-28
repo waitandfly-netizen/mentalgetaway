@@ -129,7 +129,7 @@ export default function Home() {
               我們的理念
             </h2>
             <div className="space-y-8 text-stone-600 text-lg md:text-xl leading-relaxed font-light">
-              <p>既能享受全然打開內在的歡愉，又能深入獨處保有寧靜自在</p>
+              <p>享受既敞開內在的歡愉，又能深入獨處保有寧靜自在</p>
               <div className="w-12 h-px bg-emerald-700/30 mx-auto my-10" />
               <p>品嚐在地優質原型食物，滿足身體對營養真正的需要</p>
               <div className="w-12 h-px bg-emerald-700/30 mx-auto my-10" />
