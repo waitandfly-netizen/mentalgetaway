@@ -79,11 +79,11 @@ export default function Home() {
           </h1>
           <div className="space-y-6">
             <p className="text-xl md:text-2xl text-stone-100/90 font-light tracking-widest leading-relaxed">
-              <span className="inline-block -ml-10">好好生活，</span><br />
+              <span className="inline-block -ml-16">好好生活，</span><br />
               <span className="inline-block pl-6">回到寧靜心靈的綠洲</span>
             </p>
             <p className="text-xl md:text-2xl text-stone-200/80 font-light tracking-widest leading-relaxed">
-              <span className="inline-block -ml-10">真實旅程，</span><br />
+              <span className="inline-block -ml-16">真實旅程，</span><br />
               <span className="inline-block pl-6">一趟美好滋養的出走</span>
             </p>
           </div>
@@ -129,14 +129,11 @@ export default function Home() {
               我們的理念
             </h2>
             <div className="space-y-8 text-stone-600 text-lg md:text-xl leading-relaxed font-light">
-              <p>既能享受全然打開內在的歡愉</p>
-              <p>又能深入獨處保有心靈寧靜自在</p>
+              <p>既能享受全然打開內在的歡愉，又能深入獨處保有寧靜自在</p>
               <div className="w-12 h-px bg-emerald-700/30 mx-auto my-10" />
-              <p>品嘗高質地的原型食物</p>
-              <p>滿足身體對營養真正的需要、排除負擔</p>
+              <p>品嚐在地優質原型食物，滿足身體對營養真正的需要</p>
               <div className="w-12 h-px bg-emerald-700/30 mx-auto my-10" />
-              <p>從無盡想像中的虛擬旅程轉為真切實際</p>
-              <p>滋養生命的安定與養分</p>
+              <p>讓真實，而美好的旅程，成為滋養生命的安定與養分</p>
             </div>
           </motion.div>
         </div>
