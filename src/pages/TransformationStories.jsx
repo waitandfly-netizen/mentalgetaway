@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Sparkles, Sunrise, Compass, Wind } from 'lucide-react';
+import { Heart, Sparkles, Sunrise, Compass, Wind, Leaf } from 'lucide-react';
 
 export default function TransformationStories() {
   const stories = [
