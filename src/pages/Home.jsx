@@ -77,14 +77,14 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
             心靈假期
           </h1>
-          <div className="space-y-6">
+          <div className="space-y-6 text-left inline-block">
             <p className="text-xl md:text-2xl text-stone-100/90 font-light tracking-widest leading-relaxed">
-              <span className="inline-block -ml-16">好好生活，</span><br />
-              <span className="inline-block pl-6">回到寧靜心靈的綠洲</span>
+              <span className="block">好好生活，</span>
+              <span className="block pl-8">回到寧靜心靈的綠洲</span>
             </p>
             <p className="text-xl md:text-2xl text-stone-200/80 font-light tracking-widest leading-relaxed">
-              <span className="inline-block -ml-16">真實旅程，</span><br />
-              <span className="inline-block pl-6">一趟美好滋養的出走</span>
+              <span className="block">真實旅程，</span>
+              <span className="block pl-8">一趟美好滋養的出走</span>
             </p>
           </div>
           
