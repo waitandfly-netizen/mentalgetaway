@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from '@/components/SEOHead';
 import { motion } from 'framer-motion';
 import { Heart, Leaf, Sun, Mountain, Sparkles } from 'lucide-react';
 
