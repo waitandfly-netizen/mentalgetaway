@@ -63,6 +63,12 @@ export default function Programs() {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <SEOHead
+        title="旅程介紹"
+        description="心靈假期提供一日放空篇、二日放空篇、蛻變篇與僻靜篇等多種身心靈退修旅程，讓您在大自然中重拾內在平靜與力量。選擇最適合您的心靈旅程。"
+        keywords="一日退修, 二日退修, 靜默僻靜, 身心靈旅程, 台灣心靈旅遊, retreat programs"
+        image="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80"
+      />
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div 

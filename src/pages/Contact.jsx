@@ -54,6 +54,12 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <SEOHead
+        title="聯繫我們"
+        description="有任何問題或想法，歡迎透過電子郵件或LINE官方帳號與心靈假期聯繫。我們很樂意協助您規劃專屬的身心靈旅程。"
+        keywords="聯繫心靈假期, 心靈假期報名, Spirit Vacation contact, 心靈旅程諮詢"
+        image="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200&q=80"
+      />
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div 

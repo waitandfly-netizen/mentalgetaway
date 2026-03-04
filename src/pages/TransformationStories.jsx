@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Sparkles, Sunrise, Compass, Wind, Leaf } from 'lucide-react';
+import SEOHead from '@/components/SEOHead';
 
 export default function TransformationStories() {
   const stories = [
