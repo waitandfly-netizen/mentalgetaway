@@ -28,6 +28,7 @@ export default function TestimonialHometown() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">
             我的故鄉在這裡
           </h1>
+          <p className="text-stone-200/70 text-sm mt-3 tracking-widest">2015.11.19</p>
         </motion.div>
       </section>
 

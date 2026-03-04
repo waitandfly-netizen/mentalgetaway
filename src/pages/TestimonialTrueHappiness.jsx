@@ -28,6 +28,7 @@ export default function TestimonialTrueHappiness() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">
             真實的快樂
           </h1>
+          <p className="text-stone-200/70 text-sm mt-3 tracking-widest">2016.04.24</p>
         </motion.div>
       </section>
 

@@ -28,6 +28,7 @@ export default function TestimonialFromHear() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">
             從「聽」開始
           </h1>
+          <p className="text-stone-200/70 text-sm mt-3 tracking-widest">2017.03.27</p>
         </motion.div>
       </section>
 
