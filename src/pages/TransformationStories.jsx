@@ -103,6 +103,12 @@ export default function TransformationStories() {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <SEOHead
+        title="蛻變故事"
+        description="閱讀真實參與者的心靈旅程故事——從迷惘到找回自己，從疲憊到重新充電。每一段旅程，都是一次與自己相遇的機會。"
+        keywords="心靈假期心得, 蛻變故事, 身心靈轉化, 靜心分享, retreat testimonials"
+        image="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1200&q=80"
+      />
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div 
