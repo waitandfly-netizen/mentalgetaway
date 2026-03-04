@@ -47,8 +47,33 @@ export default function Home() {
     transition: { duration: 0.8, ease: "easeOut" }
   };
 
+  // JSON-LD structured data
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "心靈假期 Spirit Vacation",
+    "url": "https://spiritvacation.base44.app",
+    "logo": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80",
+    "description": "好好生活，找回心靈寧靜的綠洲。提供一日、二日放空篇及僻靜篇等身心靈退修旅程。",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "taipei.circlelounge@gmail.com"
+    },
+    "sameAs": ["https://line.me/ti/p/@467wrtjj"]
+  };
+
   return (
     <div className="min-h-screen bg-stone-50">
+      <SEOHead
+        title="好好生活，找回心靈寧靜的綠洲"
+        description="心靈假期 Spirit Vacation — 好好生活，回到寧靜心靈的綠洲。提供一日放空篇、二日放空篇、僻靜篇等身心靈退修旅程，讓您在大自然中重拾內在平靜與力量。"
+        keywords="心靈假期, Spirit Vacation, 身心靈退修, 靜心旅程, 一日放空, 僻靜篇, 自然療癒, mindfulness retreat"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
