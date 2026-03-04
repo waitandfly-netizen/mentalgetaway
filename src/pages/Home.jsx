@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowRight, Leaf, Sun, Moon, Mountain, Sparkles } from 'lucide-react';
+import SEOHead from '@/components/SEOHead';
 
 export default function Home() {
   const programs = [
