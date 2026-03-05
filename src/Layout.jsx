@@ -130,6 +130,7 @@ export default function Layout({ children, currentPageName }) {
                 <Link to={createPageUrl('OneDayRetreat')} className="block text-sm hover:text-white transition-colors">一日放空篇</Link>
                 <Link to={createPageUrl('TwoDayRetreat')} className="block text-sm hover:text-white transition-colors">二日放空篇</Link>
                 <Link to={createPageUrl('SilentRetreat')} className="block text-sm hover:text-white transition-colors">蛻變篇</Link>
+                <Link to={createPageUrl('InvitationRetreat')} className="block text-sm hover:text-white transition-colors">僻靜篇</Link>
               </div>
             </div>
             
