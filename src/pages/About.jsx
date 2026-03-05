@@ -291,7 +291,7 @@ export default function About() {
                 {/* Card */}
                 <div className="flex-1 bg-stone-50 rounded-2xl overflow-hidden shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
                   {item.img && (
-                    <img src={item.img} alt={item.year} className="w-full h-64 object-cover object-top" />
+                    <img src={item.img} alt={item.year} className="w-full object-contain bg-stone-100" style={{maxHeight: '320px'}} />
                   )}
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3 flex-wrap">
