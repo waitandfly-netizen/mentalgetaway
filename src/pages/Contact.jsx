@@ -49,6 +49,12 @@ export default function Contact() {
       title: "服務時間",
       content: "週一至週五 10:00-18:00",
       link: null
+    },
+    {
+      icon: MessageCircle,
+      title: "Facebook 粉絲專頁",
+      content: "心靈假期",
+      link: "https://www.facebook.com/SpiritHolidays/"
     }
   ];
 
