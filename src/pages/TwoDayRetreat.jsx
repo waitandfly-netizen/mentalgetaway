@@ -154,18 +154,15 @@ export default function TwoDayRetreat() {
       <section className="py-24 px-6 bg-stone-100/50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-light text-stone-800 text-center mb-16">
-            行程包含
+            行程導覽
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              "沈澱單獨",
-              "正念瑜伽",
-              "舞動身心",
-              "晨間舒展",
-              "品茗靜坐",
-              "生活靜心",
-              "多元蔬食"
+              "放鬆引導｜芳香療癒",
+              "直覺慢食｜獨處漫步",
+              "晨間站樁｜品茶冥想",
+              "舞動身心｜舒緩瑜伽"
             ].map((item, index) => (
               <motion.div
                 key={item}
@@ -175,7 +172,7 @@ export default function TwoDayRetreat() {
                 transition={{ delay: index * 0.07 }}
                 className="bg-white rounded-2xl p-5 shadow-sm flex items-center justify-center text-center"
               >
-                <span className="text-stone-700 font-light">✧ {item}</span>
+                <span className="text-stone-700 font-light">▪︎ {item}</span>
               </motion.div>
             ))}
           </div>
