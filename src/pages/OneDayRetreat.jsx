@@ -188,7 +188,11 @@ export default function OneDayRetreat() {
               className="bg-gradient-to-br from-emerald-800 to-emerald-900 rounded-2xl p-8 text-white"
             >
               <p className="text-emerald-200 text-sm mb-2">費用</p>
-              <p className="text-4xl font-light mb-4">NT$ 1,200<span className="text-lg text-emerald-200">/人</span></p>
+              <p className="text-4xl font-light mb-3">NT$ 1,200<span className="text-lg text-emerald-200">/人</span></p>
+              <div className="mb-4">
+                <p className="text-emerald-200 text-sm mb-1">場次</p>
+                <p className="text-white font-light">5/1（五）｜5/29（五）</p>
+              </div>
               
               <a href="https://forms.gle/KCYzFjRnw8CuoYKT6" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-white text-emerald-800 hover:bg-amber-50 py-6 rounded-xl">
