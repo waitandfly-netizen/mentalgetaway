@@ -152,67 +152,32 @@ export default function TwoDayRetreat() {
 
       {/* Schedule */}
       <section className="py-24 px-6 bg-stone-100/50">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-light text-stone-800 text-center mb-16">
-            行程安排
+            行程包含
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Day 1 */}
-            <div>
-              <h3 className="text-xl font-medium text-indigo-700 mb-6 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-sm">1</span>
-                第一天
-              </h3>
-              <div className="space-y-4">
-                {schedule.day1.map((item, index) => (
-                  <motion.div
-                    key={item.time}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.05 }}
-                    className="bg-white rounded-xl p-4 shadow-sm"
-                  >
-                    <div className="flex items-start gap-4">
-                      <span className="text-indigo-600 font-medium text-sm w-14 flex-shrink-0">{item.time}</span>
-                      <div>
-                        <h4 className="font-medium text-stone-800 text-sm">{item.activity}</h4>
-                        <p className="text-stone-500 text-xs mt-1">{item.description}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Day 2 */}
-            <div>
-              <h3 className="text-xl font-medium text-indigo-700 mb-6 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-sm">2</span>
-                第二天
-              </h3>
-              <div className="space-y-4">
-                {schedule.day2.map((item, index) => (
-                  <motion.div
-                    key={item.time}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.05 }}
-                    className="bg-white rounded-xl p-4 shadow-sm"
-                  >
-                    <div className="flex items-start gap-4">
-                      <span className="text-indigo-600 font-medium text-sm w-14 flex-shrink-0">{item.time}</span>
-                      <div>
-                        <h4 className="font-medium text-stone-800 text-sm">{item.activity}</h4>
-                        <p className="text-stone-500 text-xs mt-1">{item.description}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              "沈澱單獨",
+              "正念瑜伽",
+              "舞動身心",
+              "晨間舒展",
+              "品茗靜坐",
+              "生活靜心",
+              "多元蔬食"
+            ].map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.07 }}
+                className="bg-white rounded-2xl p-5 shadow-sm flex items-center justify-center text-center"
+              >
+                <span className="text-stone-700 font-light">✧ {item}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
