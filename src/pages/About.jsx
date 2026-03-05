@@ -295,15 +295,15 @@ export default function About() {
                   )}
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3 flex-wrap">
-                      <span className="text-xl font-light text-emerald-800">{item.year}</span>
-                      <span className="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100 tracking-wide">
-                        {item.tag}
+                      <span className="text-2xl font-light text-emerald-800">{item.year}</span>
+                      <span className="text-sm text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100 tracking-wide">
+                       {item.tag}
                       </span>
-                    </div>
-                    <p className="text-stone-600 font-light text-sm leading-relaxed mb-2">{item.content}</p>
-                    {item.detail && (
-                      <p className="text-stone-400 text-xs leading-relaxed">🌱 {item.detail}</p>
-                    )}
+                      </div>
+                      <p className="text-stone-600 font-light text-base leading-relaxed mb-2">{item.content}</p>
+                      {item.detail && (
+                      <p className="text-stone-400 text-sm leading-relaxed">🌱 {item.detail}</p>
+                      )}
                   </div>
                 </div>
               </motion.div>
