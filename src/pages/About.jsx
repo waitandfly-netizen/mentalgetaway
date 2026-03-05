@@ -193,6 +193,128 @@ export default function About() {
         </div>
       </section>
 
+      {/* Timeline Section */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="text-center mb-16"
+          >
+            <p className="text-emerald-700/80 tracking-[0.3em] text-sm mb-4">OUR JOURNEY</p>
+            <h2 className="text-3xl font-light text-stone-800 tracking-wide">
+              旅程足跡
+            </h2>
+          </motion.div>
+
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-emerald-100 md:-translate-x-px" />
+
+            {[
+              {
+                year: "2013",
+                tag: "萌芽",
+                content: "心靈假期從暨南大學開始，用好山好水的大自然能量，進行身心放鬆活動。",
+                detail: "3月、4月、6月、8月、9月、11月，共計六場次2天1夜的旅程。"
+              },
+              {
+                year: "2014",
+                tag: "累積",
+                content: "為了提供更優質的充電品質，尋覓日月潭合適地點辦理心靈假期。",
+                detail: "2月、4月、6月、10月、12月，共辦理5場次。"
+              },
+              {
+                year: "2015",
+                tag: "累積",
+                content: "持續於日月潭蓄積，為滿足參加者需要，辦理尊榮等級的心靈假期，深度淨化身心靈。",
+                detail: "3月、9月辦理2場尊榮級心靈假期，與6月、12月2場暨南大學場次。"
+              },
+              {
+                year: "2016",
+                tag: "走向更廣的自然",
+                content: "心靈假期第一次離開埔里，來到宜蘭外澳海邊，將大海獨有的鮮活能量分享給參加者。",
+                detail: "4月宜蘭外澳、7月暨南大學、10月埔里松濤園，共計3場次。"
+              },
+              {
+                year: "2017",
+                tag: "支持助人者",
+                content: "支持辛勞的助人者，辦理專屬場次，讓自我照顧能有新選擇，享受完整的充電與還原。",
+                detail: "3月、8月宜蘭場、5月、11月埔里暨大場，共計4場次。"
+              },
+              {
+                year: "2018–2021",
+                tag: "自然健行",
+                content: "因應現代人忙碌的腳步，推出一日健行，用最簡單可親的方式，為生活按下暫停鍵。",
+                detail: "暖東峽谷、大湖親山步道、中正山、魚路古道，共辦理5場次。"
+              },
+              {
+                year: "2021–2022",
+                tag: "陪伴",
+                content: "疫情停辦，用粉專陪伴大家。",
+                detail: ""
+              },
+              {
+                year: "2023",
+                tag: "重新出發",
+                content: "疫情過後重新出發，在宜蘭與南投的好山好水中，撫平疫情帶來的負擔。",
+                detail: "5月宜蘭外澳、9月暨南大學，共計2場次。"
+              },
+              {
+                year: "2024–2025",
+                tag: "新的階段",
+                content: "將假期階梯化，以一日放空篇、二日放空篇、蛻變篇、僻靜篇接引不同需要的旅人。",
+                detail: "2024年淡水二日場、陽明山一日場；2025年陽明山、淡水、南投日月潭、宜蘭多場次。"
+              },
+              {
+                year: "2026 →",
+                tag: "待續",
+                content: "旅程繼續，故事未完……",
+                detail: ""
+              }
+            ].map((item, index) => {
+              const isRight = index % 2 === 0;
+              return (
+                <motion.div
+                  key={item.year}
+                  initial={{ opacity: 0, x: isRight ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08, duration: 0.6 }}
+                  className={`relative flex items-start mb-12 ${isRight ? 'md:flex-row' : 'md:flex-row-reverse'} flex-row`}
+                >
+                  {/* Mobile / left-aligned dot */}
+                  <div className="flex-shrink-0 w-12 flex justify-center relative z-10">
+                    <div className="w-4 h-4 rounded-full bg-emerald-600 border-4 border-white shadow-sm mt-1" />
+                  </div>
+
+                  {/* Content card */}
+                  <div className={`flex-1 md:w-5/12 ${isRight ? 'md:pr-12' : 'md:pl-12'} pl-2`}>
+                    <div className="bg-stone-50 rounded-2xl p-6 shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="text-xl font-light text-emerald-800">{item.year}</span>
+                        <span className="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100 tracking-wide">
+                          {item.tag}
+                        </span>
+                      </div>
+                      <p className="text-stone-700 font-light leading-relaxed text-sm mb-2">{item.content}</p>
+                      {item.detail && (
+                        <p className="text-stone-400 text-xs leading-relaxed">🌱 {item.detail}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Spacer for desktop alternating layout */}
+                  <div className="hidden md:block md:w-5/12" />
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Quote Section */}
       <section className="py-24 px-6 bg-emerald-900 text-white">
         <motion.div 
