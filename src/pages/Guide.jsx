@@ -150,7 +150,7 @@ From ✨存在✨`
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <p className="text-amber-200/80 tracking-[0.3em] text-sm mb-4">SOUL GUIDE</p>
+          <p className="text-amber-200/80 tracking-[0.3em] text-sm mb-4">SPIRITUAL GUIDE</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">
             心靈導遊
           </h1>
