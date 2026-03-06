@@ -302,7 +302,11 @@ export default function About() {
                       </div>
                       <p className="text-stone-600 font-light text-base leading-relaxed mb-2">{item.content}</p>
                       {item.detail && (
-                      <p className="text-stone-400 text-sm leading-relaxed">🌱 {item.detail}</p>
+                        <div className="space-y-1">
+                          {item.detail.split('\n\n').map((line, i) => (
+                            <p key={i} className="text-stone-400 text-sm leading-relaxed">🌱 {line}</p>
+                          ))}
+                        </div>
                       )}
                   </div>
                 </div>
