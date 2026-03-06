@@ -47,19 +47,10 @@ export default function SilentRetreat() {
   ];
 
   const schedule = [
-    { time: "05:30", activity: "起床、盥洗" },
-    { time: "06:00", activity: "晨間冥想" },
-    { time: "07:00", activity: "輕瑜伽/身體覺察" },
-    { time: "08:00", activity: "早餐（正念飲食）" },
-    { time: "09:30", activity: "主題冥想課程" },
-    { time: "11:00", activity: "自由修習時間" },
-    { time: "12:00", activity: "午餐" },
-    { time: "14:00", activity: "休息/個人時間" },
-    { time: "15:30", activity: "行禪/自然漫步" },
-    { time: "17:00", activity: "晚間冥想" },
-    { time: "18:00", activity: "晚餐" },
-    { time: "19:30", activity: "法談/分享（特定日）" },
-    { time: "21:00", activity: "就寢" }
+    { activity: "放鬆引導｜芳香療癒" },
+    { activity: "直覺慢食｜獨處漫步" },
+    { activity: "晨間站樁｜品茶冥想" },
+    { activity: "舞動身心｜舒緩瑜伽" }
   ];
 
   return (
