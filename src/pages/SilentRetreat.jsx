@@ -174,14 +174,14 @@ export default function SilentRetreat() {
           <div className="grid md:grid-cols-2 gap-4">
             {schedule.map((item, index) => (
               <motion.div
-                key={item.time}
+                key={index}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.03 }}
-                className="bg-white rounded-xl p-4 shadow-sm flex items-center gap-4"
+                transition={{ delay: index * 0.08 }}
+                className="bg-white rounded-xl p-5 shadow-sm flex items-center gap-4"
               >
-                <span className="text-emerald-700 font-medium text-sm w-14">{item.time}</span>
+                <span className="text-emerald-500 text-lg">▪︎</span>
                 <span className="text-stone-600 text-sm">{item.activity}</span>
               </motion.div>
             ))}
