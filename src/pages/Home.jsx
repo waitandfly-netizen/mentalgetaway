@@ -48,6 +48,14 @@ export default function Home() {
   };
 
   // JSON-LD structured data
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "心靈假期",
+    "alternateName": "心靈假期 Spirit Vacation",
+    "url": "https://spiritvacation-561934f1.base44.app"
+  };
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
