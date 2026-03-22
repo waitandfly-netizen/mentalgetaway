@@ -69,6 +69,7 @@ export default function Home() {
         title="好好生活，找回心靈寧靜的綠洲"
         description="心靈假期 Spirit Vacation — 好好生活，回到寧靜心靈的綠洲。提供一日放空篇、二日放空篇、僻靜篇等身心靈退修旅程，讓您在大自然中重拾內在平靜與力量。"
         keywords="心靈假期, Spirit Vacation, 身心靈退修, 靜心旅程, 一日放空, 僻靜篇, 自然療癒, mindfulness retreat"
+        image="https://media.base44.com/images/public/698fc983574e659f561934f1/701f6988b_IMG_6964.jpg"
       />
       <script
         type="application/ld+json"
