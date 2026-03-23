@@ -61,7 +61,12 @@ export default function Home() {
     "@type": "Organization",
     "name": "心靈假期 Spirit Vacation",
     "url": "https://spiritvacation.base44.app",
-    "logo": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://media.base44.com/images/public/698fc983574e659f561934f1/701f6988b_IMG_6964.jpg",
+      "width": 512,
+      "height": 512
+    },
     "description": "好好生活，找回心靈寧靜的綠洲。提供一日、二日放空篇及僻靜篇等身心靈退修旅程。",
     "contactPoint": {
       "@type": "ContactPoint",
