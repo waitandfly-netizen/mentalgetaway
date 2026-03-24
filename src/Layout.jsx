@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X, Leaf, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/lib/ThemeContext';
 
 export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
