@@ -56,6 +56,39 @@ export default function Home() {
     "url": "https://spiritvacation-561934f1.base44.app"
   };
 
+  const siteNavigationData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SiteLinksSearchBox",
+        "url": "https://spiritvacation-561934f1.base44.app"
+      }
+    ]
+  };
+
+  const siteNavElements = [
+    { name: "常見問題", url: "https://spiritvacation-561934f1.base44.app/FAQ", description: "心靈假期常見問題解答，包括報名、詛程內容、飲食住宿等詳細資訊" },
+    { name: "旅程介紹", url: "https://spiritvacation-561934f1.base44.app/Programs", description: "提供一日、二日放空篳、蔹變篳與僻靜篳等多種身心靈退修旅程" },
+    { name: "一日放空篳", url: "https://spiritvacation-561934f1.base44.app/OneDayRetreat", description: "一日放空篳，走出一方斗室，來到郊外步道跟著大自然和呼吸" },
+    { name: "僻靜篳", url: "https://spiritvacation-561934f1.base44.app/InvitationRetreat", description: "僻靜篳，來到人煙稀少的山海邊，悠遊於無邊際的意識海洋" },
+    { name: "心靈專欄", url: "https://spiritvacation-561934f1.base44.app/Guide", description: "心靈導遊丁靜如，在身心靈成長領域深工作二、三十年" },
+    { name: "初心緣起", url: "https://spiritvacation-561934f1.base44.app/About", description: "心靈假期的緣起與理念，十多年行程足跡" }
+    ];
+
+  const siteNavStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "心靈假期網站導覽",
+    "itemListElement": siteNavElements.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "url": item.url,
+      "description": item.description
+    }))
+  };
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
