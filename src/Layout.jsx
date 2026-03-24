@@ -9,6 +9,7 @@ export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { isDark, setIsDark } = useTheme();
   const isHomePage = currentPageName === 'Home';
 
   useEffect(() => {
