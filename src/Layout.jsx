@@ -72,13 +72,22 @@ export default function Layout({ children, currentPageName }) {
               ))}
             </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`md:hidden p-2 ${textColor}`}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Theme Toggle + Mobile Menu Button */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setIsDark(!isDark)}
+                className={`p-2 rounded-full transition-all duration-300 hover:bg-white/20 ${textColor}`}
+                aria-label="切換深色模式"
+              >
+                {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className={`md:hidden p-2 ${textColor}`}
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
