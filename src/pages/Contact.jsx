@@ -55,6 +55,12 @@ export default function Contact() {
       title: "Facebook 粉絲專頁",
       content: "心靈假期",
       link: "https://www.facebook.com/SpiritHolidays/"
+    },
+    {
+      icon: MessageCircle,
+      title: "Facebook 粉絲專頁",
+      content: "圓滿心靈花園",
+      link: "https://www.facebook.com/profile.php?id=100083027147942&locale=zh_TW"
     }
   ];
 
