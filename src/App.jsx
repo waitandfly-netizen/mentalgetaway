@@ -6,7 +6,6 @@ import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
-import { ThemeProvider } from '@/lib/ThemeContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
 const { Pages, Layout, mainPage } = pagesConfig;
@@ -68,7 +67,6 @@ const AuthenticatedApp = () => {
 function App() {
 
   return (
-    <ThemeProvider>
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
@@ -78,7 +76,6 @@ function App() {
         <Toaster />
       </QueryClientProvider>
     </AuthProvider>
-    </ThemeProvider>
   )
 }
 

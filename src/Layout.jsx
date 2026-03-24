@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Leaf, Sun, Moon } from 'lucide-react';
-import { useTheme } from '@/lib/ThemeContext';
+import { Menu, X, Leaf } from 'lucide-react';
 
 export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { isDark, setIsDark } = useTheme();
   const isHomePage = currentPageName === 'Home';
 
   useEffect(() => {
@@ -72,22 +70,13 @@ export default function Layout({ children, currentPageName }) {
               ))}
             </nav>
 
-            {/* Theme Toggle + Mobile Menu Button */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setIsDark(!isDark)}
-                className={`p-2 rounded-full transition-all duration-300 hover:bg-white/20 ${textColor}`}
-                aria-label="切換深色模式"
-              >
-                {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              </button>
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={`md:hidden p-2 ${textColor}`}
-              >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={`md:hidden p-2 ${textColor}`}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
 
