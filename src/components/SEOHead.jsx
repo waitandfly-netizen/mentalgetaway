@@ -14,7 +14,7 @@ export default function SEOHead({
 }) {
   const siteName = '心靈假期 Spirit Vacation';
   const siteUrl = 'https://spiritvacation.base44.app';
-  const fullTitle = title ? `${title} | ${siteName}` : siteName;
+  const fullTitle = title ? `${siteName} | ${title}` : siteName;
 
   useEffect(() => {
     // Title
