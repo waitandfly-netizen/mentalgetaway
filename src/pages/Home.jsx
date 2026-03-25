@@ -8,7 +8,7 @@ import SEOHead from '@/components/SEOHead';
 export default function Home() {
   const programs = [
     {
-      title: "一日放空篇",
+      title: "一日放空行",
       subtitle: "Day Retreat",
       description: "在自然中深呼吸，讓身心回歸平靜",
       image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/03/img_7582.jpeg",
