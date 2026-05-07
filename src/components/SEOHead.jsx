@@ -12,7 +12,7 @@ export default function SEOHead({
   type = 'website',
   noindex = false,
 }) {
-  const siteName = '心靈假期 Mental Getaway';
+  const siteName = '心靈假期Mental Getaway';
   const siteUrl = 'https://spiritvacation.base44.app';
   const fullTitle = title ? `${siteName} | ${title}` : siteName;
 
