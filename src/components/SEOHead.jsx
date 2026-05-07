@@ -12,7 +12,7 @@ export default function SEOHead({
   type = 'website',
   noindex = false,
 }) {
-  const siteName = '心靈假期 Spirit Vacation';
+  const siteName = '心靈假期 Mental Getaway';
   const siteUrl = 'https://spiritvacation.base44.app';
   const fullTitle = title ? `${siteName} | ${title}` : siteName;
 
@@ -35,7 +35,7 @@ export default function SEOHead({
 
     // Standard meta
     setMeta('meta[name="description"]', 'name=description', description || '好好生活，找回心靈寧靜的綠洲。心靈假期提供身心靈退修旅程，讓您在大自然中重拾內在平靜。');
-    setMeta('meta[name="keywords"]', 'name=keywords', keywords || '心靈假期, 身心靈, 退修, 靜心, 自然療癒, Spirit Vacation, retreat, mindfulness');
+    setMeta('meta[name="keywords"]', 'name=keywords', keywords || '心靈假期, 身心靈, 退修, 靜心, 自然療癒, Mental Getaway, retreat, mindfulness');
     setMeta('meta[name="robots"]', 'name=robots', noindex ? 'noindex,nofollow' : 'index,follow');
 
     // Open Graph

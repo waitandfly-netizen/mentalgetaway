@@ -147,7 +147,7 @@ export default function Layout({ children, currentPageName }) {
           
           <div className="border-t border-stone-800 pt-8 text-center">
             <p className="text-stone-500 text-sm font-light">
-              © 2026 心靈假期 Spirit Vacation. All rights reserved.
+              © 2026 心靈假期 Mental Getaway. All rights reserved.
             </p>
           </div>
         </div>

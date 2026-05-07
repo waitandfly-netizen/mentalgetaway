@@ -52,7 +52,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "心靈假期",
-    "alternateName": "心靈假期 Spirit Vacation",
+    "alternateName": "心靈假期 Mental Getaway",
     "url": "https://spiritvacation-561934f1.base44.app"
   };
 
@@ -92,7 +92,7 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "心靈假期 Spirit Vacation",
+    "name": "心靈假期 Mental Getaway",
     "url": "https://spiritvacation.base44.app",
     "logo": {
       "@type": "ImageObject",
@@ -113,8 +113,8 @@ export default function Home() {
     <div className="min-h-screen bg-stone-50">
       <SEOHead
         title="好好生活，找回心靈寧靜的綠洲"
-        description="心靈假期 Spirit Vacation — 好好生活，回到寧靜心靈的綠洲。提供一日放空篇、二日放空篇、僻靜篇等身心靈退修旅程，讓您在大自然中重拾內在平靜與力量。"
-        keywords="心靈假期, Spirit Vacation, 身心靈退修, 靜心旅程, 一日放空, 僻靜篇, 自然療癒, mindfulness retreat"
+        description="心靈假期 Mental Getaway — 好好生活，回到寧靜心靈的綠洲。提供一日放空篇、二日放空篇、僻靜篇等身心靈退修旅程，讓您在大自然中重拾內在平靜與力量。"
+        keywords="心靈假期, Mental Getaway, 身心靈退修, 靜心旅程, 一日放空, 僻靜篇, 自然療癒, mindfulness retreat"
         image="https://media.base44.com/images/public/698fc983574e659f561934f1/701f6988b_IMG_6964.jpg"
       />
       <script
