@@ -53,7 +53,7 @@ export default function Home() {
     "@type": "WebSite",
     "name": "心靈假期",
     "alternateName": "心靈假期 Mental Getaway",
-    "url": "https://spiritvacation-561934f1.base44.app"
+    "url": "https://mentalgetaway-561934f1.base44.app"
   };
 
   const siteNavigationData = {
@@ -62,18 +62,18 @@ export default function Home() {
     "itemListElement": [
       {
         "@type": "SiteLinksSearchBox",
-        "url": "https://spiritvacation-561934f1.base44.app"
+        "url": "https://mentalgetaway-561934f1.base44.app"
       }
     ]
   };
 
   const siteNavElements = [
-    { name: "常見問題", url: "https://spiritvacation-561934f1.base44.app/FAQ", description: "心靈假期常見問題解答，包括報名、詛程內容、飲食住宿等詳細資訊" },
-    { name: "旅程介紹", url: "https://spiritvacation-561934f1.base44.app/Programs", description: "提供一日、二日放空篳、蔹變篳與僻靜篳等多種身心靈退修旅程" },
-    { name: "一日放空篳", url: "https://spiritvacation-561934f1.base44.app/OneDayRetreat", description: "一日放空篳，走出一方斗室，來到郊外步道跟著大自然和呼吸" },
-    { name: "僻靜篳", url: "https://spiritvacation-561934f1.base44.app/InvitationRetreat", description: "僻靜篳，來到人煙稀少的山海邊，悠遊於無邊際的意識海洋" },
-    { name: "心靈專欄", url: "https://spiritvacation-561934f1.base44.app/Guide", description: "心靈導遊丁靜如，在身心靈成長領域深工作二、三十年" },
-    { name: "初心緣起", url: "https://spiritvacation-561934f1.base44.app/About", description: "心靈假期的緣起與理念，十多年行程足跡" }
+    { name: "常見問題", url: "https://mentalgetaway-561934f1.base44.app/FAQ", description: "心靈假期常見問題解答，包括報名、詛程內容、飲食住宿等詳細資訊" },
+    { name: "旅程介紹", url: "https://mentalgetaway-561934f1.base44.app/Programs", description: "提供一日、二日放空篳、蔹變篳與僻靜篳等多種身心靈退修旅程" },
+    { name: "一日放空篳", url: "https://mentalgetaway-561934f1.base44.app/OneDayRetreat", description: "一日放空篳，走出一方斗室，來到郊外步道跟著大自然和呼吸" },
+    { name: "僻靜篳", url: "https://mentalgetaway-561934f1.base44.app/InvitationRetreat", description: "僻靜篳，來到人煙稀少的山海邊，悠遊於無邊際的意識海洋" },
+    { name: "心靈專欄", url: "https://mentalgetaway-561934f1.base44.app/Guide", description: "心靈導遊丁靜如，在身心靈成長領域深工作二、三十年" },
+    { name: "初心緣起", url: "https://mentalgetaway-561934f1.base44.app/About", description: "心靈假期的緣起與理念，十多年行程足跡" }
     ];
 
   const siteNavStructuredData = {
@@ -93,7 +93,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "心靈假期 Mental Getaway",
-    "url": "https://spiritvacation.base44.app",
+    "url": "https://mentalgetaway-561934f1.base44.app",
     "logo": {
       "@type": "ImageObject",
       "url": "https://media.base44.com/images/public/698fc983574e659f561934f1/701f6988b_IMG_6964.jpg",
