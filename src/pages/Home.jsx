@@ -4,6 +4,7 @@ import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowRight, Leaf, Sun, Moon, Mountain, Sparkles } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 
 export default function Home() {
   const programs = [
@@ -275,6 +276,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TestimonialsCarousel />
 
       {/* CTA Section */}
       <section className="py-24 md:py-32 px-6 bg-emerald-900 text-white relative overflow-hidden">
