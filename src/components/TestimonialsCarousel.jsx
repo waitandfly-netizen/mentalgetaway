@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const testimonials = [
   {
@@ -82,6 +84,17 @@ export default function TestimonialsCarousel() {
               </AnimatePresence>
             </div>
           </div>
+        </div>
+
+        {/* Read More Link */}
+        <div className="text-center mt-6">
+          <Link
+            to={createPageUrl('Testimonials')}
+            className="inline-flex items-center gap-2 text-emerald-700 text-sm tracking-wider hover:gap-4 transition-all duration-300 group"
+          >
+            <span>閱讀更多心得</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Controls */}
