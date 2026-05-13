@@ -39,57 +39,81 @@ export default function TestimonialsCarousel() {
   const next = () => setCurrent(prev => (prev + 1) % testimonials.length);
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-6">
-        <p className="text-center text-emerald-700/80 tracking-[0.3em] text-sm mb-12">VOICES</p>
+    <section className="py-24 bg-stone-50 relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-emerald-100/40 blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-amber-100/30 blur-3xl translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
-        <div className="relative flex items-center gap-4">
+      <div className="max-w-3xl mx-auto px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <p className="text-emerald-700/70 tracking-[0.35em] text-xs mb-3">VOICES FROM THE HEART</p>
+          <h2 className="text-2xl md:text-3xl font-light text-stone-800 tracking-wide">參加者心聲</h2>
+          <div className="w-8 h-px bg-emerald-600/40 mx-auto mt-5" />
+        </div>
+
+        {/* Card */}
+        <div className="relative">
+          {/* Large decorative quote mark */}
+          <div className="absolute -top-6 left-6 text-8xl text-emerald-200/60 font-serif leading-none select-none pointer-events-none">"</div>
+
+          <div className="bg-white rounded-3xl shadow-sm border border-stone-100 px-10 py-12 md:px-16 md:py-14">
+            <div className="min-h-[160px] flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={current}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="text-center"
+                >
+                  <p className="text-stone-600 text-lg md:text-xl font-light leading-[2] tracking-wide">
+                    {testimonials[current].content}
+                  </p>
+                  <div className="mt-8 flex items-center justify-center gap-3">
+                    <div className="w-8 h-px bg-emerald-400/60" />
+                    <p className="text-emerald-700 tracking-[0.2em] text-sm font-light">
+                      {testimonials[current].author}
+                    </p>
+                    <div className="w-8 h-px bg-emerald-400/60" />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+        </div>
+
+        {/* Controls */}
+        <div className="flex items-center justify-center gap-6 mt-8">
           <button
             onClick={prev}
-            className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-stone-200 text-stone-400 hover:text-emerald-700 hover:border-emerald-300 transition-colors"
+            className="w-9 h-9 flex items-center justify-center rounded-full border border-stone-200 text-stone-400 hover:text-emerald-700 hover:border-emerald-300 hover:bg-emerald-50 transition-all duration-300"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4" />
           </button>
 
-          <div className="flex-1 overflow-hidden min-h-[180px] flex items-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={current}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="text-center w-full"
-              >
-                <p className="text-stone-600 text-lg md:text-xl font-light leading-relaxed mb-6">
-                  「{testimonials[current].content}」
-                </p>
-                <p className="text-emerald-700 tracking-widest text-sm">
-                  —— {testimonials[current].author}
-                </p>
-              </motion.div>
-            </AnimatePresence>
+          {/* Dots */}
+          <div className="flex items-center gap-2">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`rounded-full transition-all duration-400 ${
+                  i === current
+                    ? 'bg-emerald-700 w-5 h-1.5'
+                    : 'bg-stone-300 w-1.5 h-1.5 hover:bg-stone-400'
+                }`}
+              />
+            ))}
           </div>
 
           <button
             onClick={next}
-            className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-stone-200 text-stone-400 hover:text-emerald-700 hover:border-emerald-300 transition-colors"
+            className="w-9 h-9 flex items-center justify-center rounded-full border border-stone-200 text-stone-400 hover:text-emerald-700 hover:border-emerald-300 hover:bg-emerald-50 transition-all duration-300"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4" />
           </button>
-        </div>
-
-        {/* Dots */}
-        <div className="flex justify-center gap-2 mt-8">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                i === current ? 'bg-emerald-700 w-4' : 'bg-stone-300'
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>
