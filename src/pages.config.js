@@ -66,6 +66,7 @@ import TestimonialTrueHappiness from './pages/TestimonialTrueHappiness';
 import Testimonials from './pages/Testimonials';
 import TransformationStories from './pages/TransformationStories';
 import TwoDayRetreat from './pages/TwoDayRetreat';
+import Resources from './pages/Resources';
 import __Layout from './Layout.jsx';
 
 
@@ -89,6 +90,7 @@ export const PAGES = {
     "Testimonials": Testimonials,
     "TransformationStories": TransformationStories,
     "TwoDayRetreat": TwoDayRetreat,
+    "Resources": Resources,
 }
 
 export const pagesConfig = {

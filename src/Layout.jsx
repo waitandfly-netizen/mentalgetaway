@@ -28,6 +28,7 @@ export default function Layout({ children, currentPageName }) {
     { name: '心靈導遊', page: 'Guide' },
     { name: '參加者心得', page: 'Testimonials' },
     { name: '蛻變故事', page: 'TransformationStories' },
+    { name: '資源分享', page: 'Resources' },
     { name: '常見問題', page: 'FAQ' },
     { name: '聯繫我們', page: 'Contact' },
   ];
