@@ -149,13 +149,16 @@ export default function Resources() {
                 style={{ left: spot.x, top: spot.y }}
               >
                 <motion.div
-                  whileHover={{ scale: 1.2 }}
+                  whileHover={{ scale: 1.25 }}
                   whileTap={{ scale: 0.9 }}
-                  className={`relative w-9 h-9 rounded-full ${spot.color} shadow-lg flex items-center justify-center text-white font-bold text-sm border-2 border-white`}
+                  className={`relative w-10 h-10 rounded-full ${spot.color} shadow-xl flex items-center justify-center text-white font-bold text-sm border-[3px] border-white`}
+                  style={{ boxShadow: '0 4px 14px rgba(0,0,0,0.25)' }}
                 >
                   {spot.id}
+                  {/* Outer glow ring */}
+                  <span className={`absolute -inset-1 rounded-full border-2 border-white/60`} />
                   {/* Pulse ring */}
-                  <span className={`absolute inset-0 rounded-full ${spot.color} opacity-40 animate-ping`} />
+                  <span className={`absolute inset-0 rounded-full ${spot.color} opacity-30 animate-ping`} />
                 </motion.div>
                 {/* Tooltip on hover */}
                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-white rounded-xl shadow-md text-xs text-stone-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-stone-100">
@@ -220,7 +223,8 @@ export default function Resources() {
                     : 'bg-white border-stone-100 hover:shadow-sm hover:border-stone-200'
                 }`}
               >
-                <div className={`w-8 h-8 rounded-xl ${spot.color} flex items-center justify-center text-white font-bold text-sm mb-3`}>
+                <div className={`w-9 h-9 rounded-2xl ${spot.color} flex items-center justify-center text-white font-bold text-sm mb-3 shadow-md`}
+                  style={{ boxShadow: `0 3px 10px rgba(0,0,0,0.18)` }}>
                   {spot.id}
                 </div>
                 <p className="text-stone-800 font-light text-sm mb-1">{spot.name}</p>
