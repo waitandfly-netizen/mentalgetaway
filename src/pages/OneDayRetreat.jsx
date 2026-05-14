@@ -111,24 +111,6 @@ export default function OneDayRetreat() {
         </div>
       </section>
 
-      {/* Yangmingshan Map */}
-      <section className="py-12 px-6 bg-stone-50">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden shadow-sm border border-stone-100"
-          >
-            <img
-              src="https://media.base44.com/images/public/698fc983574e659f561934f1/91923215e_120A7A5D-5078-4A09-B9C8-33F33C47787E.png"
-              alt="陽明山靜心地圖"
-              className="w-full h-auto"
-            />
-          </motion.div>
-        </div>
-      </section>
-
       {/* Schedule */}
       <section className="py-24 px-6 bg-stone-100/50">
         <div className="max-w-4xl mx-auto">
