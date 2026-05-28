@@ -86,7 +86,7 @@ export default function Home() {
         <motion.div className="absolute inset-0" style={{ opacity: heroOpacity, scale: heroScale }}>
           <video
             ref={videoRef}
-            src="https://media.base44.com/videos/public/698fc983574e659f561934f1/60fb3d5c7_.mp4"
+            src="https://videos.pexels.com/video-files/31960561/13606930_2560_1440_25fps.mp4"
             autoPlay
             muted
             loop
