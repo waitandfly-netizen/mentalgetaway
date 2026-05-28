@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
+import SoulQuiz from '@/components/SoulQuiz';
 
 const paragraphs = [
   "給正在尋找安定、寧靜的你～",
@@ -59,6 +60,7 @@ function FloatingShape({ className, style, duration = 8, yRange = 18 }) {
 export default function Home() {
   const videoRef = useRef(null);
   const containerRef = useRef(null);
+  const [quizOpen, setQuizOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
   const heroOpacity = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
@@ -168,6 +170,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Soul Quiz CTA */}
+      <section className="py-16 px-6 bg-[#f5f0ea] text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-md mx-auto"
+        >
+          <p className="text-stone-400 text-sm tracking-widest mb-3 font-light">不確定從哪裡開始？</p>
+          <button
+            onClick={() => setQuizOpen(true)}
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white border border-stone-200 text-stone-700 rounded-full hover:bg-emerald-50 hover:border-emerald-200 hover:text-emerald-800 transition-all duration-300 shadow-sm group"
+          >
+            <Sparkles className="w-4 h-4 text-emerald-600" />
+            <span className="tracking-wider font-light">🌿 心靈小探索</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
+          <p className="text-stone-400 text-xs mt-3 font-light">花 2 分鐘，找到適合你的旅程</p>
+        </motion.div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-6 bg-emerald-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -212,6 +236,9 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+      <AnimatePresence>
+        {quizOpen && <SoulQuiz onClose={() => setQuizOpen(false)} />}
+      </AnimatePresence>
     </div>
   );
 }
