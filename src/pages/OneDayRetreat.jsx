@@ -18,8 +18,8 @@ const schedule = [
     time: "13:30", activity: "放空練習",
     note: "學習讓心安定下來，不被思緒帶著跑。不追、不抓，只是靜靜地呼吸。",
     isCore: true,
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-    imageAlt: "開闊天空與遠山",
+    image: "https://media.base44.com/images/public/698fc983574e659f561934f1/3804b5f73_30723932_1030792870416949_3331259166869159936_n.webp",
+    imageAlt: "森林溪流巨石",
   },
   { time: "15:30", activity: "賦歸", note: "帶著今天的輕盈，回到生活裡", isCore: false },
 ];
