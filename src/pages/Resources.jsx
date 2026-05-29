@@ -155,57 +155,47 @@ export default function Resources() {
                   style={{ boxShadow: '0 4px 14px rgba(0,0,0,0.25)' }}
                 >
                   {spot.id}
-                  {/* Outer glow ring */}
                   <span className={`absolute -inset-1 rounded-full border-2 border-white/60`} />
-                  {/* Pulse ring */}
                   <span className={`absolute inset-0 rounded-full ${spot.color} opacity-30 animate-ping`} />
                 </motion.div>
-                {/* Tooltip on hover */}
-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-white rounded-xl shadow-md text-xs text-stone-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-stone-100">
-                  {spot.name}
-                </div>
               </motion.button>
             ))}
-          </div>
 
-          {/* Spot Detail Panel */}
-          <AnimatePresence>
-            {activeSpot && (
-              <motion.div
-                key={activeSpot.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.4 }}
-                className={`mt-6 ${activeSpot.bgLight} border ${activeSpot.borderColor} rounded-3xl p-6 md:p-8 relative`}
-              >
-                <button
-                  onClick={() => setActiveSpot(null)}
-                  className="absolute top-4 right-4 text-stone-400 hover:text-stone-600 transition-colors"
+            {/* Floating Detail Panel on map */}
+            <AnimatePresence>
+              {activeSpot && (
+                <motion.div
+                  key={activeSpot.id}
+                  initial={{ opacity: 0, scale: 0.92, y: 8 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.92, y: 8 }}
+                  transition={{ duration: 0.25 }}
+                  className="absolute bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-80 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-stone-100 p-5 z-20"
                 >
-                  <X className="w-5 h-5" />
-                </button>
-                <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-2xl ${activeSpot.color} flex items-center justify-center text-white font-bold text-lg flex-shrink-0`}>
-                    {activeSpot.id}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-3 mb-3">
-                      <h3 className={`text-xl font-light ${activeSpot.textColor} tracking-wide`}>{activeSpot.name}</h3>
-                      <span className={`text-xs px-3 py-1 rounded-full bg-white/70 ${activeSpot.textColor} border ${activeSpot.borderColor} border-opacity-30`}>
-                        {activeSpot.type}
-                      </span>
+                  <button
+                    onClick={() => setActiveSpot(null)}
+                    className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-stone-100 hover:bg-stone-200 text-stone-500 hover:text-stone-700 transition-colors"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                  <div className="flex items-center gap-3 mb-3 pr-8">
+                    <div className={`w-9 h-9 rounded-xl ${activeSpot.color} flex items-center justify-center text-white font-bold text-sm flex-shrink-0 shadow-md`}>
+                      {activeSpot.id}
                     </div>
-                    <p className="text-stone-600 font-light leading-relaxed mb-4">{activeSpot.detail}</p>
-                    <div className="flex items-center gap-2 text-stone-500 text-sm">
-                      <Clock className="w-4 h-4" />
-                      <span>推薦時段：{activeSpot.time}</span>
+                    <div>
+                      <h3 className={`text-base font-light ${activeSpot.textColor} tracking-wide`}>{activeSpot.name}</h3>
+                      <span className={`text-xs ${activeSpot.textColor} opacity-70`}>{activeSpot.type}</span>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                  <p className="text-stone-600 font-light leading-relaxed text-sm mb-3">{activeSpot.detail}</p>
+                  <div className="flex items-center gap-2 text-stone-400 text-xs">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>推薦時段：{activeSpot.time}</span>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           {/* Spot Cards Grid */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
