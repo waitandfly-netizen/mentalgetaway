@@ -48,7 +48,7 @@ const dayRhythm = [
     phase: "傍晚",
     time: "17:00 – 21:00",
     description: "光線轉柔，引導老師帶領集體冥想。一對一的引導時間在這裡展開。入夜後，靜默繼續。你不需要做任何事，只是帶著今天的一切，好好睡一覺。",
-    image: "https://images.unsplash.com/photo-1490750967868-88df5691cc55?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
   },
 ];
 
