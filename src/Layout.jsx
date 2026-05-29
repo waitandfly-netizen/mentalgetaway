@@ -1,12 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X, Leaf, ChevronDown } from 'lucide-react';
+
+const programsDropdown = [
+  { name: '一日放空行', page: 'OneDayRetreat' },
+  { name: '二日放空篇', page: 'TwoDayRetreat' },
+  { name: '蛻變篇', page: 'SilentRetreat' },
+  { name: '僻靜篇', page: 'InvitationRetreat' },
+];
 
 export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [programsOpen, setProgramsOpen] = useState(false);
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const location = useLocation();
   const isHomePage = currentPageName === 'Home';
 
@@ -20,7 +30,18 @@ export default function Layout({ children, currentPageName }) {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setMobileProgramsOpen(false);
   }, [location]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setProgramsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const navLinks = [
     { name: '初心緣起', page: 'About' },
@@ -59,16 +80,55 @@ export default function Layout({ children, currentPageName }) {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.page}
-                  to={createPageUrl(link.page)}
-                  className={`${textColor} text-sm tracking-wider hover:text-emerald-600 transition-colors duration-300 relative group`}
-                >
-                  {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-emerald-600 group-hover:w-full transition-all duration-300" />
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.page === 'Programs' ? (
+                  <div key="Programs" className="relative" ref={dropdownRef}>
+                    <button
+                      onClick={() => setProgramsOpen(!programsOpen)}
+                      className={`${textColor} text-sm tracking-wider hover:text-emerald-600 transition-colors duration-300 flex items-center gap-1`}
+                    >
+                      {link.name}
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${programsOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    <AnimatePresence>
+                      {programsOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 8 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-40 bg-white/95 backdrop-blur-md rounded-xl shadow-lg border border-stone-100 overflow-hidden py-2"
+                        >
+                          <Link
+                            to={createPageUrl('Programs')}
+                            className="block px-4 py-2 text-sm text-stone-500 hover:text-emerald-700 hover:bg-emerald-50 transition-colors tracking-wide border-b border-stone-100 mb-1"
+                          >
+                            全部旅程
+                          </Link>
+                          {programsDropdown.map((item) => (
+                            <Link
+                              key={item.page}
+                              to={createPageUrl(item.page)}
+                              className="block px-4 py-2 text-sm text-stone-700 hover:text-emerald-700 hover:bg-emerald-50 transition-colors tracking-wide"
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    key={link.page}
+                    to={createPageUrl(link.page)}
+                    className={`${textColor} text-sm tracking-wider hover:text-emerald-600 transition-colors duration-300 relative group`}
+                  >
+                    {link.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-emerald-600 group-hover:w-full transition-all duration-300" />
+                  </Link>
+                )
+              )}
             </nav>
 
             {/* Mobile Menu Button */}
@@ -91,15 +151,48 @@ export default function Layout({ children, currentPageName }) {
               className="md:hidden bg-white border-t border-stone-100 overflow-hidden"
             >
               <nav className="px-6 py-6 space-y-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.page}
-                    to={createPageUrl(link.page)}
-                    className="block text-stone-700 text-lg font-light tracking-wider hover:text-emerald-700 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                {navLinks.map((link) =>
+                  link.page === 'Programs' ? (
+                    <div key="Programs">
+                      <button
+                        onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+                        className="flex items-center gap-2 text-stone-700 text-lg font-light tracking-wider hover:text-emerald-700 transition-colors w-full"
+                      >
+                        {link.name}
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileProgramsOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      <AnimatePresence>
+                        {mobileProgramsOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="overflow-hidden pl-4 mt-2 space-y-3 border-l-2 border-emerald-100"
+                          >
+                            <Link to={createPageUrl('Programs')} className="block text-stone-500 font-light tracking-wider hover:text-emerald-700 transition-colors">全部旅程</Link>
+                            {programsDropdown.map((item) => (
+                              <Link
+                                key={item.page}
+                                to={createPageUrl(item.page)}
+                                className="block text-stone-600 font-light tracking-wider hover:text-emerald-700 transition-colors"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      key={link.page}
+                      to={createPageUrl(link.page)}
+                      className="block text-stone-700 text-lg font-light tracking-wider hover:text-emerald-700 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )
+                )}
               </nav>
             </motion.div>
           )}
