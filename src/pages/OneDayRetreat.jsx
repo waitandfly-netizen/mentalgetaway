@@ -204,6 +204,25 @@ export default function OneDayRetreat() {
             你可以只是單純地走路、單純地呼吸、單純地存在。
           </p>
           <div className="w-8 h-px bg-emerald-400 mx-auto mt-10" />
+
+          <motion.div
+            className="mt-14 text-left max-w-xl mx-auto space-y-5 text-stone-500 font-light leading-loose text-base md:text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            <p>
+              「一日放空篇」是為忙碌的都市人設計的輕旅程。
+              在這一天裡，我們將暫時放下手機、放下工作、放下煩惱，
+              全然地投入大自然的懷抱。
+            </p>
+            <p>
+              透過輕度的森林健行，我們將慢慢地喚醒身體的感知；
+              透過正念呼吸練習，我們將學習如何讓心安定下來；
+              透過品味健康的原型食物，我們將重新體會「吃」的美好。
+            </p>
+          </motion.div>
         </motion.div>
       </section>
 
