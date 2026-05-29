@@ -178,18 +178,28 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-md mx-auto"
+          className="max-w-2xl mx-auto"
         >
-          <p className="text-stone-400 text-sm tracking-widest mb-3 font-light">不確定從哪裡開始？</p>
-          <button
-            onClick={() => setQuizOpen(true)}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white border border-stone-200 text-stone-700 rounded-full hover:bg-emerald-50 hover:border-emerald-200 hover:text-emerald-800 transition-all duration-300 shadow-sm group"
-          >
-            <Sparkles className="w-4 h-4 text-emerald-600" />
-            <span className="tracking-wider font-light">🌿 心靈小探索</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <p className="text-stone-400 text-xs mt-3 font-light">花 2 分鐘，找到適合你的旅程</p>
+          <p className="text-emerald-700/70 tracking-[0.3em] text-xs mb-2 font-light uppercase">BEGIN YOUR JOURNEY</p>
+          <p className="text-stone-700 text-lg font-light tracking-wide mb-6">準備好踏上心靈之旅了嗎？</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={() => setQuizOpen(true)}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white border border-stone-200 text-stone-700 rounded-full hover:bg-emerald-50 hover:border-emerald-200 hover:text-emerald-800 transition-all duration-300 shadow-sm group"
+            >
+              <Sparkles className="w-4 h-4 text-emerald-600" />
+              <span className="tracking-wider font-light">🌿 心靈小探索</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <Link
+              to={createPageUrl("Programs")}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-800 text-white rounded-full hover:bg-emerald-700 transition-all duration-300 shadow-sm group"
+            >
+              <span className="tracking-wider font-light">瀏覽旅程</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+          <p className="text-stone-400 text-xs mt-4 font-light">花 2 分鐘，找到適合你的旅程</p>
         </motion.div>
       </section>
 
@@ -266,19 +276,13 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-light mb-8 tracking-wide leading-relaxed">
             準備好踏上心靈之旅了嗎？
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to={createPageUrl("Programs")}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-emerald-900 rounded-full hover:bg-amber-50 transition-all duration-300 group"
-            >
-              <span className="tracking-wider font-medium">探索旅程</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+          <div className="flex justify-center">
             <Link
               to={createPageUrl("Contact")}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-emerald-900 rounded-full hover:bg-amber-50 transition-all duration-300 group"
             >
-              <span className="tracking-wider">聯繫我們</span>
+              <span className="tracking-wider font-medium">聯繫我們</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </motion.div>
