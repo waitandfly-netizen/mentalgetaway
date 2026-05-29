@@ -172,24 +172,44 @@ export default function Home() {
       </section>
 
       {/* Soul Quiz CTA */}
-      <section className="py-16 px-6 bg-[#f5f0ea] text-center">
+      <section className="py-16 px-6 bg-[#f5f0ea]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-md mx-auto"
+          className="max-w-2xl mx-auto"
         >
-          <p className="text-stone-400 text-sm tracking-widest mb-3 font-light">不確定從哪裡開始？</p>
-          <button
-            onClick={() => setQuizOpen(true)}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white border border-stone-200 text-stone-700 rounded-full hover:bg-emerald-50 hover:border-emerald-200 hover:text-emerald-800 transition-all duration-300 shadow-sm group"
-          >
-            <Sparkles className="w-4 h-4 text-emerald-600" />
-            <span className="tracking-wider font-light">🌿 心靈小探索</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <p className="text-stone-400 text-xs mt-3 font-light">花 2 分鐘，找到適合你的旅程</p>
+          <p className="text-emerald-700/70 tracking-[0.3em] text-xs mb-3 text-center font-light">BEGIN YOUR JOURNEY</p>
+          <h2 className="text-xl md:text-2xl font-light text-stone-800 tracking-wide leading-relaxed text-center mb-8">
+            準備好踏上心靈之旅了嗎？
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col items-center">
+              <p className="text-stone-400 text-sm tracking-widest mb-3 font-light">不確定從哪裡開始？</p>
+              <button
+                onClick={() => setQuizOpen(true)}
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white border border-stone-200 text-stone-700 rounded-full hover:bg-emerald-50 hover:border-emerald-200 hover:text-emerald-800 transition-all duration-300 shadow-sm group"
+              >
+                <Sparkles className="w-4 h-4 text-emerald-600" />
+                <span className="tracking-wider font-light">🌿 心靈小探索</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <p className="text-stone-400 text-xs mt-3 font-light">花 2 分鐘，找到適合你的旅程</p>
+            </div>
+            <div className="hidden sm:block w-px h-16 bg-stone-200" />
+            <div className="flex flex-col items-center">
+              <p className="text-stone-400 text-sm tracking-widest mb-3 font-light">已準備好出發？</p>
+              <Link
+                to={createPageUrl("Programs")}
+                className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-800 text-white rounded-full hover:bg-emerald-700 transition-all duration-300 shadow-sm group"
+              >
+                <span className="tracking-wider font-light">🗺️ 瀏覽旅程</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <p className="text-stone-400 text-xs mt-3 font-light">探索各種心靈旅程篇章</p>
+            </div>
+          </div>
         </motion.div>
       </section>
 
@@ -262,25 +282,17 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
         >
-          <p className="text-emerald-200/70 tracking-[0.3em] text-xs mb-6">BEGIN YOUR JOURNEY</p>
+          <p className="text-emerald-200/70 tracking-[0.3em] text-xs mb-6">STAY IN TOUCH</p>
           <h2 className="text-2xl md:text-3xl font-light mb-8 tracking-wide leading-relaxed">
-            準備好踏上心靈之旅了嗎？
+            有任何問題，歡迎聯繫我們
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to={createPageUrl("Programs")}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-emerald-900 rounded-full hover:bg-amber-50 transition-all duration-300 group"
-            >
-              <span className="tracking-wider font-medium">探索旅程</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to={createPageUrl("Contact")}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-all duration-300"
-            >
-              <span className="tracking-wider">聯繫我們</span>
-            </Link>
-          </div>
+          <Link
+            to={createPageUrl("Contact")}
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-emerald-900 rounded-full hover:bg-amber-50 transition-all duration-300 group"
+          >
+            <span className="tracking-wider font-medium">聯繫我們</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </motion.div>
       </section>
       <AnimatePresence>
