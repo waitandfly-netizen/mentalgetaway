@@ -259,42 +259,7 @@ export default function Home() {
       {/* Testimonials */}
       <TestimonialsCarousel />
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-emerald-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <FloatingShape
-            className="absolute rounded-full bg-amber-200/10 blur-3xl"
-            style={{ width: 400, height: 400, top: '-20%', left: '-10%' }}
-            duration={11}
-            yRange={20}
-          />
-          <FloatingShape
-            className="absolute rounded-full bg-emerald-400/10 blur-3xl"
-            style={{ width: 350, height: 350, bottom: '-15%', right: '-5%' }}
-            duration={14}
-            yRange={18}
-          />
-        </div>
-        <motion.div
-          className="max-w-xl mx-auto text-center relative z-10"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9 }}
-        >
-          <p className="text-emerald-200/70 tracking-[0.3em] text-xs mb-6">STAY IN TOUCH</p>
-          <h2 className="text-2xl md:text-3xl font-light mb-8 tracking-wide leading-relaxed">
-            有任何問題，歡迎聯繫我們
-          </h2>
-          <Link
-            to={createPageUrl("Contact")}
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-emerald-900 rounded-full hover:bg-amber-50 transition-all duration-300 group"
-          >
-            <span className="tracking-wider font-medium">聯繫我們</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
-      </section>
+
       <AnimatePresence>
         {quizOpen && <SoulQuiz onClose={() => setQuizOpen(false)} />}
       </AnimatePresence>
