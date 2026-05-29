@@ -232,18 +232,37 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 px-6 bg-emerald-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-amber-200 blur-3xl -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-emerald-200 blur-3xl translate-x-1/2 translate-y-1/2" />
+      <section className="py-20 px-6 bg-emerald-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute rounded-full bg-amber-200/10 blur-3xl" style={{ width: 400, height: 400, top: '-20%', left: '-10%' }} />
+          <div className="absolute rounded-full bg-emerald-400/10 blur-3xl" style={{ width: 350, height: 350, bottom: '-15%', right: '-5%' }} />
         </div>
-        <motion.div className="max-w-3xl mx-auto text-center relative z-10" initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeIn}>
-          <h2 className="text-3xl md:text-4xl font-light mb-6 tracking-wide">準備好踏上心靈之旅了嗎？</h2>
-          <p className="text-emerald-100/80 text-lg font-light mb-10 leading-relaxed">讓我們一起，在大自然中找回內心的平靜與力量</p>
-          <Link to={createPageUrl("Contact")} className="inline-flex items-center gap-3 px-10 py-4 bg-white text-emerald-900 rounded-full hover:bg-amber-50 transition-all duration-300 group">
-            <span className="tracking-wider font-medium">聯繫我們</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+        <motion.div
+          className="max-w-xl mx-auto text-center relative z-10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+        >
+          <p className="text-emerald-200/70 tracking-[0.3em] text-xs mb-6">BEGIN YOUR JOURNEY</p>
+          <h2 className="text-2xl md:text-3xl font-light mb-8 tracking-wide leading-relaxed">
+            準備好踏上心靈之旅了嗎？
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to={createPageUrl("Programs")}
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-emerald-900 rounded-full hover:bg-amber-50 transition-all duration-300 group"
+            >
+              <span className="tracking-wider font-medium">探索旅程</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to={createPageUrl("Contact")}
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-all duration-300"
+            >
+              <span className="tracking-wider">聯繫我們</span>
+            </Link>
+          </div>
         </motion.div>
       </section>
     </div>
