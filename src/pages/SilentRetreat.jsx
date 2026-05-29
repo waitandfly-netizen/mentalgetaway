@@ -33,22 +33,12 @@ const pillars = [
 
 const dayRhythm = [
   {
-    phase: "清晨",
-    time: "06:00 – 09:00",
-    description: "身體還帶著睡眠的溫度，緩緩起身。晨間站樁、品茶冥想。這個時刻，思緒最稀薄，也最容易進入安靜的狀態。",
+    description: "身體還帶著睡眠的溫度，緩緩起身。晨間站樁、品茶冥想。思緒最稀薄，也最容易進入安靜的狀態。",
     image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=80",
   },
   {
-    phase: "白晝",
-    time: "09:00 – 17:00",
     description: "直覺慢食、獨處漫步、芳香療癒、舞動身心。沒有行程表要追，只是讓每件事發生在它該發生的時候。幾天下來，你會開始感受到身體的節奏，而不是時鐘的節奏。",
     image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80",
-  },
-  {
-    phase: "傍晚",
-    time: "17:00 – 21:00",
-    description: "光線轉柔，引導老師帶領集體冥想。一對一的引導時間在這裡展開。入夜後，靜默繼續。你不需要做任何事，只是帶著今天的一切，好好睡一覺。",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
   },
 ];
 
@@ -176,10 +166,6 @@ export default function SilentRetreat() {
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-900/85 via-stone-900/30 to-transparent" />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="text-emerald-300 text-xl font-light">{block.phase}</span>
-                    <span className="text-stone-400 font-mono text-xs tracking-widest">{block.time}</span>
-                  </div>
                   <p className="text-stone-300 font-light leading-relaxed text-sm max-w-lg">{block.description}</p>
                 </div>
               </motion.div>
