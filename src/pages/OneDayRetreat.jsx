@@ -207,6 +207,54 @@ export default function OneDayRetreat() {
         </motion.div>
       </section>
 
+      {/* ── 2.5 NARRATIVE INTRO ── */}
+      <section className="py-12 md:py-20 px-6 bg-[#f7f4ef]">
+        <div className="max-w-xl mx-auto space-y-16">
+
+          {/* Line 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <p className="text-stone-500 font-light leading-loose text-base md:text-lg">
+              「一日放空篇」是為忙碌的都市人設計的輕旅程。<br />
+              在這一天裡，我們將暫時放下手機、放下工作、放下煩惱，<br />
+              全然地投入大自然的懷抱。
+            </p>
+          </motion.div>
+
+          {/* Three pillars — staggered */}
+          <div className="space-y-10">
+            {[
+              { cue: "透過輕度的森林健行", body: "我們將慢慢地喚醒身體的感知——腳底的泥土、掌心的樹皮、耳邊的鳥鳴。" },
+              { cue: "透過正念呼吸練習", body: "我們將學習如何讓心安定下來，不被思緒帶著跑。" },
+              { cue: "透過品味健康的原型食物", body: "我們將重新體會「吃」的美好，讓身體好好被滋養。" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                className="flex gap-5 group"
+              >
+                <div className="flex flex-col items-center pt-2 flex-shrink-0">
+                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 group-hover:scale-150 transition-transform duration-300" />
+                  <div className="w-px flex-1 bg-emerald-100 mt-2" />
+                </div>
+                <div>
+                  <p className="text-emerald-700 font-light text-sm tracking-wide mb-1">{item.cue}</p>
+                  <p className="text-stone-500 font-light leading-relaxed text-sm md:text-base">{item.body}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       {/* ── 3. NARRATIVE TIMELINE ── */}
       <section className="py-16 px-6 md:px-12 bg-[#f7f4ef]">
         <div className="max-w-2xl mx-auto">
