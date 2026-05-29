@@ -101,10 +101,10 @@ function SimpleBlock({ item }) {
       </div>
       <div>
         <span className="text-emerald-700 font-mono text-xs tracking-widest">{item.time}</span>
-        <h4 className={`font-light text-stone-800 mt-0.5 text-sm transition-colors duration-200 ${hovered ? 'text-emerald-800' : ''}`}>
+        <h4 className={`font-light text-stone-800 mt-0.5 text-base transition-colors duration-200 ${hovered ? 'text-emerald-800' : ''}`}>
           {item.activity}
         </h4>
-        {item.note && <p className="text-stone-400 text-xs font-light mt-0.5 leading-relaxed">{item.note}</p>}
+        {item.note && <p className="text-stone-400 text-sm font-light mt-1 leading-relaxed">{item.note}</p>}
       </div>
     </motion.div>
   );
@@ -193,8 +193,8 @@ export default function OneDayRetreat() {
                   <div className="w-px flex-1 bg-emerald-100 mt-1.5" />
                 </div>
                 <div>
-                  <p className="text-emerald-700 text-xs tracking-wide font-light mb-0.5">{item.cue}</p>
-                  <p className="text-stone-500 font-light leading-relaxed text-sm md:text-base">{item.body}</p>
+                  <p className="text-emerald-700 text-sm tracking-wide font-light mb-1">{item.cue}</p>
+                  <p className="text-stone-500 font-light leading-relaxed text-base">{item.body}</p>
                 </div>
               </motion.div>
             ))}
@@ -243,11 +243,11 @@ export default function OneDayRetreat() {
                     <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3 h-3 text-emerald-600" />
                     </div>
-                    <span className="text-stone-600 font-light text-sm">{item}</span>
+                    <span className="text-stone-600 font-light">{item}</span>
                   </motion.li>
                 ))}
               </ul>
-              <p className="text-stone-400 text-xs font-light mb-8">* 交通費用請自理，我們會提供詳細的交通指引</p>
+              <p className="text-stone-400 text-sm font-light mb-8">* 交通費用請自理，我們會提供詳細的交通指引</p>
 
               <div className="grid grid-cols-2 gap-3">
                 {specs.map(({ icon: Icon, label, value }) => (
@@ -255,7 +255,7 @@ export default function OneDayRetreat() {
                     <Icon className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
                     <div>
                       <p className="text-xs text-stone-400">{label}</p>
-                      <p className="text-sm font-medium text-stone-700">{value}</p>
+                      <p className="text-base font-medium text-stone-700">{value}</p>
                     </div>
                   </div>
                 ))}
@@ -273,7 +273,7 @@ export default function OneDayRetreat() {
               <p className="text-emerald-200 text-sm mb-5">/ 人</p>
               <div className="mb-5">
                 <p className="text-emerald-300 text-xs tracking-widest uppercase mb-1.5">近期場次</p>
-                <p className="text-white font-light text-sm">5/1（五）｜5/29（五）</p>
+                <p className="text-white font-light">5/1（五）｜5/29（五）</p>
               </div>
               <a href="https://forms.gle/KCYzFjRnw8CuoYKT6" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-white text-emerald-800 hover:bg-amber-50 py-5 rounded-xl font-medium tracking-wider">
