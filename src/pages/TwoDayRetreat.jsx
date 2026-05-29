@@ -31,7 +31,7 @@ export default function TwoDayRetreat() {
             backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80')"
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/20 via-stone-900/10 to-stone-50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-stone-900/30 to-stone-50" />
         </div>
 
         <motion.div
@@ -41,11 +41,11 @@ export default function TwoDayRetreat() {
           transition={{ duration: 1.4, ease: "easeOut" }}
         >
           <div className="max-w-2xl mx-auto">
-            <p className="text-stone-400 tracking-[0.4em] text-xs mb-5 uppercase">Two-Day Retreat</p>
-            <h1 className="text-5xl md:text-7xl font-light text-stone-900 tracking-wider mb-8 leading-tight">
+            <p className="text-white/70 tracking-[0.4em] text-xs mb-5 uppercase drop-shadow">Two-Day Retreat</p>
+            <h1 className="text-5xl md:text-7xl font-light text-white tracking-wider mb-8 leading-tight drop-shadow-lg">
               二日放空篇
             </h1>
-            <p className="text-stone-700 text-xl md:text-2xl font-light leading-relaxed">
+            <p className="text-white/90 text-xl md:text-2xl font-light leading-relaxed drop-shadow">
               「二日放空篇」是我們最受歡迎的旅程之一。
               <br />
               透過兩天一夜的完整體驗，
