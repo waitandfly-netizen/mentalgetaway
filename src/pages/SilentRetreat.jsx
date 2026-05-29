@@ -66,7 +66,7 @@ export default function SilentRetreat() {
       <section className="relative h-screen flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80')" }}
+          style={{ backgroundImage: "url('https://spiritvacation.wordpress.com/wp-content/uploads/2024/02/s__381304862_0.jpg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/30 via-stone-900/30 to-stone-900/85" />
         </div>

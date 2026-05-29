@@ -112,7 +112,7 @@ export default function OneDayRetreat() {
       <section className="relative h-screen flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=1920&q=80')" }}
+          style={{ backgroundImage: "url('https://spiritvacation.wordpress.com/wp-content/uploads/2024/03/img_7582.jpeg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/20 via-stone-900/25 to-stone-900/80" />
         </div>

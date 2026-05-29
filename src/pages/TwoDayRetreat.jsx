@@ -28,7 +28,7 @@ export default function TwoDayRetreat() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80')"
+            backgroundImage: "url('https://spiritvacation.wordpress.com/wp-content/uploads/2024/03/line_album_240313_12.jpg')"
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-stone-900/30 to-stone-50" />
