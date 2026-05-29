@@ -13,7 +13,7 @@ const schedule = [
     image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80",
     imageAlt: "陽光穿透樹冠灑落的森林小徑",
   },
-  { time: "12:00", activity: "午餐休憩", note: "重新體會「吃」的美好，讓身體好好被滋養", isCore: false },
+  { time: "12:00", activity: "午餐休憩", note: "透過品味健康的原型食物，重新體會「吃」的美好，讓身體好好被滋養", isCore: false },
   {
     time: "13:30", activity: "放空練習",
     note: "學習讓心安定下來，不被思緒帶著跑。不追、不抓，只是靜靜地呼吸。",
@@ -128,6 +128,9 @@ export default function OneDayRetreat() {
           </div>
           <h1 className="text-5xl md:text-7xl font-light text-white tracking-wide mb-3 leading-tight">一日放空篇</h1>
           <p className="text-lg md:text-2xl text-stone-200/80 font-light tracking-wide">在自然中深呼吸，讓身心回歸平靜</p>
+          <p className="mt-4 text-stone-300/70 font-light leading-relaxed text-sm md:text-base max-w-lg">
+            為忙碌的都市人設計的輕旅程。在這一天裡，我們將暫時放下手機、放下工作、放下煩惱，全然地投入大自然的懷抱。
+          </p>
         </motion.div>
         <motion.div
           className="absolute bottom-8 right-10 flex flex-col items-center"
