@@ -4,43 +4,7 @@ import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowRight, Leaf, Sun, Moon, Mountain, Sparkles, Heart } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
-import TestimonialsCarousel from '@/components/TestimonialsCarousel';
-
 export default function About() {
-  const programs = [
-    {
-      title: "一日放空行",
-      subtitle: "Day Retreat",
-      description: "在自然中深呼吸，讓身心回歸平靜",
-      image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/03/img_7582.jpeg",
-      link: "OneDayRetreat",
-      icon: Sun
-    },
-    {
-      title: "二日放空篇",
-      subtitle: "Weekend Escape",
-      description: "兩天一夜的心靈充電之旅",
-      image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/03/line_album_240313_12.jpg",
-      link: "TwoDayRetreat",
-      icon: Moon
-    },
-    {
-      title: "蛻變篇",
-      subtitle: "Silent Retreat",
-      description: "在寧靜中與內在自我對話",
-      image: "https://spiritvacation.wordpress.com/wp-content/uploads/2024/02/s__381304862_0.jpg",
-      link: "SilentRetreat",
-      icon: Mountain
-    },
-    {
-      title: "僻靜篇",
-      subtitle: "Invitation Only",
-      description: "由心靈導遊邀請，為您量身打造的身心靈旅程",
-      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/9c4e700ba_IMG_20220923_150004.jpg",
-      link: "InvitationRetreat",
-      icon: Sparkles
-    }
-  ];
 
   const values = [
     { icon: Heart, title: "真誠連結", description: "與自然、與自己、與他人建立真實的連結" },
@@ -217,41 +181,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Programs Section */}
-      <section className="py-24 md:py-32 px-6 bg-stone-100/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div className="text-center mb-16" initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeIn}>
-            <p className="text-emerald-700/80 tracking-[0.3em] text-sm mb-4">2026 PROGRAMS</p>
-            <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wide">心靈假期篇章</h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
-            {programs.map((program, index) => (
-              <motion.div key={program.title} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.2, duration: 0.8 }}>
-                <Link to={createPageUrl(program.link)} className="group block">
-                  <div className="relative overflow-hidden rounded-2xl aspect-[4/5] mb-6">
-                    <img src={program.image} alt={program.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <program.icon className="w-6 h-6 text-amber-200/80 mb-3" />
-                      <p className="text-amber-200/80 text-sm tracking-widest mb-2">{program.subtitle}</p>
-                      <h3 className="text-2xl text-white font-light">{program.title}</h3>
-                    </div>
-                  </div>
-                  <p className="text-stone-600 font-light leading-relaxed px-2">{program.description}</p>
-                  <div className="flex items-center gap-2 text-emerald-700 mt-4 px-2 group-hover:gap-4 transition-all">
-                    <span className="text-sm tracking-wider">了解更多</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <TestimonialsCarousel />
 
       {/* Timeline Section */}
       <section className="py-24 px-6 bg-white">
