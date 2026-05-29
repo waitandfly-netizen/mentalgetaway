@@ -1,337 +1,210 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { Sun, Clock, Users, MapPin, Check, ArrowRight, Calendar } from 'lucide-react';
-import SEOHead from '@/components/SEOHead';
-
-const scheduleItems = [
-  {
-    time: "09:00",
-    activity: "捷運劍潭站集合",
-    feeling: "一個深呼吸，今天只屬於你。",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-    desc: "輕裝出發，把工作通知靜音。今天，你只需要出現。"
-  },
-  {
-    time: "10:00",
-    activity: "開場引導",
-    feeling: "讓身體先學會慢下來。",
-    image: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=1200&q=80",
-    desc: "透過簡單的身體掃描與呼吸引導，把你從城市的步調，輕輕帶進山林的節奏。"
-  },
-  {
-    time: "10:30",
-    activity: "森林健行 · 站樁體驗",
-    feeling: "腳踩進土地，心也跟著落地。",
-    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80",
-    desc: "走在樹與樹之間，感受光影穿過葉縫。站樁，不是姿勢，是一種讓自己安靜下來的方式。"
-  },
-  {
-    time: "12:00",
-    activity: "午餐休憩",
-    feeling: "好好吃一頓，就是當下。",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80",
-    desc: "原型食物、當季食材，細嚼慢嚥。這一餐，是給自己的禮物。"
-  },
-  {
-    time: "13:30",
-    activity: "放空練習",
-    feeling: "什麼都不做，也是一種練習。",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-    desc: "正念靜坐、自由書寫，或只是靜靜地看山、聽風。沒有目標，只有當下。"
-  },
-  {
-    time: "15:30",
-    activity: "賦歸",
-    feeling: "帶走安靜，帶著它回到日常。",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
-    desc: "一天的旅程在夕陽餘暉中輕輕收尾。你不需要變成另一個人，只是更接近自己。"
-  }
-];
-
-const includes = [
-  "專業引導老師全程帶領",
-  "活動行政費",
-  "旅遊平安保險"
-];
-
-function ScheduleCard({ item, index }) {
-  const [hovered, setHovered] = useState(false);
-  const isEven = index % 2 === 0;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-      className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-0 md:gap-0 items-stretch min-h-[420px] overflow-hidden rounded-2xl shadow-md`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {/* Image */}
-      <div className="relative w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
-        <motion.img
-          src={item.image}
-          alt={item.activity}
-          className="w-full h-full object-cover"
-          animate={{ scale: hovered ? 1.05 : 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/50 to-transparent" />
-        {/* Time badge on image */}
-        <div className="absolute bottom-4 left-4 md:hidden">
-          <span className="bg-white/20 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full border border-white/30 tracking-wider">
-            {item.time}
-          </span>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="relative w-full md:w-1/2 bg-white flex flex-col justify-center px-8 md:px-12 py-10">
-        {/* Vertical time indicator — desktop */}
-        <span className="hidden md:block text-emerald-300 text-xs tracking-[0.3em] font-light mb-3 uppercase">
-          {item.time}
-        </span>
-
-        <motion.h3
-          className="text-2xl md:text-3xl font-light text-stone-800 mb-3 tracking-wide"
-          animate={{ color: hovered ? '#065f46' : '#292524' }}
-          transition={{ duration: 0.3 }}
-        >
-          {item.activity}
-        </motion.h3>
-
-        {/* Feeling phrase */}
-        <motion.p
-          className="text-base md:text-lg text-emerald-700 font-light italic mb-5 border-l-2 border-emerald-300 pl-4"
-          animate={{ opacity: hovered ? 1 : 0.75, x: hovered ? 4 : 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          {item.feeling}
-        </motion.p>
-
-        <p className="text-stone-500 font-light leading-relaxed text-sm md:text-base">
-          {item.desc}
-        </p>
-
-        {/* Hover hint line */}
-        <motion.div
-          className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-emerald-400 to-emerald-200"
-          animate={{ width: hovered ? '100%' : '0%' }}
-          transition={{ duration: 0.5 }}
-        />
-      </div>
-    </motion.div>
-  );
-}
+import { Button } from "@/components/ui/button";
 
 export default function OneDayRetreat() {
+  const schedule = [
+    { time: "09:00", activity: "捷運劍潭站集合" },
+    { time: "10:00", activity: "開場引導" },
+    { time: "10:30", activity: "森林健行-站樁體驗" },
+    { time: "12:00", activity: "午餐休憩" },
+    { time: "13:30", activity: "放空練習" },
+    { time: "15:30", activity: "賦歸" }
+  ];
+
+  const includes = [
+    "專業引導老師全程帶領",
+    "活動行政費",
+    "旅遊平安保險"
+  ];
+
   return (
-    <div className="min-h-screen bg-[#f5f0ea]">
-      <SEOHead
-        title="一日放空篇"
-        description="給忙碌都市人的一天。森林健行、站樁、正念練習，讓身心在自然中真正放鬆。"
-        image="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80"
-      />
-
-      {/* ── Hero ── */}
-      <section className="relative h-screen flex items-end justify-center overflow-hidden">
-        <div
+    <div className="min-h-screen bg-stone-50">
+      {/* Hero Section */}
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80')" }}
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=1920&q=80')"
+          }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/20 via-stone-900/30 to-[#f5f0ea]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-stone-900/30 to-stone-900/60" />
         </div>
-
-        <motion.div
-          className="relative z-10 text-center px-6 max-w-2xl mx-auto pb-24 md:pb-32"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4, ease: "easeOut" }}
-        >
-          <motion.p
-            className="text-amber-100/70 tracking-[0.5em] text-xs mb-5 uppercase"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            Day Retreat
-          </motion.p>
-          <h1 className="text-5xl md:text-7xl font-light text-white tracking-wider mb-6 drop-shadow-sm">
-            一日放空篇
-          </h1>
-          <p className="text-stone-200/80 text-lg md:text-xl font-light tracking-widest leading-loose">
-            給自己這一天。<br />
-            <span className="text-base text-stone-300/70">什麼都不用做，只需要出現。</span>
-          </p>
-        </motion.div>
-
-        {/* Scroll hint */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }}
-          transition={{ repeat: Infinity, duration: 2.5 }}
-        >
-          <div className="w-px h-14 bg-gradient-to-b from-white/0 via-white/50 to-white/0 mx-auto" />
-        </motion.div>
-      </section>
-
-      {/* ── Quick Stats ── */}
-      <section className="py-12 px-6 bg-white/70 backdrop-blur-sm border-y border-stone-100">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            { icon: Clock, label: "時長", value: "約 8 小時" },
-            { icon: Users, label: "人數", value: "6–12 人" },
-            { icon: MapPin, label: "地點", value: "台北近郊山區" },
-            { icon: Calendar, label: "梯次", value: "每月開團" }
-          ].map((item, i) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.6 }}
-            >
-              <item.icon className="w-5 h-5 text-emerald-500 mx-auto mb-2" />
-              <p className="text-xs text-stone-400 tracking-wider mb-1">{item.label}</p>
-              <p className="font-medium text-stone-800 text-sm">{item.value}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── Opening Letter ── */}
-      <section className="py-24 md:py-32 px-6">
-        <div className="max-w-xl mx-auto space-y-8 text-center">
-          {[
-            "「一日放空篇」是為忙碌的你設計的輕旅程。",
-            "不需要任何準備，\n不需要期待什麼改變。",
-            "只是走進山林，走進自己。"
-          ].map((text, i) => (
-            <motion.p
-              key={i}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 1, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className={`whitespace-pre-line font-light leading-loose tracking-wide ${
-                i === 0 ? 'text-xl text-stone-800' :
-                i === 2 ? 'text-lg text-emerald-800 italic' :
-                'text-base text-stone-500'
-              }`}
-            >
-              {text}
-            </motion.p>
-          ))}
-        </div>
-      </section>
-
-      {/* ── Scrolling Narrative Schedule ── */}
-      <section className="py-8 px-6 pb-24">
-        <motion.div
-          className="max-w-xl mx-auto text-center mb-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <p className="text-stone-400 text-xs tracking-[0.4em] uppercase mb-3">The Journey</p>
-          <h2 className="text-3xl font-light text-stone-800 tracking-wide">這一天，我們一起走</h2>
-        </motion.div>
-
-        <div className="max-w-5xl mx-auto space-y-6 md:space-y-10">
-          {scheduleItems.map((item, index) => (
-            <ScheduleCard key={item.time} item={item} index={index} />
-          ))}
-        </div>
-      </section>
-
-      {/* ── Includes + CTA ── */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <p className="text-stone-400 text-xs tracking-[0.4em] uppercase mb-4">Includes</p>
-            <h2 className="text-3xl font-light text-stone-800 mb-8">費用包含</h2>
-            <ul className="space-y-4">
-              {includes.map((item, i) => (
-                <motion.li
-                  key={item}
-                  initial={{ opacity: 0, x: -16 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-3 group"
-                >
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-200 transition-colors">
-                    <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  </div>
-                  <span className="text-stone-600 font-light">{item}</span>
-                </motion.li>
-              ))}
-            </ul>
-            <p className="mt-8 text-stone-400 text-sm font-light">* 交通費用請自理，我們會提供詳細的交通指引</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative bg-gradient-to-br from-emerald-800 to-emerald-950 rounded-3xl p-10 text-white overflow-hidden"
-          >
-            {/* Ambient circle */}
-            <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-emerald-600/20 blur-3xl pointer-events-none" />
-
-            <p className="text-emerald-300/70 text-xs tracking-[0.4em] uppercase mb-2">費用</p>
-            <p className="text-5xl font-light mb-1">
-              NT$ 1,200
-              <span className="text-lg text-emerald-300 ml-1">/人</span>
-            </p>
-            <p className="text-emerald-200/60 text-sm font-light mb-8">含稅費及保險</p>
-
-            <div className="mb-8">
-              <p className="text-emerald-300/70 text-xs tracking-widest uppercase mb-2">近期場次</p>
-              <p className="text-white font-light tracking-wide">5/1（五）｜5/29（五）</p>
-            </div>
-
-            <a
-              href="https://forms.gle/KCYzFjRnw8CuoYKT6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-3 w-full py-4 bg-white text-emerald-900 rounded-2xl hover:bg-amber-50 transition-all duration-300 font-medium tracking-wider"
-            >
-              給自己這一天
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── Closing ── */}
-      <section className="relative py-32 px-6 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=80')" }}
-        />
-        <motion.div
-          className="relative z-10 max-w-lg mx-auto text-center"
+        
+        <motion.div 
+          className="relative z-10 text-center px-6 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <p className="text-2xl md:text-3xl font-light text-stone-700 leading-loose tracking-wide">
-            你值得一個<br />
-            <span className="text-emerald-700">好好呼吸的日子。</span>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-6">
+            <Sun className="w-4 h-4 text-amber-200" />
+            <span className="text-white/90 text-sm tracking-wider">DAY RETREAT</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide mb-4">
+            一日放空篇
+          </h1>
+          <p className="text-xl text-stone-200/90 font-light">
+            在自然中深呼吸，讓身心回歸平靜
           </p>
         </motion.div>
+      </section>
+
+      {/* Quick Info */}
+      <section className="py-12 px-6 bg-white border-b border-stone-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { icon: Clock, label: "時長", value: "約 8 小時" },
+              { icon: Users, label: "人數", value: "6-12 人" },
+              { icon: MapPin, label: "地點", value: "台北近郊山區" },
+              { icon: Calendar, label: "梯次", value: "每月開團" }
+            ].map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 + index * 0.1 }}
+                className="text-center"
+              >
+                <item.icon className="w-6 h-6 text-emerald-600 mx-auto mb-2" />
+                <p className="text-sm text-stone-400 mb-1">{item.label}</p>
+                <p className="font-medium text-stone-800">{item.value}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Description */}
+      <section className="py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="prose prose-lg prose-stone mx-auto"
+          >
+            <h2 className="text-3xl font-light text-stone-800 text-center mb-12">
+              關於這趟旅程
+            </h2>
+            <div className="text-stone-600 font-light leading-loose space-y-6">
+              <p>
+                「一日放空篇」是為忙碌的都市人設計的輕旅程。
+                在這一天裡，我們將暫時放下手機、放下工作、放下煩惱，
+                全然地投入大自然的懷抱。
+              </p>
+              <p>
+                透過輕度的森林健行，我們將慢慢地喚醒身體的感知；
+                透過正念呼吸練習，我們將學習如何讓心安定下來；
+                透過品味健康的原型食物，我們將重新體會「吃」的美好。
+              </p>
+              <p>
+                這不是一場需要努力的課程，而是一段允許自己放鬆的時光。
+                你可以只是單純地走路、單純地呼吸、單純地存在。
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Schedule */}
+      <section className="py-24 px-6 bg-stone-100/50">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2 
+            className="text-3xl font-light text-stone-800 text-center mb-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            行程安排
+          </motion.h2>
+
+          <div className="relative">
+            <div className="absolute left-8 top-0 bottom-0 w-px bg-emerald-200 hidden md:block" />
+            
+            <div className="space-y-6">
+              {schedule.map((item, index) => (
+                <motion.div
+                  key={item.time}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex gap-6 items-start"
+                >
+                  <div className="w-16 flex-shrink-0 text-right hidden md:block">
+                    <span className="text-emerald-700 font-medium">{item.time}</span>
+                  </div>
+                  <div className="w-4 h-4 rounded-full bg-emerald-500 border-4 border-emerald-100 flex-shrink-0 mt-1 hidden md:block" />
+                  <div className="flex-1 bg-white rounded-xl p-6 shadow-sm">
+                    <span className="text-emerald-700 font-medium md:hidden">{item.time}</span>
+                    <h3 className="font-medium text-stone-800">{item.activity}</h3>
+                    {item.description && <p className="text-stone-500 font-light text-sm mt-1">{item.description}</p>}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-light text-stone-800 mb-8">費用包含</h2>
+              <ul className="space-y-4">
+                {includes.map((item, index) => (
+                  <motion.li
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-3"
+                  >
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
+                      <Check className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <span className="text-stone-600">{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+              
+              <p className="mt-8 text-stone-400 text-sm">
+                * 交通費用請自理，我們會提供詳細的交通指引
+              </p>
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-emerald-800 to-emerald-900 rounded-2xl p-8 text-white"
+            >
+              <p className="text-emerald-200 text-sm mb-2">費用</p>
+              <p className="text-4xl font-light mb-3">NT$ 1,200<span className="text-lg text-emerald-200">/人</span></p>
+              <div className="mb-4">
+                <p className="text-emerald-200 text-sm mb-1">場次</p>
+                <p className="text-white font-light">5/1（五）｜5/29（五）</p>
+              </div>
+              
+              <a href="https://forms.gle/KCYzFjRnw8CuoYKT6" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-white text-emerald-800 hover:bg-amber-50 py-6 rounded-xl">
+                  <span className="flex items-center gap-2">
+                    立即報名
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Button>
+              </a>
+            </motion.div>
+          </div>
+        </div>
       </section>
     </div>
   );
