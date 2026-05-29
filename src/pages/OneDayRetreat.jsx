@@ -81,7 +81,7 @@ function SimpleBlock({ item }) {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.55, ease: "easeOut" }}
-      className="flex items-start gap-6 py-5 group"
+      className="flex items-start gap-4 py-3 group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -91,14 +91,14 @@ function SimpleBlock({ item }) {
           animate={{ backgroundColor: hovered ? '#34d399' : 'transparent', scale: hovered ? 1.3 : 1 }}
           transition={{ duration: 0.2 }}
         />
-        <div className="w-px flex-1 bg-emerald-100 mt-1 min-h-[2.5rem]" />
+        <div className="w-px flex-1 bg-emerald-100 mt-1 min-h-[1.8rem]" />
       </div>
       <div>
-        <span className="text-emerald-700 font-mono text-sm tracking-widest">{item.time}</span>
-        <h4 className={`font-light text-stone-800 mt-1 text-lg md:text-xl transition-colors duration-200 ${hovered ? 'text-emerald-800' : ''}`}>
+        <span className="text-emerald-700 font-mono text-xs tracking-widest">{item.time}</span>
+        <h4 className={`font-light text-stone-800 mt-0.5 text-base transition-colors duration-200 ${hovered ? 'text-emerald-800' : ''}`}>
           {item.activity}
         </h4>
-        {item.note && <p className="text-stone-500 text-base font-light mt-2 leading-loose">{item.note}</p>}
+        {item.note && <p className="text-stone-400 text-sm font-light mt-1 leading-relaxed">{item.note}</p>}
       </div>
     </motion.div>
   );
@@ -160,16 +160,16 @@ export default function OneDayRetreat() {
       </section>
 
       {/* TIMELINE */}
-      <section className="py-16 md:py-24 px-6 bg-[#f7f4ef]">
+      <section className="py-10 px-6 bg-[#f7f4ef]">
         <div className="max-w-xl mx-auto">
-          <motion.h2
-            className="text-2xl md:text-3xl font-light text-stone-700 tracking-widest mb-14 text-center"
+          <motion.p
+            className="text-emerald-700 text-xs tracking-[0.3em] uppercase mb-8 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             行程安排
-          </motion.h2>
+          </motion.p>
           <div>
             {schedule.map((item) =>
               item.isCore
