@@ -25,7 +25,7 @@ const chapters = [
     label: "序章",
     title: "你已經很久\n沒有真正放空了",
     body: "那種感覺，你知道的。\n不是沒有時間，而是即使空著，心也閒不下來。",
-    image: "https://images.unsplash.com/photo-1476611338391-6f395a0dd82e?w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80",
     align: "left",
   },
   {
@@ -146,7 +146,7 @@ export default function OneDayRetreat() {
       <SEOHead
         title="一日放空篇 | 心靈假期"
         description="為忙碌的都市人設計的輕旅程，在台北近郊山林中，給自己真正放空的一天。"
-        image="https://images.unsplash.com/photo-1476611338391-6f395a0dd82e?w=1200&q=80"
+        image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
       />
 
       {/* ── Hero ── */}
