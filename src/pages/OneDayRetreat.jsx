@@ -8,15 +8,15 @@ const schedule = [
   { time: "10:00", activity: "開場引導", note: "緩緩進入今天的節奏", isCore: false },
   {
     time: "10:30", activity: "森林健行 · 站樁體驗",
-    note: "踩著樹根與泥土，感受腳底傳來的大地重量。走得慢一點，聽一聽風在說什麼。",
+    note: "慢慢地喚醒身體的感知——腳底的泥土、掌心的樹皮、耳邊的鳥鳴。",
     isCore: true,
     image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80",
     imageAlt: "陽光穿透樹冠灑落的森林小徑",
   },
-  { time: "12:00", activity: "午餐休憩", note: "品味原型食物，讓身體好好被滋養", isCore: false },
+  { time: "12:00", activity: "午餐休憩", note: "重新體會「吃」的美好，讓身體好好被滋養", isCore: false },
   {
     time: "13:30", activity: "放空練習",
-    note: "不需要做什麼，只是靜靜地躺著、坐著、呼吸。讓思緒像雲一樣飄過，不追、不抓。",
+    note: "學習讓心安定下來，不被思緒帶著跑。不追、不抓，只是靜靜地呼吸。",
     isCore: true,
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     imageAlt: "開闊天空與遠山",
@@ -25,12 +25,6 @@ const schedule = [
 ];
 
 const includes = ["專業引導老師全程帶領", "活動行政費", "旅遊平安保險"];
-
-const pillars = [
-  { cue: "透過輕度的森林健行", body: "我們將慢慢地喚醒身體的感知——腳底的泥土、掌心的樹皮、耳邊的鳥鳴。" },
-  { cue: "透過正念呼吸練習", body: "我們將學習如何讓心安定下來，不被思緒帶著跑。" },
-  { cue: "透過品味健康的原型食物", body: "我們將重新體會「吃」的美好，讓身體好好被滋養。" },
-];
 
 const specs = [
   { icon: Clock, label: "時長", value: "約 8 小時" },
@@ -163,43 +157,6 @@ export default function OneDayRetreat() {
           </p>
           <div className="w-6 h-px bg-emerald-400 mx-auto mt-8" />
         </motion.div>
-      </section>
-
-      {/* NARRATIVE INTRO */}
-      <section className="pb-10 px-6 bg-[#f7f4ef]">
-        <div className="max-w-xl mx-auto space-y-10">
-          <motion.p
-            className="text-stone-500 font-light leading-loose text-base md:text-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.9 }}
-          >
-            「一日放空篇」是為忙碌的都市人設計的輕旅程。在這一天裡，我們將暫時放下手機、放下工作、放下煩惱，全然地投入大自然的懷抱。
-          </motion.p>
-
-          <div className="space-y-6">
-            {pillars.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-30px" }}
-                transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="flex gap-4 group"
-              >
-                <div className="flex flex-col items-center pt-2 flex-shrink-0">
-                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 group-hover:scale-150 transition-transform duration-300" />
-                  <div className="w-px flex-1 bg-emerald-100 mt-1.5" />
-                </div>
-                <div>
-                  <p className="text-emerald-700 text-sm tracking-wide font-light mb-1">{item.cue}</p>
-                  <p className="text-stone-500 font-light leading-relaxed text-base">{item.body}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* TIMELINE */}
