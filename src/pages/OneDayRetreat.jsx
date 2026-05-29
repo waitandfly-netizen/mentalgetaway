@@ -59,10 +59,10 @@ function CoreBlock({ item }) {
           </span>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
-        <h3 className="text-white text-xl md:text-2xl font-light tracking-wide mb-1.5">{item.activity}</h3>
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-9">
+        <h3 className="text-white text-2xl md:text-3xl font-light tracking-wide mb-2">{item.activity}</h3>
         <motion.p
-          className="text-stone-300 font-light leading-relaxed text-sm"
+          className="text-stone-300 font-light leading-relaxed text-base"
           animate={{ opacity: hovered ? 1 : 0.7 }}
           transition={{ duration: 0.3 }}
         >
@@ -81,24 +81,24 @@ function SimpleBlock({ item }) {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.55, ease: "easeOut" }}
-      className="flex items-start gap-4 py-3 group"
+      className="flex items-start gap-5 py-5 group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="flex flex-col items-center flex-shrink-0 pt-1.5">
+      <div className="flex flex-col items-center flex-shrink-0 pt-2">
         <motion.div
-          className="w-2 h-2 rounded-full border-2 border-emerald-400"
+          className="w-2.5 h-2.5 rounded-full border-2 border-emerald-400"
           animate={{ backgroundColor: hovered ? '#34d399' : 'transparent', scale: hovered ? 1.3 : 1 }}
           transition={{ duration: 0.2 }}
         />
-        <div className="w-px flex-1 bg-emerald-100 mt-1 min-h-[1.8rem]" />
+        <div className="w-px flex-1 bg-emerald-100 mt-1.5 min-h-[2.5rem]" />
       </div>
       <div>
         <span className="text-emerald-700 font-mono text-xs tracking-widest">{item.time}</span>
-        <h4 className={`font-light text-stone-800 mt-0.5 text-base transition-colors duration-200 ${hovered ? 'text-emerald-800' : ''}`}>
+        <h4 className={`font-light text-stone-800 mt-1 text-lg transition-colors duration-200 ${hovered ? 'text-emerald-800' : ''}`}>
           {item.activity}
         </h4>
-        {item.note && <p className="text-stone-400 text-sm font-light mt-1 leading-relaxed">{item.note}</p>}
+        {item.note && <p className="text-stone-500 text-base font-light mt-2 leading-loose">{item.note}</p>}
       </div>
     </motion.div>
   );
@@ -160,10 +160,10 @@ export default function OneDayRetreat() {
       </section>
 
       {/* TIMELINE */}
-      <section className="py-10 px-6 bg-[#f7f4ef]">
+      <section className="py-16 px-6 bg-[#f7f4ef]">
         <div className="max-w-xl mx-auto">
           <motion.p
-            className="text-emerald-700 text-xs tracking-[0.3em] uppercase mb-8 text-center"
+            className="text-emerald-700 text-xs tracking-[0.3em] uppercase mb-12 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
