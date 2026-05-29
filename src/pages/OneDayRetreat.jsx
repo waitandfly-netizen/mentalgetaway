@@ -10,8 +10,8 @@ const schedule = [
     time: "10:30", activity: "森林健行 · 站樁體驗",
     note: "慢慢地喚醒身體的感知——腳底的泥土、掌心的樹皮、耳邊的鳥鳴。",
     isCore: true,
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80",
-    imageAlt: "陽光穿透樹冠灑落的森林小徑",
+    image: "https://media.base44.com/images/public/698fc983574e659f561934f1/613260106_dji_fly_20240622_101110_0043_1719056672470_photo.webp",
+    imageAlt: "陽明山森林山谷鳥瞰",
   },
   { time: "12:00", activity: "午餐休憩", note: "透過品味健康的原型食物，重新體會「吃」的美好，讓身體好好被滋養", isCore: false },
   {
