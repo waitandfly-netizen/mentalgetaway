@@ -246,12 +246,13 @@ export default function TwoDayRetreat() {
 
       {/* ── Hero ── */}
       <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
-        <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <img
-            src="https://images.unsplash.com/photo-1476673160081-cf065f5c1278?w=1920&q=80"
-            alt="二日放空篇"
-            className="w-full h-full object-cover"
-          />
+        <motion.div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            y: heroY,
+            backgroundImage: "url('https://images.unsplash.com/photo-1476673160081-cf065f5c1278?w=1920&q=80')"
+          }}
+        >
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/55 via-stone-900/30 to-[#f5f0ea]" />
         </motion.div>
 
