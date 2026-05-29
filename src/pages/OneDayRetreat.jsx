@@ -81,7 +81,7 @@ function SimpleBlock({ item }) {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.55, ease: "easeOut" }}
-      className="flex items-start gap-4 py-3 group"
+      className="flex items-start gap-4 py-5 group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -95,10 +95,10 @@ function SimpleBlock({ item }) {
       </div>
       <div>
         <span className="text-emerald-700 font-mono text-xs tracking-widest">{item.time}</span>
-        <h4 className={`font-light text-stone-800 mt-0.5 text-base transition-colors duration-200 ${hovered ? 'text-emerald-800' : ''}`}>
+        <h4 className={`font-light text-stone-800 mt-0.5 text-lg transition-colors duration-200 ${hovered ? 'text-emerald-800' : ''}`}>
           {item.activity}
         </h4>
-        {item.note && <p className="text-stone-400 text-sm font-light mt-1 leading-relaxed">{item.note}</p>}
+        {item.note && <p className="text-stone-500 text-base font-light mt-2 leading-loose">{item.note}</p>}
       </div>
     </motion.div>
   );
@@ -139,7 +139,7 @@ export default function OneDayRetreat() {
       </section>
 
       {/* ANCHOR QUOTE */}
-      <section className="py-16 md:py-20 px-6 bg-[#f7f4ef]">
+      <section className="py-20 md:py-24 px-6 bg-[#f7f4ef]">
         <motion.div
           className="max-w-xl mx-auto text-center"
           initial={{ opacity: 0, y: 24 }}
@@ -160,17 +160,17 @@ export default function OneDayRetreat() {
       </section>
 
       {/* TIMELINE */}
-      <section className="py-10 px-6 bg-[#f7f4ef]">
+      <section className="py-6 pb-20 px-6 bg-[#f7f4ef]">
         <div className="max-w-xl mx-auto">
-          <motion.p
-            className="text-emerald-700 text-xs tracking-[0.3em] uppercase mb-8 text-center"
+          <motion.h2
+            className="text-xl md:text-2xl font-light text-stone-700 tracking-widest mb-12 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             行程安排
-          </motion.p>
-          <div>
+          </motion.h2>
+          <div className="space-y-3">
             {schedule.map((item) =>
               item.isCore
                 ? <CoreBlock key={item.time} item={item} />
