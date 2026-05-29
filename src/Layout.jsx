@@ -11,19 +11,12 @@ const programsDropdown = [
   { name: '僻靜篇', page: 'InvitationRetreat' },
 ];
 
-const aboutDropdown = [
-  { name: '初心緣起', page: 'About' },
-];
-
 export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
-  const [aboutOpen, setAboutOpen] = useState(false);
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const aboutDropdownRef = useRef(null);
   const location = useLocation();
   const isHomePage = currentPageName === 'Home';
 
@@ -38,7 +31,6 @@ export default function Layout({ children, currentPageName }) {
   useEffect(() => {
     setMobileMenuOpen(false);
     setMobileProgramsOpen(false);
-    setMobileAboutOpen(false);
   }, [location]);
 
   useEffect(() => {
@@ -46,17 +38,14 @@ export default function Layout({ children, currentPageName }) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setProgramsOpen(false);
       }
-      if (aboutDropdownRef.current && !aboutDropdownRef.current.contains(e.target)) {
-        setAboutOpen(false);
-      }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const navLinks = [
-    { name: '關於我們', page: 'About', hasDropdown: 'about' },
-    { name: '旅程介紹', page: 'Programs', hasDropdown: 'programs' },
+    { name: '初心緣起', page: 'About' },
+    { name: '旅程介紹', page: 'Programs' },
     { name: '心靈導遊', page: 'Guide' },
     { name: '參加者心得', page: 'Testimonials' },
     { name: '蛻變故事', page: 'TransformationStories' },
@@ -129,37 +118,6 @@ export default function Layout({ children, currentPageName }) {
                       )}
                     </AnimatePresence>
                   </div>
-                ) : link.page === 'About' ? (
-                  <div key="About" className="relative" ref={aboutDropdownRef}>
-                    <button
-                      onClick={() => setAboutOpen(!aboutOpen)}
-                      className={`${textColor} text-sm tracking-wider hover:text-emerald-600 transition-colors duration-300 flex items-center gap-1`}
-                    >
-                      {link.name}
-                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${aboutOpen ? 'rotate-180' : ''}`} />
-                    </button>
-                    <AnimatePresence>
-                      {aboutOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 8 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 8 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-36 bg-white/95 backdrop-blur-md rounded-xl shadow-lg border border-stone-100 overflow-hidden py-2"
-                        >
-                          {aboutDropdown.map((item) => (
-                            <Link
-                              key={item.page}
-                              to={createPageUrl(item.page)}
-                              className="block px-4 py-2 text-sm text-stone-700 hover:text-emerald-700 hover:bg-emerald-50 transition-colors tracking-wide"
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
                 ) : (
                   <Link
                     key={link.page}
@@ -213,33 +171,11 @@ export default function Layout({ children, currentPageName }) {
                           >
                             <Link to={createPageUrl('Programs')} className="block text-stone-500 font-light tracking-wider hover:text-emerald-700 transition-colors">全部旅程</Link>
                             {programsDropdown.map((item) => (
-                              <Link key={item.page} to={createPageUrl(item.page)} className="block text-stone-600 font-light tracking-wider hover:text-emerald-700 transition-colors">
-                                {item.name}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : link.page === 'About' ? (
-                    <div key="About">
-                      <button
-                        onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-                        className="flex items-center gap-2 text-stone-700 text-lg font-light tracking-wider hover:text-emerald-700 transition-colors w-full"
-                      >
-                        {link.name}
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileAboutOpen ? 'rotate-180' : ''}`} />
-                      </button>
-                      <AnimatePresence>
-                        {mobileAboutOpen && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="overflow-hidden pl-4 mt-2 space-y-3 border-l-2 border-emerald-100"
-                          >
-                            {aboutDropdown.map((item) => (
-                              <Link key={item.page} to={createPageUrl(item.page)} className="block text-stone-600 font-light tracking-wider hover:text-emerald-700 transition-colors">
+                              <Link
+                                key={item.page}
+                                to={createPageUrl(item.page)}
+                                className="block text-stone-600 font-light tracking-wider hover:text-emerald-700 transition-colors"
+                              >
                                 {item.name}
                               </Link>
                             ))}
