@@ -111,8 +111,9 @@ export default function SilentRetreat() {
       </section>
 
       {/* ── 2. 靜默的質地（垂直積累）── */}
-      <section className="py-20 px-6 bg-stone-900 text-white">
-        <div className="max-w-xl mx-auto">
+      <section className="py-20 px-6 text-white relative" style={{ backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/6c0312d19_DSC_5795.webp')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-stone-900/70" />
+        <div className="max-w-xl mx-auto relative z-10">
           <motion.p
             {...fadeUp}
             className="text-emerald-400 text-xs tracking-[0.3em] uppercase mb-16 text-center"
