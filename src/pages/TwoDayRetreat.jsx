@@ -28,10 +28,10 @@ export default function TwoDayRetreat() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/bc609e1ff_s__381296664.jpg')"
+            backgroundImage: "url('https://spiritvacation.wordpress.com/wp-content/uploads/2024/03/line_album_240313_12.jpg')"
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/60 via-stone-900/50 to-stone-900/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-stone-900/30 to-stone-50" />
         </div>
 
         <motion.div
