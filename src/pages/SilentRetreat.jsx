@@ -111,15 +111,23 @@ export default function SilentRetreat() {
       </section>
 
       {/* ── 2. 靜默的質地（垂直積累）── */}
-      <section className="py-20 px-6 bg-stone-900 text-white">
-        <div className="max-w-xl mx-auto">
+      <section
+        className="relative px-6 text-white"
+        style={{
+          backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/6c0312d19_DSC_5795.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-900/70" />
+        <div className="relative max-w-5xl mx-auto py-20">
           <motion.p
             {...fadeUp}
-            className="text-emerald-400 text-xs tracking-[0.3em] uppercase mb-16 text-center"
+            className="text-emerald-400 text-xs tracking-[0.3em] uppercase mb-12 text-center"
           >
             旅程的核心
           </motion.p>
-          <div className="space-y-0">
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-0">
             {pillars.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -127,15 +135,15 @@ export default function SilentRetreat() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-                className="flex gap-6 pb-14 border-b border-stone-800 last:border-0 last:pb-0 pt-14 first:pt-0"
+                className="flex gap-6 pb-12 border-b border-white/10 last:border-0 pt-12 first:pt-0 [&:nth-child(2)]:pt-0 [&:nth-child(3)]:border-0 md:[&:nth-child(3)]:border-b"
               >
                 <div className="flex flex-col items-center flex-shrink-0">
-                  <div className="w-px h-full bg-emerald-800 mt-1" style={{ minHeight: 60 }} />
+                  <div className="w-px h-full bg-emerald-700/60 mt-1" style={{ minHeight: 60 }} />
                 </div>
                 <div>
                   <p className="text-emerald-400 text-xs tracking-[0.3em] uppercase mb-3">{String(i + 1).padStart(2, '0')}</p>
                   <h3 className="text-white text-xl font-light tracking-wide mb-3">{item.title}</h3>
-                  <p className="text-stone-400 font-light leading-loose text-base">{item.body}</p>
+                  <p className="text-stone-300 font-light leading-loose text-base">{item.body}</p>
                 </div>
               </motion.div>
             ))}
