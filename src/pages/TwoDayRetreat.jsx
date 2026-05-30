@@ -158,7 +158,7 @@ export default function TwoDayRetreat() {
           <motion.div {...fadeUp}>
             <p className="text-stone-400 tracking-widest text-xs mb-4 uppercase">Day Two · 清晨</p>
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 leading-relaxed mb-8">
-              一夜之後，<br />你已經不一樣了
+              一夜之後，<br />靠近自己
             </h2>
             <p className="text-stone-500 font-light leading-loose text-lg">
               第二天清晨，我們邀請您一起迎接日出，進行溫和的冥想練習。
