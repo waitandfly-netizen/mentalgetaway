@@ -85,8 +85,16 @@ export default function InvitationRetreat() {
       </section>
 
       {/* ── 第二段：為什麼免費 ── */}
-      <section className="py-20 px-6 bg-stone-900 text-white">
-        <div className="max-w-xl mx-auto">
+      <section
+        className="relative py-20 px-6 text-white"
+        style={{
+          backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/ac2eca0e9_s__381296648_0.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-900/65" />
+        <div className="relative max-w-xl mx-auto">
           <motion.p
             {...fadeUp}
             className="text-violet-400 text-xs tracking-[0.3em] uppercase mb-12 text-center"
@@ -98,7 +106,7 @@ export default function InvitationRetreat() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="space-y-6"
+            className="relative space-y-6"
           >
             <p className="text-stone-200 font-light leading-loose text-lg">
               僻靜篇由心靈導遊依據參加者的身心狀態，量身規劃的免費靜修體驗。
