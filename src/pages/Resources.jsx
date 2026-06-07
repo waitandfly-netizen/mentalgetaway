@@ -109,8 +109,8 @@ export default function Resources() {
           className="relative z-10 max-w-2xl mx-auto"
         >
           <Leaf className="w-8 h-8 text-emerald-600/60 mx-auto mb-6" />
-          <p className="text-emerald-700/70 tracking-[0.35em] text-xs mb-3">RESOURCES</p>
-          <h1 className="text-3xl md:text-5xl font-light text-stone-800 tracking-wide mb-4">資源分享</h1>
+          <p className="text-emerald-700/70 tracking-[0.35em] text-xs mb-3">MINDFUL MAP</p>
+          <h1 className="text-3xl md:text-5xl font-light text-stone-800 tracking-wide mb-4">靜心地圖</h1>
           <div className="w-8 h-px bg-emerald-600/40 mx-auto mb-6" />
           <p className="text-stone-500 font-light leading-relaxed">放慢腳步，找到屬於你的安靜角落</p>
         </motion.div>
@@ -119,14 +119,6 @@ export default function Resources() {
       {/* Map Section */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-light text-stone-800 text-center mb-3 tracking-wide"
-          >
-            陽明山靜心地圖
-          </motion.h2>
           <p className="text-center text-stone-400 font-light text-sm mb-10">點擊地點標記，探索每個靜心角落</p>
 
           {/* Map with pins */}
