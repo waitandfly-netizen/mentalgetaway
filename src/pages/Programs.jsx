@@ -303,7 +303,7 @@ export default function Programs() {
                     disabled={submitting}
                     className="w-full bg-stone-600 hover:bg-stone-700 text-white py-4 rounded-xl text-sm tracking-wider transition-colors disabled:opacity-60"
                   >
-                    {submitting ? '送出中...' : '送出報名資訊'}
+                    {submitting ? '送出中...' : '確認送出'}
                   </button>
                   <p className="text-center text-stone-400 text-xs">我們將確保您的個人資料隱私安全。</p>
                 </form>
