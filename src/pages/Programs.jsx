@@ -236,7 +236,7 @@ export default function Programs() {
             ) : (
               <>
                 <p className="text-emerald-700 text-center tracking-wider text-sm mb-2">想了解更多？</p>
-                <p className="text-center text-stone-500 font-light mb-10">留下聯絡資訊，我們將有專人與您聯繫。</p>
+                <p className="text-center text-stone-500 font-light mb-10">留下聯絡資訊，<br />我們將有專人與您聯繫。</p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
