@@ -14,13 +14,20 @@ export default function Programs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    await base44.integrations.Core.SendEmail({
-      to: 'taipei.circlelounge@gmail.com',
-      subject: `心靈假期報名 - ${form.name}`,
-      body: `姓名：${form.name}\n電話：${form.phone}\nEmail：${form.email}\n報名人數：${form.count}\n用餐習慣：${form.diet}\n特殊需求：${form.notes}\n得知來源：${form.source}`
-    });
-    setSubmitting(false);
-    setSubmitted(true);
+    try {
+      await base44.functions.invoke('sendRegistrationEmail', {
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        notes: form.notes,
+        source: form.source
+      });
+      setSubmitted(true);
+    } catch (err) {
+      alert('送出失敗，請稍後再試或直接聯繫我們。');
+    } finally {
+      setSubmitting(false);
+    }
   };
   const programs = [
     {
