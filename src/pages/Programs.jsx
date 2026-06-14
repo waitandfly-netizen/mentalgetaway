@@ -235,8 +235,8 @@ export default function Programs() {
               </div>
             ) : (
               <>
-                <p className="text-emerald-700 text-center tracking-wider text-sm mb-2">立即預約您的心靈假期</p>
-                <p className="text-center text-stone-500 font-light mb-10">填寫報名表單，我們將有專人與您聯繫。</p>
+                <p className="text-emerald-700 text-center tracking-wider text-sm mb-2">想了解更多？</p>
+                <p className="text-center text-stone-500 font-light mb-10">留下聯絡資訊，我們將有專人與您聯繫。</p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
@@ -276,42 +276,11 @@ export default function Programs() {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 items-start">
-                    <div>
-                      <label className="block text-sm text-stone-700 mb-2">報名人數</label>
-                      <select
-                        value={form.count}
-                        onChange={e => setForm({ ...form, count: e.target.value })}
-                        className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-700 focus:outline-none focus:border-emerald-400 bg-white"
-                      >
-                        {['1位','2位','3位','4位','5位以上'].map(v => <option key={v}>{v}</option>)}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm text-stone-700 mb-2">用餐習慣</label>
-                      <div className="flex gap-6 pt-3">
-                        {['一般飲食', '素食'].map(opt => (
-                          <label key={opt} className="flex items-center gap-2 text-sm text-stone-600 cursor-pointer">
-                            <input
-                              type="radio"
-                              name="diet"
-                              value={opt}
-                              checked={form.diet === opt}
-                              onChange={() => setForm({ ...form, diet: opt })}
-                              className="accent-emerald-600"
-                            />
-                            {opt}
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
                   <div>
-                    <label className="block text-sm text-stone-700 mb-2">特殊健康需求或備註</label>
+                    <label className="block text-sm text-stone-700 mb-2">您想多了解些什麼？</label>
                     <textarea
                       rows={4}
-                      placeholder="如有過敏或其他特殊需求請告知"
+                      placeholder="歡迎填寫您想了解的內容"
                       value={form.notes}
                       onChange={e => setForm({ ...form, notes: e.target.value })}
                       className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder-stone-300 focus:outline-none focus:border-emerald-400 resize-none"
