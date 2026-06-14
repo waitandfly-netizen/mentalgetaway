@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEOHead from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sun, Moon, Mountain, Clock, Users, MapPin, Sparkles } from 'lucide-react';
+import { base44 } from '@/api/base44Client';
 
 export default function Programs() {
+  const [form, setForm] = useState({ name: '', phone: '', email: '', count: '1位', diet: '一般飲食', notes: '', source: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    await base44.integrations.Core.SendEmail({
+      to: 'taipei.circlelounge@gmail.com',
+      subject: `心靈假期報名 - ${form.name}`,
+      body: `姓名：${form.name}\n電話：${form.phone}\nEmail：${form.email}\n報名人數：${form.count}\n用餐習慣：${form.diet}\n特殊需求：${form.notes}\n得知來源：${form.source}`
+    });
+    setSubmitting(false);
+    setSubmitted(true);
+  };
   const programs = [
     {
       title: "一日放空行",
@@ -200,6 +216,131 @@ export default function Programs() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact / Registration Form */}
+      <section className="py-24 px-6 bg-stone-100">
+        <div className="max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-3xl p-8 md:p-12 shadow-sm"
+          >
+            {submitted ? (
+              <div className="text-center py-12">
+                <p className="text-emerald-700 text-2xl font-light mb-3">感謝您的報名！</p>
+                <p className="text-stone-500 font-light">我們將會盡快與您聯繫。</p>
+              </div>
+            ) : (
+              <>
+                <p className="text-emerald-700 text-center tracking-wider text-sm mb-2">立即預約您的心靈假期</p>
+                <p className="text-center text-stone-500 font-light mb-10">填寫報名表單，我們將有專人與您聯繫。</p>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-stone-700 mb-2">您的姓名</label>
+                      <input
+                        required
+                        type="text"
+                        placeholder="請輸入姓名"
+                        value={form.name}
+                        onChange={e => setForm({ ...form, name: e.target.value })}
+                        className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder-stone-300 focus:outline-none focus:border-emerald-400"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-stone-700 mb-2">聯絡電話</label>
+                      <input
+                        required
+                        type="tel"
+                        placeholder="09XX-XXX-XXX"
+                        value={form.phone}
+                        onChange={e => setForm({ ...form, phone: e.target.value })}
+                        className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder-stone-300 focus:outline-none focus:border-emerald-400"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm text-stone-700 mb-2">常用電子郵件 (Email)</label>
+                    <input
+                      required
+                      type="email"
+                      placeholder="example@email.com"
+                      value={form.email}
+                      onChange={e => setForm({ ...form, email: e.target.value })}
+                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder-stone-300 focus:outline-none focus:border-emerald-400"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 items-start">
+                    <div>
+                      <label className="block text-sm text-stone-700 mb-2">報名人數</label>
+                      <select
+                        value={form.count}
+                        onChange={e => setForm({ ...form, count: e.target.value })}
+                        className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-700 focus:outline-none focus:border-emerald-400 bg-white"
+                      >
+                        {['1位','2位','3位','4位','5位以上'].map(v => <option key={v}>{v}</option>)}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm text-stone-700 mb-2">用餐習慣</label>
+                      <div className="flex gap-6 pt-3">
+                        {['一般飲食', '素食'].map(opt => (
+                          <label key={opt} className="flex items-center gap-2 text-sm text-stone-600 cursor-pointer">
+                            <input
+                              type="radio"
+                              name="diet"
+                              value={opt}
+                              checked={form.diet === opt}
+                              onChange={() => setForm({ ...form, diet: opt })}
+                              className="accent-emerald-600"
+                            />
+                            {opt}
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm text-stone-700 mb-2">特殊健康需求或備註</label>
+                    <textarea
+                      rows={4}
+                      placeholder="如有過敏或其他特殊需求請告知"
+                      value={form.notes}
+                      onChange={e => setForm({ ...form, notes: e.target.value })}
+                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder-stone-300 focus:outline-none focus:border-emerald-400 resize-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm text-stone-700 mb-2">您從哪裡得知此活動？</label>
+                    <input
+                      type="text"
+                      placeholder="例如：FB、好友介紹等"
+                      value={form.source}
+                      onChange={e => setForm({ ...form, source: e.target.value })}
+                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder-stone-300 focus:outline-none focus:border-emerald-400"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full bg-stone-600 hover:bg-stone-700 text-white py-4 rounded-xl text-sm tracking-wider transition-colors disabled:opacity-60"
+                  >
+                    {submitting ? '送出中...' : '送出報名資訊'}
+                  </button>
+                  <p className="text-center text-stone-400 text-xs">我們將確保您的個人資料隱私安全。</p>
+                </form>
+              </>
+            )}
+          </motion.div>
         </div>
       </section>
     </div>
