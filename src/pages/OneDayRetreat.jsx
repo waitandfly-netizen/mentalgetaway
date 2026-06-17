@@ -45,7 +45,7 @@ export default function OneDayRetreat() {
             <span className="text-white/90 text-sm tracking-wider">DAY RETREAT</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide mb-4">
-            一日放空篇
+            一日放空行
           </h1>
           <p className="text-xl text-stone-200/90 font-light">
             在自然中深呼吸，讓身心回歸平靜
