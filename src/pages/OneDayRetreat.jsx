@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function OneDayRetreat() {
   const schedule = [
-    { time: "09:00", activity: "捷運劍潭站集合" },
+    { time: "09:00", activity: "集合" },
     { time: "10:00", activity: "開場引導" },
     { time: "10:30", activity: "森林健行-站樁體驗" },
     { time: "12:00", activity: "午餐休憩" },
@@ -98,12 +98,7 @@ export default function OneDayRetreat() {
                 全然地投入大自然的懷抱。
               </p>
               <p>
-                透過輕度的森林健行，我們將慢慢地喚醒身體的感知；
-                透過正念呼吸練習，我們將學習如何讓心安定下來；
-                透過品味健康的原型食物，我們將重新體會「吃」的美好。
-              </p>
-              <p>
-                這不是一場需要努力的課程，而是一段允許自己放鬆的時光。
+                透過輕度的森林健行，我們將慢慢地喚醒身體的感知，這不是一場需要努力的課程，而是一段允許自己放鬆的時光。
                 你可以只是單純地走路、單純地呼吸、單純地存在。
               </p>
             </div>
@@ -191,7 +186,7 @@ export default function OneDayRetreat() {
               <p className="text-4xl font-light mb-3">NT$ 1,200<span className="text-lg text-emerald-200">/人</span></p>
               <div className="mb-4">
                 <p className="text-emerald-200 text-sm mb-1">場次</p>
-                <p className="text-white font-light">5/1（五）｜5/29（五）</p>
+                <p className="text-white font-light">6/26（五）｜7/24（五）｜8/28（五）</p>
               </div>
               
               <a href="https://forms.gle/KCYzFjRnw8CuoYKT6" target="_blank" rel="noopener noreferrer">
