@@ -16,9 +16,8 @@ export default function OneDayRetreat() {
   ];
 
   const includes = [
-    "專業引導老師全程帶領",
-    "活動行政費",
-    "旅遊平安保險"
+    "全程心靈導遊專業帶領",
+    "活動行政費"
   ];
 
   return (
