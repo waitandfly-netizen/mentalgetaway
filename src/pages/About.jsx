@@ -39,14 +39,14 @@ export default function About() {
         title="初心緣起"
         description="心靈假期的故事從20多年前開始，一群年輕學子在暨南大學遇到一位奇特有趣的通識課老師，開展了各自獨一無二的心靈旅程。了解我們的初心與理念。"
         keywords="心靈假期緣起, 圓滿心靈花園, 靜如老師, 身心靈成長, 心靈旅程"
-        image="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=1200&q=80"
+        image="https://media.base44.com/images/public/698fc983574e659f561934f1/059ee0d76_P1120270.jpg"
       />
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=1920&q=80')"
+            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/059ee0d76_P1120270.jpg')"
           }}
         >
           <div className="absolute inset-0 bg-stone-900/50" />
