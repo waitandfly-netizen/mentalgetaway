@@ -251,18 +251,14 @@ export default function Resources() {
               alt="日月潭靜心地圖"
               className="w-full h-auto block"
             />
-            {/* Clickable hotspot for 朝霧碼頭 */}
+            {/* Clickable hotspot over 朝霧碼頭 text in the illustration */}
             <button
               onClick={() => setShowPierPopup(true)}
               className="absolute group"
-              style={{ left: '18%', top: '40%' }}
-              title="朝霧碼頭"
+              style={{ left: '22%', top: '40%', transform: 'translate(-50%, -50%)' }}
+              title="點擊查看朝霧碼頭"
             >
-              <span className="absolute -inset-3" />
-              <span className="block w-5 h-5 rounded-full bg-white/70 border-2 border-stone-700 group-hover:bg-white group-hover:scale-125 transition-all shadow-md" />
-              <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 px-2 py-0.5 bg-white/90 rounded-md text-xs text-stone-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
-                朝霧碼頭
-              </span>
+              <span className="block w-20 h-7 cursor-pointer transition-all rounded-lg group-hover:bg-emerald-500/15 group-hover:ring-2 group-hover:ring-emerald-500/50" />
             </button>
           </motion.div>
         </div>
