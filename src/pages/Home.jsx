@@ -135,7 +135,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=80')",
+            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/059ee0d76_P1120270.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-stone-900/20 to-stone-900/60" />
