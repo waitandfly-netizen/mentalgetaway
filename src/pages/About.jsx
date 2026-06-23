@@ -139,20 +139,7 @@ export default function About() {
             </div>
           </motion.div>
           
-          {/* Team Photo */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="mt-16"
-          >
-            <img 
-              src="https://spiritvacation.wordpress.com/wp-content/uploads/2026/02/486750893_24060591246862331_2505797623539679779_n.jpg?w=1024" 
-              alt="心靈假期團隊"
-              className="w-full rounded-2xl shadow-lg"
-            />
-          </motion.div>
+
         </div>
       </section>
 
