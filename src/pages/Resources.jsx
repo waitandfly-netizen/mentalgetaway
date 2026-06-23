@@ -227,8 +227,35 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Categories */}
+      {/* Sun Moon Lake Illustration */}
       <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl font-light text-stone-800 text-center mb-10 tracking-wide"
+          >
+            日月潭靜心地圖
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="rounded-3xl overflow-hidden shadow-lg border border-stone-100"
+          >
+            <img
+              src="https://media.base44.com/images/public/698fc983574e659f561934f1/2db46f118_IMG_0120.png"
+              alt="日月潭靜心地圖"
+              className="w-full h-auto block"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="py-16 px-6 bg-stone-50">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
