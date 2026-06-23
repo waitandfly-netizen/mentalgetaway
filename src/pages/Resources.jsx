@@ -91,7 +91,6 @@ const categories = [
 
 export default function Resources() {
   const [activeSpot, setActiveSpot] = useState(null);
-  const [showChaowu, setShowChaowu] = useState(false);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -244,37 +243,13 @@ export default function Resources() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100"
+            className="rounded-3xl overflow-hidden shadow-lg border border-stone-100"
           >
             <img
               src="https://media.base44.com/images/public/698fc983574e659f561934f1/2db46f118_IMG_0120.png"
               alt="日月潭靜心地圖"
               className="w-full h-auto block"
             />
-
-            {/* 朝霧碼頭 clickable pin */}
-            <motion.button
-              initial={{ scale: 0, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-              onClick={() => setShowChaowu(true)}
-              className="absolute -translate-x-1/2 -translate-y-1/2 group"
-              style={{ left: "32%", top: "48%" }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.25 }}
-                whileTap={{ scale: 0.9 }}
-                className="relative w-8 h-8 md:w-10 md:h-10 rounded-full bg-emerald-600 shadow-xl flex items-center justify-center text-white font-bold text-xs md:text-sm border-[3px] border-white"
-                style={{ boxShadow: '0 4px 14px rgba(0,0,0,0.25)' }}
-              >
-                <MapPin className="w-4 h-4 md:w-5 md:h-5" />
-                <span className="absolute inset-0 rounded-full bg-emerald-600 opacity-30 animate-ping" />
-              </motion.div>
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-white rounded-xl shadow-md text-xs text-stone-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-stone-100">
-                朝霧碼頭
-              </div>
-            </motion.button>
           </motion.div>
         </div>
       </section>
@@ -340,40 +315,6 @@ export default function Resources() {
           </div>
         </div>
       </section>
-      {/* 朝霧碼頭 Popup */}
-      <AnimatePresence>
-        {showChaowu && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
-            onClick={() => setShowChaowu(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="relative max-w-2xl w-full rounded-3xl overflow-hidden shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={() => setShowChaowu(false)}
-                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/50 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-              <img
-                src="https://media.base44.com/images/public/698fc983574e659f561934f1/3d42885ee_IMG_0117.png"
-                alt="朝霧碼頭"
-                className="w-full h-auto block"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
