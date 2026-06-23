@@ -91,6 +91,7 @@ const categories = [
 
 export default function Resources() {
   const [activeSpot, setActiveSpot] = useState(null);
+  const [showPierPopup, setShowPierPopup] = useState(false);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -243,13 +244,26 @@ export default function Resources() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="rounded-3xl overflow-hidden shadow-lg border border-stone-100"
+            className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100"
           >
             <img
               src="https://media.base44.com/images/public/698fc983574e659f561934f1/2db46f118_IMG_0120.png"
               alt="日月潭靜心地圖"
               className="w-full h-auto block"
             />
+            {/* Clickable hotspot for 朝霧碼頭 */}
+            <button
+              onClick={() => setShowPierPopup(true)}
+              className="absolute group"
+              style={{ left: '18%', top: '40%' }}
+              title="朝霧碼頭"
+            >
+              <span className="absolute -inset-3" />
+              <span className="block w-5 h-5 rounded-full bg-white/70 border-2 border-stone-700 group-hover:bg-white group-hover:scale-125 transition-all shadow-md" />
+              <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 px-2 py-0.5 bg-white/90 rounded-md text-xs text-stone-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
+                朝霧碼頭
+              </span>
+            </button>
           </motion.div>
         </div>
       </section>
@@ -315,6 +329,39 @@ export default function Resources() {
           </div>
         </div>
       </section>
+      {/* 朝霧碼頭 Popup */}
+      <AnimatePresence>
+        {showPierPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowPierPopup(false)}
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-stone-900/70 backdrop-blur-sm p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-2xl w-full rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <button
+                onClick={() => setShowPierPopup(false)}
+                className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              <img
+                src="https://media.base44.com/images/public/698fc983574e659f561934f1/3d42885ee_IMG_0117.png"
+                alt="朝霧碼頭"
+                className="w-full h-auto block"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
