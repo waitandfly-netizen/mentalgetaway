@@ -136,6 +136,20 @@ export default function About() {
               <p className="text-lg text-stone-700 bg-stone-50 p-6 rounded-xl border-l-4 border-emerald-600">
                 如果你嚮往一種不靠努力修煉，以完全自然與平衡的方式覺醒，或許這趟旅程正是為你而準備的。
               </p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="mt-12"
+              >
+                <img 
+                  src="https://media.base44.com/images/public/698fc983574e659f561934f1/326640ce6_P1120270.jpg" 
+                  alt="山巒日出"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+              </motion.div>
             </div>
           </motion.div>
           
