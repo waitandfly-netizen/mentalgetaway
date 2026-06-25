@@ -349,11 +349,34 @@ export default function Resources() {
               >
                 <X className="w-5 h-5" />
               </button>
-              <img
-                src="https://media.base44.com/images/public/698fc983574e659f561934f1/3d42885ee_IMG_0117.png"
-                alt="朝霧碼頭"
-                className="w-full h-auto block"
-              />
+              <div className="relative">
+                <img
+                  src="https://media.base44.com/images/public/698fc983574e659f561934f1/68a116fd7_generated_image.png"
+                  alt="朝霧碼頭"
+                  className="w-full h-auto block"
+                />
+                {/* Text overlay */}
+                <div className="absolute top-8 left-6 sm:left-10 text-stone-100">
+                  <p className="text-2xl sm:text-3xl font-light tracking-widest mb-3" style={{ writingMode: 'vertical-rl' }}>
+                    朝霧碼頭
+                  </p>
+                  <p className="text-stone-300 text-xs sm:text-sm font-light mb-6">/</p>
+                  <div className="space-y-1 text-stone-200 text-sm sm:text-base font-light leading-relaxed">
+                    <p>清晨的霧氣，</p>
+                    <p>讓山與水之間，</p>
+                    <p>多了幾分溫柔。</p>
+                  </div>
+                </div>
+                <div className="absolute bottom-6 left-6 sm:left-10 flex items-center gap-2 text-stone-200">
+                  <span className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center">
+                    <span className="text-xs">〜</span>
+                  </span>
+                  <div className="text-[10px] tracking-[0.2em] leading-tight">
+                    <p>MENTAL</p>
+                    <p>GETAWAY</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}
