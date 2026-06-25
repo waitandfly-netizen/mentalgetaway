@@ -241,7 +241,7 @@ export default function About() {
               },
               {
                 year: "2017", tag: "支持助人者",
-                img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/a0ca90560_2017.png",
+                img: null,
                 content: "支持辛勞的助人者，辦理專屬場次，讓自我照顧能有新選擇，享受完整的充電與還原。",
                 detail: "3月、8月宜蘭場、5月、11月埔里暨大場，共計4場次。"
               },
