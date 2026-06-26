@@ -259,7 +259,7 @@ export default function About() {
               },
               {
                 year: "2023", tag: "重新出發",
-                img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/9475c6f06_2023.jpg",
+                img: null,
                 content: "疫情過後重新出發，在宜蘭與南投的好山好水中，撫平疫情帶來的負擔。",
                 detail: "5月宜蘭外澳、9月暨南大學，共計2場次。"
               },
