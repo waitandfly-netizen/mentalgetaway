@@ -235,7 +235,7 @@ export default function About() {
               },
               {
                 year: "2016", tag: "走向更廣的自然",
-                img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/da69f3d59_2016.png",
+                img: null,
                 content: "第一次離開埔里，來到宜蘭外澳海邊，將大海獨有的鮮活能量分享給參加者。",
                 detail: "4月宜蘭外澳、7月暨大、10月埔里松濤園，共計3場次。"
               },
