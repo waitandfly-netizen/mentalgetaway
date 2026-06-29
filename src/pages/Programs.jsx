@@ -33,7 +33,7 @@ export default function Programs() {
     {
       title: "一日放空行",
       subtitle: "Day Retreat",
-      description: "適合忙碌的都市人，用一天的時間讓身心重新充電。在自然環境中進行輕度健行、呼吸練習。",
+      description: "適合忙碌的都市人，用一天的時間讓身心重新充電。在自然環境中進行冥想、呼吸練習。",
       features: ["站樁練習", "品茗靜心", "呼吸冥想練習", "自由探索時光"],
       duration: "約 8 小時",
       groupSize: "6-12 人",
@@ -44,10 +44,10 @@ export default function Programs() {
       color: "amber"
     },
     {
-      title: "二日放空篇",
+      title: "二日放空營",
       subtitle: "Weekend Escape",
       description: "兩天一夜的深度休憩，遠離城市的喧囂，在寧靜的環境中重新連結自己。包含完整的身心課程與舒適住宿。",
-      features: ["深度森林浴", "晨間冥想練習", "營養飲食調理", "星空下靜心"],
+      features: ["靜心活動", "晨間冥想練習", "營養飲食調理", "舞動療癒"],
       duration: "2天1夜",
       groupSize: "8-15 人",
       location: "宜蘭山區民宿",
