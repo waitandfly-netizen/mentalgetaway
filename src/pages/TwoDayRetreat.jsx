@@ -63,7 +63,7 @@ export default function TwoDayRetreat() {
             <span className="text-white/90 text-sm tracking-wider">WEEKEND ESCAPE</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide mb-4">
-            二日放空篇
+            二日放空營
           </h1>
           <p className="text-xl text-stone-200/90 font-light">
             兩天一夜的心靈充電之旅
@@ -132,7 +132,7 @@ export default function TwoDayRetreat() {
             </h2>
             <div className="text-stone-600 font-light leading-loose space-y-6">
               <p>
-                「二日放空篇」是我們最受歡迎的旅程之一。
+                「二日放空營」是我們最受歡迎的旅程之一。
                 透過兩天一夜的完整體驗，讓您有足夠的時間真正地「慢下來」。
               </p>
               <p>

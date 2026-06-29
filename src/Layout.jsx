@@ -129,7 +129,7 @@ export default function Layout({ children, currentPageName }) {
               <h4 className="text-white text-sm tracking-wider mb-4">旅程篇章</h4>
               <div className="space-y-2">
                 <Link to={createPageUrl('OneDayRetreat')} className="block text-sm hover:text-white transition-colors">一日放空行</Link>
-                <Link to={createPageUrl('TwoDayRetreat')} className="block text-sm hover:text-white transition-colors">二日放空篇</Link>
+                <Link to={createPageUrl('TwoDayRetreat')} className="block text-sm hover:text-white transition-colors">二日放空營</Link>
                 <Link to={createPageUrl('SilentRetreat')} className="block text-sm hover:text-white transition-colors">蛻變篇</Link>
                 <Link to={createPageUrl('InvitationRetreat')} className="block text-sm hover:text-white transition-colors">僻靜篇</Link>
               </div>
