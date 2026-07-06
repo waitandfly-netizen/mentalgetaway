@@ -259,8 +259,8 @@ export default function About() {
               },
               {
                 year: "2023", tag: "重新出發",
-                img: null,
-                content: "疫情過後重新出發，在宜蘭與南投的好山好水中，撫平疫情帶來的負擔。",
+                img: "https://media.base44.com/images/public/698fc983574e659f561934f1/549475533_2023.jpg",
+                content: "疫情過後重新出發，精選宜蘭與南投優良能量地點，透過各式靜心，淨化身心靈，撫平疫情帶來的負擔。",
                 detail: "5月宜蘭外澳、9月暨南大學，共計2場次。"
               },
               {
