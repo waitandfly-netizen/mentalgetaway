@@ -229,7 +229,7 @@ export default function About() {
               },
               {
                 year: "2015", tag: "累積",
-                img: null,
+                img: "https://media.base44.com/images/public/698fc983574e659f561934f1/59f20548d_2015.jpg",
                 content: "持續於日月潭蓄積，在私房能量點，深度淨化身心靈，享受高品質充電。",
                 detail: "3月、9月辦理2場尊榮級；6月、12月暨南大學場次。"
               },
