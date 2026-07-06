@@ -217,19 +217,19 @@ export default function About() {
             {[
               {
                 year: "2013", tag: "萌芽",
-                img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/cf8310c37_2013.jpg",
+                img: null,
                 content: "心靈假期從暨南大學開始，用好山好水的大自然能量，進行身心放鬆活動。",
                 detail: "3月、4月、6月、8月、9月、11月，共計六場次2天1夜的旅程。"
               },
               {
                 year: "2014", tag: "累積",
-                img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/2f2c96e27_2014.png",
+                img: null,
                 content: "為了提供更優質的充電品質，尋覓日月潭合適地點辦理心靈假期。",
                 detail: "2月、4月、6月、10月、12月，共辦理5場次。"
               },
               {
                 year: "2015", tag: "累積",
-                img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/7cb0185cc_2015.jpg",
+                img: null,
                 content: "持續於日月潭蓄積，辦理尊榮等級的心靈假期，深度淨化身心靈，享受高品質充電。",
                 detail: "3月、9月辦理2場尊榮級；6月、12月暨南大學場次。"
               },
