@@ -223,8 +223,8 @@ export default function About() {
               },
               {
                 year: "2014", tag: "累積",
-                img: null,
-                content: "為了提供更優質的充電品質，尋覓日月潭合適地點辦理心靈假期。",
+                img: "https://media.base44.com/images/public/698fc983574e659f561934f1/99ec0b96f_DSC05359.jpg",
+                content: "在好山好水間，淨化身心、享受安定。",
                 detail: "2月、4月、6月、10月、12月，共辦理5場次。"
               },
               {
