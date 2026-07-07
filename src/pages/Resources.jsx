@@ -157,18 +157,23 @@ export default function Resources() {
                 return (
                   <motion.button
                     key={spot.id}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
                     onClick={() => setActiveSpot(isActive ? null : spot)}
                     className="absolute group z-10 cursor-pointer"
                     style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
                   >
-                    {/* Transparent clickable overlay on the map text */}
                     <span
-                      className={`block px-5 py-2 rounded-full border transition-all duration-300 ${isActive ? 'bg-violet-500/25 border-violet-500/60' : 'bg-transparent border-transparent group-hover:bg-violet-500/15 group-hover:border-violet-500/40'}
-                      backdrop-blur-[1px]`}
-                    />
+                      className={`block px-4 py-1.5 rounded-full text-base font-medium tracking-wide transition-all duration-300 ${
+                        isActive
+                          ? 'bg-violet-600 text-white shadow-lg'
+                          : 'bg-white/85 text-violet-700 backdrop-blur-sm shadow-md group-hover:bg-white group-hover:scale-105'
+                      }`}
+                      style={{ textShadow: isActive ? 'none' : '0 1px 2px rgba(255,255,255,0.5)' }}
+                    >
+                      夢幻湖
+                    </span>
                   </motion.button>
                 );
               }
