@@ -50,15 +50,16 @@ const spots = [
     borderColor: "border-teal-600",
     textColor: "text-violet-700",
     bgLight: "bg-teal-50",
-    description: "平緩步道與自然景色，適合獨處與散心",
+    description: "一日放空行場勘照片",
     time: "上午／平日",
     type: "獨處點",
     detail: "二子坪步道全程平緩無障礙，被茂密森林環繞。平日人少，非常適合一個人慢慢走，靜靜地與自己相處，聆聽鳥鳴與風聲。",
     x: "7%",
     y: "43%",
     photos: [
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80"
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/90446150f_S__43393044_0.jpg",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/55f280f37_S__380264455_0.jpg",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/f5c2cfdc3_621591519_879080881504381_8360370733697016373_n.jpg"
     ]
   },
   {
