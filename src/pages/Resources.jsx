@@ -167,7 +167,7 @@ export default function Resources() {
                     style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
                   >
                     <span
-                      className={`block px-5 py-1.5 rounded-full text-base font-medium tracking-wide transition-all duration-300 ${
+                      className={`block px-4 py-1 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
                         isActive
                           ? 'bg-violet-600 text-white shadow-lg'
                           : 'bg-white/70 text-violet-700 backdrop-blur-sm shadow-md hover:bg-white'
