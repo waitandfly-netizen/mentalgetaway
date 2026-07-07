@@ -17,7 +17,11 @@ const spots = [
     type: "獨處點",
     detail: "擎天崗草原一望無際，微風拂來，是放空心靈的絕佳所在。清晨的薄霧與傍晚的金光，讓人忘卻城市的喧囂，只感受當下的呼吸與寧靜。",
     x: "42%",
-    y: "18%"
+    y: "18%",
+    photos: [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&q=80"
+    ]
   },
   {
     id: 2,
@@ -32,7 +36,11 @@ const spots = [
     type: "慢走路線",
     detail: "冷水坑以溫泉與硫磺地形著名，步道輕緩，適合一邊走路一邊感受身體的每個步伐，讓思緒隨著腳步慢慢沉澱。",
     x: "62%",
-    y: "28%"
+    y: "28%",
+    photos: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80"
+    ]
   },
   {
     id: 3,
@@ -47,7 +55,11 @@ const spots = [
     type: "獨處點",
     detail: "二子坪步道全程平緩無障礙，被茂密森林環繞。平日人少，非常適合一個人慢慢走，靜靜地與自己相處，聆聽鳥鳴與風聲。",
     x: "36%",
-    y: "38%"
+    y: "38%",
+    photos: [
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80"
+    ]
   },
   {
     id: 4,
@@ -62,7 +74,11 @@ const spots = [
     type: "獨處點",
     detail: "夢幻湖是台灣特有水生植物台灣水韭的家，湖面平靜如鏡。陰天時的夢幻湖更添神秘感，坐在湖畔，帶著日記，讓文字承接內心的流動。",
     x: "30%",
-    y: "62%"
+    y: "62%",
+    photos: [
+      "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=800&q=80",
+      "https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?w=800&q=80"
+    ]
   },
   {
     id: 5,
@@ -77,7 +93,11 @@ const spots = [
     type: "眺望點",
     detail: "小油坑的噴氣孔與硫磺地形充滿原始力量，眺望台北盆地視野絕佳。在這裡感受地球的呼吸，讓自然的能量為你充電。",
     x: "62%",
-    y: "52%"
+    y: "52%",
+    photos: [
+      "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80"
+    ]
   }
 ];
 
@@ -120,7 +140,7 @@ export default function Resources() {
       {/* Map Section */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          {/* Map with pins */}
+          {/* Map with clickable hotspots */}
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100">
             <img
               src="https://media.base44.com/images/public/698fc983574e659f561934f1/cd954cdc7_.png"
@@ -128,47 +148,76 @@ export default function Resources() {
               className="w-full h-auto block"
             />
 
+            {/* Clickable hotspots */}
+            {spots.map((spot, i) => (
+              <motion.button
+                key={spot.id}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.3 + i * 0.1, type: "spring", stiffness: 200 }}
+                onClick={() => setActiveSpot(activeSpot?.id === spot.id ? null : spot)}
+                className="absolute -translate-x-1/2 -translate-y-1/2 group"
+                style={{ left: spot.x, top: spot.y }}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.25 }}
+                  whileTap={{ scale: 0.9 }}
+                  className={`relative w-10 h-10 rounded-full ${spot.color} shadow-xl flex items-center justify-center text-white font-bold text-sm border-[3px] border-white`}
+                  style={{ boxShadow: '0 4px 14px rgba(0,0,0,0.25)' }}
+                >
+                  <MapPin className="w-5 h-5" />
+                  <span className={`absolute inset-0 rounded-full ${spot.color} opacity-30 animate-ping`} />
+                </motion.div>
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-white rounded-xl shadow-md text-xs text-stone-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-stone-100">
+                  {spot.name}
+                </div>
+              </motion.button>
+            ))}
 
+            {/* Floating photo popup */}
+            <AnimatePresence>
+              {activeSpot && (
+                <motion.div
+                  key={activeSpot.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[90%] max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden"
+                >
+                  <button
+                    onClick={() => setActiveSpot(null)}
+                    className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-600 transition-colors shadow-md"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                  <div className="relative">
+                    <img
+                      src={activeSpot.photos[0]}
+                      alt={activeSpot.name}
+                      className="w-full h-56 object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                      <h3 className="text-white text-lg font-light tracking-wide">{activeSpot.name}</h3>
+                      <p className="text-white/80 text-xs font-light mt-1">{activeSpot.description}</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 p-3 overflow-x-auto">
+                    {activeSpot.photos.map((photo, i) => (
+                      <img
+                        key={i}
+                        src={photo}
+                        alt={`${activeSpot.name} ${i + 1}`}
+                        className="w-16 h-16 rounded-lg object-cover flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          {/* Spot Detail Panel */}
-          <AnimatePresence>
-            {activeSpot && (
-              <motion.div
-                key={activeSpot.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.4 }}
-                className={`mt-6 ${activeSpot.bgLight} border ${activeSpot.borderColor} rounded-3xl p-6 md:p-8 relative`}
-              >
-                <button
-                  onClick={() => setActiveSpot(null)}
-                  className="absolute top-4 right-4 text-stone-400 hover:text-stone-600 transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-                <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-2xl ${activeSpot.color} flex items-center justify-center text-white font-bold text-lg flex-shrink-0`}>
-                    {activeSpot.id}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-3 mb-3">
-                      <h3 className={`text-xl font-light ${activeSpot.textColor} tracking-wide`}>{activeSpot.name}</h3>
-                      <span className={`text-xs px-3 py-1 rounded-full bg-white/70 ${activeSpot.textColor} border ${activeSpot.borderColor} border-opacity-30`}>
-                        {activeSpot.type}
-                      </span>
-                    </div>
-                    <p className="text-stone-600 font-light leading-relaxed mb-4">{activeSpot.detail}</p>
-                    <div className="flex items-center gap-2 text-stone-500 text-sm">
-                      <Clock className="w-4 h-4" />
-                      <span>推薦時段：{activeSpot.time}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+
 
 
         </div>
