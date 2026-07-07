@@ -404,7 +404,7 @@ export default function Resources() {
                         src={activeSunMoonSpot.photos[currentSunMoonPhotoIndex]}
                         alt={activeSunMoonSpot.name}
                         onClick={() => setCurrentSunMoonPhotoIndex((prev) => (prev + 1) % activeSunMoonSpot.photos.length)}
-                        className="w-full h-80 md:h-96 object-cover cursor-pointer"
+                        className="w-full h-auto object-contain cursor-pointer max-h-[80vh]"
                       />
                       {activeSunMoonSpot.photos.length > 1 && (
                         <>
@@ -422,10 +422,12 @@ export default function Resources() {
                           </button>
                         </>
                       )}
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                        <h3 className="text-white text-2xl font-light tracking-wide">{activeSunMoonSpot.name}</h3>
-                        <p className="text-white/80 text-sm font-light mt-1">{activeSunMoonSpot.description}</p>
-                      </div>
+                      {activeSunMoonSpot.description && (
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                          <h3 className="text-white text-2xl font-light tracking-wide">{activeSunMoonSpot.name}</h3>
+                          <p className="text-white/80 text-sm font-light mt-1">{activeSunMoonSpot.description}</p>
+                        </div>
+                      )}
                     </div>
                     {activeSunMoonSpot.photos.length > 1 && (
                       <div className="flex gap-3 p-4 overflow-x-auto">
