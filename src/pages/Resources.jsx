@@ -170,27 +170,7 @@ export default function Resources() {
             )}
           </AnimatePresence>
 
-          {/* Spot Cards Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
-            {spots.map((spot, i) => (
-              <motion.button
-                key={spot.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                onClick={() => setActiveSpot(activeSpot?.id === spot.id ? null : spot)}
-                className={`text-left p-4 rounded-2xl border transition-all duration-300 ${
-                  activeSpot?.id === spot.id
-                    ? `${spot.bgLight} ${spot.borderColor} shadow-md`
-                    : 'bg-white border-stone-100 hover:shadow-sm hover:border-stone-200'
-                }`}
-              >
-                <p className="text-stone-800 font-light text-sm mb-1">{spot.name}</p>
-                <p className="text-stone-400 text-xs leading-relaxed line-clamp-2">{spot.description}</p>
-              </motion.button>
-            ))}
-          </div>
+
         </div>
       </section>
 
