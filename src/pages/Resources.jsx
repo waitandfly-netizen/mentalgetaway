@@ -73,8 +73,8 @@ const spots = [
     time: "平日／陰天",
     type: "獨處點",
     detail: "夢幻湖是台灣特有水生植物台灣水韭的家，湖面平靜如鏡。陰天時的夢幻湖更添神秘感，坐在湖畔，帶著日記，讓文字承接內心的流動。",
-    x: "30%",
-    y: "62%",
+    x: "20%",
+    y: "75%",
     photos: [
       "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=800&q=80",
       "https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?w=800&q=80"
