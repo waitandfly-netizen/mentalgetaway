@@ -120,11 +120,11 @@ const sunMoonSpots = [
   {
     id: 2,
     name: "朝霧碼頭",
-    description: "日月潭靜心活動照片",
+    description: "",
     x: "14%",
     y: "35%",
     photos: [
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/3d42885ee_IMG_0117.png",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/bd9fa73f3_3.png",
     ]
   },
   {
