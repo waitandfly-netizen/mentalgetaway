@@ -120,8 +120,6 @@ export default function Resources() {
       {/* Map Section */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-stone-400 font-light text-sm mb-10">點擊地點標記，探索每個靜心角落</p>
-
           {/* Map with pins */}
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100">
             <img
