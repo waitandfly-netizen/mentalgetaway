@@ -131,8 +131,8 @@ const sunMoonSpots = [
     id: 3,
     name: "涵碧步道",
     description: "日月潭靜心活動照片",
-    x: "30%",
-    y: "45%",
+    x: "28%",
+    y: "80%",
     photos: [
       "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
     ]
@@ -141,8 +141,8 @@ const sunMoonSpots = [
     id: 4,
     name: "慈恩塔",
     description: "日月潭靜心活動照片",
-    x: "80%",
-    y: "10%",
+    x: "82%",
+    y: "16%",
     photos: [
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
     ]
