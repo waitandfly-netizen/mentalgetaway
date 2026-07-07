@@ -140,11 +140,11 @@ const sunMoonSpots = [
   {
     id: 4,
     name: "慈恩塔",
-    description: "日月潭靜心活動照片",
+    description: "",
     x: "82%",
     y: "16%",
     photos: [
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/41bf7bf10_5.png",
     ]
   },
   {
