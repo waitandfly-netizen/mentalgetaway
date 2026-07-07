@@ -78,7 +78,8 @@ const spots = [
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/e71597c82_S__43393047_0.jpg",
       "https://media.base44.com/images/public/698fc983574e659f561934f1/c2db304c5_S__43393040_0.jpg",
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/0b5405fc0_4B24F80F-BA5D-4C19-A78A-591F0A8268A7.jpg"
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/0b5405fc0_4B24F80F-BA5D-4C19-A78A-591F0A8268A7.jpg",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/b17475470_S__43393045_0.jpg"
     ]
   },
   {
