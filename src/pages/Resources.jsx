@@ -155,19 +155,27 @@ export default function Resources() {
 
               if (isTextButton) {
                 return (
-                  <button
+                  <motion.button
                     key={spot.id}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
                     onClick={() => setActiveSpot(isActive ? null : spot)}
-                    aria-label={spot.name}
-                    className="absolute z-10 cursor-pointer bg-transparent"
-                    style={{
-                      left: spot.x,
-                      top: spot.y,
-                      transform: 'translate(-50%, -50%)',
-                      width: '90px',
-                      height: '36px'
-                    }}
-                  />
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.96 }}
+                    className="absolute z-10 cursor-pointer"
+                    style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
+                  >
+                    <span
+                      className={`block px-5 py-1.5 rounded-full text-base font-medium tracking-wide transition-all duration-300 ${
+                        isActive
+                          ? 'bg-violet-600 text-white shadow-lg'
+                          : 'bg-white/70 text-violet-700 backdrop-blur-sm shadow-md hover:bg-white'
+                      }`}
+                    >
+                      夢幻湖
+                    </span>
+                  </motion.button>
                 );
               }
 
