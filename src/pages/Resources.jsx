@@ -16,8 +16,8 @@ const spots = [
     time: "清晨／傍晚",
     type: "獨處點",
     detail: "擎天崗草原一望無際，微風拂來，是放空心靈的絕佳所在。清晨的薄霧與傍晚的金光，讓人忘卻城市的喧囂，只感受當下的呼吸與寧靜。",
-    x: "42%",
-    y: "18%",
+    x: "46%",
+    y: "10%",
     photos: [
       "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
       "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&q=80"
@@ -35,8 +35,8 @@ const spots = [
     time: "上午",
     type: "慢走路線",
     detail: "冷水坑以溫泉與硫磺地形著名，步道輕緩，適合一邊走路一邊感受身體的每個步伐，讓思緒隨著腳步慢慢沉澱。",
-    x: "62%",
-    y: "28%",
+    x: "63%",
+    y: "24%",
     photos: [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
       "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80"
@@ -55,7 +55,7 @@ const spots = [
     type: "獨處點",
     detail: "二子坪步道全程平緩無障礙，被茂密森林環繞。平日人少，非常適合一個人慢慢走，靜靜地與自己相處，聆聽鳥鳴與風聲。",
     x: "6%",
-    y: "40%",
+    y: "42%",
     photos: [
       "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80"
@@ -92,8 +92,8 @@ const spots = [
     time: "上午",
     type: "眺望點",
     detail: "小油坑的噴氣孔與硫磺地形充滿原始力量，眺望台北盆地視野絕佳。在這裡感受地球的呼吸，讓自然的能量為你充電。",
-    x: "62%",
-    y: "52%",
+    x: "58%",
+    y: "51%",
     photos: [
       "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&q=80",
       "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80"
