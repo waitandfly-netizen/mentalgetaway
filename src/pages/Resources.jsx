@@ -151,69 +151,27 @@ export default function Resources() {
             {/* Clickable hotspots */}
             {spots.map((spot, i) => {
               const isActive = activeSpot?.id === spot.id;
-              const isTextButton = spot.id === 4; // 夢幻湖 — text on map is the button
-
-              if (isTextButton) {
-                return (
-                  <motion.button
-                    key={spot.id}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
-                    onClick={() => setActiveSpot(isActive ? null : spot)}
-                    whileHover={{ scale: 1.08 }}
-                    whileTap={{ scale: 0.96 }}
-                    className="absolute z-10 cursor-pointer"
-                    style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
-                  >
-                    <span
-                      className={`block px-4 py-1 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
-                        isActive
-                          ? 'bg-violet-600 text-white shadow-lg'
-                          : 'bg-white/70 text-violet-700 backdrop-blur-sm shadow-md hover:bg-white'
-                      }`}
-                    >
-                      夢幻湖
-                    </span>
-                  </motion.button>
-                );
-              }
-
               return (
                 <motion.button
                   key={spot.id}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.3 + i * 0.1, type: "spring", stiffness: 200 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
                   onClick={() => setActiveSpot(isActive ? null : spot)}
-                  className="absolute -translate-x-1/2 -translate-y-1/2 group z-10"
-                  style={{ left: spot.x, top: spot.y }}
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="absolute z-10 cursor-pointer"
+                  style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
                 >
-                  {/* Soft pulsing halo */}
-                  <span className={`absolute inset-0 m-auto w-12 h-12 rounded-full ${spot.color} opacity-20 blur-md animate-pulse`} />
-
-                  {/* Main marker */}
-                  <motion.div
-                    whileHover={{ scale: 1.15 }}
-                    whileTap={{ scale: 0.95 }}
-                    animate={isActive ? { scale: 1.2 } : { scale: 1 }}
-                    className={`relative w-11 h-11 rounded-full ${spot.color} flex items-center justify-center text-white transition-all duration-300`}
-                    style={{
-                      boxShadow: isActive
-                        ? '0 8px 24px rgba(0,0,0,0.3), 0 0 0 3px rgba(255,255,255,0.9)'
-                        : '0 4px 12px rgba(0,0,0,0.2), 0 0 0 2px rgba(255,255,255,0.9)'
-                    }}
+                  <span
+                    className={`block px-4 py-1 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
+                      isActive
+                        ? `${spot.color} text-white shadow-lg`
+                        : `bg-white/70 ${spot.textColor} backdrop-blur-sm shadow-md hover:bg-white`
+                    }`}
                   >
-                    {/* Inner glass circle */}
-                    <span className="absolute inset-1 rounded-full bg-white/20 backdrop-blur-sm" />
-                    <MapPin className="relative w-5 h-5 drop-shadow-sm" />
-                  </motion.div>
-
-                  {/* Tooltip */}
-                  <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3.5 py-1.5 bg-white/95 backdrop-blur-md rounded-full shadow-lg text-xs font-medium text-stone-700 whitespace-nowrap transition-all duration-300 border border-white/60 pointer-events-none ${isActive || false ? 'opacity-100 -translate-y-0.5' : 'opacity-0 group-hover:opacity-100 group-hover:-translate-y-0.5'}`}>
                     {spot.name}
-                    <span className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-white/95 rotate-45 -mt-1 border-r border-b border-white/60" />
-                  </div>
+                  </span>
                 </motion.button>
               );
             })}
