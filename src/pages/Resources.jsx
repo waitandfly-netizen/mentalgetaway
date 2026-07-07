@@ -265,8 +265,8 @@ export default function Resources() {
       </section>
 
       {/* Sun Moon Lake Illustration */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-2 bg-white">
+        <div className="w-full mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
