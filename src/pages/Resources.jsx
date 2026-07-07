@@ -265,8 +265,8 @@ export default function Resources() {
       </section>
 
       {/* Sun Moon Lake Illustration */}
-      <section className="py-16 px-2 bg-white">
-        <div className="w-full mx-auto">
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -283,7 +283,7 @@ export default function Resources() {
             className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100"
           >
             <img
-              src="https://media.base44.com/images/public/698fc983574e659f561934f1/f19d9be8e_3.png"
+              src="https://media.base44.com/images/public/698fc983574e659f561934f1/2798d6bcf_3.png"
               alt="日月潭靜心地圖"
               className="w-full h-auto block"
             />
