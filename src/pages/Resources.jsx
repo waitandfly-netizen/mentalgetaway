@@ -54,7 +54,7 @@ const spots = [
     time: "上午／平日",
     type: "獨處點",
     detail: "二子坪步道全程平緩無障礙，被茂密森林環繞。平日人少，非常適合一個人慢慢走，靜靜地與自己相處，聆聽鳥鳴與風聲。",
-    x: "6%",
+    x: "7%",
     y: "43%",
     photos: [
       "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
@@ -93,7 +93,7 @@ const spots = [
     type: "眺望點",
     detail: "小油坑的噴氣孔與硫磺地形充滿原始力量，眺望台北盆地視野絕佳。在這裡感受地球的呼吸，讓自然的能量為你充電。",
     x: "52%",
-    y: "52%",
+    y: "53%",
     photos: [
       "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&q=80",
       "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80"
