@@ -54,8 +54,8 @@ const spots = [
     time: "上午／平日",
     type: "獨處點",
     detail: "二子坪步道全程平緩無障礙，被茂密森林環繞。平日人少，非常適合一個人慢慢走，靜靜地與自己相處，聆聽鳥鳴與風聲。",
-    x: "36%",
-    y: "38%",
+    x: "6%",
+    y: "40%",
     photos: [
       "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80"
