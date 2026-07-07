@@ -106,6 +106,59 @@ const spots = [
   }
 ];
 
+const sunMoonSpots = [
+  {
+    id: 1,
+    name: "九龍口大平台",
+    description: "日月潭靜心活動照片",
+    x: "18%",
+    y: "34%",
+    photos: [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+    ]
+  },
+  {
+    id: 2,
+    name: "朝霧碼頭",
+    description: "日月潭靜心活動照片",
+    x: "27%",
+    y: "46%",
+    photos: [
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/3d42885ee_IMG_0117.png",
+    ]
+  },
+  {
+    id: 3,
+    name: "涵碧步道",
+    description: "日月潭靜心活動照片",
+    x: "16%",
+    y: "72%",
+    photos: [
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+    ]
+  },
+  {
+    id: 4,
+    name: "慈恩塔",
+    description: "日月潭靜心活動照片",
+    x: "72%",
+    y: "26%",
+    photos: [
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
+    ]
+  },
+  {
+    id: 5,
+    name: "月牙灣",
+    description: "日月潭靜心活動照片",
+    x: "78%",
+    y: "68%",
+    photos: [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    ]
+  }
+];
+
 const categories = [
   { icon: Users, label: "獨處點", desc: "擎天崗、二子坪、夢幻湖" },
   { icon: Coffee, label: "喝茶點", desc: "草山行館、豆留森林、山上人家、山仔后咖啡" },
@@ -117,11 +170,16 @@ const categories = [
 export default function Resources() {
   const [activeSpot, setActiveSpot] = useState(null);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
-  const [showPierPopup, setShowPierPopup] = useState(false);
+  const [activeSunMoonSpot, setActiveSunMoonSpot] = useState(null);
+  const [currentSunMoonPhotoIndex, setCurrentSunMoonPhotoIndex] = useState(0);
 
   useEffect(() => {
     setCurrentPhotoIndex(0);
   }, [activeSpot]);
+
+  useEffect(() => {
+    setCurrentSunMoonPhotoIndex(0);
+  }, [activeSunMoonSpot]);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -287,15 +345,107 @@ export default function Resources() {
               alt="日月潭靜心地圖"
               className="w-full h-auto block"
             />
-            {/* Clickable hotspot over 朝霧碼頭 text in the illustration */}
-            <button
-              onClick={() => setShowPierPopup(true)}
-              className="absolute group"
-              style={{ left: '22%', top: '40%', transform: 'translate(-50%, -50%)' }}
-              title="點擊查看朝霧碼頭"
-            >
-              <span className="block w-20 h-7 cursor-pointer transition-all rounded-lg group-hover:bg-emerald-500/15 group-hover:ring-2 group-hover:ring-emerald-500/50" />
-            </button>
+
+            {/* Clickable hotspots */}
+            {sunMoonSpots.map((spot, i) => {
+              const isActive = activeSunMoonSpot?.id === spot.id;
+              return (
+                <motion.button
+                  key={spot.id}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
+                  onClick={() => setActiveSunMoonSpot(isActive ? null : spot)}
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="absolute z-10 cursor-pointer"
+                  style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
+                >
+                  <span
+                    className={`block px-4 py-1 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
+                      isActive
+                        ? 'bg-violet-600 text-white shadow-lg'
+                        : 'bg-white/70 text-violet-700 backdrop-blur-sm shadow-md hover:bg-white'
+                    }`}
+                  >
+                    {spot.name}
+                  </span>
+                </motion.button>
+              );
+            })}
+
+            {/* Floating photo popup */}
+            <AnimatePresence>
+              {activeSunMoonSpot && (
+                <motion.div
+                  key={activeSunMoonSpot.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  onClick={() => setActiveSunMoonSpot(null)}
+                  className="fixed inset-0 z-[60] flex items-center justify-center bg-stone-900/70 backdrop-blur-sm p-4"
+                >
+                  <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.9, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    onClick={(e) => e.stopPropagation()}
+                    className="relative max-w-3xl w-full bg-white rounded-2xl shadow-2xl overflow-hidden"
+                  >
+                    <button
+                      onClick={() => setActiveSunMoonSpot(null)}
+                      className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                    <div className="relative">
+                      <img
+                        src={activeSunMoonSpot.photos[currentSunMoonPhotoIndex]}
+                        alt={activeSunMoonSpot.name}
+                        onClick={() => setCurrentSunMoonPhotoIndex((prev) => (prev + 1) % activeSunMoonSpot.photos.length)}
+                        className="w-full h-80 md:h-96 object-cover cursor-pointer"
+                      />
+                      {activeSunMoonSpot.photos.length > 1 && (
+                        <>
+                          <button
+                            onClick={(e) => { e.stopPropagation(); setCurrentSunMoonPhotoIndex((prev) => (prev - 1 + activeSunMoonSpot.photos.length) % activeSunMoonSpot.photos.length); }}
+                            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/70 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+                          >
+                            <ChevronLeft className="w-5 h-5" />
+                          </button>
+                          <button
+                            onClick={(e) => { e.stopPropagation(); setCurrentSunMoonPhotoIndex((prev) => (prev + 1) % activeSunMoonSpot.photos.length); }}
+                            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/70 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+                          >
+                            <ChevronRight className="w-5 h-5" />
+                          </button>
+                        </>
+                      )}
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <h3 className="text-white text-2xl font-light tracking-wide">{activeSunMoonSpot.name}</h3>
+                        <p className="text-white/80 text-sm font-light mt-1">{activeSunMoonSpot.description}</p>
+                      </div>
+                    </div>
+                    {activeSunMoonSpot.photos.length > 1 && (
+                      <div className="flex gap-3 p-4 overflow-x-auto">
+                        {activeSunMoonSpot.photos.map((photo, i) => (
+                          <img
+                            key={i}
+                            src={photo}
+                            alt={`${activeSunMoonSpot.name} ${i + 1}`}
+                            onClick={() => setCurrentSunMoonPhotoIndex(i)}
+                            className={`w-24 h-24 rounded-lg object-cover flex-shrink-0 cursor-pointer transition-opacity ${
+                              i === currentSunMoonPhotoIndex ? 'ring-2 ring-violet-600 opacity-100' : 'opacity-60 hover:opacity-80'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </div>
       </section>
@@ -361,39 +511,6 @@ export default function Resources() {
           </div>
         </div>
       </section>
-      {/* 朝霧碼頭 Popup */}
-      <AnimatePresence>
-        {showPierPopup && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setShowPierPopup(false)}
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-stone-900/70 backdrop-blur-sm p-4"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative max-w-2xl w-full rounded-2xl overflow-hidden shadow-2xl"
-            >
-              <button
-                onClick={() => setShowPierPopup(false)}
-                className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
-              >
-                <X className="w-5 h-5" />
-              </button>
-              <img
-                src="https://media.base44.com/images/public/698fc983574e659f561934f1/3d42885ee_IMG_0117.png"
-                alt="朝霧碼頭"
-                className="w-full h-auto block"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
