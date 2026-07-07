@@ -110,11 +110,11 @@ const sunMoonSpots = [
   {
     id: 1,
     name: "九龍口大平台",
-    description: "日月潭靜心活動照片",
+    description: "",
     x: "6%",
     y: "26%",
     photos: [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/e6e824c5c_2.png",
     ]
   },
   {
