@@ -151,6 +151,28 @@ export default function Resources() {
             {/* Clickable hotspots */}
             {spots.map((spot, i) => {
               const isActive = activeSpot?.id === spot.id;
+              const isTextButton = spot.id === 4; // 夢幻湖 — text on map is the button
+
+              if (isTextButton) {
+                return (
+                  <motion.button
+                    key={spot.id}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
+                    onClick={() => setActiveSpot(isActive ? null : spot)}
+                    className="absolute group z-10 cursor-pointer"
+                    style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
+                  >
+                    {/* Transparent clickable overlay on the map text */}
+                    <span
+                      className={`block px-5 py-2 rounded-full border transition-all duration-300 ${isActive ? 'bg-violet-500/25 border-violet-500/60' : 'bg-transparent border-transparent group-hover:bg-violet-500/15 group-hover:border-violet-500/40'}
+                      backdrop-blur-[1px]`}
+                    />
+                  </motion.button>
+                );
+              }
+
               return (
                 <motion.button
                   key={spot.id}
