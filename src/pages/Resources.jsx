@@ -142,10 +142,10 @@ export default function Resources() {
             <button
               onClick={() => { setCarouselIndex(0); setShowLakeCarousel(true); }}
               className="absolute group"
-              style={{ left: '24%', top: '74%', transform: 'translate(-50%, -50%)' }}
+              style={{ left: '20%', top: '80%', width: '18%', height: '12%', transform: 'translate(-50%, -50%)' }}
               title="點擊查看夢幻湖照片"
             >
-              <span className="block w-40 h-16 cursor-pointer transition-all rounded-lg group-hover:bg-violet-500/15 group-hover:ring-2 group-hover:ring-violet-500/50" />
+              <span className="block w-full h-full cursor-pointer transition-all rounded-lg group-hover:bg-violet-500/15 group-hover:ring-2 group-hover:ring-violet-500/50" />
             </button>
 
           </div>
