@@ -93,15 +93,15 @@ const spots = [
     borderColor: "border-amber-600",
     textColor: "text-violet-700",
     bgLight: "bg-amber-50",
-    description: "地熱景觀，適合感受大自然的力量",
+    description: "一日放空行場勘照片",
     time: "上午",
     type: "眺望點",
     detail: "小油坑的噴氣孔與硫磺地形充滿原始力量，眺望台北盆地視野絕佳。在這裡感受地球的呼吸，讓自然的能量為你充電。",
     x: "52%",
     y: "53%",
     photos: [
-      "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&q=80",
-      "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80"
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/223e6fa3b_IMG_6492.jpg",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/d6c419a23_IMG_6473.jpg"
     ]
   }
 ];
