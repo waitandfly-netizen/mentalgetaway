@@ -125,7 +125,7 @@ export default function Resources() {
           {/* Map with pins */}
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100">
             <img
-              src="https://media.base44.com/images/public/698fc983574e659f561934f1/9dc6a6e82_120A7A5D-5078-4A09-B9C8-33F33C47787E.png"
+              src="https://media.base44.com/images/public/698fc983574e659f561934f1/cd954cdc7_.png"
               alt="陽明山靜心地圖"
               className="w-full h-auto block"
             />
