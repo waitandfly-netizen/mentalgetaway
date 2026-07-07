@@ -112,7 +112,7 @@ const sunMoonSpots = [
     name: "九龍口大平台",
     description: "日月潭靜心活動照片",
     x: "6%",
-    y: "25%",
+    y: "26%",
     photos: [
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
     ]
@@ -122,7 +122,7 @@ const sunMoonSpots = [
     name: "朝霧碼頭",
     description: "日月潭靜心活動照片",
     x: "14%",
-    y: "36%",
+    y: "35%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/3d42885ee_IMG_0117.png",
     ]
