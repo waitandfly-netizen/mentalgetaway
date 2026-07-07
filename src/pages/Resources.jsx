@@ -149,7 +149,7 @@ export default function Resources() {
 
       {/* Map Section */}
       <section className="py-16 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           {/* Map with clickable hotspots */}
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100">
             <img
