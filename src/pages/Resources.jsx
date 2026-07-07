@@ -36,7 +36,7 @@ const spots = [
     time: "上午",
     type: "慢走路線",
     detail: "冷水坑以溫泉與硫磺地形著名，步道輕緩，適合一邊走路一邊感受身體的每個步伐，讓思緒隨著腳步慢慢沉澱。",
-    x: "63%",
+    x: "64%",
     y: "24%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/8a3f1850c_IMG_20210216_121548.jpg",
