@@ -149,30 +149,46 @@ export default function Resources() {
             />
 
             {/* Clickable hotspots */}
-            {spots.map((spot, i) => (
-              <motion.button
-                key={spot.id}
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.3 + i * 0.1, type: "spring", stiffness: 200 }}
-                onClick={() => setActiveSpot(activeSpot?.id === spot.id ? null : spot)}
-                className="absolute -translate-x-1/2 -translate-y-1/2 group"
-                style={{ left: spot.x, top: spot.y }}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.25 }}
-                  whileTap={{ scale: 0.9 }}
-                  className={`relative w-10 h-10 rounded-full ${spot.color} shadow-xl flex items-center justify-center text-white font-bold text-sm border-[3px] border-white`}
-                  style={{ boxShadow: '0 4px 14px rgba(0,0,0,0.25)' }}
+            {spots.map((spot, i) => {
+              const isActive = activeSpot?.id === spot.id;
+              return (
+                <motion.button
+                  key={spot.id}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.3 + i * 0.1, type: "spring", stiffness: 200 }}
+                  onClick={() => setActiveSpot(isActive ? null : spot)}
+                  className="absolute -translate-x-1/2 -translate-y-1/2 group z-10"
+                  style={{ left: spot.x, top: spot.y }}
                 >
-                  <MapPin className="w-5 h-5" />
-                  <span className={`absolute inset-0 rounded-full ${spot.color} opacity-30 animate-ping`} />
-                </motion.div>
-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-white rounded-xl shadow-md text-xs text-stone-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-stone-100">
-                  {spot.name}
-                </div>
-              </motion.button>
-            ))}
+                  {/* Soft pulsing halo */}
+                  <span className={`absolute inset-0 m-auto w-12 h-12 rounded-full ${spot.color} opacity-20 blur-md animate-pulse`} />
+
+                  {/* Main marker */}
+                  <motion.div
+                    whileHover={{ scale: 1.15 }}
+                    whileTap={{ scale: 0.95 }}
+                    animate={isActive ? { scale: 1.2 } : { scale: 1 }}
+                    className={`relative w-11 h-11 rounded-full ${spot.color} flex items-center justify-center text-white transition-all duration-300`}
+                    style={{
+                      boxShadow: isActive
+                        ? '0 8px 24px rgba(0,0,0,0.3), 0 0 0 3px rgba(255,255,255,0.9)'
+                        : '0 4px 12px rgba(0,0,0,0.2), 0 0 0 2px rgba(255,255,255,0.9)'
+                    }}
+                  >
+                    {/* Inner glass circle */}
+                    <span className="absolute inset-1 rounded-full bg-white/20 backdrop-blur-sm" />
+                    <MapPin className="relative w-5 h-5 drop-shadow-sm" />
+                  </motion.div>
+
+                  {/* Tooltip */}
+                  <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3.5 py-1.5 bg-white/95 backdrop-blur-md rounded-full shadow-lg text-xs font-medium text-stone-700 whitespace-nowrap transition-all duration-300 border border-white/60 pointer-events-none ${isActive || false ? 'opacity-100 -translate-y-0.5' : 'opacity-0 group-hover:opacity-100 group-hover:-translate-y-0.5'}`}>
+                    {spot.name}
+                    <span className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-white/95 rotate-45 -mt-1 border-r border-b border-white/60" />
+                  </div>
+                </motion.button>
+              );
+            })}
 
             {/* Floating photo popup */}
             <AnimatePresence>
