@@ -181,39 +181,48 @@ export default function Resources() {
               {activeSpot && (
                 <motion.div
                   key={activeSpot.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[90%] max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  onClick={() => setActiveSpot(null)}
+                  className="fixed inset-0 z-[60] flex items-center justify-center bg-stone-900/70 backdrop-blur-sm p-4"
                 >
-                  <button
-                    onClick={() => setActiveSpot(null)}
-                    className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-600 transition-colors shadow-md"
+                  <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.9, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    onClick={(e) => e.stopPropagation()}
+                    className="relative max-w-3xl w-full bg-white rounded-2xl shadow-2xl overflow-hidden"
                   >
-                    <X className="w-4 h-4" />
-                  </button>
-                  <div className="relative">
-                    <img
-                      src={activeSpot.photos[0]}
-                      alt={activeSpot.name}
-                      className="w-full h-56 object-cover"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                      <h3 className="text-white text-lg font-light tracking-wide">{activeSpot.name}</h3>
-                      <p className="text-white/80 text-xs font-light mt-1">{activeSpot.description}</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-2 p-3 overflow-x-auto">
-                    {activeSpot.photos.map((photo, i) => (
+                    <button
+                      onClick={() => setActiveSpot(null)}
+                      className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                    <div className="relative">
                       <img
-                        key={i}
-                        src={photo}
-                        alt={`${activeSpot.name} ${i + 1}`}
-                        className="w-16 h-16 rounded-lg object-cover flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
+                        src={activeSpot.photos[0]}
+                        alt={activeSpot.name}
+                        className="w-full h-80 md:h-96 object-cover"
                       />
-                    ))}
-                  </div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <h3 className="text-white text-2xl font-light tracking-wide">{activeSpot.name}</h3>
+                        <p className="text-white/80 text-sm font-light mt-1">{activeSpot.description}</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3 p-4 overflow-x-auto">
+                      {activeSpot.photos.map((photo, i) => (
+                        <img
+                          key={i}
+                          src={photo}
+                          alt={`${activeSpot.name} ${i + 1}`}
+                          className="w-24 h-24 rounded-lg object-cover flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
+                        />
+                      ))}
+                    </div>
+                  </motion.div>
                 </motion.div>
               )}
             </AnimatePresence>
