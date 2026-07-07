@@ -111,8 +111,8 @@ const sunMoonSpots = [
     id: 1,
     name: "九龍口大平台",
     description: "日月潭靜心活動照片",
-    x: "18%",
-    y: "34%",
+    x: "6%",
+    y: "28%",
     photos: [
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
     ]
@@ -121,8 +121,8 @@ const sunMoonSpots = [
     id: 2,
     name: "朝霧碼頭",
     description: "日月潭靜心活動照片",
-    x: "27%",
-    y: "46%",
+    x: "15%",
+    y: "34%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/3d42885ee_IMG_0117.png",
     ]
@@ -131,8 +131,8 @@ const sunMoonSpots = [
     id: 3,
     name: "涵碧步道",
     description: "日月潭靜心活動照片",
-    x: "16%",
-    y: "72%",
+    x: "30%",
+    y: "45%",
     photos: [
       "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
     ]
@@ -141,8 +141,8 @@ const sunMoonSpots = [
     id: 4,
     name: "慈恩塔",
     description: "日月潭靜心活動照片",
-    x: "72%",
-    y: "26%",
+    x: "80%",
+    y: "10%",
     photos: [
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
     ]
@@ -152,7 +152,7 @@ const sunMoonSpots = [
     name: "月牙灣",
     description: "日月潭靜心活動照片",
     x: "78%",
-    y: "68%",
+    y: "62%",
     photos: [
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     ]
