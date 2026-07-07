@@ -232,7 +232,11 @@ export default function Resources() {
                   style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
                 >
                   <span
-                    className={`block px-[0.85rem] py-[0.2125rem] rounded-full text-[0.744rem] font-medium tracking-wide transition-all duration-300 ${
+                    className={`block rounded-full font-medium tracking-wide transition-all duration-300 ${
+                      spot.name === '冷水坑'
+                        ? 'px-[0.7225rem] py-[0.180625rem] text-[0.6324rem]'
+                        : 'px-[0.85rem] py-[0.2125rem] text-[0.744rem]'
+                    } ${
                       isActive
                         ? `${spot.color} text-white shadow-lg`
                         : `bg-white/70 ${spot.textColor} backdrop-blur-sm shadow-md hover:bg-white`
