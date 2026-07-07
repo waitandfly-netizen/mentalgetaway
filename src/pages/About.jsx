@@ -217,7 +217,7 @@ export default function About() {
             {[
               {
                 year: "2013", tag: "萌芽",
-                img: "https://media.base44.com/images/public/698fc983574e659f561934f1/baebe7993_2013.jpg",
+                img: "https://media.base44.com/images/public/698fc983574e659f561934f1/d3fd0ad1f_S__43106329.jpg",
                 content: "心靈假期從暨南大學開始，用好山好水的大自然能量，進行身心放鬆活動。",
                 detail: "3月、4月、6月、8月、9月、11月，共計六場次2天1夜的旅程。"
               },
