@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Clock, X, Leaf, Coffee, PersonStanding, Mountain, CloudRain, Users } from 'lucide-react';
+import { MapPin, Clock, X, Leaf, Coffee, PersonStanding, Mountain, CloudRain, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
 
 const spots = [
@@ -92,6 +92,16 @@ const categories = [
 export default function Resources() {
   const [activeSpot, setActiveSpot] = useState(null);
   const [showPierPopup, setShowPierPopup] = useState(false);
+  const [showLakeCarousel, setShowLakeCarousel] = useState(false);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+
+  // 夢幻湖照片輪播（照片待使用者提供後填入）
+  const lakePhotos = [
+    // { src: "URL", alt: "夢幻湖照片1" },
+  ];
+
+  const nextPhoto = () => setCarouselIndex((i) => (i + 1) % lakePhotos.length);
+  const prevPhoto = () => setCarouselIndex((i) => (i - 1 + lakePhotos.length) % lakePhotos.length);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -128,6 +138,15 @@ export default function Resources() {
               className="w-full h-auto block"
             />
 
+            {/* 夢幻湖可點擊熱點 — 點擊開啟照片輪播 */}
+            <button
+              onClick={() => { setCarouselIndex(0); setShowLakeCarousel(true); }}
+              className="absolute group"
+              style={{ left: '28%', top: '66%', transform: 'translate(-50%, -50%)' }}
+              title="點擊查看夢幻湖照片"
+            >
+              <span className="block w-24 h-8 cursor-pointer transition-all rounded-lg group-hover:bg-violet-500/15 group-hover:ring-2 group-hover:ring-violet-500/50" />
+            </button>
 
           </div>
 
@@ -300,6 +319,74 @@ export default function Resources() {
                 alt="朝霧碼頭"
                 className="w-full h-auto block"
               />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* 夢幻湖照片輪播 Popup */}
+      <AnimatePresence>
+        {showLakeCarousel && lakePhotos.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowLakeCarousel(false)}
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-stone-900/70 backdrop-blur-sm p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl bg-white"
+            >
+              <button
+                onClick={() => setShowLakeCarousel(false)}
+                className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              {/* 照片 */}
+              <div className="relative">
+                <img
+                  src={lakePhotos[carouselIndex].src}
+                  alt={lakePhotos[carouselIndex].alt}
+                  className="w-full max-h-[70vh] object-contain bg-stone-900"
+                />
+                {/* 左右按鈕 */}
+                {lakePhotos.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevPhoto}
+                      className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={nextPhoto}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </>
+                )}
+              </div>
+
+              {/* 指示點 */}
+              {lakePhotos.length > 1 && (
+                <div className="flex justify-center gap-2 py-3 bg-white">
+                  {lakePhotos.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setCarouselIndex(i)}
+                      className={`w-2 h-2 rounded-full transition-all ${i === carouselIndex ? 'bg-violet-600 w-6' : 'bg-stone-300'}`}
+                    />
+                  ))}
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}
