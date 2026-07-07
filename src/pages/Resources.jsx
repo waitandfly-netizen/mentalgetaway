@@ -12,15 +12,16 @@ const spots = [
     borderColor: "border-emerald-600",
     textColor: "text-violet-700",
     bgLight: "bg-emerald-50",
-    description: "遼闊草原，適合放空與深呼吸",
+    description: "一日放空行活動照片",
     time: "清晨／傍晚",
     type: "獨處點",
     detail: "擎天崗草原一望無際，微風拂來，是放空心靈的絕佳所在。清晨的薄霧與傍晚的金光，讓人忘卻城市的喧囂，只感受當下的呼吸與寧靜。",
     x: "48%",
     y: "6%",
     photos: [
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&q=80"
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/c1efcbd42_S__43393039_0.jpg",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/e380b51b3_482107657_629733979772407_2169853166775773632_n.jpg",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/40a50a54e_IMG_20210411_133328.jpg"
     ]
   },
   {
