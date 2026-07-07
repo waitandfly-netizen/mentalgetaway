@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Clock, X, Leaf, Coffee, PersonStanding, Mountain, CloudRain, Users } from 'lucide-react';
+import { MapPin, Clock, X, Leaf, Coffee, PersonStanding, Mountain, CloudRain, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
 
 const spots = [
@@ -76,6 +76,7 @@ const spots = [
     x: "6%",
     y: "64%",
     photos: [
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/e71597c82_S__43393047_0.jpg",
       "https://media.base44.com/images/public/698fc983574e659f561934f1/c2db304c5_S__43393040_0.jpg",
       "https://media.base44.com/images/public/698fc983574e659f561934f1/f119e0e84_S__43393047_0.jpg",
       "https://media.base44.com/images/public/698fc983574e659f561934f1/0b5405fc0_4B24F80F-BA5D-4C19-A78A-591F0A8268A7.jpg"
@@ -112,7 +113,12 @@ const categories = [
 
 export default function Resources() {
   const [activeSpot, setActiveSpot] = useState(null);
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [showPierPopup, setShowPierPopup] = useState(false);
+
+  useEffect(() => {
+    setCurrentPhotoIndex(0);
+  }, [activeSpot]);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -204,10 +210,27 @@ export default function Resources() {
                     </button>
                     <div className="relative">
                       <img
-                        src={activeSpot.photos[0]}
+                        src={activeSpot.photos[currentPhotoIndex]}
                         alt={activeSpot.name}
-                        className="w-full h-80 md:h-96 object-cover"
+                        onClick={() => setCurrentPhotoIndex((prev) => (prev + 1) % activeSpot.photos.length)}
+                        className="w-full h-80 md:h-96 object-cover cursor-pointer"
                       />
+                      {activeSpot.photos.length > 1 && (
+                        <>
+                          <button
+                            onClick={(e) => { e.stopPropagation(); setCurrentPhotoIndex((prev) => (prev - 1 + activeSpot.photos.length) % activeSpot.photos.length); }}
+                            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/70 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+                          >
+                            <ChevronLeft className="w-5 h-5" />
+                          </button>
+                          <button
+                            onClick={(e) => { e.stopPropagation(); setCurrentPhotoIndex((prev) => (prev + 1) % activeSpot.photos.length); }}
+                            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/70 hover:bg-white flex items-center justify-center text-stone-700 transition-colors shadow-md"
+                          >
+                            <ChevronRight className="w-5 h-5" />
+                          </button>
+                        </>
+                      )}
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                         <h3 className="text-white text-2xl font-light tracking-wide">{activeSpot.name}</h3>
                         <p className="text-white/80 text-sm font-light mt-1">{activeSpot.description}</p>
@@ -219,7 +242,10 @@ export default function Resources() {
                           key={i}
                           src={photo}
                           alt={`${activeSpot.name} ${i + 1}`}
-                          className="w-24 h-24 rounded-lg object-cover flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
+                          onClick={() => setCurrentPhotoIndex(i)}
+                          className={`w-24 h-24 rounded-lg object-cover flex-shrink-0 cursor-pointer transition-opacity ${
+                            i === currentPhotoIndex ? 'ring-2 ring-violet-600 opacity-100' : 'opacity-60 hover:opacity-80'
+                          }`}
                         />
                       ))}
                     </div>
