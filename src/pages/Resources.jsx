@@ -130,11 +130,11 @@ const sunMoonSpots = [
   {
     id: 3,
     name: "涵碧步道",
-    description: "日月潭靜心活動照片",
+    description: "",
     x: "25%",
     y: "78%",
     photos: [
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/4906ab9e9_1.png",
     ]
   },
   {
