@@ -188,10 +188,6 @@ export default function Resources() {
                     : 'bg-white border-stone-100 hover:shadow-sm hover:border-stone-200'
                 }`}
               >
-                <div className={`w-9 h-9 rounded-2xl ${spot.color} flex items-center justify-center text-white font-bold text-sm mb-3 shadow-md`}
-                  style={{ boxShadow: `0 3px 10px rgba(0,0,0,0.18)` }}>
-                  {spot.id}
-                </div>
                 <p className="text-stone-800 font-light text-sm mb-1">{spot.name}</p>
                 <p className="text-stone-400 text-xs leading-relaxed line-clamp-2">{spot.description}</p>
               </motion.button>
