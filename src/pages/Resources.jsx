@@ -283,7 +283,7 @@ export default function Resources() {
             className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100"
           >
             <img
-              src="https://media.base44.com/images/public/698fc983574e659f561934f1/2798d6bcf_3.png"
+              src="https://media.base44.com/images/public/698fc983574e659f561934f1/f19d9be8e_3.png"
               alt="日月潭靜心地圖"
               className="w-full h-auto block"
             />
