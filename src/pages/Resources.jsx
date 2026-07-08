@@ -111,8 +111,8 @@ const sunMoonSpots = [
     id: 1,
     name: "九龍口大平台",
     description: "",
-    x: "6%",
-    y: "26%",
+    x: "7%",
+    y: "27%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/e6e824c5c_2.png",
     ]
@@ -122,7 +122,7 @@ const sunMoonSpots = [
     name: "朝霧碼頭",
     description: "",
     x: "14%",
-    y: "35%",
+    y: "34%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/bd9fa73f3_3.png",
     ]
@@ -142,7 +142,7 @@ const sunMoonSpots = [
     name: "慈恩塔",
     description: "",
     x: "82%",
-    y: "16%",
+    y: "18%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/41bf7bf10_5.png",
     ]
@@ -151,7 +151,7 @@ const sunMoonSpots = [
     id: 5,
     name: "月牙灣",
     description: "",
-    x: "78%",
+    x: "79%",
     y: "62%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/b78aa0e4c_4.png",
