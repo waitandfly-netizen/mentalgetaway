@@ -229,8 +229,8 @@ export default function About() {
               },
               {
                 year: "2015", tag: "累積",
-                img: "https://media.base44.com/images/public/698fc983574e659f561934f1/59f20548d_2015.jpg",
-                content: "持續於日月潭蓄積，在私房能量點，深度淨化身心靈，享受高品質充電。",
+                img: "https://media.base44.com/images/public/698fc983574e659f561934f1/549475533_2023.jpg",
+                content: "持續於南投蓄積，透過適合的場域，深度淨化身心靈，讓參加者享受高品質充電。",
                 detail: "3月、9月辦理2場尊榮級；6月、12月暨南大學場次。"
               },
               {
@@ -259,7 +259,7 @@ export default function About() {
               },
               {
                 year: "2023", tag: "重新出發",
-                img: "https://media.base44.com/images/public/698fc983574e659f561934f1/549475533_2023.jpg",
+                img: null,
                 content: "疫情過後重新出發，精選宜蘭與南投優良能量地點，透過各式靜心，淨化身心靈，撫平疫情帶來的負擔。",
                 detail: "5月宜蘭外澳、9月暨南大學，共計2場次。"
               },
