@@ -234,8 +234,8 @@ export default function Resources() {
                   <span
                     className={`block rounded-full font-medium tracking-wide transition-all duration-300 ${
                       spot.name === '冷水坑'
-                        ? 'px-[0.36rem] py-[0.09rem] text-[0.316rem] md:px-4 md:py-1 md:text-sm'
-                        : 'px-[0.425rem] py-[0.106rem] text-[0.372rem] md:px-4 md:py-1 md:text-sm'
+                        ? 'px-[0.252rem] py-[0.063rem] text-[0.221rem] md:px-4 md:py-1 md:text-sm'
+                        : 'px-[0.2975rem] py-[0.0742rem] text-[0.2604rem] md:px-4 md:py-1 md:text-sm'
                     } ${
                       isActive
                         ? `${spot.color} text-white shadow-lg`
@@ -366,7 +366,7 @@ export default function Resources() {
                   style={{ left: spot.x, top: spot.y, x: '-50%', y: '-50%' }}
                 >
                   <span
-                    className={`block px-2 py-0.5 rounded-full text-[0.5rem] font-medium tracking-wide transition-all duration-300 md:px-4 md:py-1 md:text-sm ${
+                    className={`block px-[0.35rem] py-[0.0875rem] rounded-full text-[0.175rem] font-medium tracking-wide transition-all duration-300 md:px-4 md:py-1 md:text-sm ${
                       isActive
                         ? 'bg-violet-600 text-white shadow-lg'
                         : 'bg-white/70 text-violet-700 backdrop-blur-sm shadow-md hover:bg-white'
