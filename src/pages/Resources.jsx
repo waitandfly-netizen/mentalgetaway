@@ -234,8 +234,8 @@ export default function Resources() {
                   <span
                     className={`block rounded-full font-medium tracking-wide transition-all duration-300 ${
                       spot.name === '冷水坑'
-                        ? 'px-[0.7225rem] py-[0.180625rem] text-[0.6324rem]'
-                        : 'px-[0.85rem] py-[0.2125rem] text-[0.744rem]'
+                        ? 'px-[0.7225rem] py-[0.180625rem] text-[0.6324rem] md:px-4 md:py-1 md:text-sm'
+                        : 'px-[0.85rem] py-[0.2125rem] text-[0.744rem] md:px-4 md:py-1 md:text-sm'
                     } ${
                       isActive
                         ? `${spot.color} text-white shadow-lg`
