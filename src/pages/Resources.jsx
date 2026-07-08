@@ -229,13 +229,13 @@ export default function Resources() {
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.96 }}
                   className="absolute z-10 cursor-pointer"
-                  style={{ left: spot.x, top: spot.y, x: '-50%', y: '-50%' }}
+                  style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
                 >
                   <span
                     className={`block rounded-full font-medium tracking-wide transition-all duration-300 ${
                       spot.name === '冷水坑'
-                        ? 'px-[0.252rem] py-[0.063rem] text-[0.221rem] md:px-4 md:py-1 md:text-sm'
-                        : 'px-[0.2975rem] py-[0.0742rem] text-[0.2604rem] md:px-4 md:py-1 md:text-sm'
+                        ? 'px-[0.7225rem] py-[0.180625rem] text-[0.6324rem]'
+                        : 'px-[0.85rem] py-[0.2125rem] text-[0.744rem]'
                     } ${
                       isActive
                         ? `${spot.color} text-white shadow-lg`
@@ -363,10 +363,10 @@ export default function Resources() {
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.96 }}
                   className="absolute z-10 cursor-pointer"
-                  style={{ left: spot.x, top: spot.y, x: '-50%', y: '-50%' }}
+                  style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
                 >
                   <span
-                    className={`block px-[0.35rem] py-[0.0875rem] rounded-full text-[0.175rem] font-medium tracking-wide transition-all duration-300 md:px-4 md:py-1 md:text-sm ${
+                    className={`block px-4 py-1 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
                       isActive
                         ? 'bg-violet-600 text-white shadow-lg'
                         : 'bg-white/70 text-violet-700 backdrop-blur-sm shadow-md hover:bg-white'
