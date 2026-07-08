@@ -229,7 +229,7 @@ export default function Resources() {
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.96 }}
                   className="absolute z-10 cursor-pointer"
-                  style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
+                  style={{ left: spot.x, top: spot.y, x: '-50%', y: '-50%' }}
                 >
                   <span
                     className={`block rounded-full font-medium tracking-wide transition-all duration-300 ${
@@ -363,7 +363,7 @@ export default function Resources() {
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.96 }}
                   className="absolute z-10 cursor-pointer"
-                  style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
+                  style={{ left: spot.x, top: spot.y, x: '-50%', y: '-50%' }}
                 >
                   <span
                     className={`block px-4 py-1 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
