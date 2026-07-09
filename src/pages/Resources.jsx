@@ -224,7 +224,7 @@ export default function Resources() {
                   <span
                     className={`block rounded-full font-medium tracking-wide transition-all duration-300 ${
                       spot.name === '大屯自然公園'
-                        ? 'px-[0.7225rem] py-[0.180625rem] text-[0.6324rem]'
+                        ? 'px-[0.867rem] py-[0.21675rem] text-[0.75888rem]'
                         : 'px-[0.85rem] py-[0.2125rem] text-[0.744rem]'
                     } ${
                       isActive
