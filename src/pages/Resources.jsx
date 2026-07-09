@@ -52,16 +52,14 @@ const spots = [
     borderColor: "border-teal-600",
     textColor: "text-violet-700",
     bgLight: "bg-teal-50",
-    description: "一日放空行場勘照片",
+    description: "",
     time: "上午／平日",
     type: "獨處點",
     detail: "二子坪步道全程平緩無障礙，被茂密森林環繞。平日人少，非常適合一個人慢慢走，靜靜地與自己相處，聆聽鳥鳴與風聲。",
     x: "7%",
     y: "43%",
     photos: [
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/90446150f_S__43393044_0.jpg",
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/55f280f37_S__380264455_0.jpg",
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/f5c2cfdc3_621591519_879080881504381_8360370733697016373_n.jpg"
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/ca318d525_8.png"
     ]
   },
   {
@@ -278,7 +276,7 @@ export default function Resources() {
                         src={activeSpot.photos[currentPhotoIndex]}
                         alt={activeSpot.name}
                         onClick={() => setCurrentPhotoIndex((prev) => (prev + 1) % activeSpot.photos.length)}
-                        className="w-full h-80 md:h-96 object-cover cursor-pointer"
+                        className="w-full h-auto object-contain cursor-pointer max-h-[80vh]"
                       />
                       {activeSpot.photos.length > 1 && (
                         <>
@@ -296,24 +294,28 @@ export default function Resources() {
                           </button>
                         </>
                       )}
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                        <h3 className="text-white text-2xl font-light tracking-wide">{activeSpot.name}</h3>
-                        <p className="text-white/80 text-sm font-light mt-1">{activeSpot.description}</p>
+                      {activeSpot.description && (
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                          <h3 className="text-white text-2xl font-light tracking-wide">{activeSpot.name}</h3>
+                          <p className="text-white/80 text-sm font-light mt-1">{activeSpot.description}</p>
+                        </div>
+                      )}
+                    </div>
+                    {activeSpot.photos.length > 1 && (
+                      <div className="flex gap-3 p-4 overflow-x-auto">
+                        {activeSpot.photos.map((photo, i) => (
+                          <img
+                            key={i}
+                            src={photo}
+                            alt={`${activeSpot.name} ${i + 1}`}
+                            onClick={() => setCurrentPhotoIndex(i)}
+                            className={`w-24 h-24 rounded-lg object-cover flex-shrink-0 cursor-pointer transition-opacity ${
+                              i === currentPhotoIndex ? 'ring-2 ring-violet-600 opacity-100' : 'opacity-60 hover:opacity-80'
+                            }`}
+                          />
+                        ))}
                       </div>
-                    </div>
-                    <div className="flex gap-3 p-4 overflow-x-auto">
-                      {activeSpot.photos.map((photo, i) => (
-                        <img
-                          key={i}
-                          src={photo}
-                          alt={`${activeSpot.name} ${i + 1}`}
-                          onClick={() => setCurrentPhotoIndex(i)}
-                          className={`w-24 h-24 rounded-lg object-cover flex-shrink-0 cursor-pointer transition-opacity ${
-                            i === currentPhotoIndex ? 'ring-2 ring-violet-600 opacity-100' : 'opacity-60 hover:opacity-80'
-                          }`}
-                        />
-                      ))}
-                    </div>
+                    )}
                   </motion.div>
                 </motion.div>
               )}
