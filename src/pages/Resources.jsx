@@ -84,15 +84,14 @@ const spots = [
     borderColor: "border-amber-600",
     textColor: "text-violet-700",
     bgLight: "bg-amber-50",
-    description: "一日放空行場勘照片",
+    description: "",
     time: "上午",
     type: "眺望點",
     detail: "小油坑的噴氣孔與硫磺地形充滿原始力量，眺望台北盆地視野絕佳。在這裡感受地球的呼吸，讓自然的能量為你充電。",
     x: "52%",
     y: "53%",
     photos: [
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/223e6fa3b_IMG_6492.jpg",
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/d6c419a23_IMG_6473.jpg"
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/ee4fb5c00_9.png"
     ]
   }
 ];
