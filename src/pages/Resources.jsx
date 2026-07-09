@@ -56,6 +56,8 @@ const spots = [
     detail: "二子坪步道全程平緩無障礙，被茂密森林環繞。平日人少，非常適合一個人慢慢走，靜靜地與自己相處，聆聽鳥鳴與風聲。",
     x: "23%",
     y: "64%",
+    mobileX: "20%",
+    mobileY: "60%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/ca318d525_8.png"
     ]
@@ -74,6 +76,8 @@ const spots = [
     detail: "夢幻湖是台灣特有水生植物台灣水韭的家，湖面平靜如鏡。陰天時的夢幻湖更添神秘感，坐在湖畔，帶著日記，讓文字承接內心的流動。",
     x: "66%",
     y: "57%",
+    mobileX: "66%",
+    mobileY: "55%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/165bdf5c5_6.png"
     ]
