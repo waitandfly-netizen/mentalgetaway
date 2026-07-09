@@ -211,7 +211,7 @@ export default function Resources() {
           {/* Map with clickable hotspots */}
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-stone-100">
             <img
-              src="https://media.base44.com/images/public/698fc983574e659f561934f1/cd954cdc7_.png"
+              src="https://media.base44.com/images/public/698fc983574e659f561934f1/cafa9af26_.png"
               alt="陽明山靜心地圖"
               className="w-full h-auto block"
             />
