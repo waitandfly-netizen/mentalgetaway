@@ -16,8 +16,8 @@ const spots = [
     time: "清晨／傍晚",
     type: "獨處點",
     detail: "擎天崗草原一望無際，微風拂來，是放空心靈的絕佳所在。清晨的薄霧與傍晚的金光，讓人忘卻城市的喧囂，只感受當下的呼吸與寧靜。",
-    x: "90%",
-    y: "40%",
+    x: "85%",
+    y: "37%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/90bc9872c_7.png"
     ]
@@ -34,7 +34,7 @@ const spots = [
     time: "上午",
     type: "慢走路線",
     detail: "冷水坑以溫泉與硫磺地形著名，步道輕緩，適合一邊走路一邊感受身體的每個步伐，讓思緒隨著腳步慢慢沉澱。",
-    x: "10%",
+    x: "13%",
     y: "30%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/a63d93181_10.png"
@@ -52,7 +52,7 @@ const spots = [
     time: "上午／平日",
     type: "獨處點",
     detail: "二子坪步道全程平緩無障礙，被茂密森林環繞。平日人少，非常適合一個人慢慢走，靜靜地與自己相處，聆聽鳥鳴與風聲。",
-    x: "20%",
+    x: "23%",
     y: "64%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/ca318d525_8.png"
@@ -70,8 +70,8 @@ const spots = [
     time: "平日／陰天",
     type: "獨處點",
     detail: "夢幻湖是台灣特有水生植物台灣水韭的家，湖面平靜如鏡。陰天時的夢幻湖更添神秘感，坐在湖畔，帶著日記，讓文字承接內心的流動。",
-    x: "64%",
-    y: "55%",
+    x: "65%",
+    y: "56%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/165bdf5c5_6.png"
     ]
@@ -88,8 +88,8 @@ const spots = [
     time: "上午",
     type: "眺望點",
     detail: "小油坑的噴氣孔與硫磺地形充滿原始力量，眺望台北盆地視野絕佳。在這裡感受地球的呼吸，讓自然的能量為你充電。",
-    x: "90%",
-    y: "90%",
+    x: "80%",
+    y: "80%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/ee4fb5c00_9.png"
     ]
