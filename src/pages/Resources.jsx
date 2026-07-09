@@ -222,7 +222,7 @@ export default function Resources() {
                   style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
                 >
                   <span
-                    className={`block rounded-full font-medium tracking-wide transition-all duration-300 ${
+                    className={`block rounded-full font-medium tracking-wide transition-all duration-300 scale-[0.7] md:scale-100 origin-center whitespace-nowrap ${
                       spot.name === '大屯自然公園'
                         ? 'px-[0.867rem] py-[0.21675rem] text-[0.75888rem]'
                         : 'px-[0.85rem] py-[0.2125rem] text-[0.744rem]'
