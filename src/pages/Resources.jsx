@@ -26,7 +26,7 @@ const spots = [
   },
   {
     id: 2,
-    name: "冷水坑",
+    name: "大屯自然公園",
     emoji: "♨️",
     color: "bg-orange-500",
     borderColor: "border-orange-500",
@@ -87,7 +87,7 @@ const spots = [
   },
   {
     id: 5,
-    name: "小油坑",
+    name: "絹絲瀑布",
     emoji: "🌋",
     color: "bg-amber-600",
     borderColor: "border-amber-600",
@@ -233,7 +233,7 @@ export default function Resources() {
                 >
                   <span
                     className={`block rounded-full font-medium tracking-wide transition-all duration-300 ${
-                      spot.name === '冷水坑'
+                      spot.name === '大屯自然公園'
                         ? 'px-[0.7225rem] py-[0.180625rem] text-[0.6324rem]'
                         : 'px-[0.85rem] py-[0.2125rem] text-[0.744rem]'
                     } ${
