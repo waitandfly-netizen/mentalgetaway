@@ -68,17 +68,14 @@ const spots = [
     borderColor: "border-violet-600",
     textColor: "text-violet-700",
     bgLight: "bg-violet-50",
-    description: "一日放空行活動花絮",
+    description: "",
     time: "平日／陰天",
     type: "獨處點",
     detail: "夢幻湖是台灣特有水生植物台灣水韭的家，湖面平靜如鏡。陰天時的夢幻湖更添神秘感，坐在湖畔，帶著日記，讓文字承接內心的流動。",
     x: "6%",
     y: "64%",
     photos: [
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/e71597c82_S__43393047_0.jpg",
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/c2db304c5_S__43393040_0.jpg",
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/0b5405fc0_4B24F80F-BA5D-4C19-A78A-591F0A8268A7.jpg",
-      "https://media.base44.com/images/public/698fc983574e659f561934f1/b17475470_S__43393045_0.jpg"
+      "https://media.base44.com/images/public/698fc983574e659f561934f1/165bdf5c5_6.png"
     ]
   },
   {
