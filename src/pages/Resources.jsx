@@ -18,6 +18,8 @@ const spots = [
     detail: "擎天崗草原一望無際，微風拂來，是放空心靈的絕佳所在。清晨的薄霧與傍晚的金光，讓人忘卻城市的喧囂，只感受當下的呼吸與寧靜。",
     x: "80%",
     y: "35%",
+    mobileX: "78%",
+    mobileY: "33%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/90bc9872c_7.png"
     ]
@@ -90,6 +92,8 @@ const spots = [
     detail: "小油坑的噴氣孔與硫磺地形充滿原始力量，眺望台北盆地視野絕佳。在這裡感受地球的呼吸，讓自然的能量為你充電。",
     x: "77%",
     y: "82%",
+    mobileX: "75%",
+    mobileY: "82%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/ee4fb5c00_9.png"
     ]
@@ -162,6 +166,14 @@ export default function Resources() {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [activeSunMoonSpot, setActiveSunMoonSpot] = useState(null);
   const [currentSunMoonPhotoIndex, setCurrentSunMoonPhotoIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     setCurrentPhotoIndex(0);
@@ -219,7 +231,7 @@ export default function Resources() {
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.96 }}
                   className="absolute z-10 cursor-pointer"
-                  style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
+                  style={{ left: isMobile && spot.mobileX ? spot.mobileX : spot.x, top: isMobile && spot.mobileY ? spot.mobileY : spot.y, transform: 'translate(-50%, -50%)' }}
                 >
                   <span
                     className={`block rounded-full font-medium tracking-wide transition-all duration-300 scale-[0.56] md:scale-100 origin-center whitespace-nowrap ${
