@@ -89,7 +89,7 @@ const spots = [
     type: "眺望點",
     detail: "小油坑的噴氣孔與硫磺地形充滿原始力量，眺望台北盆地視野絕佳。在這裡感受地球的呼吸，讓自然的能量為你充電。",
     x: "77%",
-    y: "80%",
+    y: "82%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/ee4fb5c00_9.png"
     ]
