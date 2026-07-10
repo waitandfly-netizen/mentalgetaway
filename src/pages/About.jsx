@@ -254,7 +254,12 @@ export default function About() {
               {
                 year: "2021–2022", tag: "陪伴",
                 img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/c6b90576d_2021.png",
-                content: "疫情停辦，用粉專陪伴大家。",
+                content: (
+                  <>
+                    <p className="font-medium text-stone-800 mb-2">疫情讓旅程暫停，陪伴沒有停止。</p>
+                    <p>我們透過文字與分享，陪伴彼此走過那段不容易的日子。</p>
+                  </>
+                ),
                 detail: ""
               },
               {
