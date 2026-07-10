@@ -235,7 +235,12 @@ export default function About() {
               {
                 year: "2015", tag: "累積",
                 img: "https://media.base44.com/images/public/698fc983574e659f561934f1/549475533_2023.jpg",
-                content: "持續於南投蓄積，透過適合的場域，深度淨化身心靈，讓參加者享受高品質充電。",
+                content: (
+                  <>
+                    <p className="font-medium text-stone-800 mb-2">精選南投適合的靜心場域</p>
+                    <p>深度淨化身心靈，讓參加者享受高品質充電。</p>
+                  </>
+                ),
                 detail: "3月、9月辦理2場尊榮級；6月、12月暨南大學場次。"
               },
               {
