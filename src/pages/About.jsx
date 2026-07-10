@@ -229,7 +229,9 @@ export default function About() {
               {
                 year: "2014", tag: "累積",
                 img: "https://media.base44.com/images/public/698fc983574e659f561934f1/99ec0b96f_DSC05359.jpg",
-                content: "在好山好水間，淨化身心、享受安定。",
+                content: (
+                  <p className="font-medium text-stone-800">安定，不是來自更精彩的行程，而是來自願意慢下來的自己。</p>
+                ),
                 detail: "2月、4月、6月、10月、12月，共辦理5場次。"
               },
               {
