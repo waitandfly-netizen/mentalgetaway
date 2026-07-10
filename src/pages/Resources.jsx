@@ -112,7 +112,7 @@ const sunMoonSpots = [
     description: "",
     x: "10%",
     y: "30%",
-    mobileX: "7%",
+    mobileX: "3%",
     mobileY: "25%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/e6e824c5c_2.png",
@@ -124,7 +124,7 @@ const sunMoonSpots = [
     description: "",
     x: "12%",
     y: "48%",
-    mobileX: "7%",
+    mobileX: "5%",
     mobileY: "45%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/bd9fa73f3_3.png",
@@ -149,7 +149,7 @@ const sunMoonSpots = [
     x: "83%",
     y: "18%",
     mobileX: "75%",
-    mobileY: "15%",
+    mobileY: "12%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/41bf7bf10_5.png",
     ]
