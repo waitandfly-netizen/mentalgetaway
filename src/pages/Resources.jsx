@@ -218,12 +218,12 @@ export default function Resources() {
           <p className="text-emerald-700/70 tracking-[0.35em] text-xs mb-3">MINDFUL MAP</p>
           <h1 className="text-3xl md:text-5xl font-light text-stone-800 tracking-wide mb-4">靜心地圖</h1>
           <div className="w-8 h-px bg-emerald-600/40 mx-auto mb-6" />
-          <p className="md:hidden text-stone-500 font-light leading-relaxed whitespace-pre-line text-center">
-            這份靜心地圖是個禮物，
-            希望陪伴每一個願意慢下來的人，
-            找到屬於自己的充電、安定方式～
-            歡迎空出一段時間，
-            利用這份地圖，
+          <p className="md:hidden text-stone-500 font-light leading-relaxed text-center">
+            這份靜心地圖是個禮物，<br />
+            希望陪伴每一個願意慢下來的人，<br />
+            找到屬於自己的充電、安定方式～<br />
+            歡迎空出一段時間，<br />
+            利用這份地圖，<br />
             開啟你的靜心旅程。
           </p>
           <p className="hidden md:block text-stone-500 font-light leading-relaxed whitespace-pre-line">
