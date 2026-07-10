@@ -347,14 +347,6 @@ export default function Resources() {
       {/* Sun Moon Lake Illustration */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl font-light text-stone-800 text-center mb-10 tracking-wide"
-          >
-            日月潭靜心地圖
-          </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
