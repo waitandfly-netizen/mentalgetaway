@@ -78,7 +78,7 @@ export default function TwoDayRetreat() {
             {[
               { icon: Clock, label: "時長", value: "2天1夜" },
               { icon: Users, label: "人數", value: "8-15 人" },
-              { icon: MapPin, label: "地點", value: "宜蘭山區民宿" },
+              { icon: MapPin, label: "地點", value: "宜蘭與南投" },
               { icon: Calendar, label: "梯次", value: "每月 1-2 梯" }
             ].map((item, index) => (
               <motion.div
