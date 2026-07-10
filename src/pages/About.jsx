@@ -218,7 +218,12 @@ export default function About() {
               {
                 year: "2013", tag: "萌芽",
                 img: "https://media.base44.com/images/public/698fc983574e659f561934f1/d29c8efbf_20175-1.jpg",
-                content: "心靈假期從暨南大學開始，用好山好水的大自然能量，進行身心放鬆活動。",
+                content: (
+                  <>
+                    <p className="font-medium text-stone-800 mb-2">心靈假期，從暨南大學開始。</p>
+                    <p>讓人輕鬆快樂地成長身心靈，以渡假的方式體驗身心靈成長的美好。</p>
+                  </>
+                ),
                 detail: "3月、4月、6月、8月、9月、11月，共計六場次2天1夜的旅程。"
               },
               {
