@@ -221,7 +221,7 @@ export default function About() {
                 content: (
                   <>
                     <p className="font-medium text-stone-800 mb-2">心靈假期，從暨南大學開始。</p>
-                    <p>讓人輕鬆快樂地成長身心靈，以渡假的方式體驗身心靈成長的美好。</p>
+                    <p>以渡假的方式體驗身心靈成長的美好。</p>
                   </>
                 ),
                 detail: "3月、4月、6月、8月、9月、11月，共計六場次2天1夜的旅程。"
