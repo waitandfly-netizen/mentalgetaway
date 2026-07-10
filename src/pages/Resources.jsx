@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Clock, X, Leaf, Coffee, PersonStanding, Mountain, CloudRain, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
@@ -503,16 +504,22 @@ export default function Resources() {
 
       {/* CTA Banner Image */}
       <section className="py-16 px-6 bg-stone-50">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto text-center">
           <motion.img
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            src="https://media.base44.com/images/public/698fc983574e659f561934f1/0b9ddc115_22.png"
+            src="https://media.base44.com/images/public/698fc983574e659f561934f1/a11996aee_.png"
             alt="如果你想體驗不一樣的旅程"
             className="w-full h-auto block rounded-3xl shadow-lg border border-stone-100"
           />
+          <Link
+            to="/Programs"
+            className="inline-block mt-10 px-8 py-3 rounded-full border border-stone-700 text-stone-700 text-sm font-light tracking-wider hover:bg-stone-700 hover:text-white transition-colors duration-300"
+          >
+            看看有那些旅程
+          </Link>
         </div>
       </section>
     </div>
