@@ -112,6 +112,8 @@ const sunMoonSpots = [
     description: "",
     x: "10%",
     y: "30%",
+    mobileX: "7%",
+    mobileY: "25%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/e6e824c5c_2.png",
     ]
@@ -122,6 +124,8 @@ const sunMoonSpots = [
     description: "",
     x: "12%",
     y: "48%",
+    mobileX: "7%",
+    mobileY: "45%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/bd9fa73f3_3.png",
     ]
@@ -132,6 +136,8 @@ const sunMoonSpots = [
     description: "",
     x: "25%",
     y: "78%",
+    mobileX: "18%",
+    mobileY: "73%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/4906ab9e9_1.png",
     ]
@@ -142,6 +148,8 @@ const sunMoonSpots = [
     description: "",
     x: "83%",
     y: "18%",
+    mobileX: "75%",
+    mobileY: "15%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/41bf7bf10_5.png",
     ]
@@ -152,6 +160,8 @@ const sunMoonSpots = [
     description: "",
     x: "79%",
     y: "62%",
+    mobileX: "72%",
+    mobileY: "62%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/b78aa0e4c_4.png",
     ]
@@ -381,7 +391,7 @@ export default function Resources() {
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.96 }}
                   className="absolute z-10 cursor-pointer"
-                  style={{ left: spot.x, top: spot.y, transform: 'translate(-50%, -50%)' }}
+                  style={{ left: isMobile && spot.mobileX ? spot.mobileX : spot.x, top: isMobile && spot.mobileY ? spot.mobileY : spot.y, transform: 'translate(-50%, -50%)' }}
                 >
                   <span
                     className={`block px-4 py-1 rounded-full text-sm font-medium tracking-wide transition-all duration-300 scale-[0.35] md:scale-100 origin-center whitespace-nowrap ${
