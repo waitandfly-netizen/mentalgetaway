@@ -221,7 +221,9 @@ export default function Resources() {
           <p className="md:hidden text-stone-500 font-light leading-relaxed text-center">
             這份靜心地圖是個禮物，<br />
             希望陪伴每一個願意慢下來的人，<br />
-            找到屬於自己的充電、安定方式～<br />
+            找到屬於自己的充電、安定方式～
+          </p>
+          <p className="md:hidden text-stone-500 font-light leading-relaxed text-center mt-6">
             歡迎空出一段時間，<br />
             利用這份地圖，<br />
             開啟你的靜心旅程。
