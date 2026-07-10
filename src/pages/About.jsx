@@ -242,7 +242,12 @@ export default function About() {
               {
                 year: "2017", tag: "支持助人者",
                 img: "https://media.base44.com/images/public/698fc983574e659f561934f1/d3fd0ad1f_S__43106329.jpg",
-                content: "支持辛勞的助人者，辦理專屬場次，讓自我照顧能有新選擇，享受完整的充電與還原。",
+                content: (
+                  <>
+                    <p className="font-medium text-stone-800 mb-2">開始為助人者設計專屬場次。</p>
+                    <p>讓自我照顧能有新選擇，享受完整的充電與還原。</p>
+                  </>
+                ),
                 detail: "3月、8月宜蘭場、5月、11月埔里暨大場，共計4場次。"
               },
               {
