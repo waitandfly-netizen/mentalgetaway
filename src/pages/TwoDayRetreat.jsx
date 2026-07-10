@@ -228,6 +228,10 @@ export default function TwoDayRetreat() {
                   <span className="text-white font-medium">早鳥優惠 <span className="text-indigo-300 text-xs font-normal">（7/19前）</span></span>
                   <span className="text-white font-medium text-xl">NT$ 6,500</span>
                 </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-indigo-200 text-sm">協會優惠</span>
+                  <span className="text-indigo-200 font-medium">NT$ 5,800</span>
+                </div>
 
               </div>
 
