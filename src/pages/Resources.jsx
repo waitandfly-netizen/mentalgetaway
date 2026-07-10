@@ -121,7 +121,7 @@ const sunMoonSpots = [
     name: "朝霧碼頭",
     description: "",
     x: "14%",
-    y: "40%",
+    y: "46%",
     photos: [
       "https://media.base44.com/images/public/698fc983574e659f561934f1/bd9fa73f3_3.png",
     ]
