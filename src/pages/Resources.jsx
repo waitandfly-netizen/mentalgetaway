@@ -224,8 +224,7 @@ export default function Resources() {
             找到屬於自己的充電、安定方式～
           </p>
           <p className="md:hidden text-stone-500 font-light leading-relaxed text-center mt-6">
-            歡迎空出一段時間，<br />
-            利用這份地圖，<br />
+            歡迎空出一段時間，利用這份地圖，<br />
             開啟你的靜心旅程。
           </p>
           <p className="hidden md:block text-stone-500 font-light leading-relaxed whitespace-pre-line">
