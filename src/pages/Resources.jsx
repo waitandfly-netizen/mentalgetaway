@@ -207,7 +207,14 @@ export default function Resources() {
           <p className="text-emerald-700/70 tracking-[0.35em] text-xs mb-3">MINDFUL MAP</p>
           <h1 className="text-3xl md:text-5xl font-light text-stone-800 tracking-wide mb-4">靜心地圖</h1>
           <div className="w-8 h-px bg-emerald-600/40 mx-auto mb-6" />
-          <p className="text-stone-500 font-light leading-relaxed">放慢腳步，找到屬於你的安靜角落</p>
+          <p className="text-stone-500 font-light leading-relaxed whitespace-pre-line">
+            這份靜心地圖是個禮物，
+            希望陪伴每一個願意慢下來的人，
+            找到屬於自己的充電、安定方式～
+
+            歡迎空出一段時間，利用這份地圖，
+            開啟你的靜心旅程。
+          </p>
         </motion.div>
       </section>
 
@@ -466,40 +473,6 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="py-16 px-6 bg-stone-50">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl font-light text-stone-800 text-center mb-10 tracking-wide"
-          >
-            靜心地點分類
-          </motion.h2>
-          <div className="grid md:grid-cols-3 gap-4">
-            {categories.map((cat, i) => (
-              <motion.div
-                key={cat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex items-start gap-4 p-5 bg-stone-50 rounded-2xl"
-              >
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                  <cat.icon className="w-5 h-5 text-emerald-700" />
-                </div>
-                <div>
-                  <p className="text-stone-800 font-light mb-1">{cat.label}</p>
-                  <p className="text-stone-400 text-xs leading-relaxed">{cat.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Tips */}
       <section className="py-16 px-6 bg-emerald-50">
         <div className="max-w-2xl mx-auto text-center">
@@ -525,6 +498,21 @@ export default function Resources() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Banner Image */}
+      <section className="py-16 px-6 bg-stone-50">
+        <div className="max-w-5xl mx-auto">
+          <motion.img
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            src="https://media.base44.com/images/public/698fc983574e659f561934f1/0b9ddc115_22.png"
+            alt="如果你想體驗不一樣的旅程"
+            className="w-full h-auto block rounded-3xl shadow-lg border border-stone-100"
+          />
         </div>
       </section>
     </div>
