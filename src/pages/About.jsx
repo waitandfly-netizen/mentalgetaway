@@ -248,7 +248,12 @@ export default function About() {
               {
                 year: "2018–2021", tag: "自然健行",
                 img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/484e267b5_2018-2021.jpg",
-                content: "推出一日健行，用最簡單可親的方式，為生活按下暫停鍵，享受大自然的洗滌。",
+                content: (
+                  <>
+                    <p className="font-medium text-stone-800 mb-2">讓靜心方式更可親，為生活按下暫停鍵</p>
+                    <p>一條步道、一座山，都可以成為回到與自己連結的橋樑。</p>
+                  </>
+                ),
                 detail: "暖東峽谷、大湖親山步道、中正山、魚路古道，共辦理5場次。"
               },
               {
