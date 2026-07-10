@@ -208,7 +208,15 @@ export default function Resources() {
           <p className="text-emerald-700/70 tracking-[0.35em] text-xs mb-3">MINDFUL MAP</p>
           <h1 className="text-3xl md:text-5xl font-light text-stone-800 tracking-wide mb-4">靜心地圖</h1>
           <div className="w-8 h-px bg-emerald-600/40 mx-auto mb-6" />
-          <p className="text-stone-500 font-light leading-relaxed whitespace-pre-line">
+          <p className="md:hidden text-stone-500 font-light leading-relaxed whitespace-pre-line text-center">
+            這份靜心地圖是個禮物，
+            希望陪伴每一個願意慢下來的人，
+            找到屬於自己的充電、安定方式～
+            歡迎空出一段時間，
+            利用這份地圖，
+            開啟你的靜心旅程。
+          </p>
+          <p className="hidden md:block text-stone-500 font-light leading-relaxed whitespace-pre-line">
             這份靜心地圖是個禮物，
             希望陪伴每一個願意慢下來的人，
             找到屬於自己的充電、安定方式～
@@ -508,7 +516,7 @@ export default function Resources() {
           />
           <Link
             to="/Programs"
-            className="absolute bottom-[6%] left-[6%] px-6 py-2.5 rounded-full border border-stone-700/70 bg-white/30 backdrop-blur-sm text-stone-700 text-sm font-light tracking-wider hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-colors duration-300"
+            className="absolute bottom-[6%] left-[6%] px-6 py-2.5 rounded-full border border-stone-700/70 bg-white/30 backdrop-blur-sm text-stone-700 text-sm font-light tracking-wider hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-colors duration-300 scale-[0.6] md:scale-100 origin-bottom-left"
           >
             看看有那些旅程
           </Link>
