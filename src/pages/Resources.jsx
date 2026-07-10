@@ -529,7 +529,7 @@ export default function Resources() {
             to="/Programs"
             className="absolute bottom-[6%] left-[6%] px-6 py-2.5 rounded-full border border-stone-700/70 bg-white/30 backdrop-blur-sm text-stone-700 text-sm font-light tracking-wider hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-colors duration-300 scale-[0.6] md:scale-100 origin-bottom-left"
           >
-            看看有那些旅程
+            看看有哪些旅程
           </Link>
         </div>
       </section>
