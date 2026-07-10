@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
-import { Moon, Clock, Users, MapPin, Check, ArrowRight, Calendar, Star } from 'lucide-react';
+import { Moon, Clock, Users, MapPin, Check, ArrowRight, Calendar, Star, Wind, Utensils, User, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export default function TwoDayRetreat() {
@@ -33,10 +33,10 @@ export default function TwoDayRetreat() {
   ];
 
   const highlights = [
-    { icon: Star, title: "深度森林浴", desc: "專業引導的森林療癒體驗" },
-    { icon: Moon, title: "星空時光", desc: "在自然中與星空對話" },
-    { icon: Star, title: "精緻餐食", desc: "在地食材健康料理" },
-    { icon: Star, title: "舒適住宿", desc: "精選自然環境民宿" }
+    { icon: Wind, title: "放鬆", desc: "遠離日常壓力，\n享受自然的療育。" },
+    { icon: Utensils, title: "飲食", desc: "原形食物料理，\n淨養身體與心靈。" },
+    { icon: User, title: "獨處", desc: "享受寧靜時光，\n與自己深度連結。" },
+    { icon: Sparkles, title: "靜心", desc: "不同靜心練習，\n回歸內在的平衡。" }
   ];
 
   return (
@@ -112,7 +112,7 @@ export default function TwoDayRetreat() {
               >
                 <item.icon className="w-8 h-8 text-indigo-300 mx-auto mb-4" />
                 <h3 className="font-medium mb-2">{item.title}</h3>
-                <p className="text-indigo-200/80 text-sm">{item.desc}</p>
+                <p className="text-indigo-200/80 text-sm whitespace-pre-line">{item.desc}</p>
               </motion.div>
             ))}
           </div>
