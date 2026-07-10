@@ -92,13 +92,17 @@ export default function OneDayRetreat() {
             </h2>
             <div className="text-stone-600 font-light leading-loose space-y-6">
               <p>
-                「一日放空篇」是為忙碌的都市人設計的輕旅程。
+                為忙碌的都市人設計的輕旅程。
                 在這一天裡，我們將暫時放下手機、放下工作、放下煩惱，
                 全然地投入大自然的懷抱。
               </p>
               <p>
-                透過輕度的森林健行，我們將慢慢地喚醒身體的感知，這不是一場需要努力的課程，而是一段允許自己放鬆的時光。
-                你可以只是單純地走路、單純地呼吸、單純地存在。
+                在心靈導遊的引領下，
+                好好地呼吸和放空，讓身體重新找到穩定軸心。
+              </p>
+              <p>
+                你會發現～
+                原來真正的放鬆，不必做很多事，只需要讓自己在當下。
               </p>
             </div>
           </motion.div>
@@ -185,7 +189,7 @@ export default function OneDayRetreat() {
               <p className="text-4xl font-light mb-3">NT$ 1,200<span className="text-lg text-emerald-200">/人</span></p>
               <div className="mb-4">
                 <p className="text-emerald-200 text-sm mb-1">場次</p>
-                <p className="text-white font-light">6/26（五）｜7/24（五）｜8/28（五）</p>
+                <p className="text-white font-light">7/24（五）｜8/28（五）</p>
               </div>
               
               <a href="https://forms.gle/KCYzFjRnw8CuoYKT6" target="_blank" rel="noopener noreferrer">
