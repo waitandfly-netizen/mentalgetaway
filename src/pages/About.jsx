@@ -266,7 +266,12 @@ export default function About() {
               {
                 year: "2024–2025", tag: "新的階段",
                 img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/bfd0d0688_2024-2025.jpg",
-                content: "將假期階梯化，以一日放空篇、二日放空營、蛻變篇、僻靜篇接引不同需要的旅人。",
+                content: (
+                  <>
+                    <p className="font-medium text-stone-800 mb-2">十多年的累積，慢慢長成不同的旅程。</p>
+                    <p>一日放空、二日放空、蛻變篇與僻靜篇，陪伴不同階段的旅人，找到適合自己的步調。</p>
+                  </>
+                ),
                 detail: "2024年5月、12月淡水場二日放空營，以及 7月一日放空篇(陽明山)。\n\n2025年 4月陽明山一日放空篇。5月淡水場、8月南投日月潭場、11月宜蘭場二日放空營；4月陽明山一日放空篇。"
               },
               {
@@ -301,7 +306,7 @@ export default function About() {
                        {item.tag}
                       </span>
                       </div>
-                      <p className="text-stone-600 font-light text-base leading-relaxed mb-2">{item.content}</p>
+                      <div className="text-stone-600 font-light text-base leading-relaxed mb-2">{item.content}</div>
                       {item.detail && (
                         <div className="space-y-1">
                           {item.detail.split('\n\n').map((line, i) => (
