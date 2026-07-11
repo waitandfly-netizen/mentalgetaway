@@ -132,17 +132,26 @@ export default function Home() {
       />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        {/* Desktop background - new image, no overlay */}
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/8e5f19195_.png')",
+          }}
+        />
+        {/* Mobile background - original image with overlay */}
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/ba6a76fb1_LINE_NOTE_260711_1.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-stone-900/20 to-stone-900/60" />
         </div>
-        
-        <motion.div 
-          className="relative z-10 text-center px-6 max-w-4xl mx-auto"
+
+        {/* Text - mobile only */}
+        <motion.div
+          className="md:hidden relative z-10 text-center px-6 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
@@ -160,8 +169,6 @@ export default function Home() {
               <span className="block pl-8">一趟美好滋養的出走</span>
             </p>
           </div>
-          
-
         </motion.div>
 
         {/* Scroll Indicator */}
