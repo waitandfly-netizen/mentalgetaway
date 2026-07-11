@@ -139,15 +139,14 @@ export default function Home() {
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/8e5f19195_.png')",
           }}
         />
-        {/* Mobile background - original image with overlay */}
+        {/* Mobile background - original image, no overlay, shifted left */}
         <div
-          className="md:hidden absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="md:hidden absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/ba6a76fb1_LINE_NOTE_260711_1.jpg')",
+            backgroundPosition: "left 30% center",
           }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-stone-900/20 to-stone-900/60" />
-        </div>
+        />
 
         {/* Text - mobile only */}
         <motion.div
