@@ -1,98 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://spiritvacation.base44.app/</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/About</loc>
+    <loc>https://spiritvacation.base44.app/About</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/Programs</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/Guide</loc>
+    <loc>https://spiritvacation.base44.app/Programs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/Testimonials</loc>
+    <loc>https://spiritvacation.base44.app/OneDayRetreat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://spiritvacation.base44.app/TwoDayRetreat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://spiritvacation.base44.app/SilentRetreat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://spiritvacation.base44.app/InvitationRetreat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://spiritvacation.base44.app/Guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TransformationStories</loc>
+    <loc>https://spiritvacation.base44.app/GuideArticles</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/FAQ</loc>
+    <loc>https://spiritvacation.base44.app/Testimonials</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/Contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/OneDayRetreat</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TwoDayRetreat</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/SilentRetreat</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/InvitationRetreat</loc>
+    <loc>https://spiritvacation.base44.app/TransformationStories</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TestimonialFromHear</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://spiritvacation.base44.app/Resources</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TestimonialHometown</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://spiritvacation.base44.app/FAQ</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TestimonialNaturally</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TestimonialTrueHappiness</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TestimonialNightRhythm</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TestimonialAcceptSelf</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://spiritvacation-561934f1.base44.app/TestimonialAllIsWell</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://spiritvacation.base44.app/Contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
