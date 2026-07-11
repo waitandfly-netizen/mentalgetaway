@@ -161,20 +161,7 @@ export default function Home() {
             </p>
           </div>
           
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="mt-12"
-          >
-            <Link 
-              to={createPageUrl("Programs")}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/20 transition-all duration-500 group"
-            >
-              <span className="tracking-wider">探索旅程</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
+
         </motion.div>
 
         {/* Scroll Indicator */}
