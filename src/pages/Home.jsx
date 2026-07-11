@@ -147,19 +147,15 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
+          <p className="text-white/70 tracking-[0.4em] text-xs md:text-sm uppercase mb-8 font-medium">
             心靈假期
-          </h1>
-          <div className="space-y-6 text-left inline-block">
-            <p className="text-xl md:text-2xl text-stone-100/90 font-light tracking-widest leading-relaxed">
-              <span className="block">好好生活，</span>
-              <span className="block pl-8">回到寧靜心靈的綠洲</span>
-            </p>
-            <p className="text-xl md:text-2xl text-stone-200/80 font-light tracking-widest leading-relaxed">
-              <span className="block">真實旅程，</span>
-              <span className="block pl-8">一趟美好滋養的出走</span>
-            </p>
-          </div>
+          </p>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-12 tracking-wide leading-relaxed">
+            好好生活，<br />回到寧靜心靈的綠洲
+          </h2>
+          <p className="text-lg md:text-xl text-stone-100/80 font-light tracking-widest leading-relaxed">
+            真實旅程，<br />一趟美好滋養的出走
+          </p>
           
 
         </motion.div>
