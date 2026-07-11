@@ -147,15 +147,6 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="mb-8"
-          >
-            <Sparkles className="w-10 h-10 text-amber-200/80 mx-auto mb-4" />
-          </motion.div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
             心靈假期
           </h1>
