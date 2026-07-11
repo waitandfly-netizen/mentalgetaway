@@ -1,124 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
-import { motion, AnimatePresence } from 'framer-motion';
-import { GraduationCap, Briefcase, Clock, ArrowRight, BookOpen, Quote, ChevronLeft } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { GraduationCap, Briefcase, Clock, Quote } from 'lucide-react';
+import SEOHead from '@/components/SEOHead';
 
 export default function Guide() {
-  const [activeArticle, setActiveArticle] = useState(null);
-
-  const articles = [
-    { 
-      title: "踏上靜心成長的路", 
-      content: `在成為「心靈導遊」之前，我其實是一名典型的社工人。
-
-那時，我在台北一間知名社福基金會擔任小主管。帶著在紐約累積三年的實務經驗回到台灣，滿腔熱情與使命感，覺得自己準備好為受虐兒童做更多、更好、更深的事。
-
-然而，不過兩三年，熱情彷彿被現實反覆擠壓。
-回頭看那段日子，只剩下一個字——累。
-
-1999年，世紀大地震發生。
-看著電視畫面裡殘屋破瓦前哭泣的孩子，我的心狠狠揪了一下。隔天，我主動申請帶隊下災區。
-
-在重建區裡，我從頭開始做自己並不那麼擅長的社區工作。一步一腳印，慢慢推動、慢慢建立關係，也確實做出了一些成果。
-
-但代價是——
-體重掉到39公斤，身心俱疲。
-
-那時的我以為，付出就是燃燒自己；使命，就是撐到極限。
-現在回頭看，許多波折與疲累，其實都和自己的「孩子氣」有關——那種想證明、想扛起一切、想做得更多的衝動。
-
-因緣際會之下，我帶著懷疑與好奇，報名了一場在當時看來有些「怪力亂神」的活動。
-那時的我，是個中規中矩的基督徒——某種程度上，也活在信念與框架的制約裡。
-
-沒想到，那次經驗徹底翻轉了我。
-
-原來——
-神，可以住在你我內在。
-原來，打開制約，就能遇見神。
-原來，神不是向外尋找，而是向內探尋。
-
-更令我驚訝的是，那些原本以為玄妙難懂的活動，竟然如此落地而美好。
-玩得開心、飯吃得香、覺睡得好。整個人精氣神飽滿，心裡升起一種久違的壯闊感——
-
-「有什麼事難得倒我！」
-
-那不是逞強，而是一種深深的篤定。
-
-從「耗竭」到「自在」
-
-我突然明白——
-當社工，不一定要累死自己。
-
-那段時間回到工作崗位，還真的有種「自在」不斷地打心底冒出來！
-
-後面的二十年，不論是在學校或者是其他的自由工作，我開始以引導人學會享受自在為工作目標。
-
-自在是一種財富，帶到任何場域都可以享用，我自認這仍然是社會工作，只是對象更廣了。最重要的是，我相當自在地樂在其中～～～`
-    },
-    { 
-      title: "ego與self之不同", 
-      content: `ego是自我，是人為的，是從社會製造出來的，是self的替代品，是一個假的實體。
-
-我們會需要自我(ego)是因為我們不知道真實的自己(self)所以需要找到一個人造的中心，才有辦法在生活中安身立命。
-
-自我是從「比較」建構而成，自我總是在比較；而真實的自己是我們本然的存在，不需要比較，既不比任何人差勁也不比任何人優越，就只是自己罷了。
-
-所有靜心方法都是用來認識真實的自己的一種設計，真實的自己本來就在那裡，只是需要被發現、被認出來。
-
-一個人一旦認出真實的自己，不再有群眾心理，不會再盲從迷信，不可能被剝削利用，也不可能被命令和指使，而是依著自己的光去活，依著自己內在的精神去活，生命變得完整而美麗。
-
-我們的意識有如浩瀚無垠的海洋，也是最危險的海洋，因為當我們開始往內走，會進入空無之中，這時會有恐懼升起，怕失去控制、怕失去身份認同、怕手上的好處消失⋯⋯
-
-這種時候，會有種清楚明白，原來過去緊抓著的其實是幻影，必然會困惑、害怕、不安⋯⋯因為假的正在消失，而真的尚未來到⋯⋯
-
-親愛的～這就是靈性成長的一部分！為了得到真的，必須先失去假的。
-
-在這個關鍵的斷層地帶需要前輩或朋友給你支持，告訴你：不必害怕～這個虛無將會過去，到時你會感覺到自己是充滿的，會滿而溢出，只是需再多一點愛和耐心。
-
-親愛的～如果你是清晰的，如果你的覺知沒有被雲霧遮蔽，如果你的洞察力已從自性中升起，你將會知道此岸就是彼岸！
-
-於是我們會因為知道這個真相而笑出來，生命竟如此荒謬！我們早就已經擁有我們所渴望的東西了！寶藏一直在自己身上，我們卻到處奔波尋覓！
-
-不需要再去創造更多的自我，因為我們內在俱足著超凡的自己。`
-    },
-    { 
-      title: "一封來自存在的信", 
-      content: `收件人是助人工作者
-
-親愛的你：
-
-不管是誤打誤撞還是自小立志成為助人工作者，下面的內容請你認真看一看。
-
-那些你所在意的專業認同和助人技巧，只要願意投入時間、精神，假以時日一定會有成果，這就是吸引力法則。
-
-這裡想告訴你的是：
-
-助人工作跟愛有絕對的關係～
-
-也許你單純只是見不得別人受苦⋯⋯
-
-或者你是自己的某個階段因為受到幫助脫離困苦，進而期待自己也成為那個可以幫助別人的人！
-
-更可能是冥冥之中有個驅力，不管你做什麼，總是疊上愛人、關心人、幫助人的軌道！
-
-這樣你看懂了嗎？原來一直都是「愛」引導著我們走上助人者的道路。
-
-我知道你在長時間的付出與承擔中，漸漸感到疲憊、消耗，甚至懷疑自己是否還適合這條路！
-
-其實疲累感和消耗感的出現，是一種訊號，提醒著你重新跟自己對焦：
-
-「我的初心還在嗎？」
-「我每天是為著什麼在工作？」
-「維持生存？展現價值？還是想活出生命意義？」
-「我忙著幫助別人，是不是我也需要一點幫助呢？！」
-
-愛，沒有離開過，是你不小心把人家弄丟了⋯⋯😌
-
-From ✨存在✨`
-    }
-  ];
-
   const credentials = [
     "美國紐約州立大學社會工作碩士 MSW",
     "美國紐約州合格認證社工師 CSW"
@@ -133,6 +18,11 @@ From ✨存在✨`
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <SEOHead
+        title="心靈導遊 — 心靈假期"
+        description="心靈導遊丁靜如老師，在身心靈成長領域深作二、三十年，陪伴你走進內在的寧靜與覺察。"
+      />
+
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
@@ -272,82 +162,6 @@ From ✨存在✨`
           </motion.div>
         </div>
       </section>
-
-      {/* Articles Section */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <BookOpen className="w-8 h-8 text-emerald-600 mx-auto mb-4" />
-            <h2 className="text-3xl font-light text-stone-800">心靈專欄</h2>
-          </motion.div>
-
-          <AnimatePresence mode="wait">
-            {activeArticle === null ? (
-              <motion.div 
-                key="list"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="space-y-4"
-              >
-                {articles.map((article, index) => (
-                  <motion.div
-                    key={article.title}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <button 
-                      onClick={() => setActiveArticle(index)}
-                      className="w-full group bg-stone-50 hover:bg-emerald-50 rounded-xl p-6 transition-colors cursor-pointer flex items-center justify-between text-left"
-                    >
-                      <span className="text-stone-700 group-hover:text-emerald-800 font-medium transition-colors">
-                        {article.title}
-                      </span>
-                      <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all" />
-                    </button>
-                  </motion.div>
-                ))}
-              </motion.div>
-            ) : (
-              <motion.div 
-                key="article"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                className="bg-stone-50 rounded-2xl p-8 md:p-10"
-              >
-                <button 
-                  onClick={() => setActiveArticle(null)}
-                  className="flex items-center gap-2 text-emerald-700 hover:text-emerald-800 mb-6 transition-colors"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                  <span>返回文章列表</span>
-                </button>
-                
-                <h3 className="text-2xl font-medium text-stone-800 mb-8">
-                  {articles[activeArticle].title}
-                </h3>
-                
-                <div className="prose prose-stone max-w-none">
-                  {articles[activeArticle].content.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="text-stone-600 font-light leading-loose mb-4">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </section>
-
 
     </div>
   );

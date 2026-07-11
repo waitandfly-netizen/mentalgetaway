@@ -51,6 +51,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Guide from './pages/Guide';
+import GuideArticles from './pages/GuideArticles';
 import Home from './pages/Home';
 import InvitationRetreat from './pages/InvitationRetreat';
 import OneDayRetreat from './pages/OneDayRetreat';
@@ -75,6 +76,7 @@ export const PAGES = {
     "Contact": Contact,
     "FAQ": FAQ,
     "Guide": Guide,
+    "GuideArticles": GuideArticles,
     "Home": Home,
     "InvitationRetreat": InvitationRetreat,
     "OneDayRetreat": OneDayRetreat,

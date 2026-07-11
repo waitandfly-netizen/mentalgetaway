@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X, Leaf, ChevronDown } from 'lucide-react';
 
 export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [expandedDropdown, setExpandedDropdown] = useState(null);
   const location = useLocation();
   const isHomePage = currentPageName === 'Home';
 
@@ -20,12 +21,16 @@ export default function Layout({ children, currentPageName }) {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setExpandedDropdown(null);
   }, [location]);
 
   const navLinks = [
     { name: '初心緣起', page: 'About' },
     { name: '旅程介紹', page: 'Programs' },
-    { name: '心靈導遊', page: 'Guide' },
+    { name: '心靈導遊', page: 'Guide', children: [
+      { name: '心靈導遊介紹', page: 'Guide' },
+      { name: '心靈專欄', page: 'GuideArticles' },
+    ]},
     { name: '參加者心得', page: 'Testimonials' },
     { name: '蛻變故事', page: 'TransformationStories' },
     { name: '靜心地圖', page: 'Resources' },
@@ -60,14 +65,36 @@ export default function Layout({ children, currentPageName }) {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <Link
-                  key={link.page}
-                  to={createPageUrl(link.page)}
-                  className={`${textColor} text-sm tracking-wider hover:text-emerald-600 transition-colors duration-300 relative group`}
-                >
-                  {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-emerald-600 group-hover:w-full transition-all duration-300" />
-                </Link>
+                link.children ? (
+                  <div key={link.page} className="relative group">
+                    <span className={`${textColor} text-sm tracking-wider hover:text-emerald-600 transition-colors duration-300 cursor-pointer flex items-center gap-1`}>
+                      {link.name}
+                      <ChevronDown className="w-3 h-3" />
+                    </span>
+                    <div className="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                      <div className="bg-white rounded-lg shadow-lg border border-stone-100 py-2 min-w-[180px]">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.page}
+                            to={createPageUrl(child.page)}
+                            className="block px-4 py-2 text-sm text-stone-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors whitespace-nowrap"
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    key={link.page}
+                    to={createPageUrl(link.page)}
+                    className={`${textColor} text-sm tracking-wider hover:text-emerald-600 transition-colors duration-300 relative group`}
+                  >
+                    {link.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-emerald-600 group-hover:w-full transition-all duration-300" />
+                  </Link>
+                )
               ))}
             </nav>
 
@@ -92,13 +119,38 @@ export default function Layout({ children, currentPageName }) {
             >
               <nav className="px-6 py-6 space-y-4">
                 {navLinks.map((link) => (
-                  <Link
-                    key={link.page}
-                    to={createPageUrl(link.page)}
-                    className="block text-stone-700 text-lg font-light tracking-wider hover:text-emerald-700 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
+                  link.children ? (
+                    <div key={link.page}>
+                      <button
+                        onClick={() => setExpandedDropdown(expandedDropdown === link.page ? null : link.page)}
+                        className="flex items-center justify-between w-full text-stone-700 text-lg font-light tracking-wider"
+                      >
+                        {link.name}
+                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedDropdown === link.page ? 'rotate-180' : ''}`} />
+                      </button>
+                      {expandedDropdown === link.page && (
+                        <div className="pl-4 mt-2 space-y-3">
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.page}
+                              to={createPageUrl(child.page)}
+                              className="block text-stone-600 text-base font-light tracking-wider hover:text-emerald-700 transition-colors"
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      key={link.page}
+                      to={createPageUrl(link.page)}
+                      className="block text-stone-700 text-lg font-light tracking-wider hover:text-emerald-700 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )
                 ))}
               </nav>
             </motion.div>
