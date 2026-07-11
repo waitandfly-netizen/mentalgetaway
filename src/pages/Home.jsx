@@ -133,9 +133,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="md:hidden absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/ba6a76fb1_LINE_NOTE_260711_1.jpg')",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-stone-900/20 to-stone-900/60" />
+        </div>
+        <div 
+          className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/8e5f19195_.png')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-stone-900/20 to-stone-900/60" />
