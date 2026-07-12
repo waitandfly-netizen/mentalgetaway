@@ -132,13 +132,32 @@ export default function Home() {
       />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Desktop background - new image with baked-in text */}
+        {/* Desktop background */}
         <div
           className="hidden lg:block absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/9d344de7a_banner.png')",
           }}
         />
+        {/* Desktop text overlay - left-aligned, middle-left position */}
+        <motion.div
+          className="hidden lg:flex absolute inset-0 z-10 flex-col justify-center items-start pl-[8%] pr-[40%]"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          <h1 className="text-6xl xl:text-7xl font-bold text-white mb-10 tracking-wide drop-shadow-lg">
+            心靈假期
+          </h1>
+          <div className="space-y-5">
+            <p className="text-2xl xl:text-3xl text-white font-light tracking-widest leading-relaxed drop-shadow-md">
+              好好生活，回到寧靜心靈的綠洲
+            </p>
+            <p className="text-2xl xl:text-3xl text-white font-light tracking-widest leading-relaxed drop-shadow-md">
+              真實旅程，一趟美好滋養的出走
+            </p>
+          </div>
+        </motion.div>
         {/* Mobile/tablet background - original image, no overlay, shifted left */}
         <div
           className="lg:hidden absolute inset-0 bg-cover bg-no-repeat"
