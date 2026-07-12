@@ -111,7 +111,7 @@ export default function Programs() {
         >
           <p className="text-amber-200/80 tracking-[0.3em] text-sm mb-4">OUR PROGRAMS</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">
-            旅程介紹
+            旅程篇章
           </h1>
         </motion.div>
       </section>
