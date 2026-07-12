@@ -132,25 +132,25 @@ export default function Home() {
       />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Desktop background - new image, no overlay */}
+        {/* Desktop background - new image with baked-in text */}
         <div
-          className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="hidden lg:block absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/8e5f19195_.png')",
+            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/9d344de7a_banner.png')",
           }}
         />
-        {/* Mobile background - original image, no overlay, shifted left */}
+        {/* Mobile/tablet background - original image, no overlay, shifted left */}
         <div
-          className="md:hidden absolute inset-0 bg-cover bg-no-repeat"
+          className="lg:hidden absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/ba6a76fb1_LINE_NOTE_260711_1.jpg')",
             backgroundPosition: "left 30% center",
           }}
         />
 
-        {/* Text - mobile only */}
+        {/* Text - mobile and tablet */}
         <motion.div
-          className="md:hidden relative z-10 text-center px-6 max-w-4xl mx-auto"
+          className="lg:hidden relative z-10 text-center px-6 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
