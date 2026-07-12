@@ -45,13 +45,35 @@ export default function RetreatRecordPage({ title, year, category, heroImage, he
           >
             {showIntroHeading && <h2 className="text-2xl font-light text-stone-800 mb-6 tracking-wide">旅程簡介</h2>}
             {introSections ? (
-              <div className="space-y-8">
-                {introSections.map((section, i) => (
-                  <div key={i}>
-                    <p className="font-medium text-stone-800 text-lg mb-3 tracking-wide">{section.venue}</p>
-                    <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{section.content}</p>
-                  </div>
-                ))}
+              <div className="space-y-12">
+                {introSections.map((section, i) => {
+                  const isImageRight = section.imagePosition !== 'left';
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8 }}
+                      className={`flex flex-col md:flex-row items-center gap-8 ${section.image ? '' : 'justify-center'}`}
+                    >
+                      {section.image && !isImageRight && (
+                        <div className="md:w-1/2 w-full overflow-hidden rounded-2xl shadow-md">
+                          <img src={section.image} alt={section.venue} className="w-full h-full object-cover aspect-[4/3]" />
+                        </div>
+                      )}
+                      <div className={`md:w-1/2 ${section.image ? '' : 'w-full'}`}>
+                        <p className="font-medium text-emerald-800 text-xl mb-4 tracking-wide">{section.venue}</p>
+                        <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{section.content}</p>
+                      </div>
+                      {section.image && isImageRight && (
+                        <div className="md:w-1/2 w-full overflow-hidden rounded-2xl shadow-md">
+                          <img src={section.image} alt={section.venue} className="w-full h-full object-cover aspect-[4/3]" />
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })}
               </div>
             ) : (
               <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{intro}</p>
