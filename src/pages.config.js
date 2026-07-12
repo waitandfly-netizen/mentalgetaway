@@ -56,6 +56,10 @@ import Home from './pages/Home';
 import InvitationRetreat from './pages/InvitationRetreat';
 import OneDayRetreat from './pages/OneDayRetreat';
 import Programs from './pages/Programs';
+import Retreat2014 from './pages/Retreat2014';
+import Retreat2017 from './pages/Retreat2017';
+import Retreat2020WarmDong from './pages/Retreat2020WarmDong';
+import Retreat2023 from './pages/Retreat2023';
 import SilentRetreat from './pages/SilentRetreat';
 import TestimonialAcceptSelf from './pages/TestimonialAcceptSelf';
 import TestimonialAllIsWell from './pages/TestimonialAllIsWell';
@@ -81,6 +85,10 @@ export const PAGES = {
     "InvitationRetreat": InvitationRetreat,
     "OneDayRetreat": OneDayRetreat,
     "Programs": Programs,
+    "Retreat2014": Retreat2014,
+    "Retreat2017": Retreat2017,
+    "Retreat2020WarmDong": Retreat2020WarmDong,
+    "Retreat2023": Retreat2023,
     "SilentRetreat": SilentRetreat,
     "TestimonialAcceptSelf": TestimonialAcceptSelf,
     "TestimonialAllIsWell": TestimonialAllIsWell,

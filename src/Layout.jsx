@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Leaf, ChevronDown } from 'lucide-react';
+import { Menu, X, Leaf, ChevronDown, ChevronRight } from 'lucide-react';
 
 export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedDropdown, setExpandedDropdown] = useState(null);
+  const [expandedSubDropdown, setExpandedSubDropdown] = useState(null);
   const location = useLocation();
   const isHomePage = currentPageName === 'Home';
 
@@ -22,6 +23,7 @@ export default function Layout({ children, currentPageName }) {
   useEffect(() => {
     setMobileMenuOpen(false);
     setExpandedDropdown(null);
+    setExpandedSubDropdown(null);
   }, [location]);
 
   const navLinks = [
@@ -29,6 +31,16 @@ export default function Layout({ children, currentPageName }) {
     { name: '旅程介紹', page: 'Programs', children: [
       { name: '旅程篇章', page: 'Programs' },
       { name: '常見問題', page: 'FAQ' },
+    ]},
+    { name: '旅程紀錄', children: [
+      { name: '一日健行篇', children: [
+        { name: '2020年暖東峽谷', page: 'Retreat2020WarmDong' },
+      ]},
+      { name: '二日放空營', children: [
+        { name: '2014年旅程', page: 'Retreat2014' },
+        { name: '2017年旅程', page: 'Retreat2017' },
+        { name: '2023年旅程', page: 'Retreat2023' },
+      ]},
     ]},
     { name: '心靈導遊', page: 'Guide', children: [
       { name: '心靈導遊介紹', page: 'Guide' },
@@ -68,7 +80,7 @@ export default function Layout({ children, currentPageName }) {
             <nav className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 link.children ? (
-                  <div key={link.page} className="relative group">
+                  <div key={link.name} className="relative group">
                     <span className={`${textColor} text-sm tracking-wider hover:text-emerald-600 transition-colors duration-300 cursor-pointer flex items-center gap-1`}>
                       {link.name}
                       <ChevronDown className="w-3 h-3" />
@@ -76,13 +88,35 @@ export default function Layout({ children, currentPageName }) {
                     <div className="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
                       <div className="bg-white rounded-lg shadow-lg border border-stone-100 py-2 min-w-[180px]">
                         {link.children.map((child) => (
-                          <Link
-                            key={child.page}
-                            to={createPageUrl(child.page)}
-                            className="block px-4 py-2 text-sm text-stone-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors whitespace-nowrap"
-                          >
-                            {child.name}
-                          </Link>
+                          child.children ? (
+                            <div key={child.name} className="relative group/sub">
+                              <span className="flex items-center justify-between px-4 py-2 text-sm text-stone-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors whitespace-nowrap cursor-pointer">
+                                {child.name}
+                                <ChevronRight className="w-3 h-3 ml-3" />
+                              </span>
+                              <div className="absolute top-0 left-full pl-1 hidden group-hover/sub:block z-50">
+                                <div className="bg-white rounded-lg shadow-lg border border-stone-100 py-2 min-w-[180px]">
+                                  {child.children.map((grandchild) => (
+                                    <Link
+                                      key={grandchild.page}
+                                      to={createPageUrl(grandchild.page)}
+                                      className="block px-4 py-2 text-sm text-stone-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors whitespace-nowrap"
+                                    >
+                                      {grandchild.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          ) : (
+                            <Link
+                              key={child.name}
+                              to={createPageUrl(child.page)}
+                              className="block px-4 py-2 text-sm text-stone-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors whitespace-nowrap"
+                            >
+                              {child.name}
+                            </Link>
+                          )
                         ))}
                       </div>
                     </div>
@@ -122,24 +156,49 @@ export default function Layout({ children, currentPageName }) {
               <nav className="px-6 py-6 space-y-4">
                 {navLinks.map((link) => (
                   link.children ? (
-                    <div key={link.page}>
+                    <div key={link.name}>
                       <button
-                        onClick={() => setExpandedDropdown(expandedDropdown === link.page ? null : link.page)}
+                        onClick={() => setExpandedDropdown(expandedDropdown === link.name ? null : link.name)}
                         className="flex items-center justify-between w-full text-stone-700 text-lg font-light tracking-wider"
                       >
                         {link.name}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedDropdown === link.page ? 'rotate-180' : ''}`} />
+                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedDropdown === link.name ? 'rotate-180' : ''}`} />
                       </button>
-                      {expandedDropdown === link.page && (
+                      {expandedDropdown === link.name && (
                         <div className="pl-4 mt-2 space-y-3">
                           {link.children.map((child) => (
-                            <Link
-                              key={child.page}
-                              to={createPageUrl(child.page)}
-                              className="block text-stone-600 text-base font-light tracking-wider hover:text-emerald-700 transition-colors"
-                            >
-                              {child.name}
-                            </Link>
+                            child.children ? (
+                              <div key={child.name}>
+                                <button
+                                  onClick={() => setExpandedSubDropdown(expandedSubDropdown === child.name ? null : child.name)}
+                                  className="flex items-center justify-between w-full text-stone-600 text-base font-light tracking-wider"
+                                >
+                                  {child.name}
+                                  <ChevronDown className={`w-4 h-4 transition-transform ${expandedSubDropdown === child.name ? 'rotate-180' : ''}`} />
+                                </button>
+                                {expandedSubDropdown === child.name && (
+                                  <div className="pl-4 mt-2 space-y-2">
+                                    {child.children.map((grandchild) => (
+                                      <Link
+                                        key={grandchild.page}
+                                        to={createPageUrl(grandchild.page)}
+                                        className="block text-stone-500 text-sm font-light tracking-wider hover:text-emerald-700 transition-colors"
+                                      >
+                                        {grandchild.name}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            ) : (
+                              <Link
+                                key={child.name}
+                                to={createPageUrl(child.page)}
+                                className="block text-stone-600 text-base font-light tracking-wider hover:text-emerald-700 transition-colors"
+                              >
+                                {child.name}
+                              </Link>
+                            )
                           ))}
                         </div>
                       )}
