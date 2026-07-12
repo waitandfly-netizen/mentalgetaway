@@ -7,6 +7,7 @@ export default function Retreat2017() {
       year="2017"
       category="二日放空營"
       heroImage="https://media.base44.com/images/public/698fc983574e659f561934f1/42618884d_banner.jpg"
+      heroOverlay={false}
       showIntroHeading={false}
       introSections={[
         {
