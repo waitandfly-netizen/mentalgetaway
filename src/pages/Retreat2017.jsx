@@ -6,7 +6,7 @@ export default function Retreat2017() {
       title="2017年旅程"
       year="2017"
       category="二日放空營"
-      heroImage="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80"
+      heroImage="https://media.base44.com/images/public/698fc983574e659f561934f1/42618884d_banner.jpg"
       showIntroHeading={false}
       introSections={[
         {
@@ -34,16 +34,16 @@ export default function Retreat2017() {
           image: "https://media.base44.com/images/public/698fc983574e659f561934f1/2ace67291_.jpg"
         },
         {
-          emoji: "🧘",
-          title: "舒緩瑜伽",
-          description: "身體放鬆了，\n心也比較容易安靜。",
-          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/9b69b09de_.png"
+          emoji: "🥑",
+          title: "原形蔬食",
+          description: "品嘗原形食物，\n減輕身心負擔。",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/9b2e5d88c_.jpg"
         },
         {
           emoji: "🌙",
           title: "心靈派對",
           description: "跟著心靈導遊引導，\n享受身心全然敞開的遼闊。",
-          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/9b2e5d88c_.jpg"
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/9b69b09de_.png"
         }
       ]}
       reflections={[
