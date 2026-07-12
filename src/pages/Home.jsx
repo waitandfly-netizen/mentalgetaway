@@ -131,7 +131,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavStructuredData) }}
       />
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Desktop background - new image, no overlay */}
         <div
           className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -155,15 +155,15 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-wide">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 sm:mb-6 tracking-wide">
             心靈假期
           </h1>
-          <div className="space-y-6 text-left inline-block">
-            <p className="text-xl md:text-2xl text-stone-100/90 font-light tracking-widest leading-relaxed">
+          <div className="space-y-4 sm:space-y-6 text-left inline-block">
+            <p className="text-lg sm:text-xl md:text-2xl text-stone-100/90 font-light tracking-widest leading-relaxed">
               <span className="block">好好生活，</span>
               <span className="block pl-8">回到寧靜心靈的綠洲</span>
             </p>
-            <p className="text-xl md:text-2xl text-stone-200/80 font-light tracking-widest leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-stone-200/80 font-light tracking-widest leading-relaxed">
               <span className="block">真實旅程，</span>
               <span className="block pl-8">一趟美好滋養的出走</span>
             </p>
@@ -181,7 +181,7 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-24 md:py-32 px-6 bg-white">
+      <section className="py-16 md:py-32 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div 
             className="text-center"
@@ -206,7 +206,7 @@ export default function Home() {
       </section>
 
       {/* Programs Section */}
-      <section className="py-24 md:py-32 px-6 bg-stone-100/50">
+      <section className="py-16 md:py-32 px-6 bg-stone-100/50">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -264,7 +264,7 @@ export default function Home() {
       <TestimonialsCarousel />
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 px-6 bg-emerald-900 text-white relative overflow-hidden">
+      <section className="py-16 md:py-32 px-6 bg-emerald-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-amber-200 blur-3xl -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-emerald-200 blur-3xl translate-x-1/2 translate-y-1/2" />
