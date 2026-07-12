@@ -6,11 +6,12 @@ export default function Retreat2017() {
       title="2017年旅程"
       year="2017"
       category="二日放空營"
-      heroImage="https://media.base44.com/images/public/698fc983574e659f561934f1/42618884d_banner.jpg"
+      heroImage="https://media.base44.com/images/public/698fc983574e659f561934f1/1561cd024_.png"
       showIntroHeading={false}
       introSections={[
         {
           venue: "3月、8月宜蘭外澳場",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/1561cd024_.png",
           content: "迎接日出,照亮第三眼;\n心輪靜心,打開全身氣脈。\n之後,静静安坐海底輪,\n享受與天地共鳴之美····"
         },
         {

@@ -12,9 +12,7 @@ export default function RetreatRecordPage({ title, year, category, heroImage, in
 
       {/* Hero */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroImage}')` }}>
-          <div className="absolute inset-0 bg-stone-900/50" />
-        </div>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroImage}')` }} />
         <motion.div
           className="relative z-10 text-center px-6"
           initial={{ opacity: 0, y: 30 }}
@@ -49,6 +47,11 @@ export default function RetreatRecordPage({ title, year, category, heroImage, in
                 {introSections.map((section, i) => (
                   <div key={i}>
                     <p className="font-medium text-stone-800 text-lg mb-3 tracking-wide">{section.venue}</p>
+                    {section.image && (
+                      <div className="overflow-hidden rounded-2xl shadow-sm mb-4 max-h-[280px]">
+                        <img src={section.image} alt={section.venue} className="w-full h-full object-cover" />
+                      </div>
+                    )}
                     <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{section.content}</p>
                   </div>
                 ))}
