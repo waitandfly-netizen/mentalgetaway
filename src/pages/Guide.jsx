@@ -29,7 +29,7 @@ export default function Guide() {
           className="absolute inset-0 bg-cover"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/f2cde3b63_banner.png')",
-            backgroundPosition: "center 50%"
+            backgroundPosition: "center 70%"
           }}
         />
         
