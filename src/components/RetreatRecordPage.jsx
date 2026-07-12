@@ -5,7 +5,7 @@ import { Calendar, MapPin, Users, ArrowLeft, Camera, Leaf } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import SEOHead from '@/components/SEOHead';
 
-export default function RetreatRecordPage({ title, year, category, heroImage, intro, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities }) {
+export default function RetreatRecordPage({ title, year, category, heroImage, intro, introSections, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities }) {
   return (
     <div className="min-h-screen bg-stone-50">
       <SEOHead title={title} description={`${category} — ${title}`} />
@@ -44,7 +44,18 @@ export default function RetreatRecordPage({ title, year, category, heroImage, in
             transition={{ duration: 0.8 }}
           >
             {showIntroHeading && <h2 className="text-2xl font-light text-stone-800 mb-6 tracking-wide">旅程簡介</h2>}
-            <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{intro}</p>
+            {introSections ? (
+              <div className="space-y-8">
+                {introSections.map((section, i) => (
+                  <div key={i}>
+                    <p className="font-medium text-stone-800 text-lg mb-3 tracking-wide">{section.venue}</p>
+                    <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{section.content}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{intro}</p>
+            )}
           </motion.div>
 
           <div className="grid grid-cols-3 gap-4 mt-12">

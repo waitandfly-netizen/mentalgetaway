@@ -8,33 +8,42 @@ export default function Retreat2017() {
       category="二日放空營"
       heroImage="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80"
       showIntroHeading={false}
-      intro="助人工作需要長時間陪伴他人，也容易忽略自己的需要。\n我們希望透過兩天一夜，在自然裡重新找回身體與生活的節奏。"
-      location="新竹 山中"
+      introSections={[
+        {
+          venue: "3月、8月宜蘭外澳場",
+          content: "迎接日出,照亮第三眼;\n心輪靜心,打開全身氣脈。\n之後,静静安坐海底輪,\n享受與天地共鳴之美····"
+        },
+        {
+          venue: "5月、11月埔里暨大場",
+          content: "曁大一望無際的寬闊草原,\n迎接每位助人路上的旅人,\n可以恣意地放松、喘口氣,\n讓秋季的沉静帶走內心的疲憊,\n給心靈放個假,\n享受與自己相處的寧靜時光。"
+        }
+      ]}
+      location="宜蘭外澳 / 埔里暨大"
       groupSize="25人"
       activities={[
         {
           emoji: "🌿",
           title: "草地放鬆",
           description: "在自然裡慢慢走，\n把注意力放回身體。",
-          image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/c9890c584_.jpg"
         },
         {
           emoji: "🍵",
           title: "品茗靜心",
           description: "享受茶氣，\n讓內在的安定慢慢累積。",
-          image: "https://images.unsplash.com/photo-1545048702-79362596cdc9?w=800&q=80"
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/2ace67291_.jpg"
         },
         {
           emoji: "🧘",
           title: "舒緩瑜伽",
           description: "身體放鬆了，\n心也比較容易安靜。",
-          image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80"
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/9b69b09de_.png"
         },
         {
           emoji: "🌙",
           title: "心靈派對",
           description: "跟著心靈導遊引導，\n享受身心全然敞開的遼闊。",
-          image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80"
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/9b2e5d88c_.jpg"
         }
       ]}
       reflections={[
