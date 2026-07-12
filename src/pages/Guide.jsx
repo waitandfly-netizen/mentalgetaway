@@ -26,9 +26,10 @@ export default function Guide() {
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/f2cde3b63_banner.png')"
+            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/f2cde3b63_banner.png')",
+            backgroundPosition: "center 40%"
           }}
         />
         
