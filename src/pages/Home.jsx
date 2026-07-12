@@ -134,7 +134,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Banner image with built-in text */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-left lg:bg-center"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/388c8689f_banner.png')",
           }}
