@@ -53,13 +53,28 @@ export default function Retreat2017() {
       ]}
       reflections={[
         {
-          content: "我感受到整個活動的氛圍很輕松自在，加上大自然豐沛能量的支持，我的身心都得到放松，靈魂也非常愉快，才知道原來人生可以這么樂活，從此就愛上心靈假期~"
+          author: "宛蓁",
+          content: "我感受到整個活動的氛圍很輕松自在，加上大自然豐沛能量的支持，我的身心都得到放松，靈魂也非常愉快，才知道原來人生可以這么樂活，從此就愛上心靈假期~",
+          images: [
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/a4e648c52_1.jpg",
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/0bee7b92e_2.jpg"
+          ]
         },
         {
-          content: "心靈假期讓我放下內外壓力，在短短時光裡享受到萬物與我同在的好滋味，同時也讓心~安放在自己身上。"
+          author: "佳音",
+          content: "心靈假期讓我放下內外壓力，在短短時光裡享受到萬物與我同在的好滋味，同時也讓心~安放在自己身上。",
+          images: [
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/28292e6a0_1.jpg",
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/d41b4e86c_2.jpg"
+          ]
         },
         {
-          content: "有一個小小的彈性空間在那裡，只需静静的等著下個片刻的到來，松松的~偶爾就突然蹦出有趣的新滋味~食物也很新鮮、順口~身體裡外不經意的就被補到了，一些深藏的疲憊也悄悄卸下。"
+          author: "如婷",
+          content: "有一個小小的彈性空間在那裡，只需静静的等著下個片刻的到來，松松的~偶爾就突然蹦出有趣的新滋味~食物也很新鮮、順口~身體裡外不經意的就被補到了，一些深藏的疲憊也悄悄卸下。",
+          images: [
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/cf7b46e29_1.jpg",
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/c1ea592a8_2.jpg"
+          ]
         }
       ]}
     />

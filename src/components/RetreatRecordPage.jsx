@@ -161,24 +161,43 @@ export default function RetreatRecordPage({ title, year, category, heroImage, he
       {/* Reflections */}
       {reflections.length > 0 && (
         <section className="py-16 px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Leaf className="w-6 h-6 text-emerald-600/60 mx-auto mb-3" />
               <h2 className="text-2xl font-light text-stone-800 tracking-wide">旅程回顧</h2>
             </div>
-            <div className="space-y-12">
-              {reflections.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  {item.title && <h3 className="text-lg font-medium text-stone-700 mb-3">{item.title}</h3>}
-                  <p className="text-stone-600 font-light leading-relaxed whitespace-pre-line">{item.content}</p>
-                </motion.div>
-              ))}
+            <div className="space-y-16">
+              {reflections.map((item, i) => {
+                const images = item.images || [];
+                const isReverse = i % 2 === 1;
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className={`flex flex-col md:flex-row items-center gap-8 bg-white rounded-3xl shadow-sm p-6 md:p-10 ${isReverse ? 'md:flex-row-reverse' : ''}`}
+                  >
+                    {images.length > 0 && (
+                      <div className={`md:w-1/2 w-full grid ${images.length === 2 ? 'grid-cols-2' : 'grid-cols-1'} gap-3`}>
+                        {images.map((img, j) => (
+                          <div key={j} className="overflow-hidden rounded-2xl aspect-[3/4]">
+                            <img src={img} alt={`${item.author || '參加者'} ${j + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <div className={`md:w-1/2 ${images.length === 0 ? 'w-full' : ''}`}>
+                      {item.author && (
+                        <p className="text-emerald-700 font-medium tracking-wider mb-4 text-sm">— {item.author}</p>
+                      )}
+                      {item.title && <h3 className="text-lg font-medium text-stone-700 mb-3">{item.title}</h3>}
+                      <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{item.content}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
