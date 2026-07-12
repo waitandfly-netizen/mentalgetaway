@@ -134,28 +134,28 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Desktop background - new image, no overlay */}
         <div
-          className="hidden lg:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/8e5f19195_.png')",
           }}
         />
-        {/* Mobile/Tablet background - original image, no overlay, shifted left */}
+        {/* Mobile background - original image, no overlay, shifted left */}
         <div
-          className="lg:hidden absolute inset-0 bg-cover bg-no-repeat"
+          className="md:hidden absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/ba6a76fb1_LINE_NOTE_260711_1.jpg')",
             backgroundPosition: "left 30% center",
           }}
         />
 
-        {/* Text - mobile/tablet */}
+        {/* Text - mobile only */}
         <motion.div
-          className="lg:hidden relative z-10 text-center px-6 max-w-4xl mx-auto"
+          className="md:hidden relative z-10 text-center px-6 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-light text-white mb-4 sm:mb-6 tracking-wide">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 sm:mb-6 tracking-wide">
             心靈假期
           </h1>
           <div className="space-y-4 sm:space-y-6 text-left inline-block">
