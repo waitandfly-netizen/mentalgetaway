@@ -55,22 +55,17 @@ export default function RetreatRecordPage({ title, year, category, heroImage, he
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.8 }}
-                      className={`flex flex-col md:flex-row items-center gap-6 md:gap-8 ${section.image ? '' : 'justify-center'}`}
+                      className={`flex flex-col md:flex-row items-center gap-6 md:gap-8 ${section.image ? (section.imagePosition === 'left' ? 'md:flex-row' : 'md:flex-row-reverse') : 'justify-center'}`}
                     >
-                      {section.image && !isImageRight && (
-                        <div className="md:w-1/2 w-full overflow-hidden rounded-2xl shadow-md">
+                      {section.image && (
+                        <div className="md:w-1/2 w-full overflow-hidden rounded-2xl shadow-md order-1 md:order-none">
                           <img src={section.image} alt={section.venue} className="w-full h-full object-cover aspect-[4/3]" />
                         </div>
                       )}
-                      <div className={`md:w-1/2 ${section.image ? '' : 'w-full'}`}>
+                      <div className={`md:w-1/2 ${section.image ? '' : 'w-full'} order-2 md:order-none`}>
                         <p className="font-medium text-emerald-800 text-lg md:text-xl mb-3 md:mb-4 tracking-wide">{section.venue}</p>
                         <p className="text-stone-600 font-light leading-relaxed text-base md:text-lg whitespace-pre-line">{section.content}</p>
                       </div>
-                      {section.image && isImageRight && (
-                        <div className="md:w-1/2 w-full overflow-hidden rounded-2xl shadow-md">
-                          <img src={section.image} alt={section.venue} className="w-full h-full object-cover aspect-[4/3]" />
-                        </div>
-                      )}
                     </motion.div>
                   );
                 })}
