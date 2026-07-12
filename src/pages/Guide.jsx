@@ -25,14 +25,12 @@ export default function Guide() {
 
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://spiritvacation.wordpress.com/wp-content/uploads/2025/09/3.jpg')"
+            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/f2cde3b63_banner.png')"
           }}
-        >
-          <div className="absolute inset-0 bg-stone-900/40" />
-        </div>
+        />
         
         <motion.div 
           className="relative z-10 text-center px-6"
