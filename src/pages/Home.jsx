@@ -149,12 +149,19 @@ export default function Home() {
           <h1 className="text-6xl xl:text-7xl font-bold text-white mb-10 tracking-wide drop-shadow-lg">
             心靈假期
           </h1>
-          <div className="space-y-5">
+          <div className="space-y-1">
             <p className="text-2xl xl:text-3xl text-white font-light tracking-widest leading-relaxed drop-shadow-md">
-              好好生活，回到寧靜心靈的綠洲
+              好好生活，
             </p>
+            <p className="text-2xl xl:text-3xl text-white font-light tracking-widest leading-relaxed drop-shadow-md pl-10">
+              回到寧靜心靈的綠洲
+            </p>
+            <div className="h-5" />
             <p className="text-2xl xl:text-3xl text-white font-light tracking-widest leading-relaxed drop-shadow-md">
-              真實旅程，一趟美好滋養的出走
+              真實旅程，
+            </p>
+            <p className="text-2xl xl:text-3xl text-white font-light tracking-widest leading-relaxed drop-shadow-md pl-10">
+              一趟美好滋養的出走
             </p>
           </div>
         </motion.div>
