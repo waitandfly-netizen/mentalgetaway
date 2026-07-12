@@ -36,7 +36,7 @@ export default function Retreat2017() {
           emoji: "🍵",
           title: "品茗靜心",
           description: "享受茶氣，\n讓內在的安定慢慢累積。",
-          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/2ace67291_.jpg"
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/03573a9f6_.jpg"
         },
         {
           emoji: "🥑",
