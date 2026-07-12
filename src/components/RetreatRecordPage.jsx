@@ -5,7 +5,7 @@ import { Calendar, MapPin, Users, ArrowLeft, Camera, Leaf } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import SEOHead from '@/components/SEOHead';
 
-export default function RetreatRecordPage({ title, year, category, heroImage, intro, location, groupSize, gallery = [], reflections = [] }) {
+export default function RetreatRecordPage({ title, year, category, heroImage, intro, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities }) {
   return (
     <div className="min-h-screen bg-stone-50">
       <SEOHead title={title} description={`${category} — ${title}`} />
@@ -43,8 +43,8 @@ export default function RetreatRecordPage({ title, year, category, heroImage, in
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl font-light text-stone-800 mb-6 tracking-wide">旅程簡介</h2>
-            <p className="text-stone-600 font-light leading-relaxed text-lg">{intro}</p>
+            {showIntroHeading && <h2 className="text-2xl font-light text-stone-800 mb-6 tracking-wide">旅程簡介</h2>}
+            <p className="text-stone-600 font-light leading-relaxed text-lg whitespace-pre-line">{intro}</p>
           </motion.div>
 
           <div className="grid grid-cols-3 gap-4 mt-12">
@@ -63,6 +63,41 @@ export default function RetreatRecordPage({ title, year, category, heroImage, in
           </div>
         </div>
       </section>
+
+      {/* Activities (staggered gallery with captions) */}
+      {activities && activities.length > 0 && (
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <Camera className="w-6 h-6 text-stone-400 mx-auto mb-3" />
+              <h2 className="text-2xl font-light text-stone-800 tracking-wide">旅程紀實</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-6">
+              {activities.map((act, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15 }}
+                  className={`overflow-hidden rounded-2xl shadow-sm bg-stone-50 ${i % 2 === 1 ? 'md:mt-16' : ''}`}
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={act.image} alt={act.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">{act.emoji}</span>
+                      <h3 className="text-lg font-medium text-stone-700">{act.title}</h3>
+                    </div>
+                    <p className="text-stone-600 font-light leading-relaxed whitespace-pre-line">{act.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Gallery */}
       {gallery.length > 0 && (
@@ -107,8 +142,8 @@ export default function RetreatRecordPage({ title, year, category, heroImage, in
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <h3 className="text-lg font-medium text-stone-700 mb-3">{item.title}</h3>
-                  <p className="text-stone-600 font-light leading-relaxed">{item.content}</p>
+                  {item.title && <h3 className="text-lg font-medium text-stone-700 mb-3">{item.title}</h3>}
+                  <p className="text-stone-600 font-light leading-relaxed whitespace-pre-line">{item.content}</p>
                 </motion.div>
               ))}
             </div>
