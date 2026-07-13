@@ -136,7 +136,7 @@ export default function Home() {
         <div
           className="hidden lg:block absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/9d344de7a_banner.png')",
+            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/7f270bbf5_18.png')",
           }}
         />
         {/* Desktop text overlay - left-aligned, middle-left position */}
