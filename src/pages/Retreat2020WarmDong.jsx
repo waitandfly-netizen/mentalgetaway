@@ -30,10 +30,12 @@ export default function Retreat2020WarmDong() {
       gallery={[]}
       reflections={[
         {
+          author: '博',
           images: ['https://media.base44.com/images/public/698fc983574e659f561934f1/be139eda4_.jpg'],
           content: "原本走得氣喘吁吁，想跟上前面的腳步，練習把呼吸帶到腳底，感受到地面的反饋，意外的體會到輕鬆的感覺~"
         },
         {
+          author: '英',
           images: ['https://media.base44.com/images/public/698fc983574e659f561934f1/1e4fe5154_.jpg'],
           content: "爬陡坡時，一度很想放棄，但回到尊重身體的狀態，一步一步慢慢走，親密到當下的弱，反而有個踏實的感動。"
         }
