@@ -37,7 +37,6 @@ export default function RetreatRecordPage({ title, year, category, heroImage, he
         >
           {category && <p className="text-amber-200/80 tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm mb-3 md:mb-4">{category}</p>}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">{title}</h1>
-          {year && <p className="text-white/70 mt-3 md:mt-4 tracking-wider text-sm md:text-base">{year}</p>}
         </motion.div>
       </section>
 
