@@ -42,8 +42,8 @@ export default function Retreat2020WarmDong() {
         {
           author: 'Dorothy',
           images: [
-            'https://media.base44.com/images/public/698fc983574e659f561934f1/aee8f4f94_image.png',
-            'https://media.base44.com/images/public/698fc983574e659f561934f1/d0aa98b25_image.png'
+            'https://media.base44.com/images/public/698fc983574e659f561934f1/8ff22cc9a_171505793_4296852646993624_241174651645746618_n.jpg',
+            'https://media.base44.com/images/public/698fc983574e659f561934f1/63135d836_170549623_4296853373660218_5370498107267935870_n.jpg'
           ],
           content: "山林裡一群人一起慢慢走著，把注意力放回自己身上。森林的氣息與潺潺流水聲，讓累積許久的疲憊慢慢鬆開。\n\n雖然最後的爬坡有些辛苦，但當躺在擎天崗的草地上時，只覺得疲憊早已悄悄放下。\n\n更讓人喜歡的，是一路上的笑聲與陪伴。暖身遊戲、彼此的分享，讓原本陌生的人慢慢熟悉起來，也發現原來靜心不一定是安安靜靜的，也可以是在一群人之中，很自在地做自己。\n\n沒有過度加工的原型食物、豐盛而有飽足感的午餐，讓人重新感受身體被好好照顧的感覺。"
         }
