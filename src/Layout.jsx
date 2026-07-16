@@ -37,7 +37,6 @@ export default function Layout({ children, currentPageName }) {
       { name: '心靈導遊介紹', page: 'Guide' },
       { name: '心靈專欄', page: 'GuideArticles' },
     ]},
-    { name: '參加者心得', page: 'Testimonials' },
     { name: '旅程紀錄', children: [
       { name: '一日放空行', page: 'Retreat2020WarmDong' },
       { name: '二日放空營', children: [
@@ -46,7 +45,6 @@ export default function Layout({ children, currentPageName }) {
         { name: '2023年旅程', page: 'Retreat2023' },
       ]},
     ]},
-    { name: '參加者心得', page: 'Testimonials' },
     { name: '蛻變故事', page: 'TransformationStories' },
     { name: '靜心地圖', page: 'Resources' },
     { name: '聯繫我們', page: 'Contact' },
