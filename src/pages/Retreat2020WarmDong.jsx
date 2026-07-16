@@ -41,6 +41,7 @@ export default function Retreat2020WarmDong() {
         },
         {
           author: 'Dorothy',
+          imageLayout: 'stacked',
           images: [
             'https://media.base44.com/images/public/698fc983574e659f561934f1/8ff22cc9a_171505793_4296852646993624_241174651645746618_n.jpg',
             'https://media.base44.com/images/public/698fc983574e659f561934f1/63135d836_170549623_4296853373660218_5370498107267935870_n.jpg'

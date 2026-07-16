@@ -208,9 +208,9 @@ export default function RetreatRecordPage({ title, subtitle, year, category, her
                     className={`flex flex-col md:flex-row items-center gap-5 md:gap-8 bg-white rounded-2xl md:rounded-3xl shadow-sm p-5 md:p-10 ${isReverse ? 'md:flex-row-reverse' : ''}`}
                   >
                     {images.length > 0 && (
-                      <div className={`md:w-1/2 w-full grid ${images.length === 2 ? 'grid-cols-2' : 'grid-cols-1'} gap-2 md:gap-3`}>
+                      <div className={`md:w-1/2 w-full grid ${item.imageLayout === 'stacked' ? 'grid-cols-1' : images.length === 2 ? 'grid-cols-2' : 'grid-cols-1'} gap-2 md:gap-3`}>
                         {images.map((img, j) => (
-                          <div key={j} className="overflow-hidden rounded-2xl aspect-[3/4]">
+                          <div key={j} className={`overflow-hidden rounded-2xl ${item.imageLayout === 'stacked' ? 'aspect-[4/3]' : 'aspect-[3/4]'}`}>
                             <img src={img} alt={`${item.author || '參加者'} ${j + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                           </div>
                         ))}
