@@ -5,16 +5,30 @@ import { Calendar, MapPin, Users, ArrowLeft, Camera, Leaf } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import SEOHead from '@/components/SEOHead';
 
-export default function RetreatRecordPage({ title, year, category, heroImage, heroOverlay = true, intro, introSections, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities }) {
+export default function RetreatRecordPage({ title, year, category, heroImage, heroVideo, heroOverlay = true, intro, introSections, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities }) {
   return (
     <div className="min-h-screen bg-stone-50">
       <SEOHead title={title} description={`${category} — ${title}`} />
 
       {/* Hero */}
       <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroImage}')` }}>
-          {heroOverlay && <div className="absolute inset-0 bg-stone-900/50" />}
-        </div>
+        {heroVideo ? (
+          <div className="absolute inset-0 w-full h-full">
+            <video
+              src={heroVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {heroOverlay && <div className="absolute inset-0 bg-stone-900/50" />}
+          </div>
+        ) : (
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroImage}')` }}>
+            {heroOverlay && <div className="absolute inset-0 bg-stone-900/50" />}
+          </div>
+        )}
         <motion.div
           className="relative z-10 text-center px-6"
           initial={{ opacity: 0, y: 30 }}
