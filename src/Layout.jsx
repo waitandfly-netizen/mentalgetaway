@@ -37,6 +37,9 @@ export default function Layout({ children, currentPageName }) {
       { name: '心靈專欄', page: 'GuideArticles' },
     ]},
     { name: '旅程紀錄', children: [
+      { name: '一日放空行', children: [
+        { name: '2020年暖東峽谷', page: 'Retreat2020WarmDong' },
+      ]},
       { name: '二日放空營', children: [
         { name: '2014年旅程', page: 'Retreat2014' },
         { name: '2017年旅程', page: 'Retreat2017' },
