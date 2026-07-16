@@ -287,6 +287,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Journey Video Section */}
+      <section className="py-16 md:py-32 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <motion.div 
+            className="text-center mb-12"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <p className="text-emerald-700/80 tracking-[0.3em] text-sm mb-4">A GLIMPSE OF THE JOURNEY</p>
+            <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wide">
+              旅程的模樣
+            </h2>
+          </motion.div>
+          <motion.div 
+            className="relative rounded-2xl overflow-hidden shadow-xl"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <video
+              src="https://media.base44.com/videos/public/698fc983574e659f561934f1/72b3cc2b5_AQMctlMixZcfySR-EbaJ-iXyx1G9quvhmVGzT3FUUxyZ3Jrd3jpiiUUX-rlpbIzVf31NbFFk0pH1b2EAQ7uM0ZmR.mp4"
+              controls
+              playsInline
+              className="w-full aspect-video object-cover bg-stone-900"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       <TestimonialsCarousel />
 
       {/* CTA Section */}
