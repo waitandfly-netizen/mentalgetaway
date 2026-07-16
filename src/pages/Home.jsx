@@ -310,7 +310,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <video
-              src="https://media.base44.com/videos/public/698fc983574e659f561934f1/72b3cc2b5_AQMctlMixZcfySR-EbaJ-iXyx1G9quvhmVGzT3FUUxyZ3Jrd3jpiiUUX-rlpbIzVf31NbFFk0pH1b2EAQ7uM0ZmR.mp4"
+              src="https://media.base44.com/videos/public/698fc983574e659f561934f1/70c598eb0_AQNfNe-njDXVLVUGyB5l72E3IjedI_MY0CWbZw0_TpQQ9JWtfVay1mDQcLCrOLPOMmaLU_5B-QDxMZdpV9H--ZbhFktsAIqO8mS2b-UFSGcRoA.mp4"
               controls
               playsInline
               className="w-full aspect-video object-cover bg-stone-900"
