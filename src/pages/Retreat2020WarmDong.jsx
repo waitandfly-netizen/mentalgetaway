@@ -26,14 +26,8 @@ export default function Retreat2020WarmDong() {
       ]}
       location="基隆 暖東峽谷"
       groupSize="20人"
-      gallery={[
-        "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&q=80",
-        "https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=800&q=80",
-        "https://images.unsplash.com/photo-1455218873509-8097305ee378?w=800&q=80",
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
-        "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80",
-        "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
-      ]}
+      journeyVideo="https://media.base44.com/videos/public/698fc983574e659f561934f1/160e4fb5e_.mp4"
+      gallery={[]}
       reflections={[
         {
           title: "走進峽谷，走進自己",

@@ -5,7 +5,7 @@ import { Calendar, MapPin, Users, ArrowLeft, Camera, Leaf } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import SEOHead from '@/components/SEOHead';
 
-export default function RetreatRecordPage({ title, subtitle, year, category, heroImage, heroVideo, heroOverlay = true, intro, introSections, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities }) {
+export default function RetreatRecordPage({ title, subtitle, year, category, heroImage, heroVideo, heroOverlay = true, intro, introSections, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities, journeyVideo }) {
   return (
     <div className="min-h-screen bg-stone-50">
       <SEOHead title={title} description={`${category} — ${title}`} />
@@ -142,27 +142,46 @@ export default function RetreatRecordPage({ title, subtitle, year, category, her
       )}
 
       {/* Gallery */}
-      {gallery.length > 0 && (
+      {(journeyVideo || gallery.length > 0) && (
         <section className="py-16 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <Camera className="w-6 h-6 text-stone-400 mx-auto mb-3" />
               <h2 className="text-2xl font-light text-stone-800 tracking-wide">旅程紀實</h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {gallery.map((img, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="overflow-hidden rounded-2xl aspect-[4/3] shadow-sm"
-                >
-                  <img src={img} alt={`旅程照片 ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                </motion.div>
-              ))}
-            </div>
+            {journeyVideo ? (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="overflow-hidden rounded-2xl shadow-md"
+              >
+                <video
+                  src={journeyVideo}
+                  controls
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto max-h-[80vh] object-cover"
+                />
+              </motion.div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {gallery.map((img, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="overflow-hidden rounded-2xl aspect-[4/3] shadow-sm"
+                  >
+                    <img src={img} alt={`旅程照片 ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  </motion.div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}
