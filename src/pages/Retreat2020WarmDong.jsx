@@ -3,9 +3,9 @@ import RetreatRecordPage from '@/components/RetreatRecordPage';
 export default function Retreat2020WarmDong() {
   return (
     <RetreatRecordPage
-      title="2020年暖東峽谷"
+      title="一日放空行"
       year="2020"
-      category="一日放空行"
+      category=""
       heroImage="https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1920&q=80"
       heroVideo="https://media.base44.com/videos/public/698fc983574e659f561934f1/ef7d4219f_banner.mp4"
       intro="2020年的秋天，我們走進了暖東峽谷。沿著溪谷而上，兩旁是蔥鬱的植被與陡峭的岩壁，水聲伴隨著每一步。這是一日的健行，卻是一段與自己對話的旅程。在峽谷的包圍中，城市的喧囂逐漸遠去，只剩下腳下的步伐與呼吸的節奏。"
