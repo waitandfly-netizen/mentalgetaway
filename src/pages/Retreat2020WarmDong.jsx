@@ -7,7 +7,7 @@ export default function Retreat2020WarmDong() {
       year="2020"
       category="一日放空行"
       heroImage="https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1920&q=80"
-      heroVideo="https://media.base44.com/videos/public/698fc983574e659f561934f1/e422de6e3_AQMrcKjLaywIM9snDhzXAIqL2msnBqKtnrB3j5lZ-G6sfFEeEG29UGlBhjXUONw-CuxlxdLfvnlS7LI1pF_TKi1xv36s4UQ5hsqSB5VrhdYOLA.mp4"
+      heroVideo="https://media.base44.com/videos/public/698fc983574e659f561934f1/ef7d4219f_banner.mp4"
       intro="2020年的秋天，我們走進了暖東峽谷。沿著溪谷而上，兩旁是蔥鬱的植被與陡峭的岩壁，水聲伴隨著每一步。這是一日的健行，卻是一段與自己對話的旅程。在峽谷的包圍中，城市的喧囂逐漸遠去，只剩下腳下的步伐與呼吸的節奏。"
       location="基隆 暖東峽谷"
       groupSize="20人"
