@@ -4,6 +4,7 @@ export default function Retreat2020WarmDong() {
   return (
     <RetreatRecordPage
       title="一日放空行"
+      subtitle="夏日旅程"
       year="2020"
       category=""
       heroImage="https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1920&q=80"
