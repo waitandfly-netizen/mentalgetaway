@@ -31,11 +31,13 @@ export default function Layout({ children, currentPageName }) {
     { name: '旅程介紹', page: 'Programs', children: [
       { name: '旅程篇章', page: 'Programs' },
       { name: '常見問題', page: 'FAQ' },
+      { name: '參加者心得', page: 'Testimonials' },
     ]},
     { name: '心靈導遊', page: 'Guide', children: [
       { name: '心靈導遊介紹', page: 'Guide' },
       { name: '心靈專欄', page: 'GuideArticles' },
     ]},
+    { name: '參加者心得', page: 'Testimonials' },
     { name: '旅程紀錄', children: [
       { name: '一日放空行', page: 'Retreat2020WarmDong' },
       { name: '二日放空營', children: [
