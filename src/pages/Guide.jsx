@@ -29,10 +29,9 @@ export default function Guide() {
           className="absolute inset-0 bg-cover"
           style={{
             backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/9a94b38b9_.jpg')",
-            backgroundPosition: "center 45%"
+            backgroundPosition: "center 75%"
           }}
         />
-        <div className="absolute inset-0 bg-stone-900/40" />
         
         <motion.div 
           className="relative z-10 text-center px-6"
