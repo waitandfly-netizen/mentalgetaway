@@ -6,34 +6,75 @@ export default function Retreat2023() {
       title="2023年旅程"
       year="2023"
       category="二日放空營"
-      heroImage="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1920&q=80"
-      intro="2023年，經歷了世界的動盪之後，我們再次相聚。這一次的二日放空營，多了許多新面孔，也多了更深的感悟。在山林之間，我們重新找回了彼此的連結與內在的平靜。經歷了隔離與不確定，能夠再次一起呼吸、一起靜默，格外珍貴。"
-      location="苗栗 山中"
-      groupSize="30人"
-      gallery={[
-        "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
-        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
-        "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80",
-        "https://images.unsplash.com/photo-1455218873509-8097305ee378?w=800&q=80",
-        "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=800&q=80",
-        "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      heroImage="https://media.base44.com/images/public/698fc983574e659f561934f1/42618884d_banner.jpg"
+      heroOverlay={false}
+      showIntroHeading={false}
+      introSections={[
+        {
+          venue: "3月、8月宜蘭外澳",
+          content: "迎接日出,照亮第三眼;\n心輪靜心,打開全身氣脈。\n之後,静静安坐海底輪,\n享受與天地共鳴之美····",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/d2fbe04d0_.png",
+          imagePosition: "right"
+        },
+        {
+          venue: "5月、11月埔里暨大",
+          content: "曁大一望無際的寬闊草原,\n迎接每位助人路上的旅人,\n可以恣意地放松、喘口氣,\n讓秋季的沉静帶走內心的疲憊,\n享受與自己相處的寧靜時光。",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/7521f949b_.jpg",
+          imagePosition: "left"
+        }
+      ]}
+      location="宜蘭外澳 / 埔里暨大"
+      groupSize="25人"
+      activities={[
+        {
+          emoji: "🌿",
+          title: "草地放鬆",
+          description: "在自然裡慢慢走，\n把注意力放回身體。",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/c9890c584_.jpg"
+        },
+        {
+          emoji: "🍵",
+          title: "品茗靜心",
+          description: "享受茶氣，\n讓內在的安定慢慢累積。",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/03573a9f6_.jpg"
+        },
+        {
+          emoji: "🥑",
+          title: "原形蔬食",
+          description: "品嘗原形食物，\n減輕身心負擔。",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/9b2e5d88c_.jpg"
+        },
+        {
+          emoji: "🌙",
+          title: "心靈派對",
+          description: "跟著心靈導遊引導，\n享受身心全然敞開的遼闊。",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/9b69b09de_.png"
+        }
       ]}
       reflections={[
         {
-          title: "重逢的珍貴",
-          content: "經歷了幾年的距離與不確定，能夠再次走進山林、和一群人一起靜默，有一種難以言說的感動。報到那天，有人說：「我不知道有多需要這個週末。」我們都懂。"
+          author: "wen",
+          content: "我感受到整個活動的氛圍很輕松自在，加上大自然豐沛能量的支持，我的身心都得到放松，靈魂也非常愉快，才知道原來人生可以這么樂活，從此就愛上心靈假期~",
+          images: [
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/a4e648c52_1.jpg",
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/0bee7b92e_2.jpg"
+          ]
         },
         {
-          title: "在自然中重新校準",
-          content: "遠離了螢幕和訊息通知，感官慢慢打開。我們聽見了風穿過樹梢的聲音，聞到了雨後泥土的氣息，看見了清晨露水在葉片上折射的光。這些一直都在，只是我們太久沒有停下來注意。"
+          author: "joe",
+          content: "心靈假期讓我放下內外壓力，在短短時光裡享受到萬物與我同在的好滋味，同時也讓心~安放在自己身上。",
+          images: [
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/28292e6a0_1.jpg",
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/d41b4e86c_2.jpg"
+          ]
         },
         {
-          title: "三十個人的靜默",
-          content: "三十個人一起靜默用餐，是這趟旅程最特別的畫面之一。没有交談聲，只有碗筷輕碰的聲音、咀嚼的聲音、窗外的蟲鳴。有人說，那是他吃過最安心的一頓飯——因為終於不需要表演「我過得很好」。"
-        },
-        {
-          title: "帶回日常的練習",
-          content: "旅程結束前，每個人寫下了一個要帶回日常的小練習。有人選擇每天早晨十分鐘不看手機，有人決定每週去公園走一圈，有人許願要好好吃一頓飯。改變不必很大，從一個小小的承諾開始就夠了。"
+          author: "Ting",
+          content: "有一個小小的彈性空間在那裡，只需静静的等著下個片刻的到來，鬆鬆的~偶爾就突然蹦出有趣的新滋味~食物也很新鮮、順口~身體裡外不經意的就被補到了，一些深藏的疲憊也悄悄卸下。",
+          images: [
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/cf7b46e29_1.jpg",
+            "https://media.base44.com/images/public/698fc983574e659f561934f1/c1ea592a8_2.jpg"
+          ]
         }
       ]}
     />
