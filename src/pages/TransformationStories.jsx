@@ -1,13 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, Sparkles, Sunrise, Compass, Wind, Leaf } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Heart, Sparkles, Sunrise, Compass, Wind, Leaf, ChevronDown } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
 
 export default function TransformationStories() {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
   const stories = [
     {
       title: "從往外找尋意義到往內接近自己",
       author: "Tracy",
+      summary: "工作耗竭、失戀後漸漸失去生活色彩，在心靈假期學會親密自己、讓情緒流動，走到對自己全然接納的愛。",
       content: [
         "剛踏入社會的那幾年，身心在日復一日的工作中逐漸耗竭，發現離自己越來越遙遠。經歷失戀的悲傷與工作的無力感，漸漸失去了生活原本的色彩。內在生命力渴求被喚醒，當時的我以為意義是追尋外在的人事物，只是這條路走著走著，一路上迷茫、遙遠。",
         "直到受到朋友的邀約，參加心靈假期，那時候單純想給自己一個機會嘗試不同的事物，看看能不能讓生活有些不一樣。",
@@ -24,6 +27,7 @@ export default function TransformationStories() {
     {
       title: "在尋愛的路上，我慢慢回到自己",
       author: "Gina",
+      summary: "從小追尋愛，失戀後走進靜如老師的課，學會愛自己，在心靈假期被接住，瞥見一生追尋的那份愛。",
       content: [
         "因為家庭的關係，我很小就開始思考一個問題——\n什麼是愛？",
         "我試著在書裡找答案，也走進一段又一段關係裡。\n那些年，我經驗過忌妒、比較、交換、虛偽與幻象。\n關係裡偶爾也有美好，但總是和我心底真正渴望的「愛」，隔著一段距離。",
@@ -45,6 +49,7 @@ export default function TransformationStories() {
     {
       title: "學習與自己同在",
       author: "Elena",
+      summary: "助人工作耗竭，在心靈假期學會親密真實的自己，從燃燒自己走到穩定而長久的流動。",
       content: [
         "大學畢業後踏入助人工作領域，懷抱著熱情，相信燃燒自己照亮他人，期待自己的力量可以為世界加分，然而隨著工作時間越長，身心的負荷也越來越大，開始懷疑到底為何而戰？也不確定存在的意義。",
         "直到職場來了一位新同事，一開始對她的印象是，這個人很奇怪，當大家都忙得焦頭爛額時，她簡單的幾句話，讓氛圍變得不太一樣，也因為她的輕鬆幽默，工作的過程變得不那麼負擔和艱鉅，在好奇心的驅使下接受她的邀請參加心靈假期，沒有想過的內在親密旅程就此展開。",
@@ -60,6 +65,7 @@ export default function TransformationStories() {
     {
       title: "當我學會放下控制，生命開始流動",
       author: "小雨",
+      summary: "長女肩負掌控一切，身心警訊後在靜心活動中學會放手，練習「不完美」而找到前所未有的自由。",
       content: [
         "身為家中的長女，從小到大我都扮演著「可靠」、「負責」的角色。我以為只要夠努力、夠堅強，就能掌控一切、保護所有我在乎的人。",
         "但這樣的生活方式，讓我越來越累。我開始失眠、焦慮，身體也出現各種警訊。朋友建議我來參加心靈假期，起初我是抗拒的——我怎麼可能有時間「放空」？",
@@ -74,6 +80,7 @@ export default function TransformationStories() {
     {
       title: "在沉默中，我聽見了內在的聲音",
       author: "阿傑",
+      summary: "業務員慣於說話，在三天兩夜的靜默中聽見內在聲音，重新找回生命的方向與力量。",
       content: [
         "作為一個業務員，我的工作就是不停地說話——說服客戶、應酬交際、維持關係。但越是習慣用語言與人互動，我就越不知道真實的自己是什麼樣子。",
         "參加心靈假期的三天兩夜，大部分時間我們都保持靜默。一開始，我非常不習慣，甚至有點恐慌——沒有說話，我該如何與人連結？",
@@ -88,6 +95,7 @@ export default function TransformationStories() {
     {
       title: "從黑暗中看見曙光",
       author: "小葵",
+      summary: "憂鬱症困住時來到心靈假期，在被接納的陪伴與動態靜心中釋放壓抑，一步步走向光的方向。",
       content: [
         "那段時間的我，被憂鬱症困住了。每天醒來都覺得活著很累，看不見未來，也找不到意義。身邊的人都說「要正向思考」、「要加油」，但這些話反而讓我更加孤單。",
         "我不知道自己為什麼會來參加心靈假期，也許是最後的嘗試，也許只是不想放棄。",
@@ -100,6 +108,10 @@ export default function TransformationStories() {
       icon: Sunrise
     }
   ];
+
+  const toggleStory = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -152,40 +164,75 @@ export default function TransformationStories() {
 
       {/* Stories */}
       <section className="py-16 px-6 bg-stone-50">
-        <div className="max-w-4xl mx-auto space-y-24">
-          {stories.map((story, index) => (
-            <motion.article
-              key={story.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-sm"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center">
-                  <story.icon className="w-6 h-6 text-emerald-600" />
-                </div>
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-light text-stone-800">
-                    {story.title}
-                  </h2>
-                  <p className="text-sm text-stone-400 mt-1">{story.author}</p>
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto space-y-8">
+          {stories.map((story, index) => {
+            const isOpen = expandedIndex === index;
+            return (
+              <motion.article
+                key={story.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="bg-white rounded-3xl shadow-sm overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleStory(index)}
+                  className="w-full text-left p-6 md:p-10 flex items-start gap-4 md:gap-5 hover:bg-stone-50/60 transition-colors"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-emerald-50 flex items-center justify-center">
+                    <story.icon className="w-6 h-6 md:w-7 md:h-7 text-emerald-600" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-xl md:text-2xl font-light text-stone-800 leading-snug">
+                      {story.title}
+                    </h2>
+                    <p className="text-sm text-stone-400 mt-1">{story.author}</p>
+                    <p className="text-stone-500 font-light leading-relaxed mt-3 text-sm md:text-base line-clamp-2">
+                      {story.summary}
+                    </p>
+                  </div>
+                  <ChevronDown
+                    className={`flex-shrink-0 w-5 h-5 text-stone-400 mt-1 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
 
-              <div className="prose prose-stone max-w-none">
-                {story.content.map((paragraph, pIndex) => (
-                  <p 
-                    key={pIndex} 
-                    className="text-stone-600 font-light leading-loose mb-6 whitespace-pre-line"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </motion.article>
-          ))}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 md:px-10 pb-8 md:pb-12 pt-2 border-t border-stone-100">
+                        <div className="max-w-none pt-6">
+                          {story.content.map((paragraph, pIndex) => (
+                            <p 
+                              key={pIndex} 
+                              className="text-stone-600 font-light leading-loose mb-6 whitespace-pre-line"
+                            >
+                              {paragraph}
+                            </p>
+                          ))}
+                        </div>
+                        <div className="text-center mt-4">
+                          <button
+                            onClick={() => setExpandedIndex(null)}
+                            className="inline-flex items-center gap-2 text-sm text-emerald-700 hover:text-emerald-800 transition-colors"
+                          >
+                            <ChevronDown className="w-4 h-4 rotate-180" />
+                            收合故事
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.article>
+            );
+          })}
         </div>
       </section>
 
