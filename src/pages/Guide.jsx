@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Briefcase, Clock, Quote } from 'lucide-react';
 import SEOHead from '@/components/SEOHead';
+import GuideActivities from '@/components/GuideActivities';
 
 export default function Guide() {
   const credentials = [
@@ -136,6 +137,9 @@ export default function Guide() {
           </div>
         </div>
       </section>
+
+      {/* Activities Led */}
+      <GuideActivities />
 
       {/* Credentials */}
       <section className="py-20 px-6 bg-stone-100/50">
