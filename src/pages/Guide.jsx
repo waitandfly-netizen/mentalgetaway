@@ -46,6 +46,56 @@ export default function Guide() {
         </motion.div>
       </section>
 
+      {/* Voices about the Guide */}
+      <section className="py-24 px-6 bg-gradient-to-b from-stone-50 to-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-14"
+          >
+            <Quote className="w-8 h-8 text-emerald-300 mx-auto mb-4" />
+            <h2 className="text-2xl md:text-3xl font-light text-stone-800 leading-relaxed">
+              如果用一句話形容心靈導遊……
+            </h2>
+          </motion.div>
+
+          <div className="space-y-6">
+            {[
+              "明明講了沉重的事情，但卻被幽默的氛圍融化，哭笑間變得輕鬆~",
+              "每當心裡的坎過不去，她不急著幫我解答，而是給出空間陪伴、提供方向，終於跨過去時的喜悅更深刻",
+              "常常都會有一種她比我自己還要更在乎生命的蛻變",
+              "有時候覺得她的想法無俚頭，但那份自由卻讓人覺得舒服",
+              "總是被她深刻的同理支持到，原來被理解是這樣的感覺",
+            ].map((text, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
+              >
+                <div
+                  className={`relative max-w-xl bg-white rounded-2xl shadow-sm border border-stone-100 px-7 py-6 ${
+                    index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'
+                  }`}
+                >
+                  <span className="absolute top-4 text-4xl text-emerald-200 leading-none select-none">
+                    “
+                  </span>
+                  <p className="text-stone-600 font-light leading-relaxed pl-6">
+                    {text}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Guide Introduction */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
