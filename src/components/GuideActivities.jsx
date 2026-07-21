@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
 
 const categories = [
   {
     label: '工作坊',
+    labelEn: 'Workshops',
     accent: 'emerald',
     items: [
       {
@@ -26,6 +26,7 @@ const categories = [
   },
   {
     label: '講座',
+    labelEn: 'Talks',
     accent: 'amber',
     items: [
       {
@@ -47,6 +48,7 @@ const categories = [
   },
   {
     label: '課程',
+    labelEn: 'Courses',
     accent: 'teal',
     items: [
       {
@@ -71,48 +73,49 @@ const categories = [
 const accentMap = {
   emerald: {
     text: 'text-emerald-700',
-    bg: 'bg-emerald-50',
-    border: 'border-emerald-200',
-    pill: 'bg-emerald-50 text-emerald-800 border-emerald-100',
-    bar: 'bg-emerald-500',
-    name: 'text-emerald-700 bg-emerald-50 border-emerald-200',
+    line: 'bg-emerald-400',
+    dot: 'bg-emerald-500',
+    name: 'text-emerald-700',
+    rule: 'border-emerald-200',
   },
   amber: {
     text: 'text-amber-700',
-    bg: 'bg-amber-50',
-    border: 'border-amber-200',
-    pill: 'bg-amber-50 text-amber-800 border-amber-100',
-    bar: 'bg-amber-500',
-    name: 'text-amber-700 bg-amber-50 border-amber-200',
+    line: 'bg-amber-400',
+    dot: 'bg-amber-500',
+    name: 'text-amber-700',
+    rule: 'border-amber-200',
   },
   teal: {
     text: 'text-teal-700',
-    bg: 'bg-teal-50',
-    border: 'border-teal-200',
-    pill: 'bg-teal-50 text-teal-800 border-teal-100',
-    bar: 'bg-teal-500',
-    name: 'text-teal-700 bg-teal-50 border-teal-200',
+    line: 'bg-teal-400',
+    dot: 'bg-teal-500',
+    name: 'text-teal-700',
+    rule: 'border-teal-200',
   },
 };
 
 export default function GuideActivities() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-white to-stone-50">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-28 px-6 bg-gradient-to-b from-white via-stone-50/60 to-white">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <p className="text-emerald-700/70 tracking-[0.25em] text-xs mb-4">PATHS WE'VE WALKED TOGETHER</p>
-          <h2 className="text-2xl md:text-3xl font-light text-stone-800 leading-relaxed">
+          <div className="flex items-center justify-center gap-4 mb-5">
+            <span className="h-px w-12 bg-stone-300" />
+            <span className="text-stone-400 tracking-[0.35em] text-[11px]">PATHS WE'VE WALKED TOGETHER</span>
+            <span className="h-px w-12 bg-stone-300" />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-light text-stone-800 tracking-wide">
             我們一起走過的生命旅程
           </h2>
         </motion.div>
 
-        <div className="space-y-10">
+        <div className="space-y-24">
           {categories.map((cat, ci) => {
             const a = accentMap[cat.accent];
             return (
@@ -121,40 +124,53 @@ export default function GuideActivities() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: ci * 0.1 }}
-                className="relative bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden"
+                transition={{ duration: 0.7 }}
               >
-                <div className={`absolute left-0 top-0 bottom-0 w-1.5 ${a.bar}`} />
-                <div className="p-8 md:p-10 pl-10 md:pl-12">
-                  <div className="flex items-center gap-3 mb-8">
-                    <span className={`inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium ${a.pill} border`}>
-                      {cat.label}
-                    </span>
-                    <span className="h-px flex-1 bg-stone-100" />
-                  </div>
+                {/* Category header */}
+                <div className="flex items-center gap-4 mb-12">
+                  <span className={`w-2 h-2 rounded-full ${a.dot}`} />
+                  <h3 className={`text-sm tracking-[0.3em] font-medium ${a.text}`}>
+                    {cat.label}
+                  </h3>
+                  <span className="text-stone-300 text-xs tracking-[0.2em]">{cat.labelEn.toUpperCase()}</span>
+                  <span className="flex-1 h-px bg-stone-200" />
+                </div>
 
-                  <div className="space-y-6">
-                    {cat.items.map((item, ri) => (
-                      <div key={ri} className={`rounded-xl p-5 md:p-6 ${a.bg}`}>
-                        <div className="flex items-baseline gap-3 mb-3">
-                          <h3 className={`text-lg md:text-xl font-medium tracking-wide ${a.text}`}>
-                            {item.keyword}
-                          </h3>
-                        </div>
-                        <div className="flex gap-3">
-                          <Quote className={`w-5 h-5 ${a.text} flex-shrink-0 mt-0.5 opacity-50`} />
-                          <p className="text-stone-600 font-light leading-relaxed text-[15px]">
-                            {item.reflection}
-                          </p>
-                        </div>
-                        <div className="mt-4 pl-8">
-                          <span className={`inline-block px-3 py-1 rounded-lg text-sm font-medium border ${a.name}`}>
-                            《{item.activity}》
-                          </span>
-                        </div>
+                {/* Reflection items */}
+                <div className="space-y-10">
+                  {cat.items.map((item, ri) => (
+                    <motion.article
+                      key={ri}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: ri * 0.08 }}
+                      className="relative pl-8 md:pl-10"
+                    >
+                      {/* vertical thread */}
+                      <span className="absolute left-0 top-1.5 bottom-0 w-px bg-stone-200" />
+                      <span className={`absolute left-0 top-1.5 w-px h-8 ${a.line}`} />
+                      {/* index */}
+                      <span className="absolute -left-0 top-1.5 -translate-x-1/2 hidden" />
+
+                      <div className="flex items-baseline gap-4 mb-3">
+                        <span className="text-stone-300 text-xs tracking-widest font-light">
+                          {String(ri + 1).padStart(2, '0')}
+                        </span>
+                        <h4 className={`text-xl md:text-2xl font-light tracking-wide ${a.text}`}>
+                          {item.keyword}
+                        </h4>
                       </div>
-                    ))}
-                  </div>
+
+                      <p className="text-stone-600 font-light leading-loose text-[15px] md:text-base">
+                        {item.reflection}
+                      </p>
+
+                      <p className={`mt-4 text-sm tracking-wide font-medium ${a.name}`}>
+                        《{item.activity}》
+                      </p>
+                    </motion.article>
+                  ))}
                 </div>
               </motion.div>
             );
