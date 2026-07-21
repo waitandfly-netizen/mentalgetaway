@@ -134,7 +134,7 @@ export default function Guide() {
                 <span className="absolute left-0 top-0 bottom-0 w-px bg-emerald-400/60" />
                 <Quote className="w-7 h-7 text-emerald-300 mb-4" />
                 <p className="text-stone-700 font-light leading-loose text-[15px] md:text-base">
-                  靜如自帶輕鬆自在的氛圍，擅長以幽默與靈敏的同理心，陪伴人走進那些不容易說出口的苦，看見困境中的可能性。有時像一位朋友，有時像一面溫柔的鏡子，在不知不覺中，帶著人重新看見自己，開啟更寬廣、柔軟的生命視野。
+                  擅長用靈敏的幽默感，陪伴人走進那些不容易說出口的苦，重新看見困境中的可能性，開啟更寬廣、柔軟的心靈視野。
                 </p>
               </div>
             </motion.div>
