@@ -71,7 +71,7 @@ export default function Guide() {
             className="rounded-2xl overflow-hidden shadow-lg bg-black"
           >
             <video
-              src="https://media.base44.com/videos/public/698fc983574e659f561934f1/95499f754_b1MWIBs_R2T1oxCYph8-CMnY7d7cRpdA9BmyVOUQaG0.mp4"
+              src="https://media.base44.com/videos/public/698fc983574e659f561934f1/adaf6434a_.mp4"
               autoPlay
               loop
               muted
