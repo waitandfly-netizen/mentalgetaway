@@ -83,39 +83,58 @@ export default function Guide() {
       </section>
 
       {/* Guide Introduction */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-24 md:py-28 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-start">
+            {/* Portrait */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="md:col-span-5 md:sticky md:top-28"
             >
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/325984cb6_BF23888F-18F5-4CBC-967A-C6BF097C7E21.jpg" 
-                alt="丁靜如老師"
-                className="w-full rounded-2xl shadow-lg"
-              />
+              <div className="relative">
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698fc983574e659f561934f1/325984cb6_BF23888F-18F5-4CBC-967A-C6BF097C7E21.jpg"
+                  alt="丁靜如老師"
+                  className="w-full rounded-sm shadow-md"
+                />
+                <span className="absolute -bottom-3 -right-3 w-16 h-16 border-r border-b border-emerald-300/70" />
+              </div>
             </motion.div>
-            
+
+            {/* Biography */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="md:col-span-7"
             >
-              <h2 className="text-3xl font-light text-stone-800 mb-2">心靈導遊</h2>
-              <p className="text-2xl text-emerald-700 font-medium mb-6">丁靜如</p>
-              
-              <p className="text-stone-600 font-light leading-relaxed mb-8">
-                在身心靈成長領域深工作二、三十年，深知一個人的生命能量與心理健康，攸關其一生的幸福走向。當內在逐漸清明、建立正知正見，生命的方向與價值也會自然浮現。
-              </p>
-              
-              <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded-r-xl">
-                <Quote className="w-6 h-6 text-emerald-300 mb-3" />
-                <p className="text-stone-700 italic leading-relaxed">
-                  擅長用靈敏的幽默感，陪伴人走進那些不容易說出口的苦，重新看見困境中的可能性，開啟更寬廣、柔軟的心靈視野。
+              <p className="text-emerald-700/70 tracking-[0.3em] text-xs mb-3">SPIRITUAL GUIDE</p>
+              <h2 className="text-2xl md:text-3xl font-light text-stone-800 tracking-wide">心靈導遊</h2>
+              <p className="text-xl md:text-2xl text-emerald-700 font-light mt-1 mb-6">丁靜如</p>
+              <span className="block w-12 h-px bg-emerald-300 mb-8" />
+
+              <div className="space-y-6 text-stone-600 font-light leading-loose text-[15px] md:text-base">
+                <p>
+                  在身心靈成長領域深耕二、三十年，靜如始終相信，一個人的生命能量與心理健康，攸關其一生的幸福走向。當內在逐漸清明、建立正知正見，生命的方向與價值，也會自然浮現。
+                </p>
+                <p>
+                  年輕時曾在美國水牛城與紐約從事兒童遊戲治療與成人諮商工作，回國後持續於醫院精神科、社福基金會、各級學校及社區，進行個別與團體的陪伴與輔導。二十多年來，她始終走在人與生命相遇的現場，看見許多人在迷惘、困頓與生命轉折中，重新找回自己的力量。
+                </p>
+                <p>
+                  在自身修練與陪伴他人的歷程裡，她深刻體會到，真正的平靜並非來自沒有風浪，而是在風浪之中，依然能安住於自己。因此，她也將這份體悟化為生命的分享，希望陪伴更多人，慢慢走進心靈的探索，尋得內在安定的力量，品嚐寧靜喜悅的平和狀態。
+                </p>
+              </div>
+
+              {/* Highlight pull-quote */}
+              <div className="mt-10 relative pl-6 md:pl-8">
+                <span className="absolute left-0 top-0 bottom-0 w-px bg-emerald-400/60" />
+                <Quote className="w-7 h-7 text-emerald-300 mb-4" />
+                <p className="text-stone-700 font-light leading-loose text-[15px] md:text-base">
+                  靜如自帶輕鬆自在的氛圍，擅長以幽默與靈敏的同理心，陪伴人走進那些不容易說出口的苦，看見困境中的可能性。有時像一位朋友，有時像一面溫柔的鏡子，在不知不覺中，帶著人重新看見自己，開啟更寬廣、柔軟的生命視野。
                 </p>
               </div>
             </motion.div>
