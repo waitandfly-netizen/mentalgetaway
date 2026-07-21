@@ -126,6 +126,27 @@ export default function Guide() {
       {/* Activities Led */}
       <GuideActivities />
 
+      {/* Closing note before credentials */}
+      <section className="pb-12 px-6">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mx-auto text-center text-stone-600 font-light leading-relaxed text-lg"
+        >
+          心靈假期外，靜如陪伴很多人，走過不同的生命旅程，也收穫了各式禮物，如果你對於這些活動有所好奇～可以參考
+          <a
+            href="https://www.facebook.com/profile.php?id=100083027147942&locale=zh_TW"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-700 font-medium hover:text-emerald-800 underline decoration-emerald-300 underline-offset-4"
+          >
+            「圓滿心靈花園粉絲專頁」
+          </a>
+        </motion.p>
+      </section>
+
       {/* Credentials */}
       <section className="py-20 px-6 bg-stone-100/50">
         <div className="max-w-5xl mx-auto">
