@@ -72,11 +72,11 @@ export default function Guide() {
               { text: '總是被她深刻的同理支持到，原來被理解是這樣的感覺', accent: 'sky' },
             ].map(({ text, accent }, i) => {
               const map = {
-                emerald: { q: 'text-emerald-300', dot: 'bg-emerald-400', mark: 'text-emerald-500' },
-                amber: { q: 'text-amber-300', dot: 'bg-amber-400', mark: 'text-amber-500' },
-                teal: { q: 'text-teal-300', dot: 'bg-teal-400', mark: 'text-teal-500' },
-                rose: { q: 'text-rose-300', dot: 'bg-rose-400', mark: 'text-rose-500' },
-                sky: { q: 'text-sky-300', dot: 'bg-sky-400', mark: 'text-sky-500' },
+                emerald: { mark: 'text-emerald-700/30', dot: 'bg-emerald-700/70' },
+                amber: { mark: 'text-amber-600/30', dot: 'bg-amber-600/70' },
+                teal: { mark: 'text-teal-700/30', dot: 'bg-teal-700/70' },
+                rose: { mark: 'text-rose-600/30', dot: 'bg-rose-600/70' },
+                sky: { mark: 'text-sky-700/30', dot: 'bg-sky-700/70' },
               }[accent];
               const flip = i % 2 === 1;
               return (
@@ -92,10 +92,10 @@ export default function Guide() {
                     <span className={`absolute -top-6 ${flip ? '-right-1 rotate-6' : '-left-1 -rotate-6'} text-5xl md:text-6xl ${map.mark} font-serif leading-none select-none`}>
                       “
                     </span>
-                    <p className="pt-4 text-lg md:text-xl text-stone-700 font-light leading-loose tracking-wide">
+                    <p className="pt-4 text-lg md:text-xl text-stone-600 font-light leading-loose tracking-[0.04em]">
                       {text}
                     </p>
-                    <span className={`inline-block mt-4 h-1 w-10 rounded-full ${map.dot}`} />
+                    <span className={`inline-block mt-4 h-px w-12 rounded-full ${map.dot}`} />
                   </blockquote>
                 </motion.div>
               );
