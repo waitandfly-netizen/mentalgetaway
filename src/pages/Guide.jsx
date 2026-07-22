@@ -87,8 +87,8 @@ export default function Guide() {
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.9 }}
                   className={`flex ${flip ? 'md:flex-row-reverse md:text-right' : 'md:text-left'}`}
-                >
-                  <blockquote className={`relative max-w-xl ${flip ? 'md:ml-auto' : ''} ${i === 2 ? 'md:mx-auto md:text-center' : ''}`}>
+                  >
+                    <blockquote className={`relative max-w-xl ${flip ? 'md:ml-auto md:mr-0' : 'md:mr-auto md:ml-0'}`}>
                     <span className={`absolute -top-6 ${flip ? '-right-1 rotate-6' : '-left-1 -rotate-6'} text-5xl md:text-6xl ${map.mark} font-serif leading-none select-none`}>
                       “
                     </span>
