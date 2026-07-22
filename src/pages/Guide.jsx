@@ -48,14 +48,14 @@ export default function Guide() {
       </section>
 
       {/* Voices about the Guide */}
-      <section className="py-20 px-6 bg-stone-50">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-24 px-6 bg-stone-50">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-10"
+            className="text-center mb-14"
           >
             <p className="text-emerald-700/70 tracking-[0.25em] text-xs mb-4">VOICES ABOUT THE GUIDE</p>
             <h2 className="text-2xl md:text-3xl font-light text-stone-800 leading-relaxed">
@@ -63,22 +63,30 @@ export default function Guide() {
             </h2>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="rounded-2xl overflow-hidden shadow-lg bg-black"
-          >
-            <video
-              src="https://media.base44.com/videos/public/698fc983574e659f561934f1/adaf6434a_.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full max-h-[80vh] object-cover"
-            />
-          </motion.div>
+          <div className="space-y-10">
+            {[
+              '明明講了沉重的事情，但卻被幽默的氛圍融化，哭笑間變得輕鬆～',
+              '每當心裡的坎過不去，她不急著幫我解答，而是給出空間陪伴、提供方向，終於跨過去時的喜悅更深刻',
+              '常常都會有一種她比我自己還要更在乎生命的蛻變',
+              '有時候覺得她的想法無俚頭，但那份自由卻讓人覺得舒服',
+              '總是被她深刻的同理支持到，原來被理解是這樣的感覺',
+            ].map((line, i) => (
+              <motion.blockquote
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.9, delay: i * 0.15 }}
+                className="relative"
+              >
+                <span className="absolute -top-3 -left-1 text-emerald-200/70 text-4xl font-light leading-none select-none">“</span>
+                <p className="pl-7 text-lg md:text-xl text-stone-700 font-light leading-loose tracking-wide">
+                  {line}
+                </p>
+                {i < 4 && <span className="block mt-10 h-px bg-stone-200" />}
+              </motion.blockquote>
+            ))}
+          </div>
         </div>
       </section>
 
