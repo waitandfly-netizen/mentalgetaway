@@ -63,29 +63,43 @@ export default function Guide() {
             </h2>
           </motion.div>
 
-          <div className="space-y-10">
+          <div className="space-y-14">
             {[
-              '明明講了沉重的事情，但卻被幽默的氛圍融化，哭笑間變得輕鬆～',
-              '每當心裡的坎過不去，她不急著幫我解答，而是給出空間陪伴、提供方向，終於跨過去時的喜悅更深刻',
-              '常常都會有一種她比我自己還要更在乎生命的蛻變',
-              '有時候覺得她的想法無俚頭，但那份自由卻讓人覺得舒服',
-              '總是被她深刻的同理支持到，原來被理解是這樣的感覺',
-            ].map((line, i) => (
-              <motion.blockquote
-                key={i}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.9, delay: i * 0.15 }}
-                className="relative"
-              >
-                <span className="absolute -top-3 -left-1 text-emerald-200/70 text-4xl font-light leading-none select-none">“</span>
-                <p className="pl-7 text-lg md:text-xl text-stone-700 font-light leading-loose tracking-wide">
-                  {line}
-                </p>
-                {i < 4 && <span className="block mt-10 h-px bg-stone-200" />}
-              </motion.blockquote>
-            ))}
+              { text: '明明講了沉重的事情，但卻被幽默的氛圍融化，哭笑間變得輕鬆～', accent: 'emerald' },
+              { text: '每當心裡的坎過不去，她不急著幫我解答，而是給出空間陪伴、提供方向，終於跨過去時的喜悅更深刻', accent: 'amber' },
+              { text: '常常都會有一種她比我自己還要更在乎生命的蛻變', accent: 'teal' },
+              { text: '有時候覺得她的想法無俚頭，但那份自由卻讓人覺得舒服', accent: 'rose' },
+              { text: '總是被她深刻的同理支持到，原來被理解是這樣的感覺', accent: 'sky' },
+            ].map(({ text, accent }, i) => {
+              const map = {
+                emerald: { q: 'text-emerald-300', dot: 'bg-emerald-400', mark: 'text-emerald-500' },
+                amber: { q: 'text-amber-300', dot: 'bg-amber-400', mark: 'text-amber-500' },
+                teal: { q: 'text-teal-300', dot: 'bg-teal-400', mark: 'text-teal-500' },
+                rose: { q: 'text-rose-300', dot: 'bg-rose-400', mark: 'text-rose-500' },
+                sky: { q: 'text-sky-300', dot: 'bg-sky-400', mark: 'text-sky-500' },
+              }[accent];
+              const flip = i % 2 === 1;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.9 }}
+                  className={`flex ${flip ? 'md:flex-row-reverse md:text-right' : 'md:text-left'}`}
+                >
+                  <blockquote className={`relative max-w-xl ${flip ? 'md:ml-auto' : ''} ${i === 2 ? 'md:mx-auto md:text-center' : ''}`}>
+                    <span className={`absolute -top-6 ${flip ? '-right-1 rotate-6' : '-left-1 -rotate-6'} text-5xl md:text-6xl ${map.mark} font-serif leading-none select-none`}>
+                      “
+                    </span>
+                    <p className="pt-4 text-lg md:text-xl text-stone-700 font-light leading-loose tracking-wide">
+                      {text}
+                    </p>
+                    <span className={`inline-block mt-4 h-1 w-10 rounded-full ${map.dot}`} />
+                  </blockquote>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
