@@ -156,15 +156,14 @@ function ReflectionItem({ item, index, accent }) {
       className="relative pl-8 md:pl-10"
     >
       {/* vertical thread */}
-      <span className="absolute left-0 top-1.5 bottom-0 w-px bg-stone-200" />
-      <span className={`absolute left-0 top-1.5 w-px h-8 ${a.line}`} />
+      <span className={`absolute left-0 top-1.5 bottom-0 w-px ${a.line} opacity-40`} />
 
-      <div className="flex items-baseline gap-4 mb-3">
+      <div className="flex items-baseline gap-4 mb-4">
         <span className="text-stone-300 text-xs tracking-widest font-light">
           {String(index + 1).padStart(2, '0')}
         </span>
         {item.keyword && (
-          <h4 className={`text-xl md:text-2xl font-light tracking-wide ${a.text}`}>
+          <h4 className={`text-xl md:text-2xl font-medium tracking-wide ${a.text}`}>
             {item.keyword}
           </h4>
         )}
@@ -174,7 +173,7 @@ function ReflectionItem({ item, index, accent }) {
         {item.reflection}
       </p>
 
-      <p className={`mt-4 text-sm tracking-wide font-medium ${a.name}`}>
+      <p className={`mt-5 text-sm tracking-wide font-medium ${a.name}`}>
         《{item.activity}》
       </p>
     </motion.article>
