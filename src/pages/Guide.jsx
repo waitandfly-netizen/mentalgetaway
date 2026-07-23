@@ -61,6 +61,7 @@ export default function Guide() {
             <h2 className="text-2xl md:text-3xl font-light text-stone-800 leading-relaxed">
               如果用一句話形容心靈導遊……
             </h2>
+            <p className="mt-4 text-stone-500/80 font-light tracking-[0.15em] text-sm">參加者們的心聲～</p>
           </motion.div>
 
           <div className="space-y-14">
