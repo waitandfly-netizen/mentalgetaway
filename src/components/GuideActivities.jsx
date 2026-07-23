@@ -31,6 +31,11 @@ const categories = [
             reflection: '學習透過身體的動作與自己連結，將思緒回到當下，感受到真正放鬆。',
             activity: '抒壓工作坊',
           },
+        ],
+      },
+      {
+        label: '意識覺醒',
+        items: [
           {
             reflection: '回家後，迫不及待把重反力運用在生活中，感覺到腳底熱熱的，有覺知的做事，人就變得安靜了。',
             activity: '臍脈無極印',
@@ -48,10 +53,6 @@ const categories = [
             activity: '心靈新視界',
           },
         ],
-      },
-      {
-        label: '意識覺醒',
-        items: [],
       },
     ],
   },
