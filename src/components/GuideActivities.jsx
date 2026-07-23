@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const categories = [
@@ -181,6 +181,13 @@ function ReflectionItem({ item, index, accent }) {
 }
 
 export default function GuideActivities() {
+  const [activeGroup, setActiveGroup] = useState(null);
+  const workshopGroups = categories[0].groups;
+  const groupSubtitles = {
+    '安定與寧靜': 'Calm & Stillness',
+    '身心充電': 'Recharge',
+    '意識覺醒': 'Awakening',
+  };
   return (
     <section className="py-28 px-6 bg-gradient-to-b from-white via-stone-50/60 to-white">
       <div className="max-w-4xl mx-auto">
@@ -203,6 +210,44 @@ export default function GuideActivities() {
             不同活動參加者收到的生命禮物
           </p>
         </motion.div>
+
+        {/* Filter cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-16">
+          {workshopGroups.map((group, i) => {
+            const active = activeGroup === group.label;
+            return (
+              <button
+                key={group.label}
+                onClick={() => setActiveGroup(active ? null : group.label)}
+                className={`group relative overflow-hidden rounded-2xl border p-5 sm:p-6 text-left transition-all duration-300 ${
+                  active
+                    ? 'border-emerald-400 bg-emerald-50/60 shadow-md'
+                    : 'border-stone-200 bg-white hover:border-emerald-300 hover:shadow-sm'
+                }`}
+              >
+                <span className={`absolute left-0 top-0 h-full w-1 transition-colors ${
+                  active ? 'bg-emerald-400' : 'bg-emerald-200 group-hover:bg-emerald-300'
+                }`} />
+                <div className="flex items-center justify-between mb-3 pl-2">
+                  <span className="text-stone-300 text-xs tracking-[0.2em] font-light">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    active ? 'bg-emerald-500' : 'bg-emerald-200 group-hover:bg-emerald-300'
+                  }`} />
+                </div>
+                <h4 className={`pl-2 text-base sm:text-lg font-medium tracking-wide ${
+                  active ? 'text-emerald-700' : 'text-stone-800'
+                }`}>
+                  {group.label}
+                </h4>
+                <p className="pl-2 mt-1 text-[11px] text-stone-400 tracking-[0.15em]">
+                  {groupSubtitles[group.label]}
+                </p>
+              </button>
+            );
+          })}
+        </div>
 
         <div className="space-y-24">
           {categories.map((cat) => {
@@ -227,7 +272,9 @@ export default function GuideActivities() {
 
                 {cat.groups ? (
                   <div className="space-y-16">
-                    {cat.groups.map((group) => (
+                    {cat.groups
+                      .filter((g) => cat.label !== '工作坊' || !activeGroup || g.label === activeGroup)
+                      .map((group) => (
                       <div key={group.label}>
                         {/* Subcategory header */}
                         <div className="flex items-center gap-3 mb-8">
