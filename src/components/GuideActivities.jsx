@@ -217,12 +217,12 @@ export default function GuideActivities() {
                 transition={{ duration: 0.7 }}
               >
                 {/* Category header */}
-                <div className="flex items-center gap-4 mb-12">
-                  <span className={`w-2 h-2 rounded-full ${a.dot}`} />
-                  <h3 className={`text-sm tracking-[0.3em] font-medium ${a.text}`}>
+                <div className="flex items-center gap-4 mb-14">
+                  <span className={`w-2.5 h-2.5 rounded-full ${a.dot}`} />
+                  <h3 className={`text-xl md:text-2xl tracking-[0.2em] font-medium ${a.text}`}>
                     {cat.label}
                   </h3>
-                  <span className="text-stone-300 text-xs tracking-[0.2em]">{cat.labelEn.toUpperCase()}</span>
+                  <span className="text-stone-300 text-[11px] tracking-[0.25em]">{cat.labelEn.toUpperCase()}</span>
                   <span className="flex-1 h-px bg-stone-200" />
                 </div>
 
