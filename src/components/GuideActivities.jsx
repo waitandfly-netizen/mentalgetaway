@@ -205,7 +205,7 @@ export default function GuideActivities() {
         </motion.div>
 
         <div className="space-y-24">
-          {categories.map((cat) => {
+          {categories.filter((cat) => cat.label !== '講座').map((cat) => {
             const a = accentMap[cat.accent];
             return (
               <motion.div
