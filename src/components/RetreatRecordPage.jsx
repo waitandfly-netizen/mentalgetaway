@@ -5,7 +5,7 @@ import { Calendar, MapPin, Users, ArrowLeft, Camera, Leaf } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import SEOHead from '@/components/SEOHead';
 
-export default function RetreatRecordPage({ title, subtitle, year, category, heroImage, heroVideo, heroOverlay = true, intro, introSections, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities, journeyVideo }) {
+export default function RetreatRecordPage({ title, subtitle, year, category, heroImage, heroVideo, heroOverlay = true, heroVideoFit = 'cover', intro, introSections, location, groupSize, gallery = [], reflections = [], showIntroHeading = true, activities, journeyVideo }) {
   return (
     <div className="min-h-screen bg-stone-50">
       <SEOHead title={title} description={`${category} — ${title}`} />
@@ -20,7 +20,7 @@ export default function RetreatRecordPage({ title, subtitle, year, category, her
               loop
               muted
               playsInline
-              className="absolute inset-0 w-full h-full object-cover"
+              className={`absolute inset-0 w-full h-full ${heroVideoFit === 'contain' ? 'object-contain' : 'object-cover'} bg-black`}
             />
             {heroOverlay && <div className="absolute inset-0 bg-stone-900/50" />}
           </div>
