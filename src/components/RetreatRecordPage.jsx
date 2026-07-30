@@ -11,34 +11,60 @@ export default function RetreatRecordPage({ title, subtitle, year, category, her
       <SEOHead title={title} description={`${category} — ${title}`} />
 
       {/* Hero */}
-      <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className={`relative overflow-hidden ${heroVideo && heroVideoFit === 'contain' ? 'w-full' : 'h-[40vh] md:h-[50vh] flex items-center justify-center'}`}>
         {heroVideo ? (
-          <div className="absolute inset-0 w-full h-full">
-            <video
-              src={heroVideo}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className={`absolute inset-0 w-full h-full ${heroVideoFit === 'contain' ? 'object-contain' : 'object-cover'} bg-black`}
-            />
-            {heroOverlay && <div className="absolute inset-0 bg-stone-900/50" />}
-          </div>
+          heroVideoFit === 'contain' ? (
+            <div className="relative w-full">
+              <video
+                src={heroVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="block w-full h-auto"
+              />
+              {heroOverlay && <div className="absolute inset-0 bg-stone-900/50" />}
+              <motion.div
+                className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                {category && <p className="text-amber-200/80 tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm mb-3 md:mb-4">{category}</p>}
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">{title}</h1>
+                {subtitle && <p className="text-white/80 mt-3 md:mt-4 tracking-wider text-lg md:text-2xl font-light">{subtitle}</p>}
+              </motion.div>
+            </div>
+          ) : (
+            <div className="absolute inset-0 w-full h-full">
+              <video
+                src={heroVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {heroOverlay && <div className="absolute inset-0 bg-stone-900/50" />}
+            </div>
+          )
         ) : (
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroImage}')` }}>
             {heroOverlay && <div className="absolute inset-0 bg-stone-900/50" />}
           </div>
         )}
-        <motion.div
-          className="relative z-10 text-center px-6"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          {category && <p className="text-amber-200/80 tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm mb-3 md:mb-4">{category}</p>}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">{title}</h1>
-          {subtitle && <p className="text-white/80 mt-3 md:mt-4 tracking-wider text-lg md:text-2xl font-light">{subtitle}</p>}
-        </motion.div>
+        {!(heroVideo && heroVideoFit === 'contain') && (
+          <motion.div
+            className="relative z-10 text-center px-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            {category && <p className="text-amber-200/80 tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm mb-3 md:mb-4">{category}</p>}
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">{title}</h1>
+            {subtitle && <p className="text-white/80 mt-3 md:mt-4 tracking-wider text-lg md:text-2xl font-light">{subtitle}</p>}
+          </motion.div>
+        )}
       </section>
 
       {/* Back link */}
