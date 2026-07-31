@@ -19,7 +19,7 @@ export default function Retreat2017() {
         {
           venue: "5月、11月埔里暨大",
           content: "曁大一望無際的寬闊草原,\n迎接每位助人路上的旅人,\n可以恣意地放松、喘口氣,\n讓秋季的沉静帶走內心的疲憊,\n享受與自己相處的寧靜時光。",
-          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/7521f949b_.jpg",
+          image: "https://media.base44.com/images/public/698fc983574e659f561934f1/72b6a3d2f_IMG_0302.jpg",
           imagePosition: "left"
         }
       ]}
