@@ -209,9 +209,12 @@ export default function TwoDayRetreat() {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-indigo-800 to-indigo-900 rounded-2xl p-8 text-white"
             >
-              <div className="flex items-center gap-2 mb-2">
-                <Calendar className="w-5 h-5 text-indigo-300" />
-                <p className="text-indigo-200 text-sm tracking-wider">第一梯次</p>
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-indigo-300" />
+                  <p className="text-indigo-200 text-sm tracking-wider">第一梯次</p>
+                </div>
+                <span className="bg-rose-500 text-white text-xs tracking-widest px-3 py-1 rounded-full">已額滿</span>
               </div>
               <h3 className="text-2xl font-light mb-1">08/08 ~ 08/09</h3>
               <div className="flex items-center gap-2 mb-6">
@@ -235,14 +238,11 @@ export default function TwoDayRetreat() {
 
               </div>
 
-              <a href="https://forms.gle/6q2nmZ8anrPKFN5F8" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-white text-indigo-800 hover:bg-amber-50 py-6 rounded-xl">
-                  <span className="flex items-center gap-2">
-                    立即報名
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                </Button>
-              </a>
+              <Button disabled className="w-full bg-white/20 text-white/70 py-6 rounded-xl cursor-not-allowed">
+                <span className="flex items-center gap-2">
+                  已額滿
+                </span>
+              </Button>
             </motion.div>
 
             {/* Session 2 */}
