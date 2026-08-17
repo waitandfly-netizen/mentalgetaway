@@ -27,8 +27,7 @@ export default function Testimonials() {
     {
       title: "【真實的快樂】",
       date: "2016.04.24",
-      content: "全然投入每個當下、盡情享受所有發生，一步步貼近自己的愛、大家的愛⋯ 越往下紮根、越深入內在，向外的揮灑也越自在...",
-      link: "TestimonialTrueHappiness"
+      content: "全然投入每個當下、盡情享受所有發生，一步步貼近自己的愛、大家的愛⋯ 越往下紮根、越深入內在，向外的揮灑也越自在..."
     },
     {
       title: "【黑夜裡的自然律動】",
@@ -72,6 +71,12 @@ export default function Testimonials() {
       date: "2026.08",
       content: "這幾天回來之後，時不時會浮現在有外澳點點滴滴的畫面。雖然活動中經歷了激烈和平靜的環節，但感覺心裡有一塊溫柔的部分被觸動了...",
       link: "TestimonialGentleCompanion"
+    },
+    {
+      title: "【感受與自己、與世界的連結】",
+      date: "2026.08",
+      content: "第一天下午的笑靜心，我躺在地上，心裡忍不住想：「到底要笑多久啊？我真的笑不出來。」就在這時，耳邊傳來先生的笑聲...",
+      link: "TestimonialConnection"
     }
   ];
 
