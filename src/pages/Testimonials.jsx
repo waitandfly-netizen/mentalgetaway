@@ -60,6 +60,12 @@ export default function Testimonials() {
       date: "2026.08",
       content: "這次心靈假期讓我印象很深刻的是畫畫。靜心後休息時，我走到外澳海邊，迎著颱風接近時強勁的風，看著眼前拍打的浪花，再看看前方安靜、穩固存在的龜山島，最後是遠方海洋與天空無邊的寬闊...",
       link: "TestimonialSurrender"
+    },
+    {
+      title: "【一場與自己的親密練習】",
+      date: "2026.08",
+      content: "一個人搭上火車，原以為只是在海邊住一晚的輕鬆假期，沒想到，這趟旅程和想像中很不一樣...",
+      link: "TestimonialIntimatePractice"
     }
   ];
 
