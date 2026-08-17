@@ -103,15 +103,19 @@ export default function TestimonialIntimatePractice() {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
-              {gallery.map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`練習紀錄 ${i + 1}`}
-                  className="w-full rounded-lg shadow-md object-contain"
-                />
-              ))}
+            <div className="mt-12">
+              <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-4 sm:p-6">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  {gallery.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`練習紀錄 ${i + 1}`}
+                      className="w-full h-full max-h-[420px] object-cover rounded-xl"
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
