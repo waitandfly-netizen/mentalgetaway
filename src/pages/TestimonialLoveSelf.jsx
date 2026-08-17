@@ -57,11 +57,11 @@ export default function TestimonialLoveSelf() {
             )}
           </motion.div>
 
-          <div className="mt-8 overflow-hidden rounded-2xl">
+          <div className="mt-8 flex justify-center">
             <img
               src="https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg"
               alt="2026.8月宜蘭二日放空營(學員A)"
-              className="w-full object-cover"
+              className="max-w-sm w-full rounded-xl object-cover"
             />
           </div>
         </div>
