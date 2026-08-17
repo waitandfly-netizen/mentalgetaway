@@ -54,6 +54,26 @@ export default function TestimonialSurrender() {
               )
             )}
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
+          >
+            {[
+              "https://media.base44.com/images/public/698fc983574e659f561934f1/97f13095a_LINE_ALBUM_202608_260817_4.jpg",
+              "https://media.base44.com/images/public/698fc983574e659f561934f1/f17cd2f3a_LINE_ALBUM_202608_260817_6.jpg",
+            ].map((src, i) => (
+              <div key={i} className="bg-white rounded-2xl p-4 shadow-sm">
+                <img
+                  src={src}
+                  alt={`臣服於天地之間畫作 ${i + 1}`}
+                  className="w-full h-auto object-contain rounded-xl max-h-[80vh]"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
     </div>
