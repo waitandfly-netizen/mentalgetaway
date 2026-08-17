@@ -15,10 +15,6 @@ export default function TestimonialIntimatePractice() {
         "但躺下的剎那，關於死亡的悲傷突然襲來，我像孩子般大哭，那些壓抑已久的情緒被喚了出來。",
         "靜默之後，身體變輕了。我不知道還需要多久，但開始接受：原來我的悲傷，還沒有走完。",
       ],
-      images: [
-        "https://media.base44.com/images/public/698fc983574e659f561934f1/24b4ae7a9_79594b09-eba8-41b4-be40-234bd06dc2b8.jpg",
-        "https://media.base44.com/images/public/698fc983574e659f561934f1/14be903c7_LINE_ALBUM_202608_260812_2.jpg",
-      ],
     },
     {
       heading: "之二｜亢達里尼靜心",
@@ -37,6 +33,11 @@ export default function TestimonialIntimatePractice() {
         "回家後，我減少了便利商店的微波食品，身體反而自然帶著我走進傳統市場。",
       ],
     },
+  ];
+
+  const gallery = [
+    "https://media.base44.com/images/public/698fc983574e659f561934f1/24b4ae7a9_79594b09-eba8-41b4-be40-234bd06dc2b8.jpg",
+    "https://media.base44.com/images/public/698fc983574e659f561934f1/14be903c7_LINE_ALBUM_202608_260812_2.jpg",
   ];
 
   const closing = [
@@ -91,18 +92,6 @@ export default function TestimonialIntimatePractice() {
                     {p}
                   </p>
                 ))}
-                {section.images && section.images.length > 0 && (
-                  <div className="flex flex-col items-center gap-6 mt-6 mb-4">
-                    {section.images.map((src, k) => (
-                      <img
-                        key={k}
-                        src={src}
-                        alt={`練習紀錄 ${k + 1}`}
-                        className="w-full max-w-sm rounded-lg shadow-md object-contain"
-                      />
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
 
@@ -111,6 +100,17 @@ export default function TestimonialIntimatePractice() {
                 <p key={i} className="text-stone-600 font-light leading-loose text-lg mb-4">
                   {p}
                 </p>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+              {gallery.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`練習紀錄 ${i + 1}`}
+                  className="w-full rounded-lg shadow-md object-contain"
+                />
               ))}
             </div>
           </motion.div>
