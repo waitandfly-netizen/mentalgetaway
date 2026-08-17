@@ -15,16 +15,7 @@ export default function TestimonialLoveSelf() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg')"
-          }}
-        >
-          <div className="absolute inset-0 bg-stone-900/50" />
-        </div>
-
+      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden bg-emerald-900">
         <motion.div
           className="relative z-10 text-center px-6"
           initial={{ opacity: 0, y: 30 }}
@@ -65,6 +56,14 @@ export default function TestimonialLoveSelf() {
               )
             )}
           </motion.div>
+
+          <div className="mt-8 overflow-hidden rounded-2xl">
+            <img
+              src="https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg"
+              alt="2026.8月宜蘭二日放空營(學員A)"
+              className="w-full object-cover"
+            />
+          </div>
         </div>
       </section>
     </div>
