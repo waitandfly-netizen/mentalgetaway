@@ -24,7 +24,7 @@ export default function TestimonialLoveSelf() {
         >
           <p className="text-amber-200/80 tracking-[0.3em] text-sm mb-4">TESTIMONIAL</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">
-            愛自己真實的樣貌
+            靈魂真實的需要是甚麼？
           </h1>
           <p className="text-stone-200/70 text-sm mt-3 tracking-widest">2026.8月宜蘭二日放空營(學員A)</p>
         </motion.div>

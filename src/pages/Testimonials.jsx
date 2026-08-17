@@ -49,7 +49,7 @@ export default function Testimonials() {
       link: "TestimonialAllIsWell"
     },
     {
-      title: "【愛自己真實的樣貌】",
+      title: "【靈魂真實的需要是甚麼？】",
       date: "2026.08",
       image: "https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg",
       content: "參加心靈假期之前，一直有個疑惑：一個靈魂不斷回到這個世界，經歷各種滋味是為了什麼？當時我只知道於我而言是和愛有關的功課，但是這個愛還很模糊，只停留在我渴望被愛、被他人被接納、害怕被討厭等...",
