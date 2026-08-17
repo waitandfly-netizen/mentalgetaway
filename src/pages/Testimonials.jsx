@@ -27,7 +27,8 @@ export default function Testimonials() {
     {
       title: "【真實的快樂】",
       date: "2016.04.24",
-      content: "全然投入每個當下、盡情享受所有發生，一步步貼近自己的愛、大家的愛⋯ 越往下紮根、越深入內在，向外的揮灑也越自在..."
+      content: "全然投入每個當下、盡情享受所有發生，一步步貼近自己的愛、大家的愛⋯ 越往下紮根、越深入內在，向外的揮灑也越自在...",
+      link: "TestimonialTrueHappiness"
     },
     {
       title: "【黑夜裡的自然律動】",
