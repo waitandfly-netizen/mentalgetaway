@@ -111,7 +111,7 @@ export default function TestimonialIntimatePractice() {
                       key={i}
                       src={src}
                       alt={`練習紀錄 ${i + 1}`}
-                      className="w-full h-full max-h-[420px] object-cover rounded-xl"
+                      className={`w-full h-full max-h-[420px] object-cover rounded-xl ${i === 0 ? 'object-top' : 'object-center'}`}
                     />
                   ))}
                 </div>
