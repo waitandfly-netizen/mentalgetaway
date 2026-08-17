@@ -54,6 +54,12 @@ export default function Testimonials() {
       image: "https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg",
       content: "參加心靈假期之前，一直有個疑惑：一個靈魂不斷回到這個世界，經歷各種滋味是為了什麼？當時我只知道於我而言是和愛有關的功課，但是這個愛還很模糊，只停留在我渴望被愛、被他人被接納、害怕被討厭等...",
       link: "TestimonialLoveSelf"
+    },
+    {
+      title: "【臣服於天地之間】",
+      date: "2026.08",
+      content: "這次心靈假期讓我印象很深刻的是畫畫。靜心後休息時，我走到外澳海邊，迎著颱風接近時強勁的風，看著眼前拍打的浪花，再看看前方安靜、穩固存在的龜山島，最後是遠方海洋與天空無邊的寬闊...",
+      link: "TestimonialSurrender"
     }
   ];
 
