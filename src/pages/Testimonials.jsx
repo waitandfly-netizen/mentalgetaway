@@ -51,8 +51,8 @@ export default function Testimonials() {
     {
       title: "2026.8月宜蘭二日放空營(學員A)",
       date: "2026.08",
-      image: "https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg",
-      content: "參加心靈假期之前，一直有個疑惑：一個靈魂不斷回到這個世界，經歷各種滋味是為了什麼？當時我只知道於我而言是和愛有關的功課，但是這個愛還很模糊，只停留在我渴望被愛、被他人被接納、害怕被討厭等。帶著這個疑惑，在假期中，聽到一句話讓我很有感，我們的靈魂生生世世都要來愛自己，但是我們都忘記了，一直在愛別人，為別人愛…\n那個當下我的靈魂聽到了，有種沈睡已久終於甦醒過來的感覺。原來我的靈魂要修煉的是如何真的愛到自己。\n\n從有意識以來，我一直在為了別人忙，為了讓別人喜歡我，而要求自己要做好，以至於我越來越害怕聽見自己的聲音，不論是睡覺時一定要伴隨外在的聲音，依靠外界的穩定來安定自己，又或是整理心得時越來越彆扭，更容易拖延，都是在避開最重要的聲音，我靈魂的聲音（現在還聽不到祂要說什麼，但是感覺到祂一直想跟我說話，只是一直被蓋住）。\n\n當自己的時間慢下來，變得細緻之後，看外界的動靜真的會很清晰，會聽見別人語言之外更加深的意圖，看見別人的無意識。對自己身體的感覺也會放大，可以很快感覺到自己有沒有坐正或站穩。"
+      content: "參加心靈假期之前，一直有個疑惑：一個靈魂不斷回到這個世界，經歷各種滋味是為了什麼？帶著這個疑惑，在假期中，聽到一句話讓我很有感，我們的靈魂生生世世都要來愛自己...",
+      link: "TestimonialYilan2026"
     }
   ];
 
@@ -124,12 +124,7 @@ export default function Testimonials() {
                     <Quote className="w-8 h-8 text-emerald-200 mb-4" />
                     <h3 className="text-lg font-medium text-stone-800 mb-1">{testimonial.title}</h3>
                     {testimonial.date && <p className="text-stone-400 text-xs mb-3 tracking-wider">{testimonial.date}</p>}
-                    {testimonial.image && (
-                      <div className="mb-4 overflow-hidden rounded-xl">
-                        <img src={testimonial.image} alt={testimonial.title} className="w-full h-48 object-cover" />
-                      </div>
-                    )}
-                    <p className="text-stone-600 font-light leading-relaxed text-sm whitespace-pre-line">
+                    <p className="text-stone-600 font-light leading-relaxed text-sm">
                       {testimonial.content}
                     </p>
                   </>
