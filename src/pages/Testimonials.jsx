@@ -66,6 +66,12 @@ export default function Testimonials() {
       date: "2026.08",
       content: "一個人搭上火車，原以為只是在海邊住一晚的輕鬆假期，沒想到，這趟旅程和想像中很不一樣...",
       link: "TestimonialIntimatePractice"
+    },
+    {
+      title: "【好好陪伴自己，也是一種溫柔】",
+      date: "2026.08",
+      content: "這幾天回來之後，時不時會浮現在有外澳點點滴滴的畫面。雖然活動中經歷了激烈和平靜的環節，但感覺心裡有一塊溫柔的部分被觸動了...",
+      link: "TestimonialGentleCompanion"
     }
   ];
 

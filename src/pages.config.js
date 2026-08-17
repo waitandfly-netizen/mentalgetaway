@@ -71,6 +71,7 @@ import TestimonialTrueHappiness from './pages/TestimonialTrueHappiness';
 import TestimonialLoveSelf from './pages/TestimonialLoveSelf';
 import TestimonialSurrender from './pages/TestimonialSurrender';
 import TestimonialIntimatePractice from './pages/TestimonialIntimatePractice';
+import TestimonialGentleCompanion from './pages/TestimonialGentleCompanion';
 import Testimonials from './pages/Testimonials';
 import TransformationStories from './pages/TransformationStories';
 import TwoDayRetreat from './pages/TwoDayRetreat';
@@ -103,6 +104,7 @@ export const PAGES = {
     "TestimonialLoveSelf": TestimonialLoveSelf,
     "TestimonialSurrender": TestimonialSurrender,
     "TestimonialIntimatePractice": TestimonialIntimatePractice,
+    "TestimonialGentleCompanion": TestimonialGentleCompanion,
     "Testimonials": Testimonials,
     "TransformationStories": TransformationStories,
     "TwoDayRetreat": TwoDayRetreat,
