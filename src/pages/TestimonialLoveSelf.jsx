@@ -31,7 +31,7 @@ export default function TestimonialLoveSelf() {
       </section>
 
       <section className="py-16 px-6">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Link
             to={createPageUrl('Testimonials')}
             className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 mb-8 transition-colors"
@@ -40,29 +40,36 @@ export default function TestimonialLoveSelf() {
             <span>返回參加者心得</span>
           </Link>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="prose prose-stone max-w-none"
-          >
-            {paragraphs.map((p, i) =>
-              p === "" ? (
-                <div key={i} className="h-4" />
-              ) : (
-                <p key={i} className="text-stone-600 font-light leading-loose text-lg mb-4">
-                  {p}
-                </p>
-              )
-            )}
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex justify-center md:justify-end"
+            >
+              <img
+                src="https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg"
+                alt="2026.8月宜蘭二日放空營(學員A)"
+                className="max-w-sm w-full rounded-xl object-cover"
+              />
+            </motion.div>
 
-          <div className="mt-8 flex justify-center">
-            <img
-              src="https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg"
-              alt="2026.8月宜蘭二日放空營(學員A)"
-              className="max-w-sm w-full rounded-xl object-cover"
-            />
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="prose prose-stone max-w-none"
+            >
+              {paragraphs.map((p, i) =>
+                p === "" ? (
+                  <div key={i} className="h-4" />
+                ) : (
+                  <p key={i} className="text-stone-600 font-light leading-loose text-lg mb-4">
+                    {p}
+                  </p>
+                )
+              )}
+            </motion.div>
           </div>
         </div>
       </section>
