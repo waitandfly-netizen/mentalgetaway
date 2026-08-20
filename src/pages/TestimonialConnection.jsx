@@ -16,10 +16,7 @@ export default function TestimonialConnection() {
     "而那一刻，我好像都感受到了。",
   ];
 
-  const gallery = [
-    "https://media.base44.com/images/public/698fc983574e659f561934f1/f321b55f6_18174472-f7bf-4da2-b334-12ecac6914e6.jpg",
-    "https://media.base44.com/images/public/698fc983574e659f561934f1/11e61348d_LINE_ALBUM_202608_260817_5.jpg",
-  ];
+  const image = "https://media.base44.com/images/public/698fc983574e659f561934f1/1505450ff_18174472-f7bf-4da2-b334-12ecac6914e6.jpg";
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -54,16 +51,11 @@ export default function TestimonialConnection() {
 
             <div className="mt-12">
               <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-4 sm:p-6">
-                <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                  {gallery.map((src, i) => (
-                    <img
-                      key={i}
-                      src={src}
-                      alt={`活動紀錄 ${i + 1}`}
-                      className="w-full h-full max-h-[420px] object-cover rounded-xl"
-                    />
-                  ))}
-                </div>
+                <img
+                  src={image}
+                  alt="感受與自己、與世界的連結"
+                  className="w-full max-h-[70vh] object-contain rounded-xl"
+                />
               </div>
             </div>
           </motion.div>
