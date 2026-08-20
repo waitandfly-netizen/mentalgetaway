@@ -50,7 +50,7 @@ export default function TestimonialLoveSelf() {
               <img
                 src="https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg"
                 alt="2026.8月宜蘭二日放空營(學員A)"
-                className="max-w-[19rem] w-full md:h-full rounded-xl object-cover"
+                className="max-w-[19rem] w-full md:h-full rounded-xl object-cover md:object-top"
               />
             </motion.div>
 
