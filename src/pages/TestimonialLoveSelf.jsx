@@ -40,7 +40,7 @@ export default function TestimonialLoveSelf() {
             <span>返回參加者心得</span>
           </Link>
 
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid md:grid-cols-2 gap-10 items-stretch">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -50,7 +50,7 @@ export default function TestimonialLoveSelf() {
               <img
                 src="https://media.base44.com/images/public/698fc983574e659f561934f1/245bfb060_A.jpg"
                 alt="2026.8月宜蘭二日放空營(學員A)"
-                className="max-w-sm w-full rounded-xl object-cover"
+                className="max-w-sm w-full md:h-full rounded-xl object-cover"
               />
             </motion.div>
 
