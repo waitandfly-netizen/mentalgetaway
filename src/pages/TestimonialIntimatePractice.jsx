@@ -15,6 +15,8 @@ export default function TestimonialIntimatePractice() {
         "但躺下的剎那，關於死亡的悲傷突然襲來，我像孩子般大哭，那些壓抑已久的情緒被喚了出來。",
         "靜默之後，身體變輕了。我不知道還需要多久，但開始接受：原來我的悲傷，還沒有走完。",
       ],
+      image: "https://media.base44.com/images/public/698fc983574e659f561934f1/f3a90f845_79594b09-eba8-41b4-be40-234bd06dc2b8.jpg",
+      imageSide: "left",
     },
     {
       heading: "之二｜亢達里尼靜心",
@@ -32,6 +34,8 @@ export default function TestimonialIntimatePractice() {
         "這次，我重新用五感去聞、去看、去品嚐。兩天裡，食物的香氣重新打開了我的嗅覺，也讓身體開始自然選擇真正想吃的東西。",
         "回家後，我減少了便利商店的微波食品，身體反而自然帶著我走進傳統市場。",
       ],
+      image: "https://media.base44.com/images/public/698fc983574e659f561934f1/dbc8f63f5_LINE_ALBUM_202608_260812_1.jpg",
+      imageSide: "right",
     },
   ];
 
@@ -69,18 +73,51 @@ export default function TestimonialIntimatePractice() {
           >
             <p className="text-stone-600 font-light leading-loose text-lg mb-10">{intro}</p>
 
-            {sections.map((section, i) => (
-              <div key={i} className="mb-10">
-                <h2 className="text-2xl font-light text-emerald-800 tracking-wide mb-4">
-                  {section.heading}
-                </h2>
-                {section.paragraphs.map((p, j) => (
-                  <p key={j} className="text-stone-600 font-light leading-loose text-lg mb-4">
-                    {p}
-                  </p>
-                ))}
-              </div>
-            ))}
+            {sections.map((section, i) => {
+              const textBlock = (
+                <div>
+                  <h2 className="text-2xl font-light text-emerald-800 tracking-wide mb-4">
+                    {section.heading}
+                  </h2>
+                  {section.paragraphs.map((p, j) => (
+                    <p key={j} className="text-stone-600 font-light leading-loose text-lg mb-4">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              );
+
+              const imageBlock = section.image ? (
+                <motion.div
+                  initial={{ opacity: 0, x: section.imageSide === 'left' ? -20 : 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="flex justify-center"
+                >
+                  <img
+                    src={section.image}
+                    alt={section.heading}
+                    className="rounded-xl object-contain max-h-[70vh] max-w-full w-auto"
+                  />
+                </motion.div>
+              ) : null;
+
+              return (
+                <div key={i} className="mb-12">
+                  {section.image ? (
+                    <div className="grid md:grid-cols-2 gap-10 items-center">
+                      {section.imageSide === 'left' ? (
+                        <>{imageBlock}{textBlock}</>
+                      ) : (
+                        <>{textBlock}{imageBlock}</>
+                      )}
+                    </div>
+                  ) : (
+                    textBlock
+                  )}
+                </div>
+              );
+            })}
 
             <div className="border-t border-stone-200 pt-8 mt-8">
               {closing.map((p, i) => (
