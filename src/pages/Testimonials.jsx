@@ -121,7 +121,7 @@ export default function Testimonials() {
       {/* Testimonials Grid */}
       <section className="py-16 px-6 bg-stone-50">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -141,7 +141,7 @@ export default function Testimonials() {
                         <img src={testimonial.image} alt={testimonial.title} className="w-full h-48 object-cover" />
                       </div>
                     )}
-                    <p className="text-stone-600 font-light leading-relaxed text-sm mb-4">
+                    <p className="text-stone-600 font-light leading-loose text-base tracking-wide mb-4">
                       {testimonial.content}
                     </p>
                     <span className="inline-flex items-center gap-2 text-emerald-700 text-sm group-hover:gap-3 transition-all">
@@ -158,7 +158,7 @@ export default function Testimonials() {
                         <img src={testimonial.image} alt={testimonial.title} className="w-full h-48 object-cover" />
                       </div>
                     )}
-                    <p className="text-stone-600 font-light leading-relaxed text-sm whitespace-pre-line">
+                    <p className="text-stone-600 font-light leading-loose text-base tracking-wide whitespace-pre-line">
                       {testimonial.content}
                     </p>
                   </>
