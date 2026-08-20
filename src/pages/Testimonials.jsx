@@ -39,7 +39,7 @@ export default function Testimonials() {
     {
       title: "【一切都很好】",
       date: "2025.11.01",
-      content: "登頂之際，海拔濾去了城市的喧囂，只留下大自然的白噪音，這份靜謐並非無聲，而是一種心理空間的轉換，讓人從瑣碎中抽離，向內觀照...",
+      content: "「放空」並非停滯，而是高質量的「留白」，正是這份留白，讓身心得以重整，將山頂的靜、對陰晴的接納，融入每一天的生活。",
       link: "TestimonialAllIsWell"
     },
     {
