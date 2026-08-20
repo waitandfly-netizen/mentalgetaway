@@ -35,6 +35,11 @@ export default function TestimonialIntimatePractice() {
     },
   ];
 
+  const gallery = [
+    "https://media.base44.com/images/public/698fc983574e659f561934f1/dbc8f63f5_LINE_ALBUM_202608_260812_1.jpg",
+    "https://media.base44.com/images/public/698fc983574e659f561934f1/f3a90f845_79594b09-eba8-41b4-be40-234bd06dc2b8.jpg",
+  ];
+
   const closing = [
     "心靈假期一下子就過去了。",
     "外澳的海因颱風激起巨浪，我心裡的小宇宙也跟著波瀾起伏。",
@@ -90,6 +95,20 @@ export default function TestimonialIntimatePractice() {
               ))}
             </div>
 
+            <div className="mt-12">
+              <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-4 sm:p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  {gallery.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`練習紀錄 ${i + 1}`}
+                      className="w-full h-full max-h-[420px] object-cover rounded-xl"
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           <Link
