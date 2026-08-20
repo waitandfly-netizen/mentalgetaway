@@ -33,7 +33,7 @@ export default function Testimonials() {
     {
       title: "【感受與自己、與世界的連結】",
       date: "2026.08",
-      content: "第一天下午的笑靜心，我躺在地上，心裡忍不住想：「到底要笑多久啊？我真的笑不出來。」就在這時，耳邊傳來先生的笑聲...",
+      content: "連結不只有牽著一個人的手。有時是和愛的人連結，有時是和自己連結；有時，只是安靜地站在世界裡，而那一刻，我好像都感受到了。",
       link: "TestimonialConnection"
     },
     {
