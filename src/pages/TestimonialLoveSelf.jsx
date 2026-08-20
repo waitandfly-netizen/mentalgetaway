@@ -64,7 +64,7 @@ export default function TestimonialLoveSelf() {
                 p === "" ? (
                   <div key={i} className="h-4" />
                 ) : (
-                  <p key={i} className="text-stone-600 font-light leading-loose text-lg mb-4">
+                  <p key={i} className={`text-stone-600 font-light leading-loose text-lg ${i === paragraphs.length - 1 ? '' : 'mb-4'}`}>
                     {p}
                   </p>
                 )
