@@ -96,6 +96,16 @@ export default function TestimonialAcceptSelf() {
             )}
           </motion.div>
 
+          <div className="mt-12">
+            <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-4 sm:p-6">
+              <img
+                src="https://media.base44.com/images/public/698fc983574e659f561934f1/ef4658fa1_IMG_8691.png"
+                alt="接受自己的每個狀態"
+                className="w-full max-h-[70vh] object-contain rounded-xl"
+              />
+            </div>
+          </div>
+
           <Link
             to={createPageUrl('Testimonials')}
             className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 mt-12 transition-colors"
