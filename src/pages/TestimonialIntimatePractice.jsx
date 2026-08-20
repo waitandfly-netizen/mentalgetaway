@@ -24,6 +24,7 @@ export default function TestimonialIntimatePractice() {
         "回想過去劇烈的舞動，我忍不住笑了：「以前是不是有點用演的呀？」",
         "原來，對待自己可以更細緻。我喜歡這種和自己親密的感覺，雖然還有些陌生。",
       ],
+      image: "https://media.base44.com/images/public/698fc983574e659f561934f1/f3a90f845_79594b09-eba8-41b4-be40-234bd06dc2b8.jpg",
     },
     {
       heading: "之三｜直覺慢食",
@@ -32,6 +33,7 @@ export default function TestimonialIntimatePractice() {
         "這次，我重新用五感去聞、去看、去品嚐。兩天裡，食物的香氣重新打開了我的嗅覺，也讓身體開始自然選擇真正想吃的東西。",
         "回家後，我減少了便利商店的微波食品，身體反而自然帶著我走進傳統市場。",
       ],
+      image: "https://media.base44.com/images/public/698fc983574e659f561934f1/dbc8f63f5_LINE_ALBUM_202608_260812_1.jpg",
     },
   ];
 
@@ -79,6 +81,17 @@ export default function TestimonialIntimatePractice() {
                     {p}
                   </p>
                 ))}
+                {section.image && (
+                  <div className="mt-6 mb-2 flex justify-center">
+                    <div className="bg-white rounded-2xl shadow-sm p-3 max-w-md w-full">
+                      <img
+                        src={section.image}
+                        alt={section.heading}
+                        className="w-full h-auto object-contain rounded-xl max-h-[60vh]"
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
 
