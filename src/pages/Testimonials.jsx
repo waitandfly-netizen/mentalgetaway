@@ -21,7 +21,7 @@ export default function Testimonials() {
     {
       title: "【一場與自己的親密練習】",
       date: "2026.08",
-      content: "一個人搭上火車，原以為只是在海邊住一晚的輕鬆假期，沒想到，這趟旅程和想像中很不一樣...",
+      content: "第一次發現，原來不需要那麼用力。原來，對待自己可以更細緻。我喜歡這種和自己親密的感覺，雖然還有些陌生。",
       link: "TestimonialIntimatePractice"
     },
     {
