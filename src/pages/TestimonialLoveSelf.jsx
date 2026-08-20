@@ -32,14 +32,6 @@ export default function TestimonialLoveSelf() {
 
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <Link
-            to={createPageUrl('Testimonials')}
-            className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 mb-8 transition-colors"
-          >
-            <ChevronLeft className="w-5 h-5" />
-            <span>返回參加者心得</span>
-          </Link>
-
           <div className="grid md:grid-cols-2 gap-10 items-stretch">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -71,6 +63,14 @@ export default function TestimonialLoveSelf() {
               )}
             </motion.div>
           </div>
+
+          <Link
+            to={createPageUrl('Testimonials')}
+            className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 mt-12 transition-colors"
+          >
+            <ChevronLeft className="w-5 h-5" />
+            <span>返回參加者心得</span>
+          </Link>
         </div>
       </section>
     </div>
