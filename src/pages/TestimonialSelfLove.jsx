@@ -28,6 +28,7 @@ export default function TestimonialSelfLove() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">
             對自己的愛永遠不嫌多
           </h1>
+          <p className="text-stone-200/70 text-sm mt-3 tracking-widest">2026.8月宜蘭二日放空營(學員F)</p>
         </motion.div>
       </section>
 
