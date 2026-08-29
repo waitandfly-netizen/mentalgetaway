@@ -32,7 +32,7 @@ export default function TestimonialDailyDepth() {
         >
           <p className="text-amber-200/80 tracking-[0.3em] text-sm mb-4">TESTIMONIAL</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide">
-            原來日常，可以感受得這麼深
+            原來日常，可以感受得這麼深刻
           </h1>
           <p className="text-stone-200/70 text-sm mt-3 tracking-widest">2026.8月宜蘭二日放空營(學員G)</p>
         </motion.div>
