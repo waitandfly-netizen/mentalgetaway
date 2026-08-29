@@ -7,6 +7,12 @@ import { Quote, ArrowRight } from 'lucide-react';
 export default function Testimonials() {
   const testimonials = [
     {
+      title: "【對自己的愛永遠不嫌多】",
+      date: "",
+      content: "參加心靈假期的感覺真好，嚐到這美好滋味，深刻感覺自己是多麼的需要自由、放鬆，原來自己需要好多愛，永遠不嫌多～",
+      link: "TestimonialSelfLove"
+    },
+    {
       title: "【靈魂真實的需要是甚麼？】",
       date: "2026.08",
       content: "在假期中，聽到一句話讓我很有感，我們的靈魂生生世世都要來愛自己，但是我們都忘記了，一直在愛別人，為別人愛…",
