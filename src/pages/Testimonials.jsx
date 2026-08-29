@@ -8,7 +8,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       title: "【對自己的愛永遠不嫌多】",
-      date: "",
+      date: "2026.08",
       content: "參加心靈假期的感覺真好，嚐到這美好滋味，深刻感覺自己是多麼的需要自由、放鬆，原來自己需要好多愛，永遠不嫌多～",
       link: "TestimonialSelfLove"
     },
