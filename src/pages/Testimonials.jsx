@@ -7,22 +7,10 @@ import { Quote, ArrowRight } from 'lucide-react';
 export default function Testimonials() {
   const testimonials = [
     {
-      title: "【對自己的愛永遠不嫌多】",
-      date: "2026.08",
-      content: "參加心靈假期的感覺真好，嚐到這美好滋味，深刻感覺自己是多麼的需要自由、放鬆，原來自己需要好多愛，永遠不嫌多～",
-      link: "TestimonialSelfLove"
-    },
-    {
       title: "【原來日常，可以感受得這麼深刻】",
       date: "2026.08",
       content: "現在太常外食了，食材本身對我來說好像並沒有很親近～那天很感謝有好好挑選了有能量的食材，透過食材連結小遊戲，很難得靜下來好好觸摸、聞一聞，真的有感受到不只是食物，而是有生命力的蔬菜。",
       link: "TestimonialDailyDepth"
-    },
-    {
-      title: "【靈魂真實的需要是甚麼？】",
-      date: "2026.08",
-      content: "在假期中，聽到一句話讓我很有感，我們的靈魂生生世世都要來愛自己，但是我們都忘記了，一直在愛別人，為別人愛…",
-      link: "TestimonialLoveSelf"
     },
     {
       title: "【臣服於天地之間】",
@@ -35,12 +23,6 @@ export default function Testimonials() {
       date: "2026.08",
       content: "第一次發現，原來不需要那麼用力。原來，對待自己可以更細緻。我喜歡這種和自己親密的感覺，雖然還有些陌生。",
       link: "TestimonialIntimatePractice"
-    },
-    {
-      title: "【好好陪伴自己，也是一種溫柔】",
-      date: "2026.08",
-      content: "假期結束後，時不時會浮現在有外澳點點滴滴的畫面。雖然活動中經歷了激烈和平靜的環節，但感覺心裡有一塊溫柔的部分被觸動了。",
-      link: "TestimonialGentleCompanion"
     },
     {
       title: "【感受與自己、與世界的連結】",

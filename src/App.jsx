@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
-import TestimonialSelfLove from './pages/TestimonialSelfLove';
 import TestimonialDailyDepth from './pages/TestimonialDailyDepth';
 
 const { Pages, Layout, mainPage } = pagesConfig;
@@ -63,11 +62,6 @@ const AuthenticatedApp = () => {
       <Route path="/TestimonialDailyDepth" element={
         <LayoutWrapper currentPageName="TestimonialDailyDepth">
           <TestimonialDailyDepth />
-        </LayoutWrapper>
-      } />
-      <Route path="/TestimonialSelfLove" element={
-        <LayoutWrapper currentPageName="TestimonialSelfLove">
-          <TestimonialSelfLove />
         </LayoutWrapper>
       } />
       <Route path="*" element={<PageNotFound />} />
