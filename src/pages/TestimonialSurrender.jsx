@@ -55,7 +55,7 @@ export default function TestimonialSurrender() {
           >
             <div className="bg-white rounded-2xl p-4 shadow-sm">
               <img
-                src="https://media.base44.com/images/public/698fc983574e659f561934f1/2b6fbe61d_53f0f3c2-221a-4a64-9aec-6bc6a1981964.jpg"
+                src="https://media.base44.com/images/public/698fc983574e659f561934f1/b47c33d03_7130b136-ca6d-418c-bbce-f21b9d2da0d0.jpg"
                 alt="臣服於天地之間畫作"
                 className="w-full h-auto object-contain rounded-xl max-h-[80vh]"
               />
