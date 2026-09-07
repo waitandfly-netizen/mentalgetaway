@@ -7,12 +7,6 @@ import { Quote, ArrowRight } from 'lucide-react';
 export default function Testimonials() {
   const testimonials = [
     {
-      title: "【原來日常，可以感受得這麼深刻】",
-      date: "2026.08",
-      content: "現在太常外食了，食材本身對我來說好像並沒有很親近～那天很感謝有好好挑選了有能量的食材，透過食材連結小遊戲，很難得靜下來好好觸摸、聞一聞，真的有感受到不只是食物，而是有生命力的蔬菜。",
-      link: "TestimonialDailyDepth"
-    },
-    {
       title: "【臣服於天地之間】",
       date: "2026.08",
       content: "那時我感受到大自然的巨大與敬畏，突然覺得自己很渺小，好像什麼都不用做，只要安靜地存在、慢慢感受，也許就是一種臣服。",
