@@ -25,12 +25,6 @@ export default function Testimonials() {
       link: "TestimonialIntimatePractice"
     },
     {
-      title: "【感受與自己、與世界的連結】",
-      date: "2026.08",
-      content: "連結不只有牽著一個人的手。有時是和愛的人連結，有時是和自己連結；有時，只是安靜地站在世界裡，而那一刻，我好像都感受到了。",
-      link: "TestimonialConnection"
-    },
-    {
       title: "【一切都很好】",
       date: "2025.11.01",
       content: "「放空」並非停滯，而是高質量的「留白」，正是這份留白，讓身心得以重整，將山頂的靜、對陰晴的接納，融入每一天的生活。",
